@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 2 — Disequilibrium & Price Changes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted:#898781;
+    --blue:#2a78d6; --orange:#eb6834; --aqua:#1baf7a; --border:rgba(11,11,11,0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --blue:#3987e5; --orange:#d95926; --aqua:#199e70; --border:rgba(255,255,255,0.10); }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    display: flex; flex-direction: column;
+  }
+  .deck { flex: 1; position: relative; overflow: hidden; }
+  .slide {
+    position: absolute; inset: 0;
+    display: none;
+    flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 50px 70px;
+  }
+  .slide.active { display: flex; }
+  .eyebrow { font-size: 15px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 18px; }
+  .big { font-size: 52px; font-weight: 700; line-height: 1.15; margin: 0 0 16px; }
+  .med { font-size: 28px; font-weight: 600; margin: 0 0 12px; }
+  .sub { font-size: 19px; color: var(--ink2); max-width: 760px; line-height: 1.5; }
+  .emoji-row { font-size: 60px; margin-bottom: 20px; letter-spacing: 20px; }
+  .diagram-row { display: flex; gap: 40px; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
+  .diagram-row .txt { max-width: 280px; text-align: left; font-size: 15px; color: var(--ink2); }
+  .warn { color: var(--orange); font-weight: 700; }
+  footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 28px; border-top: 1px solid var(--border); background: var(--surface);
+  }
+  .nav-btn { border: 1px solid var(--border); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; }
+  .counter { font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <section class="slide active">
+    <div class="eyebrow">Lesson 2 · Syllabus 2.4.3 / 2.5</div>
+    <div class="big">Disequilibrium & Price Changes</div>
+    <div class="sub">Why can't you ever get a padel court at 6pm?</div>
+  </section>
+
+  <section class="slide">
+    <div class="med">Quick recap</div>
+    <div class="sub">At <b>equilibrium</b>, quantity demanded = quantity supplied. You already know this cold — today's about what happens when it <i>isn't</i> equal.</div>
+  </section>
+
+  <section class="slide">
+    <div class="med">🎾 6–8pm slot: SHORTAGE</div>
+    <div class="diagram-row">
+      <svg width="320" height="260" viewBox="0 0 320 260">
+        <line x1="40" y1="20" x2="40" y2="230" stroke="currentColor" stroke-width="2"/>
+        <line x1="40" y1="230" x2="300" y2="230" stroke="currentColor" stroke-width="2"/>
+        <line x1="60" y1="40" x2="260" y2="210" stroke="#2a78d6" stroke-width="3"/>
+        <line x1="60" y1="210" x2="260" y2="40" stroke="#eb6834" stroke-width="3"/>
+        <line x1="40" y1="160" x2="300" y2="160" stroke="currentColor" stroke-width="2" stroke-dasharray="5,4"/>
+        <circle cx="170" cy="160" r="0" />
+        <text x="270" y="35" font-size="13" fill="#eb6834">S</text>
+        <text x="270" y="215" font-size="13" fill="#2a78d6">D</text>
+        <text x="10" y="165" font-size="12" fill="currentColor">P1</text>
+        <line x1="125" y1="160" x2="125" y2="160" />
+        <circle cx="97" cy="160" r="4" fill="#eb6834"/>
+        <circle cx="222" cy="160" r="4" fill="#2a78d6"/>
+        <line x1="97" y1="245" x2="222" y2="245" stroke="currentColor" stroke-width="2"/>
+        <text x="130" y="258" font-size="12" fill="currentColor">shortage</text>
+        <text x="90" y="245" font-size="11" fill="currentColor" text-anchor="end">Qs</text>
+        <text x="230" y="245" font-size="11" fill="currentColor">Qd</text>
+      </svg>
+      <div class="txt">Club's normal price (P1) is <b>below</b> the true equilibrium for this slot. Quantity demanded (Qd) &gt; quantity supplied (Qs, fixed courts). That gap is the shortage.</div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="med">🎾 9am slot: SURPLUS</div>
+    <div class="diagram-row">
+      <svg width="320" height="260" viewBox="0 0 320 260">
+        <line x1="40" y1="20" x2="40" y2="230" stroke="currentColor" stroke-width="2"/>
+        <line x1="40" y1="230" x2="300" y2="230" stroke="currentColor" stroke-width="2"/>
+        <line x1="60" y1="40" x2="260" y2="210" stroke="#2a78d6" stroke-width="3"/>
+        <line x1="60" y1="210" x2="260" y2="40" stroke="#eb6834" stroke-width="3"/>
+        <line x1="40" y1="90" x2="300" y2="90" stroke="currentColor" stroke-width="2" stroke-dasharray="5,4"/>
+        <text x="270" y="35" font-size="13" fill="#eb6834">S</text>
+        <text x="270" y="215" font-size="13" fill="#2a78d6">D</text>
+        <text x="10" y="95" font-size="12" fill="currentColor">P1</text>
+        <circle cx="222" cy="90" r="4" fill="#eb6834"/>
+        <circle cx="97" cy="90" r="4" fill="#2a78d6"/>
+        <line x1="97" y1="245" x2="222" y2="245" stroke="currentColor" stroke-width="2"/>
+        <text x="130" y="258" font-size="12" fill="currentColor">surplus</text>
+        <text x="90" y="245" font-size="11" fill="currentColor" text-anchor="end">Qd</text>
+        <text x="230" y="245" font-size="11" fill="currentColor">Qs</text>
+      </svg>
+      <div class="txt">Same price (P1) is now <b>above</b> the true equilibrium for this quiet slot. Quantity supplied (Qs) &gt; quantity demanded (Qd). Empty courts = surplus.</div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="med">Clearing it: pricing</div>
+    <div class="sub">Raise the evening price → quantity demanded falls back (movement along D) until it matches supply.<br><br>Cut the morning price → quantity demanded rises until it matches supply.<br><br>Both cases: price moves toward <b>that slot's own equilibrium</b>.</div>
+  </section>
+
+  <section class="slide">
+    <div class="emoji-row">🧩 📈</div>
+    <div class="med">Same idea: retired Lego sets</div>
+    <div class="sub">Set is discontinued → supply fixed/shrinking, demand persists → shortage at old retail price → resale price rises until quantity demanded falls to match the fixed supply.</div>
+  </section>
+
+  <section class="slide">
+    <div class="med">Causes vs consequences</div>
+    <div class="sub" style="text-align:left; max-width:600px;">
+      <b>Cause</b> of a price change → a shift in demand and/or supply.<br><br>
+      <b>Consequence</b> of a price change → quantity bought &amp; sold changes.<br><br>
+      <span class="warn">Watch out:</span> a price change itself only moves you <i>along</i> a curve — it doesn't shift the curve.
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow">Next lesson</div>
+    <div class="med">Price elasticity of demand (PED)</div>
+    <div class="sub">Why does a price rise crush sales of some things but barely dent others?</div>
+  </section>
+
+</div>
+<footer>
+  <button class="nav-btn" id="prevBtn">← Prev</button>
+  <span class="counter" id="counter"></span>
+  <button class="nav-btn" id="nextBtn">Next →</button>
+</footer>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let i = 0;
+  function show(n) {
+    slides[i].classList.remove('active');
+    i = (n + slides.length) % slides.length;
+    slides[i].classList.add('active');
+    document.getElementById('counter').textContent = (i+1) + ' / ' + slides.length;
+  }
+  document.getElementById('prevBtn').onclick = () => show(i-1);
+  document.getElementById('nextBtn').onclick = () => show(i+1);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') show(i+1);
+    if (e.key === 'ArrowLeft') show(i-1);
+  });
+  show(0);
+</script>
+</body>
+</html>

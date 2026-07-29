@@ -1,0 +1,23 @@
+Factors of production: The resources used to produce goods and services — classified into land, labour, capital and enterprise.
+
+Land: A factor of production consisting of natural resources used in production, e.g. raw materials, oil, minerals. In Tom's Print Co., the PLA filament (made from petroleum) counts as land. Its reward is rent.
+
+Labour: A factor of production consisting of human physical or mental effort used in production. In Tom's Print Co., this is Tom's own time designing CAD files, running the printer, and packaging orders. Its reward is wages.
+
+Capital: A factor of production consisting of manufactured goods used to produce other goods and services, e.g. machinery, tools, buildings. In Tom's Print Co., this is the 3D printer, laptop, and tools. Capital is not the same as money — cash itself is not a factor of production. Its reward is interest.
+
+Enterprise: A factor of production involving the willingness and ability to take risks, organise the other three factors of production, and innovate, in pursuit of profit. In Tom's Print Co., this is Tom's decision to start the business and risk his savings. Its reward is profit.
+
+Rent: The reward paid to the factor of production land.
+
+Wages: The reward paid to the factor of production labour.
+
+Interest: The reward paid to the factor of production capital.
+
+Profit: The reward paid to the factor of production enterprise. Unlike rent, wages and interest, profit is not guaranteed — it is a residual reward and can be negative (a loss).
+
+Quantity of a factor of production: How much of that factor exists, e.g. Tom buying a second 3D printer increases the quantity of capital.
+
+Quality of a factor of production: How productive or effective that factor is, e.g. Tom upgrading to a faster, more precise 3D printer increases the quality of capital (the quantity of printers stays the same).
+
+Common misconception — capital vs money: In everyday language "capital" often means money or savings. In economics, capital means the physical manufactured goods (machinery, tools, equipment) used to produce other things. Money used to buy a 3D printer is finance; the printer itself is capital.

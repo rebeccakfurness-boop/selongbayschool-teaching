@@ -1,0 +1,75 @@
+{
+  "academic_year": "26/27",
+  "school": "Selong Bay School",
+  "school_holidays": [
+    {
+      "start": "2026-07-01",
+      "end": "2026-07-05",
+      "label": "Term break"
+    },
+    {
+      "start": "2026-07-20",
+      "end": "2026-07-26",
+      "label": "Term break"
+    },
+    {
+      "start": "2026-10-05",
+      "end": "2026-10-09",
+      "label": "Mid-term break"
+    },
+    {
+      "start": "2026-12-14",
+      "end": "2026-12-31",
+      "label": "Winter break"
+    },
+    {
+      "start": "2027-01-04",
+      "end": "2027-01-10",
+      "label": "Winter break"
+    },
+    {
+      "start": "2027-03-08",
+      "end": "2027-03-21",
+      "label": "Spring break"
+    },
+    {
+      "start": "2027-06-21",
+      "end": "2027-06-30",
+      "label": "End of year"
+    }
+  ],
+  "public_holidays": [
+    {
+      "date": "2026-08-17",
+      "label": "Public holiday"
+    },
+    {
+      "date": "2026-08-25",
+      "label": "Public holiday"
+    },
+    {
+      "date": "2027-01-01",
+      "label": "New Year's Day"
+    },
+    {
+      "date": "2027-03-26",
+      "label": "Public holiday"
+    },
+    {
+      "date": "2027-05-01",
+      "label": "Labour Day"
+    },
+    {
+      "date": "2027-05-20",
+      "label": "Public holiday"
+    },
+    {
+      "date": "2027-06-01",
+      "label": "Public holiday"
+    },
+    {
+      "date": "2027-06-06",
+      "label": "Public holiday"
+    }
+  ]
+}

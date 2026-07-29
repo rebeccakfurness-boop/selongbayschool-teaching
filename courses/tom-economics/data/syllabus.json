@@ -1,0 +1,224 @@
+{
+  "code": "0455",
+  "title": "Cambridge IGCSE Economics",
+  "exam_series": "June 2027",
+  "topics": [
+    {
+      "id": "1",
+      "title": "The basic economic problem",
+      "subtopics": [
+        {
+          "id": "1.1",
+          "title": "The nature of the basic economic problem",
+          "known": true
+        },
+        {
+          "id": "1.2",
+          "title": "Factors of production",
+          "known": false
+        },
+        {
+          "id": "1.3",
+          "title": "Opportunity cost",
+          "known": true
+        },
+        {
+          "id": "1.4",
+          "title": "Production possibility curve (PPC) diagrams",
+          "known": true
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "The allocation of resources",
+      "subtopics": [
+        {
+          "id": "2.1",
+          "title": "The role of markets in allocating resources",
+          "known": true
+        },
+        {
+          "id": "2.2",
+          "title": "Demand",
+          "known": true
+        },
+        {
+          "id": "2.3",
+          "title": "Supply",
+          "known": true
+        },
+        {
+          "id": "2.4",
+          "title": "Price determination",
+          "known": true,
+          "note": "2.4.1-2.4.2 known; 2.4.3 disequilibrium covered in Lesson 2"
+        },
+        {
+          "id": "2.5",
+          "title": "Price changes",
+          "known": false
+        },
+        {
+          "id": "2.6",
+          "title": "Price elasticity of demand (PED)",
+          "known": false
+        },
+        {
+          "id": "2.7",
+          "title": "Price elasticity of supply (PES)",
+          "known": false
+        },
+        {
+          "id": "2.8",
+          "title": "Market economic system",
+          "known": false
+        },
+        {
+          "id": "2.9",
+          "title": "Market failure",
+          "known": false
+        },
+        {
+          "id": "2.10",
+          "title": "Mixed economic system",
+          "known": false
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Microeconomic decision-makers",
+      "subtopics": [
+        {
+          "id": "3.1",
+          "title": "Money and banking",
+          "known": false
+        },
+        {
+          "id": "3.2",
+          "title": "Households",
+          "known": false
+        },
+        {
+          "id": "3.3",
+          "title": "Workers",
+          "known": false
+        },
+        {
+          "id": "3.4",
+          "title": "Firms",
+          "known": false
+        },
+        {
+          "id": "3.5",
+          "title": "Firms and production",
+          "known": false
+        },
+        {
+          "id": "3.6",
+          "title": "Firms' costs, revenue and objectives",
+          "known": false
+        },
+        {
+          "id": "3.7",
+          "title": "Types of markets",
+          "known": false
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Government and the macroeconomy",
+      "subtopics": [
+        {
+          "id": "4.1",
+          "title": "Government macroeconomic intervention",
+          "known": false
+        },
+        {
+          "id": "4.2",
+          "title": "Fiscal policy",
+          "known": false
+        },
+        {
+          "id": "4.3",
+          "title": "Monetary policy",
+          "known": false
+        },
+        {
+          "id": "4.4",
+          "title": "Supply-side policy",
+          "known": false
+        },
+        {
+          "id": "4.5",
+          "title": "Economic growth",
+          "known": false
+        },
+        {
+          "id": "4.6",
+          "title": "Employment and unemployment",
+          "known": false
+        },
+        {
+          "id": "4.7",
+          "title": "Inflation",
+          "known": false
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Economic development",
+      "subtopics": [
+        {
+          "id": "5.1",
+          "title": "Living standards",
+          "known": false
+        },
+        {
+          "id": "5.2",
+          "title": "Poverty",
+          "known": false
+        },
+        {
+          "id": "5.3",
+          "title": "Population",
+          "known": false
+        },
+        {
+          "id": "5.4",
+          "title": "Differences in economic development between countries",
+          "known": false
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "International trade and globalisation",
+      "subtopics": [
+        {
+          "id": "6.1",
+          "title": "Specialisation and free trade",
+          "known": false
+        },
+        {
+          "id": "6.2",
+          "title": "Globalisation and trade restrictions",
+          "known": false
+        },
+        {
+          "id": "6.3",
+          "title": "Foreign exchange rates",
+          "known": false
+        },
+        {
+          "id": "6.4",
+          "title": "Current account of the balance of payments",
+          "known": false
+        }
+      ]
+    }
+  ]
+}

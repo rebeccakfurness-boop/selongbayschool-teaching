@@ -1,0 +1,1550 @@
+<title>Tom — IGCSE Economics 0455</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --page:           #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --grid:           #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-blue:    #2a78d6;
+    --series-orange:  #eb6834;
+    --series-aqua:    #1baf7a;
+    --series-yellow:  #eda100;
+    --series-magenta: #e87ba4;
+    --status-good:    #0ca30c;
+    --status-good-text: #006300;
+    --status-warning: #fab219;
+    --status-warning-text: #7a5200;
+    --seq-track:      #e1e0d9;
+    --card-shadow:    0 1px 2px rgba(11,11,11,0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --page:           #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --grid:           #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-blue:    #3987e5;
+      --series-orange:  #d95926;
+      --series-aqua:    #199e70;
+      --series-yellow:  #c98500;
+      --series-magenta: #d55181;
+      --status-good:    #0ca30c;
+      --status-good-text: #6bdc6b;
+      --status-warning: #fab219;
+      --status-warning-text: #f5c264;
+      --seq-track:      #2c2c2a;
+      --card-shadow:    0 1px 2px rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --page:           #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --grid:           #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-blue:    #3987e5;
+    --series-orange:  #d95926;
+    --series-aqua:    #199e70;
+    --series-yellow:  #c98500;
+    --series-magenta: #d55181;
+    --status-good:    #0ca30c;
+    --status-good-text: #6bdc6b;
+    --status-warning: #fab219;
+    --status-warning-text: #f5c264;
+    --seq-track:      #2c2c2a;
+    --card-shadow:    0 1px 2px rgba(0,0,0,0.4);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--page);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  header h1 { font-size: 18px; font-weight: 600; margin: 0; }
+  header .sub { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+  .theme-btn {
+    border: 1px solid var(--border);
+    background: var(--surface-1);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  nav.tabs {
+    display: flex;
+    gap: 4px;
+    padding: 0 28px;
+    border-bottom: 1px solid var(--border);
+    background: var(--page);
+  }
+  nav.tabs button {
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding: 12px 14px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+  nav.tabs button.active { color: var(--text-primary); border-bottom-color: var(--series-blue); font-weight: 600; }
+  main { padding: 24px 28px 60px; max-width: 1080px; margin: 0 auto; }
+  .view { display: none; }
+  .view.active { display: block; }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .stat-tile {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    box-shadow: var(--card-shadow);
+  }
+  .stat-tile .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .stat-tile .value {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.1;
+    font-variant-numeric: proportional-nums;
+  }
+  .stat-tile .value.small { font-size: 16px; font-weight: 600; }
+  .stat-tile .foot { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+  .meter-track {
+    background: var(--seq-track);
+    border-radius: 20px;
+    height: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .meter-fill {
+    height: 100%;
+    background: var(--series-blue);
+    border-radius: 20px;
+  }
+
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 20px;
+    box-shadow: var(--card-shadow);
+  }
+  .card h2 { font-size: 15px; margin: 0 0 4px; }
+  .card .muted { color: var(--text-secondary); font-size: 13px; }
+  .up-next-topic { font-size: 21px; font-weight: 600; margin: 10px 0 2px; }
+  .up-next-date { font-size: 13px; color: var(--text-secondary); }
+  .btn-row { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    text-decoration: none;
+  }
+  .btn-primary { background: var(--series-blue); color: white; border-color: transparent; }
+  .btn-secondary { background: var(--surface-1); color: var(--text-primary); }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .pill-content   { background: color-mix(in srgb, var(--series-blue) 16%, transparent); color: var(--series-blue); }
+  .pill-review    { background: color-mix(in srgb, var(--series-aqua) 16%, transparent); color: var(--series-aqua); }
+  .pill-revision  { background: color-mix(in srgb, var(--series-orange) 16%, transparent); color: var(--series-orange); }
+  .pill-exam-skill{ background: color-mix(in srgb, var(--series-magenta) 20%, transparent); color: var(--series-magenta); }
+  .pill-past-paper{ background: color-mix(in srgb, var(--series-yellow) 20%, transparent); color: var(--series-yellow); }
+  .pill-buffer    { background: var(--grid); color: var(--text-secondary); }
+  .pill-good      { background: color-mix(in srgb, var(--status-good) 16%, transparent); color: var(--status-good-text); }
+  .pill-warning   { background: color-mix(in srgb, var(--status-warning) 24%, transparent); color: var(--status-warning-text); }
+
+  table.seq { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.seq th {
+    text-align: left;
+    padding: 8px 10px;
+    color: var(--text-muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; background: var(--surface-1);
+  }
+  table.seq td { padding: 9px 10px; border-bottom: 1px solid var(--grid); vertical-align: middle; }
+  table.seq tr.done td { color: var(--text-muted); }
+  table.seq tr.done .title { text-decoration: line-through; }
+  table.seq tr:hover td { background: color-mix(in srgb, var(--series-blue) 4%, transparent); }
+  table.seq tr.current td { background: color-mix(in srgb, var(--series-blue) 8%, transparent); }
+  .row-actions { display: flex; gap: 6px; }
+  .icon-btn {
+    border: 1px solid var(--border);
+    background: var(--surface-1);
+    color: var(--text-secondary);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .icon-btn.on { background: var(--status-good); color: white; border-color: transparent; }
+  .icon-btn.warn-on { background: var(--status-warning); color: #4a3300; border-color: transparent; }
+  .muted-link { color: var(--text-muted); font-size: 12px; }
+  a.mat-link { color: var(--series-blue); font-size: 12px; text-decoration: none; }
+  a.mat-link:hover { text-decoration: underline; }
+
+  .topic-block { margin-bottom: 18px; }
+  .topic-block h3 { font-size: 14px; margin: 0 0 8px; }
+  .sub-row { display: flex; align-items: center; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--grid); font-size: 13px; }
+  .sub-row:last-child { border-bottom: none; }
+  .sub-row .name { color: var(--text-primary); }
+  .sub-row .ref { color: var(--text-muted); margin-right: 8px; font-variant-numeric: tabular-nums; }
+
+  .empty { color: var(--text-muted); font-size: 13px; padding: 10px 0; }
+  .filter-row { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+  .filter-row button {
+    border: 1px solid var(--border);
+    background: var(--surface-1);
+    color: var(--text-secondary);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .filter-row button.active { background: var(--series-blue); color: white; border-color: transparent; }
+
+  @media (max-width: 720px) {
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+    main { padding: 16px; }
+    header { padding: 16px; }
+  }
+</style>
+
+<header>
+  <div>
+    <h1>Tom — Cambridge IGCSE Economics 0455</h1>
+    <div class="sub">Targeting the June 2027 exam series</div>
+  </div>
+  <button class="theme-btn" id="themeToggle">🌓 Toggle theme</button>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-view="home">Home</button>
+  <button class="tab-btn" data-view="sequence">Full sequence</button>
+  <button class="tab-btn" data-view="syllabus">Syllabus map</button>
+</nav>
+
+<main>
+  <section id="view-home" class="view active"></section>
+  <section id="view-sequence" class="view"></section>
+  <section id="view-syllabus" class="view"></section>
+</main>
+
+<script id="calendar-data" type="application/json">{
+  "academic_year": "26/27",
+  "school": "Selong Bay School",
+  "school_holidays": [
+    {
+      "start": "2026-07-01",
+      "end": "2026-07-05",
+      "label": "Term break"
+    },
+    {
+      "start": "2026-07-20",
+      "end": "2026-07-26",
+      "label": "Term break"
+    },
+    {
+      "start": "2026-10-05",
+      "end": "2026-10-09",
+      "label": "Mid-term break"
+    },
+    {
+      "start": "2026-12-14",
+      "end": "2026-12-31",
+      "label": "Winter break"
+    },
+    {
+      "start": "2027-01-04",
+      "end": "2027-01-10",
+      "label": "Winter break"
+    },
+    {
+      "start": "2027-03-08",
+      "end": "2027-03-21",
+      "label": "Spring break"
+    },
+    {
+      "start": "2027-06-21",
+      "end": "2027-06-30",
+      "label": "End of year"
+    }
+  ],
+  "public_holidays": [
+    {
+      "date": "2026-08-17",
+      "label": "Public holiday"
+    },
+    {
+      "date": "2026-08-25",
+      "label": "Public holiday"
+    },
+    {
+      "date": "2027-01-01",
+      "label": "New Year's Day"
+    },
+    {
+      "date": "2027-03-26",
+      "label": "Public holiday"
+    },
+    {
+      "date": "2027-05-01",
+      "label": "Labour Day"
+    },
+    {
+      "date": "2027-05-20",
+      "label": "Public holiday"
+    },
+    {
+      "date": "2027-06-01",
+      "label": "Public holiday"
+    },
+    {
+      "date": "2027-06-06",
+      "label": "Public holiday"
+    }
+  ]
+}</script>
+<script id="syllabus-data" type="application/json">{
+  "code": "0455",
+  "title": "Cambridge IGCSE Economics",
+  "exam_series": "June 2027",
+  "topics": [
+    {
+      "id": "1",
+      "title": "The basic economic problem",
+      "subtopics": [
+        {
+          "id": "1.1",
+          "title": "The nature of the basic economic problem",
+          "known": true
+        },
+        {
+          "id": "1.2",
+          "title": "Factors of production",
+          "known": false
+        },
+        {
+          "id": "1.3",
+          "title": "Opportunity cost",
+          "known": true
+        },
+        {
+          "id": "1.4",
+          "title": "Production possibility curve (PPC) diagrams",
+          "known": true
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "The allocation of resources",
+      "subtopics": [
+        {
+          "id": "2.1",
+          "title": "The role of markets in allocating resources",
+          "known": true
+        },
+        {
+          "id": "2.2",
+          "title": "Demand",
+          "known": true
+        },
+        {
+          "id": "2.3",
+          "title": "Supply",
+          "known": true
+        },
+        {
+          "id": "2.4",
+          "title": "Price determination",
+          "known": true,
+          "note": "2.4.1-2.4.2 known; 2.4.3 disequilibrium covered in Lesson 2"
+        },
+        {
+          "id": "2.5",
+          "title": "Price changes",
+          "known": false
+        },
+        {
+          "id": "2.6",
+          "title": "Price elasticity of demand (PED)",
+          "known": false
+        },
+        {
+          "id": "2.7",
+          "title": "Price elasticity of supply (PES)",
+          "known": false
+        },
+        {
+          "id": "2.8",
+          "title": "Market economic system",
+          "known": false
+        },
+        {
+          "id": "2.9",
+          "title": "Market failure",
+          "known": false
+        },
+        {
+          "id": "2.10",
+          "title": "Mixed economic system",
+          "known": false
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Microeconomic decision-makers",
+      "subtopics": [
+        {
+          "id": "3.1",
+          "title": "Money and banking",
+          "known": false
+        },
+        {
+          "id": "3.2",
+          "title": "Households",
+          "known": false
+        },
+        {
+          "id": "3.3",
+          "title": "Workers",
+          "known": false
+        },
+        {
+          "id": "3.4",
+          "title": "Firms",
+          "known": false
+        },
+        {
+          "id": "3.5",
+          "title": "Firms and production",
+          "known": false
+        },
+        {
+          "id": "3.6",
+          "title": "Firms' costs, revenue and objectives",
+          "known": false
+        },
+        {
+          "id": "3.7",
+          "title": "Types of markets",
+          "known": false
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Government and the macroeconomy",
+      "subtopics": [
+        {
+          "id": "4.1",
+          "title": "Government macroeconomic intervention",
+          "known": false
+        },
+        {
+          "id": "4.2",
+          "title": "Fiscal policy",
+          "known": false
+        },
+        {
+          "id": "4.3",
+          "title": "Monetary policy",
+          "known": false
+        },
+        {
+          "id": "4.4",
+          "title": "Supply-side policy",
+          "known": false
+        },
+        {
+          "id": "4.5",
+          "title": "Economic growth",
+          "known": false
+        },
+        {
+          "id": "4.6",
+          "title": "Employment and unemployment",
+          "known": false
+        },
+        {
+          "id": "4.7",
+          "title": "Inflation",
+          "known": false
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Economic development",
+      "subtopics": [
+        {
+          "id": "5.1",
+          "title": "Living standards",
+          "known": false
+        },
+        {
+          "id": "5.2",
+          "title": "Poverty",
+          "known": false
+        },
+        {
+          "id": "5.3",
+          "title": "Population",
+          "known": false
+        },
+        {
+          "id": "5.4",
+          "title": "Differences in economic development between countries",
+          "known": false
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "International trade and globalisation",
+      "subtopics": [
+        {
+          "id": "6.1",
+          "title": "Specialisation and free trade",
+          "known": false
+        },
+        {
+          "id": "6.2",
+          "title": "Globalisation and trade restrictions",
+          "known": false
+        },
+        {
+          "id": "6.3",
+          "title": "Foreign exchange rates",
+          "known": false
+        },
+        {
+          "id": "6.4",
+          "title": "Current account of the balance of payments",
+          "known": false
+        }
+      ]
+    }
+  ]
+}</script>
+<script id="lessons-data" type="application/json">{
+  "lessons": [
+    {
+      "lesson": 1,
+      "date": "2026-07-30",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "1.2",
+      "title": "Factors of production",
+      "materials_generated": true,
+      "folder": "lessons/lesson-01"
+    },
+    {
+      "lesson": 2,
+      "date": "2026-08-04",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "2.4.3 / 2.5",
+      "title": "Market disequilibrium & price changes",
+      "materials_generated": true,
+      "folder": "lessons/lesson-02"
+    },
+    {
+      "lesson": 3,
+      "date": "2026-08-06",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "2.6",
+      "title": "PED: definition, calculation, determinants",
+      "materials_generated": false,
+      "folder": "lessons/lesson-03"
+    },
+    {
+      "lesson": 4,
+      "date": "2026-08-11",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "2.6",
+      "title": "PED: revenue relationship & significance",
+      "materials_generated": false,
+      "folder": "lessons/lesson-04"
+    },
+    {
+      "lesson": 5,
+      "date": "2026-08-13",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "2.7",
+      "title": "Price elasticity of supply (PES)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-05"
+    },
+    {
+      "lesson": 6,
+      "date": "2026-08-18",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "2.8",
+      "title": "Market economic system",
+      "materials_generated": false,
+      "folder": "lessons/lesson-06"
+    },
+    {
+      "lesson": 7,
+      "date": "2026-08-20",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "2.9",
+      "title": "Market failure: key definitions",
+      "materials_generated": false,
+      "folder": "lessons/lesson-07"
+    },
+    {
+      "lesson": 8,
+      "date": "2026-08-27",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "2.9",
+      "title": "Market failure: causes & consequences",
+      "materials_generated": false,
+      "folder": "lessons/lesson-08"
+    },
+    {
+      "lesson": 9,
+      "date": "2026-09-01",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "2.10",
+      "title": "Mixed economy & price controls/tax/subsidies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-09"
+    },
+    {
+      "lesson": 10,
+      "date": "2026-09-03",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "2.10",
+      "title": "Other government intervention (regulation, privatisation, nationalisation, quotas)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-10"
+    },
+    {
+      "lesson": 11,
+      "date": "2026-09-08",
+      "weekday": "Tuesday",
+      "phase": "review",
+      "syllabus_ref": "1-2",
+      "title": "Review & consolidation: Topics 1-2",
+      "materials_generated": false,
+      "folder": "lessons/lesson-11"
+    },
+    {
+      "lesson": 12,
+      "date": "2026-09-10",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "3.1",
+      "title": "Money and banking",
+      "materials_generated": false,
+      "folder": "lessons/lesson-12"
+    },
+    {
+      "lesson": 13,
+      "date": "2026-09-15",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "3.2 / 3.3",
+      "title": "Households & choice of occupation",
+      "materials_generated": false,
+      "folder": "lessons/lesson-13"
+    },
+    {
+      "lesson": 14,
+      "date": "2026-09-17",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "3.3",
+      "title": "Wage determination & NMW diagrams",
+      "materials_generated": false,
+      "folder": "lessons/lesson-14"
+    },
+    {
+      "lesson": 15,
+      "date": "2026-09-22",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "3.3",
+      "title": "Wage differences, mobility, division of labour",
+      "materials_generated": false,
+      "folder": "lessons/lesson-15"
+    },
+    {
+      "lesson": 16,
+      "date": "2026-09-24",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "3.4",
+      "title": "Types of firms & mergers",
+      "materials_generated": false,
+      "folder": "lessons/lesson-16"
+    },
+    {
+      "lesson": 17,
+      "date": "2026-09-29",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "3.4",
+      "title": "Economies & diseconomies of scale",
+      "materials_generated": false,
+      "folder": "lessons/lesson-17"
+    },
+    {
+      "lesson": 18,
+      "date": "2026-10-01",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "3.5",
+      "title": "Firms and production",
+      "materials_generated": false,
+      "folder": "lessons/lesson-18"
+    },
+    {
+      "lesson": 19,
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "3.6",
+      "title": "Costs of production (calculations)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-19"
+    },
+    {
+      "lesson": 20,
+      "date": "2026-10-15",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "3.6",
+      "title": "Revenue & firms' objectives",
+      "materials_generated": false,
+      "folder": "lessons/lesson-20"
+    },
+    {
+      "lesson": 21,
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "3.7",
+      "title": "Types of markets: competitive vs monopoly",
+      "materials_generated": false,
+      "folder": "lessons/lesson-21"
+    },
+    {
+      "lesson": 22,
+      "date": "2026-10-22",
+      "weekday": "Thursday",
+      "phase": "review",
+      "syllabus_ref": "3",
+      "title": "Review & consolidation: Topic 3",
+      "materials_generated": false,
+      "folder": "lessons/lesson-22"
+    },
+    {
+      "lesson": 23,
+      "date": "2026-10-27",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.1",
+      "title": "Macroeconomic aims & conflicts",
+      "materials_generated": false,
+      "folder": "lessons/lesson-23"
+    },
+    {
+      "lesson": 24,
+      "date": "2026-10-29",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "4.2",
+      "title": "Government budget & taxation",
+      "materials_generated": false,
+      "folder": "lessons/lesson-24"
+    },
+    {
+      "lesson": 25,
+      "date": "2026-11-03",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.2",
+      "title": "Fiscal policy measures & effects",
+      "materials_generated": false,
+      "folder": "lessons/lesson-25"
+    },
+    {
+      "lesson": 26,
+      "date": "2026-11-05",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "4.3",
+      "title": "Monetary policy",
+      "materials_generated": false,
+      "folder": "lessons/lesson-26"
+    },
+    {
+      "lesson": 27,
+      "date": "2026-11-10",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.4",
+      "title": "Supply-side policy",
+      "materials_generated": false,
+      "folder": "lessons/lesson-27"
+    },
+    {
+      "lesson": 28,
+      "date": "2026-11-12",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "4.5",
+      "title": "Economic growth",
+      "materials_generated": false,
+      "folder": "lessons/lesson-28"
+    },
+    {
+      "lesson": 29,
+      "date": "2026-11-17",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.5",
+      "title": "Recession & growth policies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-29"
+    },
+    {
+      "lesson": 30,
+      "date": "2026-11-19",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "4.6",
+      "title": "Unemployment: definitions, measurement, types",
+      "materials_generated": false,
+      "folder": "lessons/lesson-30"
+    },
+    {
+      "lesson": 31,
+      "date": "2026-11-24",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.6",
+      "title": "Unemployment: consequences & policies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-31"
+    },
+    {
+      "lesson": 32,
+      "date": "2026-11-26",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "4.7",
+      "title": "Inflation: definitions, measurement, causes",
+      "materials_generated": false,
+      "folder": "lessons/lesson-32"
+    },
+    {
+      "lesson": 33,
+      "date": "2026-12-01",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.7",
+      "title": "Inflation: consequences & policies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-33"
+    },
+    {
+      "lesson": 34,
+      "date": "2026-12-03",
+      "weekday": "Thursday",
+      "phase": "review",
+      "syllabus_ref": "4",
+      "title": "Review & consolidation: Topic 4",
+      "materials_generated": false,
+      "folder": "lessons/lesson-34"
+    },
+    {
+      "lesson": 35,
+      "date": "2026-12-08",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "5.1",
+      "title": "Living standards (GDP/head, HDI)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-35"
+    },
+    {
+      "lesson": 36,
+      "date": "2026-12-10",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "5.2",
+      "title": "Poverty",
+      "materials_generated": false,
+      "folder": "lessons/lesson-36"
+    },
+    {
+      "lesson": 37,
+      "date": "2027-01-12",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "5.3",
+      "title": "Population",
+      "materials_generated": false,
+      "folder": "lessons/lesson-37"
+    },
+    {
+      "lesson": 38,
+      "date": "2027-01-14",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "5.4",
+      "title": "International development differences",
+      "materials_generated": false,
+      "folder": "lessons/lesson-38"
+    },
+    {
+      "lesson": 39,
+      "date": "2027-01-19",
+      "weekday": "Tuesday",
+      "phase": "review",
+      "syllabus_ref": "5",
+      "title": "Review & consolidation: Topic 5",
+      "materials_generated": false,
+      "folder": "lessons/lesson-39"
+    },
+    {
+      "lesson": 40,
+      "date": "2027-01-21",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "6.1",
+      "title": "Specialisation & free trade",
+      "materials_generated": false,
+      "folder": "lessons/lesson-40"
+    },
+    {
+      "lesson": 41,
+      "date": "2027-01-26",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "6.2",
+      "title": "Globalisation & multinational companies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-41"
+    },
+    {
+      "lesson": 42,
+      "date": "2027-01-28",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "6.2",
+      "title": "Trade restrictions",
+      "materials_generated": false,
+      "folder": "lessons/lesson-42"
+    },
+    {
+      "lesson": 43,
+      "date": "2027-02-02",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "6.3",
+      "title": "Foreign exchange rates: basics & reasons to trade currency",
+      "materials_generated": false,
+      "folder": "lessons/lesson-43"
+    },
+    {
+      "lesson": 44,
+      "date": "2027-02-04",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "6.3",
+      "title": "Exchange rate determination & consequences",
+      "materials_generated": false,
+      "folder": "lessons/lesson-44"
+    },
+    {
+      "lesson": 45,
+      "date": "2027-02-09",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "6.4",
+      "title": "Balance of payments: structure & causes",
+      "materials_generated": false,
+      "folder": "lessons/lesson-45"
+    },
+    {
+      "lesson": 46,
+      "date": "2027-02-11",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "6.4",
+      "title": "Balance of payments: consequences & policies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-46"
+    },
+    {
+      "lesson": 47,
+      "date": "2027-02-16",
+      "weekday": "Tuesday",
+      "phase": "review",
+      "syllabus_ref": "6",
+      "title": "Review & consolidation: Topic 6 + full syllabus map",
+      "materials_generated": false,
+      "folder": "lessons/lesson-47"
+    },
+    {
+      "lesson": 48,
+      "date": "2027-02-18",
+      "weekday": "Thursday",
+      "phase": "revision",
+      "syllabus_ref": "1",
+      "title": "Revision blitz: Topic 1",
+      "materials_generated": false,
+      "folder": "lessons/lesson-48"
+    },
+    {
+      "lesson": 49,
+      "date": "2027-02-23",
+      "weekday": "Tuesday",
+      "phase": "revision",
+      "syllabus_ref": "2",
+      "title": "Revision blitz: Topic 2",
+      "materials_generated": false,
+      "folder": "lessons/lesson-49"
+    },
+    {
+      "lesson": 50,
+      "date": "2027-02-25",
+      "weekday": "Thursday",
+      "phase": "revision",
+      "syllabus_ref": "3",
+      "title": "Revision blitz: Topic 3",
+      "materials_generated": false,
+      "folder": "lessons/lesson-50"
+    },
+    {
+      "lesson": 51,
+      "date": "2027-03-02",
+      "weekday": "Tuesday",
+      "phase": "revision",
+      "syllabus_ref": "4",
+      "title": "Revision blitz: Topic 4",
+      "materials_generated": false,
+      "folder": "lessons/lesson-51"
+    },
+    {
+      "lesson": 52,
+      "date": "2027-03-04",
+      "weekday": "Thursday",
+      "phase": "revision",
+      "syllabus_ref": "5",
+      "title": "Revision blitz: Topic 5",
+      "materials_generated": false,
+      "folder": "lessons/lesson-52"
+    },
+    {
+      "lesson": 53,
+      "date": "2027-03-23",
+      "weekday": "Tuesday",
+      "phase": "revision",
+      "syllabus_ref": "6",
+      "title": "Revision blitz: Topic 6",
+      "materials_generated": false,
+      "folder": "lessons/lesson-53"
+    },
+    {
+      "lesson": 54,
+      "date": "2027-03-25",
+      "weekday": "Thursday",
+      "phase": "exam-skill",
+      "syllabus_ref": "P1",
+      "title": "Paper 1 command words & MCQ technique + timed set",
+      "materials_generated": false,
+      "folder": "lessons/lesson-54"
+    },
+    {
+      "lesson": 55,
+      "date": "2027-03-30",
+      "weekday": "Tuesday",
+      "phase": "exam-skill",
+      "syllabus_ref": "P1",
+      "title": "Paper 1 timed practice set 2 + review",
+      "materials_generated": false,
+      "folder": "lessons/lesson-55"
+    },
+    {
+      "lesson": 56,
+      "date": "2027-04-01",
+      "weekday": "Thursday",
+      "phase": "exam-skill",
+      "syllabus_ref": "P2-A",
+      "title": "Paper 2 Section A (data response) technique",
+      "materials_generated": false,
+      "folder": "lessons/lesson-56"
+    },
+    {
+      "lesson": 57,
+      "date": "2027-04-06",
+      "weekday": "Tuesday",
+      "phase": "exam-skill",
+      "syllabus_ref": "P2-B",
+      "title": "Paper 2 Section B part (d) evaluation technique (Level 3 answers)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-57"
+    },
+    {
+      "lesson": 58,
+      "date": "2027-04-08",
+      "weekday": "Thursday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP1",
+      "title": "Past paper 1: sit (P1+P2 extract)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-58"
+    },
+    {
+      "lesson": 59,
+      "date": "2027-04-13",
+      "weekday": "Tuesday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP1",
+      "title": "Past paper 1: review & feedback",
+      "materials_generated": false,
+      "folder": "lessons/lesson-59"
+    },
+    {
+      "lesson": 60,
+      "date": "2027-04-15",
+      "weekday": "Thursday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP2",
+      "title": "Past paper 2: sit",
+      "materials_generated": false,
+      "folder": "lessons/lesson-60"
+    },
+    {
+      "lesson": 61,
+      "date": "2027-04-20",
+      "weekday": "Tuesday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP2",
+      "title": "Past paper 2: review & feedback",
+      "materials_generated": false,
+      "folder": "lessons/lesson-61"
+    },
+    {
+      "lesson": 62,
+      "date": "2027-04-22",
+      "weekday": "Thursday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP3",
+      "title": "Past paper 3: sit",
+      "materials_generated": false,
+      "folder": "lessons/lesson-62"
+    },
+    {
+      "lesson": 63,
+      "date": "2027-04-27",
+      "weekday": "Tuesday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP3",
+      "title": "Past paper 3: review & feedback",
+      "materials_generated": false,
+      "folder": "lessons/lesson-63"
+    },
+    {
+      "lesson": 64,
+      "date": "2027-04-29",
+      "weekday": "Thursday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP4",
+      "title": "Past paper 4: sit",
+      "materials_generated": false,
+      "folder": "lessons/lesson-64"
+    },
+    {
+      "lesson": 65,
+      "date": "2027-05-04",
+      "weekday": "Tuesday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP4",
+      "title": "Past paper 4: review & feedback",
+      "materials_generated": false,
+      "folder": "lessons/lesson-65"
+    },
+    {
+      "lesson": 66,
+      "date": "2027-05-06",
+      "weekday": "Thursday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP5",
+      "title": "Past paper 5: sit",
+      "materials_generated": false,
+      "folder": "lessons/lesson-66"
+    },
+    {
+      "lesson": 67,
+      "date": "2027-05-11",
+      "weekday": "Tuesday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP5",
+      "title": "Past paper 5: review & feedback",
+      "materials_generated": false,
+      "folder": "lessons/lesson-67"
+    },
+    {
+      "lesson": 68,
+      "date": "2027-05-13",
+      "weekday": "Thursday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Flex/re-teach slot (weakest topic, reactive)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-68"
+    },
+    {
+      "lesson": 69,
+      "date": "2027-05-18",
+      "weekday": "Tuesday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Flex/re-teach slot (weakest topic, reactive)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-69"
+    },
+    {
+      "lesson": 70,
+      "date": "2027-05-25",
+      "weekday": "Tuesday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Flex/re-teach slot (weakest topic, reactive)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-70"
+    },
+    {
+      "lesson": 71,
+      "date": "2027-05-27",
+      "weekday": "Thursday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Final mixed past-paper drill",
+      "materials_generated": false,
+      "folder": "lessons/lesson-71"
+    },
+    {
+      "lesson": 72,
+      "date": "2027-06-03",
+      "weekday": "Thursday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Final mixed past-paper drill",
+      "materials_generated": false,
+      "folder": "lessons/lesson-72"
+    },
+    {
+      "lesson": 73,
+      "date": "2027-06-08",
+      "weekday": "Tuesday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Confidence-building light review",
+      "materials_generated": false,
+      "folder": "lessons/lesson-73"
+    },
+    {
+      "lesson": 74,
+      "date": "2027-06-10",
+      "weekday": "Thursday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Confidence-building light review + exam-day logistics chat",
+      "materials_generated": false,
+      "folder": "lessons/lesson-74"
+    }
+  ],
+  "total_slots_available": 76
+}</script>
+
+<script>
+const CALENDAR = JSON.parse(document.getElementById('calendar-data').textContent);
+const SYLLABUS = JSON.parse(document.getElementById('syllabus-data').textContent);
+const LESSONS = JSON.parse(document.getElementById('lessons-data').textContent).lessons;
+const STORAGE_KEY = 'tom-economics-progress-v1';
+
+function loadProgress() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  return { done: {}, reteach: {} };
+}
+function saveProgress(p) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(p));
+}
+let progress = loadProgress();
+
+function isDone(n) { return !!progress.done[n]; }
+function isReteach(n) { return !!progress.reteach[n]; }
+function toggleDone(n) {
+  progress.done[n] = !progress.done[n];
+  saveProgress(progress);
+  renderAll();
+}
+function toggleReteach(n) {
+  progress.reteach[n] = !progress.reteach[n];
+  saveProgress(progress);
+  renderAll();
+}
+
+function fmtDate(iso) {
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function contentLessons() {
+  return LESSONS.filter(l => l.phase === 'content' || l.phase === 'review');
+}
+function nextLesson() {
+  return LESSONS.find(l => !isDone(l.lesson));
+}
+function reteachList() {
+  return LESSONS.filter(l => isReteach(l.lesson));
+}
+function pillClass(phase) {
+  return {
+    content: 'pill-content', review: 'pill-review', revision: 'pill-revision',
+    'exam-skill': 'pill-exam-skill', 'past-paper': 'pill-past-paper', buffer: 'pill-buffer'
+  }[phase] || 'pill-buffer';
+}
+function phaseLabel(phase) {
+  return {
+    content: 'Content', review: 'Review', revision: 'Revision',
+    'exam-skill': 'Exam skill', 'past-paper': 'Past paper', buffer: 'Buffer'
+  }[phase] || phase;
+}
+
+function renderHome() {
+  const el = document.getElementById('view-home');
+  const cl = contentLessons();
+  const doneContent = cl.filter(l => isDone(l.lesson)).length;
+  const pct = cl.length ? Math.round((doneContent / cl.length) * 100) : 0;
+  const nl = nextLesson();
+  const rt = reteachList();
+  const doneTotal = LESSONS.filter(l => isDone(l.lesson)).length;
+
+  el.innerHTML = `
+    <div class="stat-row">
+      <div class="stat-tile">
+        <div class="label">Current / next lesson</div>
+        <div class="value">${nl ? '#' + nl.lesson : '🎉'}</div>
+        <div class="foot">${nl ? nl.title : 'All lessons complete'}</div>
+      </div>
+      <div class="stat-tile">
+        <div class="label">Syllabus covered</div>
+        <div class="value">${pct}%</div>
+        <div class="meter-track"><div class="meter-fill" style="width:${pct}%"></div></div>
+      </div>
+      <div class="stat-tile">
+        <div class="label">Next session date</div>
+        <div class="value small">${nl ? fmtDate(nl.date) : '—'}</div>
+        <div class="foot">${nl ? phaseLabel(nl.phase) + ' · ' + nl.syllabus_ref : ''}</div>
+      </div>
+      <div class="stat-tile">
+        <div class="label">Flagged for re-teach</div>
+        <div class="value">${rt.length}</div>
+        <div class="foot">${rt.length ? rt.map(l => '#' + l.lesson).join(', ') : 'None right now'}</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Up next</h2>
+      <div class="muted">Lesson ${nl ? nl.lesson : '—'} of ${LESSONS.length} · ${nl ? nl.syllabus_ref : ''}</div>
+      <div class="up-next-topic">${nl ? nl.title : 'You are fully up to date 🎉'}</div>
+      <div class="up-next-date">${nl ? fmtDate(nl.date) + ' · ' + phaseLabel(nl.phase) : ''}</div>
+      <div class="btn-row">
+        ${nl && nl.materials_generated ? `<a class="btn btn-secondary" href="${nl.folder}/guide.html" target="_blank">📘 Open guide</a>
+        <a class="btn btn-secondary" href="${nl.folder}/worksheet.html" target="_blank">📝 Worksheet</a>
+        <a class="btn btn-secondary" href="${nl.folder}/slides.html" target="_blank">🖥️ Slides</a>
+        <a class="btn btn-secondary" href="${nl.folder}/flashcards.txt" target="_blank">🃏 Flashcards</a>` :
+        nl ? `<span class="muted-link">Materials not generated yet — ask Claude Code: "plan lesson ${nl.lesson}"</span>` : ''}
+      </div>
+      ${nl ? `<div class="btn-row"><button class="btn btn-primary" onclick="toggleDone(${nl.lesson})">✓ Mark done & advance</button></div>` : ''}
+    </div>
+
+    ${rt.length ? `<div class="card">
+      <h2>Needs a re-teach</h2>
+      <div class="muted">Flagged from the Full sequence view</div>
+      ${rt.map(l => `<div class="sub-row"><span><span class="ref">#${l.lesson}</span>${l.title}</span><a class="mat-link" href="${l.folder}/guide.html" target="_blank">Open guide →</a></div>`).join('')}
+    </div>` : ''}
+
+    <div class="card">
+      <h2>Course snapshot</h2>
+      <div class="muted">${doneTotal} of ${LESSONS.length} lessons marked done overall (content, revision, exam skills & past papers combined)</div>
+    </div>
+  `;
+}
+
+let seqFilter = 'all';
+function renderSequence() {
+  const el = document.getElementById('view-sequence');
+  const phases = ['all','content','review','revision','exam-skill','past-paper','buffer'];
+  const filtered = seqFilter === 'all' ? LESSONS : LESSONS.filter(l => l.phase === seqFilter);
+  const nl = nextLesson();
+  el.innerHTML = `
+    <div class="card">
+      <div class="filter-row">
+        ${phases.map(p => `<button class="${seqFilter===p?'active':''}" onclick="setSeqFilter('${p}')">${p==='all'?'All':phaseLabel(p)}</button>`).join('')}
+      </div>
+      <div style="overflow-x:auto;">
+      <table class="seq">
+        <thead><tr><th>#</th><th>Date</th><th>Phase</th><th>Ref</th><th>Title</th><th>Materials</th><th>Status</th></tr></thead>
+        <tbody>
+        ${filtered.map(l => `
+          <tr class="${isDone(l.lesson)?'done':''} ${nl && nl.lesson===l.lesson?'current':''}">
+            <td>${l.lesson}</td>
+            <td>${fmtDate(l.date)}</td>
+            <td><span class="pill ${pillClass(l.phase)}">${phaseLabel(l.phase)}</span></td>
+            <td>${l.syllabus_ref}</td>
+            <td class="title">${l.title}</td>
+            <td>${l.materials_generated ? `<a class="mat-link" href="${l.folder}/guide.html" target="_blank">guide</a> · <a class="mat-link" href="${l.folder}/worksheet.html" target="_blank">worksheet</a> · <a class="mat-link" href="${l.folder}/slides.html" target="_blank">slides</a> · <a class="mat-link" href="${l.folder}/flashcards.txt" target="_blank">cards</a>` : `<span class="muted-link">not generated</span>`}</td>
+            <td>
+              <div class="row-actions">
+                <button class="icon-btn ${isDone(l.lesson)?'on':''}" title="Mark done" onclick="toggleDone(${l.lesson})">✓</button>
+                <button class="icon-btn ${isReteach(l.lesson)?'warn-on':''}" title="Flag re-teach" onclick="toggleReteach(${l.lesson})">⚠</button>
+              </div>
+            </td>
+          </tr>
+        `).join('')}
+        </tbody>
+      </table>
+      </div>
+    </div>
+  `;
+}
+function setSeqFilter(p) { seqFilter = p; renderSequence(); }
+
+function lessonsForSubtopic(ref) {
+  return LESSONS.filter(l => l.syllabus_ref.split(/[\s\/]+/).some(r => r === ref || r.startsWith(ref)));
+}
+
+function renderSyllabus() {
+  const el = document.getElementById('view-syllabus');
+  el.innerHTML = `
+    <div class="card">
+      <div class="muted" style="margin-bottom:12px;">Cambridge ${SYLLABUS.code} · ${SYLLABUS.title} · ${SYLLABUS.exam_series}</div>
+      ${SYLLABUS.topics.map(t => `
+        <div class="topic-block">
+          <h3>${t.id}. ${t.title}</h3>
+          ${t.subtopics.map(s => {
+            const covering = lessonsForSubtopic(s.id);
+            const doneAny = covering.some(l => isDone(l.lesson));
+            return `<div class="sub-row">
+              <span><span class="ref">${s.id}</span><span class="name">${s.title}</span></span>
+              <span>
+                ${s.known ? '<span class="pill pill-good">✓ Already known</span>' :
+                  doneAny ? '<span class="pill pill-good">✓ Taught</span>' :
+                  covering.length ? `<span class="muted-link">Lesson ${covering.map(l=>l.lesson).join(', ')}</span>` : ''}
+              </span>
+            </div>`;
+          }).join('')}
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderAll() { renderHome(); renderSequence(); renderSyllabus(); }
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('view-' + btn.dataset.view).classList.add('active');
+  });
+});
+
+const themeBtn = document.getElementById('themeToggle');
+function applyStoredTheme() {
+  const t = localStorage.getItem('tom-economics-theme');
+  if (t) document.documentElement.setAttribute('data-theme', t);
+}
+themeBtn.addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme');
+  const next = cur === 'dark' ? 'light' : (cur === 'light' ? null : 'dark');
+  if (next) { document.documentElement.setAttribute('data-theme', next); localStorage.setItem('tom-economics-theme', next); }
+  else { document.documentElement.removeAttribute('data-theme'); localStorage.removeItem('tom-economics-theme'); }
+});
+applyStoredTheme();
+
+renderAll();
+</script>

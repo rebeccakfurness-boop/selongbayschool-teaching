@@ -1,0 +1,17 @@
+Market disequilibrium: A situation where quantity demanded and quantity supplied are not equal at the current price — the market is not at equilibrium.
+
+Shortage: A situation where quantity demanded exceeds quantity supplied at the current price, e.g. padel courts at 6-8pm when the price is set below the true equilibrium for that time slot.
+
+Surplus: A situation where quantity supplied exceeds quantity demanded at the current price, e.g. empty padel courts at 9am when the price is set above the true equilibrium for that time slot.
+
+How a shortage is cleared: Price rises, causing a movement along the demand curve (quantity demanded falls) until it matches the fixed quantity supplied, reaching a new, higher equilibrium.
+
+How a surplus is cleared: Price falls, causing a movement along the demand curve (quantity demanded rises) until it matches quantity supplied, reaching a new, lower equilibrium.
+
+Cause of a price change: A shift in demand and/or a shift in supply, driven by a change in one of their non-price determinants (e.g. a Lego set being discontinued reduces future supply).
+
+Consequence of a price change: A change in the quantity bought and sold. How much it changes depends on price elasticity (covered in the next lesson).
+
+Movement along a curve vs a shift of a curve: A price change on its own causes a movement along an existing demand or supply curve. A shift of the whole curve is caused by a change in a non-price determinant (income, tastes, cost of production, number of buyers/sellers, etc.) — the two are easy to mix up but are not the same thing.
+
+Worked example — retired Lego set: Once a set is discontinued, supply becomes fixed (or shrinks) while demand often persists or grows. At the old retail price this creates a shortage. On the resale market, price rises until quantity demanded falls back to match the fixed quantity available — a new, higher equilibrium.

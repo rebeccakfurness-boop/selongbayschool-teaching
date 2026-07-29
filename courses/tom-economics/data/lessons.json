@@ -1,0 +1,745 @@
+{
+  "lessons": [
+    {
+      "lesson": 1,
+      "date": "2026-07-30",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "1.2",
+      "title": "Factors of production",
+      "materials_generated": true,
+      "folder": "lessons/lesson-01"
+    },
+    {
+      "lesson": 2,
+      "date": "2026-08-04",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "2.4.3 / 2.5",
+      "title": "Market disequilibrium & price changes",
+      "materials_generated": true,
+      "folder": "lessons/lesson-02"
+    },
+    {
+      "lesson": 3,
+      "date": "2026-08-06",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "2.6",
+      "title": "PED: definition, calculation, determinants",
+      "materials_generated": false,
+      "folder": "lessons/lesson-03"
+    },
+    {
+      "lesson": 4,
+      "date": "2026-08-11",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "2.6",
+      "title": "PED: revenue relationship & significance",
+      "materials_generated": false,
+      "folder": "lessons/lesson-04"
+    },
+    {
+      "lesson": 5,
+      "date": "2026-08-13",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "2.7",
+      "title": "Price elasticity of supply (PES)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-05"
+    },
+    {
+      "lesson": 6,
+      "date": "2026-08-18",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "2.8",
+      "title": "Market economic system",
+      "materials_generated": false,
+      "folder": "lessons/lesson-06"
+    },
+    {
+      "lesson": 7,
+      "date": "2026-08-20",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "2.9",
+      "title": "Market failure: key definitions",
+      "materials_generated": false,
+      "folder": "lessons/lesson-07"
+    },
+    {
+      "lesson": 8,
+      "date": "2026-08-27",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "2.9",
+      "title": "Market failure: causes & consequences",
+      "materials_generated": false,
+      "folder": "lessons/lesson-08"
+    },
+    {
+      "lesson": 9,
+      "date": "2026-09-01",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "2.10",
+      "title": "Mixed economy & price controls/tax/subsidies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-09"
+    },
+    {
+      "lesson": 10,
+      "date": "2026-09-03",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "2.10",
+      "title": "Other government intervention (regulation, privatisation, nationalisation, quotas)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-10"
+    },
+    {
+      "lesson": 11,
+      "date": "2026-09-08",
+      "weekday": "Tuesday",
+      "phase": "review",
+      "syllabus_ref": "1-2",
+      "title": "Review & consolidation: Topics 1-2",
+      "materials_generated": false,
+      "folder": "lessons/lesson-11"
+    },
+    {
+      "lesson": 12,
+      "date": "2026-09-10",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "3.1",
+      "title": "Money and banking",
+      "materials_generated": false,
+      "folder": "lessons/lesson-12"
+    },
+    {
+      "lesson": 13,
+      "date": "2026-09-15",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "3.2 / 3.3",
+      "title": "Households & choice of occupation",
+      "materials_generated": false,
+      "folder": "lessons/lesson-13"
+    },
+    {
+      "lesson": 14,
+      "date": "2026-09-17",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "3.3",
+      "title": "Wage determination & NMW diagrams",
+      "materials_generated": false,
+      "folder": "lessons/lesson-14"
+    },
+    {
+      "lesson": 15,
+      "date": "2026-09-22",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "3.3",
+      "title": "Wage differences, mobility, division of labour",
+      "materials_generated": false,
+      "folder": "lessons/lesson-15"
+    },
+    {
+      "lesson": 16,
+      "date": "2026-09-24",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "3.4",
+      "title": "Types of firms & mergers",
+      "materials_generated": false,
+      "folder": "lessons/lesson-16"
+    },
+    {
+      "lesson": 17,
+      "date": "2026-09-29",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "3.4",
+      "title": "Economies & diseconomies of scale",
+      "materials_generated": false,
+      "folder": "lessons/lesson-17"
+    },
+    {
+      "lesson": 18,
+      "date": "2026-10-01",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "3.5",
+      "title": "Firms and production",
+      "materials_generated": false,
+      "folder": "lessons/lesson-18"
+    },
+    {
+      "lesson": 19,
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "3.6",
+      "title": "Costs of production (calculations)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-19"
+    },
+    {
+      "lesson": 20,
+      "date": "2026-10-15",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "3.6",
+      "title": "Revenue & firms' objectives",
+      "materials_generated": false,
+      "folder": "lessons/lesson-20"
+    },
+    {
+      "lesson": 21,
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "3.7",
+      "title": "Types of markets: competitive vs monopoly",
+      "materials_generated": false,
+      "folder": "lessons/lesson-21"
+    },
+    {
+      "lesson": 22,
+      "date": "2026-10-22",
+      "weekday": "Thursday",
+      "phase": "review",
+      "syllabus_ref": "3",
+      "title": "Review & consolidation: Topic 3",
+      "materials_generated": false,
+      "folder": "lessons/lesson-22"
+    },
+    {
+      "lesson": 23,
+      "date": "2026-10-27",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.1",
+      "title": "Macroeconomic aims & conflicts",
+      "materials_generated": false,
+      "folder": "lessons/lesson-23"
+    },
+    {
+      "lesson": 24,
+      "date": "2026-10-29",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "4.2",
+      "title": "Government budget & taxation",
+      "materials_generated": false,
+      "folder": "lessons/lesson-24"
+    },
+    {
+      "lesson": 25,
+      "date": "2026-11-03",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.2",
+      "title": "Fiscal policy measures & effects",
+      "materials_generated": false,
+      "folder": "lessons/lesson-25"
+    },
+    {
+      "lesson": 26,
+      "date": "2026-11-05",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "4.3",
+      "title": "Monetary policy",
+      "materials_generated": false,
+      "folder": "lessons/lesson-26"
+    },
+    {
+      "lesson": 27,
+      "date": "2026-11-10",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.4",
+      "title": "Supply-side policy",
+      "materials_generated": false,
+      "folder": "lessons/lesson-27"
+    },
+    {
+      "lesson": 28,
+      "date": "2026-11-12",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "4.5",
+      "title": "Economic growth",
+      "materials_generated": false,
+      "folder": "lessons/lesson-28"
+    },
+    {
+      "lesson": 29,
+      "date": "2026-11-17",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.5",
+      "title": "Recession & growth policies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-29"
+    },
+    {
+      "lesson": 30,
+      "date": "2026-11-19",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "4.6",
+      "title": "Unemployment: definitions, measurement, types",
+      "materials_generated": false,
+      "folder": "lessons/lesson-30"
+    },
+    {
+      "lesson": 31,
+      "date": "2026-11-24",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.6",
+      "title": "Unemployment: consequences & policies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-31"
+    },
+    {
+      "lesson": 32,
+      "date": "2026-11-26",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "4.7",
+      "title": "Inflation: definitions, measurement, causes",
+      "materials_generated": false,
+      "folder": "lessons/lesson-32"
+    },
+    {
+      "lesson": 33,
+      "date": "2026-12-01",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "4.7",
+      "title": "Inflation: consequences & policies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-33"
+    },
+    {
+      "lesson": 34,
+      "date": "2026-12-03",
+      "weekday": "Thursday",
+      "phase": "review",
+      "syllabus_ref": "4",
+      "title": "Review & consolidation: Topic 4",
+      "materials_generated": false,
+      "folder": "lessons/lesson-34"
+    },
+    {
+      "lesson": 35,
+      "date": "2026-12-08",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "5.1",
+      "title": "Living standards (GDP/head, HDI)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-35"
+    },
+    {
+      "lesson": 36,
+      "date": "2026-12-10",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "5.2",
+      "title": "Poverty",
+      "materials_generated": false,
+      "folder": "lessons/lesson-36"
+    },
+    {
+      "lesson": 37,
+      "date": "2027-01-12",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "5.3",
+      "title": "Population",
+      "materials_generated": false,
+      "folder": "lessons/lesson-37"
+    },
+    {
+      "lesson": 38,
+      "date": "2027-01-14",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "5.4",
+      "title": "International development differences",
+      "materials_generated": false,
+      "folder": "lessons/lesson-38"
+    },
+    {
+      "lesson": 39,
+      "date": "2027-01-19",
+      "weekday": "Tuesday",
+      "phase": "review",
+      "syllabus_ref": "5",
+      "title": "Review & consolidation: Topic 5",
+      "materials_generated": false,
+      "folder": "lessons/lesson-39"
+    },
+    {
+      "lesson": 40,
+      "date": "2027-01-21",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "6.1",
+      "title": "Specialisation & free trade",
+      "materials_generated": false,
+      "folder": "lessons/lesson-40"
+    },
+    {
+      "lesson": 41,
+      "date": "2027-01-26",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "6.2",
+      "title": "Globalisation & multinational companies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-41"
+    },
+    {
+      "lesson": 42,
+      "date": "2027-01-28",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "6.2",
+      "title": "Trade restrictions",
+      "materials_generated": false,
+      "folder": "lessons/lesson-42"
+    },
+    {
+      "lesson": 43,
+      "date": "2027-02-02",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "6.3",
+      "title": "Foreign exchange rates: basics & reasons to trade currency",
+      "materials_generated": false,
+      "folder": "lessons/lesson-43"
+    },
+    {
+      "lesson": 44,
+      "date": "2027-02-04",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "6.3",
+      "title": "Exchange rate determination & consequences",
+      "materials_generated": false,
+      "folder": "lessons/lesson-44"
+    },
+    {
+      "lesson": 45,
+      "date": "2027-02-09",
+      "weekday": "Tuesday",
+      "phase": "content",
+      "syllabus_ref": "6.4",
+      "title": "Balance of payments: structure & causes",
+      "materials_generated": false,
+      "folder": "lessons/lesson-45"
+    },
+    {
+      "lesson": 46,
+      "date": "2027-02-11",
+      "weekday": "Thursday",
+      "phase": "content",
+      "syllabus_ref": "6.4",
+      "title": "Balance of payments: consequences & policies",
+      "materials_generated": false,
+      "folder": "lessons/lesson-46"
+    },
+    {
+      "lesson": 47,
+      "date": "2027-02-16",
+      "weekday": "Tuesday",
+      "phase": "review",
+      "syllabus_ref": "6",
+      "title": "Review & consolidation: Topic 6 + full syllabus map",
+      "materials_generated": false,
+      "folder": "lessons/lesson-47"
+    },
+    {
+      "lesson": 48,
+      "date": "2027-02-18",
+      "weekday": "Thursday",
+      "phase": "revision",
+      "syllabus_ref": "1",
+      "title": "Revision blitz: Topic 1",
+      "materials_generated": false,
+      "folder": "lessons/lesson-48"
+    },
+    {
+      "lesson": 49,
+      "date": "2027-02-23",
+      "weekday": "Tuesday",
+      "phase": "revision",
+      "syllabus_ref": "2",
+      "title": "Revision blitz: Topic 2",
+      "materials_generated": false,
+      "folder": "lessons/lesson-49"
+    },
+    {
+      "lesson": 50,
+      "date": "2027-02-25",
+      "weekday": "Thursday",
+      "phase": "revision",
+      "syllabus_ref": "3",
+      "title": "Revision blitz: Topic 3",
+      "materials_generated": false,
+      "folder": "lessons/lesson-50"
+    },
+    {
+      "lesson": 51,
+      "date": "2027-03-02",
+      "weekday": "Tuesday",
+      "phase": "revision",
+      "syllabus_ref": "4",
+      "title": "Revision blitz: Topic 4",
+      "materials_generated": false,
+      "folder": "lessons/lesson-51"
+    },
+    {
+      "lesson": 52,
+      "date": "2027-03-04",
+      "weekday": "Thursday",
+      "phase": "revision",
+      "syllabus_ref": "5",
+      "title": "Revision blitz: Topic 5",
+      "materials_generated": false,
+      "folder": "lessons/lesson-52"
+    },
+    {
+      "lesson": 53,
+      "date": "2027-03-23",
+      "weekday": "Tuesday",
+      "phase": "revision",
+      "syllabus_ref": "6",
+      "title": "Revision blitz: Topic 6",
+      "materials_generated": false,
+      "folder": "lessons/lesson-53"
+    },
+    {
+      "lesson": 54,
+      "date": "2027-03-25",
+      "weekday": "Thursday",
+      "phase": "exam-skill",
+      "syllabus_ref": "P1",
+      "title": "Paper 1 command words & MCQ technique + timed set",
+      "materials_generated": false,
+      "folder": "lessons/lesson-54"
+    },
+    {
+      "lesson": 55,
+      "date": "2027-03-30",
+      "weekday": "Tuesday",
+      "phase": "exam-skill",
+      "syllabus_ref": "P1",
+      "title": "Paper 1 timed practice set 2 + review",
+      "materials_generated": false,
+      "folder": "lessons/lesson-55"
+    },
+    {
+      "lesson": 56,
+      "date": "2027-04-01",
+      "weekday": "Thursday",
+      "phase": "exam-skill",
+      "syllabus_ref": "P2-A",
+      "title": "Paper 2 Section A (data response) technique",
+      "materials_generated": false,
+      "folder": "lessons/lesson-56"
+    },
+    {
+      "lesson": 57,
+      "date": "2027-04-06",
+      "weekday": "Tuesday",
+      "phase": "exam-skill",
+      "syllabus_ref": "P2-B",
+      "title": "Paper 2 Section B part (d) evaluation technique (Level 3 answers)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-57"
+    },
+    {
+      "lesson": 58,
+      "date": "2027-04-08",
+      "weekday": "Thursday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP1",
+      "title": "Past paper 1: sit (P1+P2 extract)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-58"
+    },
+    {
+      "lesson": 59,
+      "date": "2027-04-13",
+      "weekday": "Tuesday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP1",
+      "title": "Past paper 1: review & feedback",
+      "materials_generated": false,
+      "folder": "lessons/lesson-59"
+    },
+    {
+      "lesson": 60,
+      "date": "2027-04-15",
+      "weekday": "Thursday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP2",
+      "title": "Past paper 2: sit",
+      "materials_generated": false,
+      "folder": "lessons/lesson-60"
+    },
+    {
+      "lesson": 61,
+      "date": "2027-04-20",
+      "weekday": "Tuesday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP2",
+      "title": "Past paper 2: review & feedback",
+      "materials_generated": false,
+      "folder": "lessons/lesson-61"
+    },
+    {
+      "lesson": 62,
+      "date": "2027-04-22",
+      "weekday": "Thursday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP3",
+      "title": "Past paper 3: sit",
+      "materials_generated": false,
+      "folder": "lessons/lesson-62"
+    },
+    {
+      "lesson": 63,
+      "date": "2027-04-27",
+      "weekday": "Tuesday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP3",
+      "title": "Past paper 3: review & feedback",
+      "materials_generated": false,
+      "folder": "lessons/lesson-63"
+    },
+    {
+      "lesson": 64,
+      "date": "2027-04-29",
+      "weekday": "Thursday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP4",
+      "title": "Past paper 4: sit",
+      "materials_generated": false,
+      "folder": "lessons/lesson-64"
+    },
+    {
+      "lesson": 65,
+      "date": "2027-05-04",
+      "weekday": "Tuesday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP4",
+      "title": "Past paper 4: review & feedback",
+      "materials_generated": false,
+      "folder": "lessons/lesson-65"
+    },
+    {
+      "lesson": 66,
+      "date": "2027-05-06",
+      "weekday": "Thursday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP5",
+      "title": "Past paper 5: sit",
+      "materials_generated": false,
+      "folder": "lessons/lesson-66"
+    },
+    {
+      "lesson": 67,
+      "date": "2027-05-11",
+      "weekday": "Tuesday",
+      "phase": "past-paper",
+      "syllabus_ref": "PP5",
+      "title": "Past paper 5: review & feedback",
+      "materials_generated": false,
+      "folder": "lessons/lesson-67"
+    },
+    {
+      "lesson": 68,
+      "date": "2027-05-13",
+      "weekday": "Thursday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Flex/re-teach slot (weakest topic, reactive)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-68"
+    },
+    {
+      "lesson": 69,
+      "date": "2027-05-18",
+      "weekday": "Tuesday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Flex/re-teach slot (weakest topic, reactive)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-69"
+    },
+    {
+      "lesson": 70,
+      "date": "2027-05-25",
+      "weekday": "Tuesday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Flex/re-teach slot (weakest topic, reactive)",
+      "materials_generated": false,
+      "folder": "lessons/lesson-70"
+    },
+    {
+      "lesson": 71,
+      "date": "2027-05-27",
+      "weekday": "Thursday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Final mixed past-paper drill",
+      "materials_generated": false,
+      "folder": "lessons/lesson-71"
+    },
+    {
+      "lesson": 72,
+      "date": "2027-06-03",
+      "weekday": "Thursday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Final mixed past-paper drill",
+      "materials_generated": false,
+      "folder": "lessons/lesson-72"
+    },
+    {
+      "lesson": 73,
+      "date": "2027-06-08",
+      "weekday": "Tuesday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Confidence-building light review",
+      "materials_generated": false,
+      "folder": "lessons/lesson-73"
+    },
+    {
+      "lesson": 74,
+      "date": "2027-06-10",
+      "weekday": "Thursday",
+      "phase": "buffer",
+      "syllabus_ref": "-",
+      "title": "Confidence-building light review + exam-day logistics chat",
+      "materials_generated": false,
+      "folder": "lessons/lesson-74"
+    }
+  ],
+  "total_slots_available": 76
+}

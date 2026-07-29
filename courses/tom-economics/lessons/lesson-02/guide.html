@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 2 Guide — Disequilibrium & Price Changes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted:#898781;
+    --blue:#2a78d6; --orange:#eb6834; --border:rgba(11,11,11,0.12); --grid:#e1e0d9;
+    --warn-bg:#fdf1de; --warn-border:#eb6834;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --blue:#3987e5; --orange:#d95926; --border:rgba(255,255,255,0.14); --grid:#2c2c2a;
+      --warn-bg:#2a2117; --warn-border:#d95926; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 14px; }
+  th, td { border: 1px solid var(--grid); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--grid); font-weight: 600; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 2 — Teaching Guide &amp; Script</h1>
+<p><strong>Syllabus ref: 2.4.3 Market disequilibrium &amp; 2.5 Price changes</strong><br />
+Linked materials: <code>worksheet.md</code> · <code>slides.html</code> · <code>flashcards.txt</code> — all four cover this same syllabus point.</p>
+<p>Tom already knows demand, supply and market equilibrium solidly (confirmed via the Term 1 recap worksheet) — <strong>don't re-teach equilibrium from scratch</strong>, just touch it briefly as the anchor before introducing what's new: what happens when price <em>isn't</em> at equilibrium.</p>
+<h2>Learning objectives</h2>
+<p>By the end of this lesson Tom can:<br />
+1. Define market disequilibrium and distinguish a <strong>shortage</strong> (quantity demanded &gt; quantity supplied) from a <strong>surplus</strong> (quantity supplied &gt; quantity demanded).<br />
+2. Read shortages/surpluses off a demand–supply diagram and a schedule.<br />
+3. Explain that price changes are <strong>caused</strong> by shifts in demand and/or supply, and state their <strong>consequence</strong> for quantity sold.</p>
+<h2>The running example: padel court bookings</h2>
+<p>Tom's local padel club has a fixed number of courts. The interesting thing: the <em>same</em> fixed supply of courts faces wildly different demand at different times of day — perfect for disequilibrium.</p>
+<h2>Timing breakdown (30 minutes)</h2>
+<p><strong>0–3 min — Quick anchor (recap, don't re-teach)</strong><br />
+"Remind me — at equilibrium, what's true about quantity demanded and quantity supplied?" (They're equal.) Move on fast — this is confirmed knowledge, not new content.</p>
+<p><strong>3–12 min — Disequilibrium: shortage vs surplus</strong><br />
+Set up the club's evening peak slot (6–8pm weekdays): tons of people want to play after school, but only a handful of courts exist. At the club's normal flat price, <strong>quantity demanded &gt; quantity supplied at that price</strong> → this is a <strong>shortage</strong>.<br />
+Now the weekday 9am slot: almost nobody wants to play, but the same courts are sitting empty. At the normal price, <strong>quantity supplied &gt; quantity demanded</strong> → this is a <strong>surplus</strong>.<br />
+Draw both on a D/S diagram: shortage = price line below the equilibrium price; surplus = price line above it. Get Tom to sketch both.</p>
+<p><strong>12–20 min — How the market self-corrects, and 2.5 causes of price changes</strong><br />
+Ask: "If you ran the club, what would you actually do about the 6pm shortage? What about the empty 9am courts?" Lead him to: raise the evening price (reduces quantity demanded, moves toward the true — higher — equilibrium for that time slot) and cut the morning price (attracts more bookings, moves toward the true — lower — equilibrium for that slot). This <strong>is</strong> the price mechanism clearing disequilibrium.<br />
+Reinforce with a second example Tom already half-knows: a <strong>discontinued Lego set</strong>. Once a set is retired, supply is fixed/shrinking while demand often keeps going (or grows, from collectors) → shortage at the old retail price → resale prices rise on the secondary market until quantity demanded falls back to match the fixed quantity available. Same mechanism, different market.</p>
+<p><strong>20–26 min — 2.5 Price changes: causes and consequences</strong><br />
+State plainly: <strong>price changes are caused by shifts in demand and/or supply</strong> (not by "the market deciding" — some underlying determinant moved). The <strong>consequence</strong> is a change in the quantity bought and sold. Don't get pulled into exact magnitudes yet — flag explicitly: <em>"How much quantity changes when price changes is a whole separate idea — price elasticity of demand — which is the next two lessons."</em> This sets up PED cleanly without teaching it early.</p>
+<p><strong>26–30 min — Guided practice + wrap-up</strong><br />
+Run worksheet Section B verbally. Set self-directed worksheet + flashcards for later. Preview next lesson: "Next time: why a price rise crushes sales of some things but barely dents others — price elasticity of demand."</p>
+<h2>Common misconceptions to watch for</h2>
+<ol>
+<li><strong>Movement along vs shift of a curve.</strong> A price change alone causes a <em>movement along</em> the existing curve (this lesson). A <em>shift</em> of the whole curve is caused by a non-price determinant changing (already covered in demand/supply lessons) — don't let the two blur together.</li>
+<li><strong>"Shortage" doesn't mean zero stock exists.</strong> It specifically means quantity demanded exceeds quantity supplied <em>at the current price</em> — the courts still physically exist, they're just fully booked.</li>
+<li><strong>Surplus is not "nobody wants it at all."</strong> It means supply exceeds demand <em>at that price</em> — a lower price could still clear it.</li>
+<li>Assuming prices adjust instantly and perfectly — real markets (like the padel club) take a manager's decision to actually change the price; it's not automatic.</li>
+</ol>
+<h2>Next lesson</h2>
+<p>Lesson 3 — 2.6 Price elasticity of demand (PED): definition, calculation, determinants.</p>
+</div>
+</body>
+</html>

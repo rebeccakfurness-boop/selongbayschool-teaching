@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 1 Guide — Factors of Production</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted:#898781;
+    --blue:#2a78d6; --orange:#eb6834; --border:rgba(11,11,11,0.12); --grid:#e1e0d9;
+    --warn-bg:#fdf1de; --warn-border:#eb6834;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --blue:#3987e5; --orange:#d95926; --border:rgba(255,255,255,0.14); --grid:#2c2c2a;
+      --warn-bg:#2a2117; --warn-border:#d95926; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 14px; }
+  th, td { border: 1px solid var(--grid); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--grid); font-weight: 600; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 1 — Teaching Guide &amp; Script</h1>
+<p><strong>Syllabus ref: 1.2 Factors of production</strong> (1.2.1 Factors of production and their rewards · 1.2.2 Quantity and quality of factors of production)<br />
+Linked materials: <code>worksheet.md</code> · <code>slides.html</code> · <code>flashcards.txt</code> — all four cover this same syllabus point.</p>
+<h2>Learning objectives</h2>
+<p>By the end of this lesson Tom can:</p>
+<ol>
+<li>Define the four factors of production — <strong>land, labour, capital, enterprise</strong> — and give an example of each.</li>
+<li>State the reward each factor earns — <strong>rent, wages, interest, profit</strong>.</li>
+<li>Explain what causes the <strong>quantity</strong> and <strong>quality</strong> of a factor of production to change.</li>
+</ol>
+<h2>The running example: Tom's Print Co.</h2>
+<p>Use this the whole lesson — a small 3D-printing business Tom "runs," making custom <strong>padel paddle overgrips</strong> and <strong>personalised Lego-compatible minifigure accessories</strong> to sell to friends at school and the padel club. Every definition below hooks onto it. (This business reappears in later lessons on firms, costs and production — worth bedding in properly now.)</p>
+<h2>Timing breakdown (30 minutes)</h2>
+<p><strong>0–3 min — Hook</strong><br />
+Ask Tom: "If you were going to actually start Tom's Print Co. this weekend, what four <em>types</em> of thing would you need — not a shopping list, but categories?" Let him guess loosely. Don't correct yet — just plant the question.</p>
+<p><strong>3–15 min — Core teaching: the four factors + their rewards</strong><br />
+Introduce each one anchored to the business:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Definition</th>
+<th>In Tom's Print Co.</th>
+<th>Reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Land</strong></td>
+<td>Natural resources used in production — not just "ground," anything nature provides</td>
+<td>The PLA filament spool is made from petroleum, a natural resource; the workshop space</td>
+<td><strong>Rent</strong></td>
+</tr>
+<tr>
+<td><strong>Labour</strong></td>
+<td>Human physical or mental effort used in production</td>
+<td>Tom's own hours designing CAD files, running the printer, sanding, packaging</td>
+<td><strong>Wages</strong></td>
+</tr>
+<tr>
+<td><strong>Capital</strong></td>
+<td>Manufactured goods used to produce other goods/services (<strong>not money</strong>)</td>
+<td>The 3D printer, the laptop, calipers, sandpaper</td>
+<td><strong>Interest</strong></td>
+</tr>
+<tr>
+<td><strong>Enterprise</strong></td>
+<td>The willingness and ability to take risks, organise the other three factors, and innovate, in pursuit of profit</td>
+<td>Tom's decision to start the business at all, choose what to make, risk his savings on a printer that might not pay off</td>
+<td><strong>Profit</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Say this out loud explicitly: <em>"Profit is different from the other three rewards — rent, wages and interest are usually agreed in advance and guaranteed. Profit is what's left over, and it can be negative."</em> This is the single most exam-useful line in the lesson.</p>
+<p><strong>15–23 min — Quantity vs quality</strong><br />
+Explain that factors of production don't stay fixed — both how <em>much</em> of a factor exists and how <em>good</em> it is can change:</p>
+<ul>
+<li><strong>Quantity of capital ↑</strong> — Tom buys a second 3D printer.</li>
+<li><strong>Quality of capital ↑</strong> — Tom upgrades to a faster, more precise printer (same number of machines, better ones).</li>
+<li><strong>Quantity of labour ↑</strong> — a friend joins to help pack and sell.</li>
+<li><strong>Quality of labour ↑</strong> — Tom does a short online CAD course and gets much faster/better at designing.</li>
+<li><strong>Quantity/quality of land</strong> — finding a new filament supplier (quantity) vs switching to a higher-grade filament that prints stronger parts (quality).</li>
+</ul>
+<p>Ask Tom to generate one more pair himself before moving on (padel club buying more courts vs resurfacing existing courts is a good nudge if he's stuck).</p>
+<p><strong>23–28 min — Guided practice</strong><br />
+Run through worksheet Section B verbally together (don't just hand it over) — point at each item in the Tom's Print Co. scenario and ask "which factor, and why?" before he writes anything.</p>
+<p><strong>28–30 min — Wrap-up</strong><br />
+State the plan for self-directed time: finish the worksheet, paste <code>flashcards.txt</code> into NotebookLM. Preview next lesson: "Next time we look at what happens when there's suddenly way more demand for padel court bookings than there are courts available — shortages, and how prices react."</p>
+<h2>Common misconceptions to watch for</h2>
+<ol>
+<li><strong>"Capital = money."</strong> In economics, capital is the <em>physical</em> manufactured stuff (the printer, tools) — not cash or savings. Cash is finance, not a factor of production. Correct this immediately if it comes up.</li>
+<li><strong>Mixing up labour and enterprise.</strong> An employee Tom hires supplies labour (wages); Tom himself, organising and risking capital, supplies enterprise (profit).</li>
+<li><strong>"Land only means soil/ground."</strong> In this syllabus land = <em>any</em> natural resource — oil, minerals, fish stocks, the raw filament material itself.</li>
+<li><strong>Treating profit as guaranteed like wages.</strong> It's a residual reward and the only one that can be negative (a loss).</li>
+</ol>
+<h2>Next lesson</h2>
+<p>Lesson 2 — 2.4.3 Market disequilibrium &amp; 2.5 Price changes, using padel court booking demand as the running example.</p>
+</div>
+</body>
+</html>
