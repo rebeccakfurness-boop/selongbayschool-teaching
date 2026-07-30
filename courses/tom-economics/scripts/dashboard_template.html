@@ -351,6 +351,42 @@ function phaseLabel(phase) {
   }[phase] || phase;
 }
 
+// Builds the "Open guide / Worksheet (+Word) / Slides (+PowerPoint) / Flashcards" buttons
+// for the Up Next card. Word/PowerPoint only appear as a small secondary link when generated.
+function homeMaterialButtons(l) {
+  const f = l.files || {};
+  const parts = [];
+  if (f.guide_html) parts.push(`<a class="btn btn-secondary" href="${l.folder}/guide.html" target="_blank">📘 Open guide</a>`);
+  if (f.worksheet_html) {
+    const docx = f.worksheet_docx ? ` <a class="mat-link" href="${l.folder}/worksheet.docx" target="_blank">(.docx)</a>` : '';
+    parts.push(`<span class="btn btn-secondary"><a href="${l.folder}/worksheet.html" target="_blank" style="text-decoration:none;color:inherit;">📝 Worksheet</a>${docx}</span>`);
+  }
+  if (f.slides_html) {
+    const pptx = f.slides_pptx ? ` <a class="mat-link" href="${l.folder}/slides.pptx" target="_blank">(.pptx)</a>` : '';
+    parts.push(`<span class="btn btn-secondary"><a href="${l.folder}/slides.html" target="_blank" style="text-decoration:none;color:inherit;">🖥️ Slides</a>${pptx}</span>`);
+  }
+  if (f.flashcards) parts.push(`<a class="btn btn-secondary" href="${l.folder}/flashcards.txt" target="_blank">🃏 Flashcards</a>`);
+  return parts.join('\n');
+}
+
+// Compact "guide · worksheet (docx) · slides (pptx) · cards" line for the Full Sequence table.
+function seqMaterialLinks(l) {
+  const f = l.files || {};
+  if (!f.guide_html) return `<span class="muted-link">not generated</span>`;
+  const bits = [];
+  bits.push(`<a class="mat-link" href="${l.folder}/guide.html" target="_blank">guide</a>`);
+  if (f.worksheet_html) {
+    const docx = f.worksheet_docx ? ` / <a class="mat-link" href="${l.folder}/worksheet.docx" target="_blank">docx</a>` : '';
+    bits.push(`<a class="mat-link" href="${l.folder}/worksheet.html" target="_blank">worksheet</a>${docx}`);
+  }
+  if (f.slides_html) {
+    const pptx = f.slides_pptx ? ` / <a class="mat-link" href="${l.folder}/slides.pptx" target="_blank">pptx</a>` : '';
+    bits.push(`<a class="mat-link" href="${l.folder}/slides.html" target="_blank">slides</a>${pptx}`);
+  }
+  if (f.flashcards) bits.push(`<a class="mat-link" href="${l.folder}/flashcards.txt" target="_blank">cards</a>`);
+  return bits.join(' · ');
+}
+
 function renderHome() {
   const el = document.getElementById('view-home');
   const cl = contentLessons();
@@ -390,10 +426,7 @@ function renderHome() {
       <div class="up-next-topic">${nl ? nl.title : 'You are fully up to date 🎉'}</div>
       <div class="up-next-date">${nl ? fmtDate(nl.date) + ' · ' + phaseLabel(nl.phase) : ''}</div>
       <div class="btn-row">
-        ${nl && nl.materials_generated ? `<a class="btn btn-secondary" href="${nl.folder}/guide.html" target="_blank">📘 Open guide</a>
-        <a class="btn btn-secondary" href="${nl.folder}/worksheet.html" target="_blank">📝 Worksheet</a>
-        <a class="btn btn-secondary" href="${nl.folder}/slides.html" target="_blank">🖥️ Slides</a>
-        <a class="btn btn-secondary" href="${nl.folder}/flashcards.txt" target="_blank">🃏 Flashcards</a>` :
+        ${nl && nl.materials_generated ? homeMaterialButtons(nl) :
         nl ? `<span class="muted-link">Materials not generated yet — ask Claude Code: "plan lesson ${nl.lesson}"</span>` : ''}
       </div>
       ${nl ? `<div class="btn-row"><button class="btn btn-primary" onclick="toggleDone(${nl.lesson})">✓ Mark done & advance</button></div>` : ''}
@@ -434,7 +467,7 @@ function renderSequence() {
             <td><span class="pill ${pillClass(l.phase)}">${phaseLabel(l.phase)}</span></td>
             <td>${l.syllabus_ref}</td>
             <td class="title">${l.title}</td>
-            <td>${l.materials_generated ? `<a class="mat-link" href="${l.folder}/guide.html" target="_blank">guide</a> · <a class="mat-link" href="${l.folder}/worksheet.html" target="_blank">worksheet</a> · <a class="mat-link" href="${l.folder}/slides.html" target="_blank">slides</a> · <a class="mat-link" href="${l.folder}/flashcards.txt" target="_blank">cards</a>` : `<span class="muted-link">not generated</span>`}</td>
+            <td>${seqMaterialLinks(l)}</td>
             <td>
               <div class="row-actions">
                 <button class="icon-btn ${isDone(l.lesson)?'on':''}" title="Mark done" onclick="toggleDone(${l.lesson})">✓</button>

@@ -203,10 +203,20 @@ units = [
  ("buffer","-","Confidence-building light review + exam-day logistics chat"),
 ]
 
+def has_file(folder_name, filename):
+    return os.path.exists(os.path.join(BASE, "lessons", folder_name, filename))
+
 lessons = []
 for i, ((phase, ref, title), date) in enumerate(zip(units, lesson_dates), 1):
     folder_name = f"lesson-{i:02d}"
-    has_materials = os.path.exists(os.path.join(BASE, "lessons", folder_name, "guide.html"))
+    files = {
+        "guide_html": has_file(folder_name, "guide.html"),
+        "worksheet_html": has_file(folder_name, "worksheet.html"),
+        "worksheet_docx": has_file(folder_name, "worksheet.docx"),
+        "slides_html": has_file(folder_name, "slides.html"),
+        "slides_pptx": has_file(folder_name, "slides.pptx"),
+        "flashcards": has_file(folder_name, "flashcards.txt"),
+    }
     lessons.append({
         "lesson": i,
         "date": date.isoformat(),
@@ -214,7 +224,8 @@ for i, ((phase, ref, title), date) in enumerate(zip(units, lesson_dates), 1):
         "phase": phase,
         "syllabus_ref": ref,
         "title": title,
-        "materials_generated": has_materials,
+        "materials_generated": files["guide_html"],
+        "files": files,
         "folder": f"lessons/{folder_name}",
     })
 

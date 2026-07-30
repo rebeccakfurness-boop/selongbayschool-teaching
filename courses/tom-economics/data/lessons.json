@@ -8,6 +8,14 @@
       "syllabus_ref": "1.2",
       "title": "Factors of production",
       "materials_generated": true,
+      "files": {
+        "guide_html": true,
+        "worksheet_html": true,
+        "worksheet_docx": true,
+        "slides_html": true,
+        "slides_pptx": true,
+        "flashcards": true
+      },
       "folder": "lessons/lesson-01"
     },
     {
@@ -18,6 +26,14 @@
       "syllabus_ref": "2.4.3 / 2.5",
       "title": "Market disequilibrium & price changes",
       "materials_generated": true,
+      "files": {
+        "guide_html": true,
+        "worksheet_html": true,
+        "worksheet_docx": true,
+        "slides_html": true,
+        "slides_pptx": true,
+        "flashcards": true
+      },
       "folder": "lessons/lesson-02"
     },
     {
@@ -28,6 +44,14 @@
       "syllabus_ref": "2.6",
       "title": "PED: definition, calculation, determinants",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-03"
     },
     {
@@ -38,6 +62,14 @@
       "syllabus_ref": "2.6",
       "title": "PED: revenue relationship & significance",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-04"
     },
     {
@@ -48,6 +80,14 @@
       "syllabus_ref": "2.7",
       "title": "Price elasticity of supply (PES)",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-05"
     },
     {
@@ -58,6 +98,14 @@
       "syllabus_ref": "2.8",
       "title": "Market economic system",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-06"
     },
     {
@@ -68,6 +116,14 @@
       "syllabus_ref": "2.9",
       "title": "Market failure: key definitions",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-07"
     },
     {
@@ -78,6 +134,14 @@
       "syllabus_ref": "2.9",
       "title": "Market failure: causes & consequences",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-08"
     },
     {
@@ -88,6 +152,14 @@
       "syllabus_ref": "2.10",
       "title": "Mixed economy & price controls/tax/subsidies",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-09"
     },
     {
@@ -98,6 +170,14 @@
       "syllabus_ref": "2.10",
       "title": "Other government intervention (regulation, privatisation, nationalisation, quotas)",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-10"
     },
     {
@@ -108,6 +188,14 @@
       "syllabus_ref": "1-2",
       "title": "Review & consolidation: Topics 1-2",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-11"
     },
     {
@@ -118,6 +206,14 @@
       "syllabus_ref": "3.1",
       "title": "Money and banking",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-12"
     },
     {
@@ -128,6 +224,14 @@
       "syllabus_ref": "3.2 / 3.3",
       "title": "Households & choice of occupation",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-13"
     },
     {
@@ -138,6 +242,14 @@
       "syllabus_ref": "3.3",
       "title": "Wage determination & NMW diagrams",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-14"
     },
     {
@@ -148,6 +260,14 @@
       "syllabus_ref": "3.3",
       "title": "Wage differences, mobility, division of labour",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-15"
     },
     {
@@ -158,6 +278,14 @@
       "syllabus_ref": "3.4",
       "title": "Types of firms & mergers",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-16"
     },
     {
@@ -168,6 +296,14 @@
       "syllabus_ref": "3.4",
       "title": "Economies & diseconomies of scale",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-17"
     },
     {
@@ -178,6 +314,14 @@
       "syllabus_ref": "3.5",
       "title": "Firms and production",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-18"
     },
     {
@@ -188,6 +332,14 @@
       "syllabus_ref": "3.6",
       "title": "Costs of production (calculations)",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-19"
     },
     {
@@ -198,6 +350,14 @@
       "syllabus_ref": "3.6",
       "title": "Revenue & firms' objectives",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-20"
     },
     {
@@ -208,6 +368,14 @@
       "syllabus_ref": "3.7",
       "title": "Types of markets: competitive vs monopoly",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-21"
     },
     {
@@ -218,6 +386,14 @@
       "syllabus_ref": "3",
       "title": "Review & consolidation: Topic 3",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-22"
     },
     {
@@ -228,6 +404,14 @@
       "syllabus_ref": "4.1",
       "title": "Macroeconomic aims & conflicts",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-23"
     },
     {
@@ -238,6 +422,14 @@
       "syllabus_ref": "4.2",
       "title": "Government budget & taxation",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-24"
     },
     {
@@ -248,6 +440,14 @@
       "syllabus_ref": "4.2",
       "title": "Fiscal policy measures & effects",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-25"
     },
     {
@@ -258,6 +458,14 @@
       "syllabus_ref": "4.3",
       "title": "Monetary policy",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-26"
     },
     {
@@ -268,6 +476,14 @@
       "syllabus_ref": "4.4",
       "title": "Supply-side policy",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-27"
     },
     {
@@ -278,6 +494,14 @@
       "syllabus_ref": "4.5",
       "title": "Economic growth",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-28"
     },
     {
@@ -288,6 +512,14 @@
       "syllabus_ref": "4.5",
       "title": "Recession & growth policies",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-29"
     },
     {
@@ -298,6 +530,14 @@
       "syllabus_ref": "4.6",
       "title": "Unemployment: definitions, measurement, types",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-30"
     },
     {
@@ -308,6 +548,14 @@
       "syllabus_ref": "4.6",
       "title": "Unemployment: consequences & policies",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-31"
     },
     {
@@ -318,6 +566,14 @@
       "syllabus_ref": "4.7",
       "title": "Inflation: definitions, measurement, causes",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-32"
     },
     {
@@ -328,6 +584,14 @@
       "syllabus_ref": "4.7",
       "title": "Inflation: consequences & policies",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-33"
     },
     {
@@ -338,6 +602,14 @@
       "syllabus_ref": "4",
       "title": "Review & consolidation: Topic 4",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-34"
     },
     {
@@ -348,6 +620,14 @@
       "syllabus_ref": "5.1",
       "title": "Living standards (GDP/head, HDI)",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-35"
     },
     {
@@ -358,6 +638,14 @@
       "syllabus_ref": "5.2",
       "title": "Poverty",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-36"
     },
     {
@@ -368,6 +656,14 @@
       "syllabus_ref": "5.3",
       "title": "Population",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-37"
     },
     {
@@ -378,6 +674,14 @@
       "syllabus_ref": "5.4",
       "title": "International development differences",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-38"
     },
     {
@@ -388,6 +692,14 @@
       "syllabus_ref": "5",
       "title": "Review & consolidation: Topic 5",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-39"
     },
     {
@@ -398,6 +710,14 @@
       "syllabus_ref": "6.1",
       "title": "Specialisation & free trade",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-40"
     },
     {
@@ -408,6 +728,14 @@
       "syllabus_ref": "6.2",
       "title": "Globalisation & multinational companies",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-41"
     },
     {
@@ -418,6 +746,14 @@
       "syllabus_ref": "6.2",
       "title": "Trade restrictions",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-42"
     },
     {
@@ -428,6 +764,14 @@
       "syllabus_ref": "6.3",
       "title": "Foreign exchange rates: basics & reasons to trade currency",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-43"
     },
     {
@@ -438,6 +782,14 @@
       "syllabus_ref": "6.3",
       "title": "Exchange rate determination & consequences",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-44"
     },
     {
@@ -448,6 +800,14 @@
       "syllabus_ref": "6.4",
       "title": "Balance of payments: structure & causes",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-45"
     },
     {
@@ -458,6 +818,14 @@
       "syllabus_ref": "6.4",
       "title": "Balance of payments: consequences & policies",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-46"
     },
     {
@@ -468,6 +836,14 @@
       "syllabus_ref": "6",
       "title": "Review & consolidation: Topic 6 + full syllabus map",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-47"
     },
     {
@@ -478,6 +854,14 @@
       "syllabus_ref": "1",
       "title": "Revision blitz: Topic 1",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-48"
     },
     {
@@ -488,6 +872,14 @@
       "syllabus_ref": "2",
       "title": "Revision blitz: Topic 2",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-49"
     },
     {
@@ -498,6 +890,14 @@
       "syllabus_ref": "3",
       "title": "Revision blitz: Topic 3",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-50"
     },
     {
@@ -508,6 +908,14 @@
       "syllabus_ref": "4",
       "title": "Revision blitz: Topic 4",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-51"
     },
     {
@@ -518,6 +926,14 @@
       "syllabus_ref": "5",
       "title": "Revision blitz: Topic 5",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-52"
     },
     {
@@ -528,6 +944,14 @@
       "syllabus_ref": "6",
       "title": "Revision blitz: Topic 6",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-53"
     },
     {
@@ -538,6 +962,14 @@
       "syllabus_ref": "P1",
       "title": "Paper 1 command words & MCQ technique + timed set",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-54"
     },
     {
@@ -548,6 +980,14 @@
       "syllabus_ref": "P1",
       "title": "Paper 1 timed practice set 2 + review",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-55"
     },
     {
@@ -558,6 +998,14 @@
       "syllabus_ref": "P2-A",
       "title": "Paper 2 Section A (data response) technique",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-56"
     },
     {
@@ -568,6 +1016,14 @@
       "syllabus_ref": "P2-B",
       "title": "Paper 2 Section B part (d) evaluation technique (Level 3 answers)",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-57"
     },
     {
@@ -578,6 +1034,14 @@
       "syllabus_ref": "PP1",
       "title": "Past paper 1: sit (P1+P2 extract)",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-58"
     },
     {
@@ -588,6 +1052,14 @@
       "syllabus_ref": "PP1",
       "title": "Past paper 1: review & feedback",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-59"
     },
     {
@@ -598,6 +1070,14 @@
       "syllabus_ref": "PP2",
       "title": "Past paper 2: sit",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-60"
     },
     {
@@ -608,6 +1088,14 @@
       "syllabus_ref": "PP2",
       "title": "Past paper 2: review & feedback",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-61"
     },
     {
@@ -618,6 +1106,14 @@
       "syllabus_ref": "PP3",
       "title": "Past paper 3: sit",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-62"
     },
     {
@@ -628,6 +1124,14 @@
       "syllabus_ref": "PP3",
       "title": "Past paper 3: review & feedback",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-63"
     },
     {
@@ -638,6 +1142,14 @@
       "syllabus_ref": "PP4",
       "title": "Past paper 4: sit",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-64"
     },
     {
@@ -648,6 +1160,14 @@
       "syllabus_ref": "PP4",
       "title": "Past paper 4: review & feedback",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-65"
     },
     {
@@ -658,6 +1178,14 @@
       "syllabus_ref": "PP5",
       "title": "Past paper 5: sit",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-66"
     },
     {
@@ -668,6 +1196,14 @@
       "syllabus_ref": "PP5",
       "title": "Past paper 5: review & feedback",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-67"
     },
     {
@@ -678,6 +1214,14 @@
       "syllabus_ref": "-",
       "title": "Flex/re-teach slot (weakest topic, reactive)",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-68"
     },
     {
@@ -688,6 +1232,14 @@
       "syllabus_ref": "-",
       "title": "Flex/re-teach slot (weakest topic, reactive)",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-69"
     },
     {
@@ -698,6 +1250,14 @@
       "syllabus_ref": "-",
       "title": "Flex/re-teach slot (weakest topic, reactive)",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-70"
     },
     {
@@ -708,6 +1268,14 @@
       "syllabus_ref": "-",
       "title": "Final mixed past-paper drill",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-71"
     },
     {
@@ -718,6 +1286,14 @@
       "syllabus_ref": "-",
       "title": "Final mixed past-paper drill",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-72"
     },
     {
@@ -728,6 +1304,14 @@
       "syllabus_ref": "-",
       "title": "Confidence-building light review",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-73"
     },
     {
@@ -738,6 +1322,14 @@
       "syllabus_ref": "-",
       "title": "Confidence-building light review + exam-day logistics chat",
       "materials_generated": false,
+      "files": {
+        "guide_html": false,
+        "worksheet_html": false,
+        "worksheet_docx": false,
+        "slides_html": false,
+        "slides_pptx": false,
+        "flashcards": false
+      },
       "folder": "lessons/lesson-74"
     }
   ],
