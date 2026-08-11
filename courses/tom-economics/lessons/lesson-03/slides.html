@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 3 — Price Elasticity of Demand</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted:#898781;
+    --blue:#2a78d6; --orange:#eb6834; --aqua:#1baf7a; --border:rgba(11,11,11,0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --blue:#3987e5; --orange:#d95926; --aqua:#199e70; --border:rgba(255,255,255,0.10); }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    display: flex; flex-direction: column;
+  }
+  .deck { flex: 1; position: relative; overflow: hidden; }
+  .slide {
+    position: absolute; inset: 0;
+    display: none;
+    flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 50px 70px;
+  }
+  .slide.active { display: flex; }
+  .eyebrow { font-size: 15px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 18px; }
+  .big { font-size: 50px; font-weight: 700; line-height: 1.15; margin: 0 0 16px; }
+  .med { font-size: 28px; font-weight: 600; margin: 0 0 12px; }
+  .sub { font-size: 19px; color: var(--ink2); max-width: 780px; line-height: 1.5; }
+  .formula { font-size: 30px; font-weight: 700; color: var(--blue); margin: 18px 0; font-family: Cambria, Georgia, serif; }
+  .card-row { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+  .calc-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 22px 26px; width: 460px; text-align: left; box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  }
+  .calc-card .line { font-size: 15px; color: var(--ink2); margin-bottom: 6px; }
+  .calc-card .result { font-size: 20px; font-weight: 700; color: var(--blue); margin-top: 10px; }
+  .warn { color: var(--orange); font-weight: 700; }
+  .spectrum-row { display: flex; gap: 14px; justify-content: center; margin-top: 10px; }
+  .spectrum-item { text-align: center; }
+  .spectrum-item .lbl { font-size: 12px; color: var(--ink2); margin-top: 6px; max-width: 140px; }
+  .det-row { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+  .det-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px 20px; width: 340px; text-align: left;
+  }
+  .det-card .name { font-weight: 700; color: var(--blue); font-size: 15px; margin-bottom: 6px; }
+  .det-card .desc { font-size: 13px; color: var(--ink2); line-height: 1.4; }
+  footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 28px; border-top: 1px solid var(--border); background: var(--surface);
+  }
+  .nav-btn { border: 1px solid var(--border); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; }
+  .counter { font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <section class="slide active">
+    <div class="eyebrow">Lesson 3 · Syllabus 2.6</div>
+    <div class="big">Price Elasticity of Demand</div>
+    <div class="sub">If Tom raises his prices, does he lose a few customers — or a lot?</div>
+  </section>
+
+  <section class="slide">
+    <div class="med">Same price rise, different reactions</div>
+    <div class="sub">Tom puts up the price of custom padel grips by 10%. Would he lose a few customers, or a lot? What would that actually depend on?</div>
+  </section>
+
+  <section class="slide">
+    <div class="med">Definition &amp; formula</div>
+    <div class="sub">PED measures how responsive quantity demanded is to a change in price.</div>
+    <div class="formula">PED = %&Delta;Qd &divide; %&Delta;P</div>
+    <div class="sub">PED is technically always negative (law of demand) — economists usually just discuss its <b>size</b>, ignoring the minus sign.</div>
+  </section>
+
+  <section class="slide">
+    <div class="med">🎾 Worked example: elastic</div>
+    <div class="calc-card">
+      <div class="line">Padel club casual court booking</div>
+      <div class="line">Price: $20 → $22 &nbsp; (+10%)</div>
+      <div class="line">Quantity: 100 → 80 bookings/week &nbsp; (−20%)</div>
+      <div class="result">PED = −20 ÷ 10 = −2 → Elastic</div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="med">🧩 Worked example: inelastic</div>
+    <div class="calc-card">
+      <div class="line">Retired Lego set, resale market</div>
+      <div class="line">Price: $50 → $55 &nbsp; (+10%)</div>
+      <div class="line">Quantity: 40 → 38 sets/month &nbsp; (−5%)</div>
+      <div class="result">PED = −5 ÷ 10 = −0.5 → Inelastic</div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="med">The PED spectrum</div>
+    <div class="spectrum-row">
+      <div class="spectrum-item">
+        <svg width="110" height="110" viewBox="0 0 110 110"><line x1="20" y1="10" x2="20" y2="90" stroke="currentColor" stroke-width="2"/><line x1="20" y1="90" x2="100" y2="90" stroke="currentColor" stroke-width="2"/><line x1="55" y1="15" x2="55" y2="85" stroke="#2a78d6" stroke-width="3"/></svg>
+        <div class="lbl"><b>Perfectly inelastic</b><br>PED = 0</div>
+      </div>
+      <div class="spectrum-item">
+        <svg width="110" height="110" viewBox="0 0 110 110"><line x1="20" y1="10" x2="20" y2="90" stroke="currentColor" stroke-width="2"/><line x1="20" y1="90" x2="100" y2="90" stroke="currentColor" stroke-width="2"/><line x1="40" y1="15" x2="70" y2="85" stroke="#2a78d6" stroke-width="3"/></svg>
+        <div class="lbl"><b>Inelastic</b><br>0 &lt; PED &lt; 1</div>
+      </div>
+      <div class="spectrum-item">
+        <svg width="110" height="110" viewBox="0 0 110 110"><line x1="20" y1="10" x2="20" y2="90" stroke="currentColor" stroke-width="2"/><line x1="20" y1="90" x2="100" y2="90" stroke="currentColor" stroke-width="2"/><line x1="25" y1="15" x2="95" y2="85" stroke="#eb6834" stroke-width="3"/></svg>
+        <div class="lbl"><b>Unitary</b><br>PED = 1</div>
+      </div>
+      <div class="spectrum-item">
+        <svg width="110" height="110" viewBox="0 0 110 110"><line x1="20" y1="10" x2="20" y2="90" stroke="currentColor" stroke-width="2"/><line x1="20" y1="90" x2="100" y2="90" stroke="currentColor" stroke-width="2"/><line x1="15" y1="35" x2="100" y2="65" stroke="#1baf7a" stroke-width="3"/></svg>
+        <div class="lbl"><b>Elastic</b><br>PED &gt; 1</div>
+      </div>
+      <div class="spectrum-item">
+        <svg width="110" height="110" viewBox="0 0 110 110"><line x1="20" y1="10" x2="20" y2="90" stroke="currentColor" stroke-width="2"/><line x1="20" y1="90" x2="100" y2="90" stroke="currentColor" stroke-width="2"/><line x1="15" y1="50" x2="100" y2="50" stroke="#1baf7a" stroke-width="3"/></svg>
+        <div class="lbl"><b>Perfectly elastic</b><br>PED = &infin;</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="med">Determinants of PED (1/2)</div>
+    <div class="det-row">
+      <div class="det-card"><div class="name">Substitutes</div><div class="desc">More/closer substitutes = more elastic. A generic Lego set (many alternatives) vs. a specific retired set (no substitute).</div></div>
+      <div class="det-card"><div class="name">Necessity vs luxury</div><div class="desc">Necessities are more inelastic. Court resurfacing (has to happen) vs. novelty keychains (impulse buy).</div></div>
+      <div class="det-card"><div class="name">Share of income</div><div class="desc">Bigger share of income = more elastic. A cheap grip (barely noticed) vs. an annual club membership (very noticeable).</div></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="med">Determinants of PED (2/2)</div>
+    <div class="det-row">
+      <div class="det-card"><div class="name">Habit-forming</div><div class="desc">Addictive goods are more inelastic (classic example: cigarettes).</div></div>
+      <div class="det-card"><div class="name">Time period</div><div class="desc">More elastic in the long run — customers keep buying out of habit short-term, then switch supplier over time.</div></div>
+      <div class="det-card"><div class="name">Width of definition</div><div class="desc">"3D-printed products" broadly (hard to avoid) vs. "Tom's specific grip design" narrowly (easy to switch away from).</div></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="med">Quick check</div>
+    <div class="sub" style="text-align:left; max-width:640px;">
+      💡 A 10% price rise causes quantity demanded to fall by 25%. Elastic or inelastic?<br><br>
+      💡 Which makes demand <b>more</b> elastic: many substitutes, or being a necessity?
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="med">Recap</div>
+    <div class="sub" style="text-align:left; max-width:640px;">
+      PED = %&Delta;Qd &divide; %&Delta;P<br><br>
+      0 → perfectly inelastic &nbsp;·&nbsp; 0–1 → inelastic &nbsp;·&nbsp; 1 → unitary &nbsp;·&nbsp; &gt;1 → elastic &nbsp;·&nbsp; &infin; → perfectly elastic<br><br>
+      Determinants: substitutes, necessity, income share, habit, time, width of definition.
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow">Next lesson</div>
+    <div class="med">PED: revenue &amp; significance</div>
+    <div class="sub">What PED means for how much money Tom actually makes when he changes his prices.</div>
+  </section>
+
+</div>
+<footer>
+  <button class="nav-btn" id="prevBtn">← Prev</button>
+  <span class="counter" id="counter"></span>
+  <button class="nav-btn" id="nextBtn">Next →</button>
+</footer>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let i = 0;
+  function show(n) {
+    slides[i].classList.remove('active');
+    i = (n + slides.length) % slides.length;
+    slides[i].classList.add('active');
+    document.getElementById('counter').textContent = (i+1) + ' / ' + slides.length;
+  }
+  document.getElementById('prevBtn').onclick = () => show(i-1);
+  document.getElementById('nextBtn').onclick = () => show(i+1);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') show(i+1);
+    if (e.key === 'ArrowLeft') show(i-1);
+  });
+  show(0);
+</script>
+</body>
+</html>

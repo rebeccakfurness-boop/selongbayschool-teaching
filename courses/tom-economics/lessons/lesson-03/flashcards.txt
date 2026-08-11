@@ -1,0 +1,25 @@
+Price elasticity of demand (PED): A measure of how responsive quantity demanded is to a change in price.
+
+PED formula: PED = % change in quantity demanded ÷ % change in price. PED is technically always negative (law of demand), but economists usually discuss its size, ignoring the minus sign.
+
+Perfectly inelastic demand: PED = 0. Quantity demanded does not change at all when price changes.
+
+Inelastic demand: PED is between 0 and 1 (ignoring sign). Quantity demanded changes proportionally less than price, e.g. a retired Lego set's resale demand (price +10%, quantity -5%, PED = -0.5).
+
+Unitary elastic demand: PED = 1 exactly. Quantity demanded changes by exactly the same percentage as price.
+
+Elastic demand: PED is greater than 1 (ignoring sign). Quantity demanded changes proportionally more than price, e.g. padel club casual court bookings (price +10%, quantity -20%, PED = -2).
+
+Perfectly elastic demand: PED is infinite. Any price rise at all causes quantity demanded to fall to zero.
+
+Determinant — substitutes: More and closer substitutes make demand more elastic, because buyers can easily switch away when price rises. A generic Lego set (many alternatives) is more elastic than a specific retired set (no substitute).
+
+Determinant — necessity vs luxury: Necessities have more inelastic demand than luxuries, since buyers can't easily go without them.
+
+Determinant — proportion of income: The bigger the share of a buyer's income a good takes up, the more elastic its demand, since a price change is more noticeable.
+
+Determinant — habit-forming/addictive goods: Addictive goods tend to have inelastic demand, since buyers keep purchasing even as price rises.
+
+Determinant — time period: Demand tends to become more elastic over a longer time period, as buyers have more opportunity to find and switch to alternatives.
+
+Determinant — width of definition of the good: A broadly defined good (e.g. "3D-printed products") has more inelastic demand than a narrowly defined one (e.g. "Tom's specific grip design"), because the broad category has fewer substitutes.

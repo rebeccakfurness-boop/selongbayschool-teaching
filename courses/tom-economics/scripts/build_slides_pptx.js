@@ -66,6 +66,81 @@ function bodySlide(pres, title, bodyLines, opts = {}) {
   return s;
 }
 
+function calcSlide(pres, eyebrow, title, lines, result) {
+  const s = pres.addSlide();
+  s.background = { color: WHITE };
+  s.addText(eyebrow, { x: 0.7, y: 0.7, w: 11.9, h: 0.6, fontFace: "Calibri", fontSize: 22, color: NAVY, bold: true });
+  s.addShape("roundRect", { x: 3.9, y: 1.8, w: 5.5, h: 3.6, rectRadius: 0.14, fill: { color: CARD }, line: { type: "none" } });
+  s.addText(title, { x: 4.2, y: 2.1, w: 4.9, h: 0.4, fontFace: "Calibri", fontSize: 14, color: MUTED, bold: true });
+  const paras = lines.map(t => ({ text: t, options: { breakLine: true, paraSpaceAfter: 6, color: INK, fontSize: 15, fontFace: "Calibri" } }));
+  s.addText(paras, { x: 4.2, y: 2.6, w: 4.9, h: 1.6, valign: "top" });
+  s.addText(result, { x: 4.2, y: 4.3, w: 4.9, h: 0.9, fontFace: "Cambria", fontSize: 20, color: NAVY, bold: true });
+  return s;
+}
+
+// ---- PED spectrum: 5 small axis+line diagrams in a row ----
+function pedMiniDiagram(s, x, y, size, slopeType, color) {
+  s.addShape("line", { x, y, w: 0, h: size, line: { color: INK, width: 1.25 } });
+  s.addShape("line", { x, y: y + size, w: size, h: 0, line: { color: INK, width: 1.25 } });
+  const pad = size * 0.15;
+  if (slopeType === "vertical") {
+    s.addShape("line", { x: x + size * 0.5, y: y + pad, w: 0, h: size - pad * 2, line: { color, width: 2.5 } });
+  } else if (slopeType === "horizontal") {
+    s.addShape("line", { x: x + pad, y: y + size * 0.5, w: size - pad * 2, h: 0, line: { color, width: 2.5 } });
+  } else {
+    // diagonal, steepness varies: "steep" | "mid" | "shallow"
+    const insetMap = { steep: 0.32, mid: 0.15, shallow: 0.32 };
+    const inset = insetMap[slopeType] || 0.15;
+    if (slopeType === "shallow") {
+      s.addShape("line", { x: x + pad, y: y + size * 0.35, w: size - pad * 2, h: size * 0.3, line: { color, width: 2.5 } });
+    } else {
+      s.addShape("line", { x: x + size * inset, y: y + pad, w: size - size * inset * 2, h: size - pad * 2, line: { color, width: 2.5 }, flipV: true });
+    }
+  }
+}
+
+function pedSpectrumSlide(pres) {
+  const s = pres.addSlide();
+  s.background = { color: WHITE };
+  s.addText("The PED spectrum", { x: 0.7, y: 0.6, w: 11.9, h: 0.8, fontFace: "Cambria", fontSize: 32, color: NAVY, bold: true });
+  const items = [
+    { slope: "vertical", label: "Perfectly inelastic", sub: "PED = 0", color: NAVY },
+    { slope: "steep", label: "Inelastic", sub: "0 < PED < 1", color: NAVY },
+    { slope: "mid", label: "Unitary", sub: "PED = 1", color: CORAL },
+    { slope: "shallow", label: "Elastic", sub: "PED > 1", color: "1BAF7A" },
+    { slope: "horizontal", label: "Perfectly elastic", sub: "PED = ∞", color: "1BAF7A" },
+  ];
+  const dSize = 1.7, gap = 0.5;
+  const totalW = items.length * dSize + (items.length - 1) * gap;
+  let x = (13.33 - totalW) / 2;
+  const y = 2.2;
+  for (const it of items) {
+    pedMiniDiagram(s, x, y, dSize, it.slope, it.color);
+    s.addText(it.label, { x: x - 0.3, y: y + dSize + 0.15, w: dSize + 0.6, h: 0.35, align: "center", fontFace: "Calibri", fontSize: 12, bold: true, color: NAVY });
+    s.addText(it.sub, { x: x - 0.3, y: y + dSize + 0.5, w: dSize + 0.6, h: 0.3, align: "center", fontFace: "Calibri", fontSize: 11, color: MUTED });
+    x += dSize + gap;
+  }
+  return s;
+}
+
+function cardRowSlide(pres, title, cards) {
+  const s = pres.addSlide();
+  s.background = { color: WHITE };
+  s.addText(title, { x: 0.7, y: 0.6, w: 11.9, h: 0.8, fontFace: "Cambria", fontSize: 30, color: NAVY, bold: true });
+  const n = cards.length;
+  const cardW = 3.6, gap = 0.4;
+  const totalW = n * cardW + (n - 1) * gap;
+  let x = (13.33 - totalW) / 2;
+  const y = 2.0;
+  cards.forEach(c => {
+    s.addShape("roundRect", { x, y, w: cardW, h: 3.4, rectRadius: 0.12, fill: { color: CARD }, line: { type: "none" } });
+    s.addText(c.name, { x: x + 0.3, y: y + 0.3, w: cardW - 0.6, h: 0.6, fontFace: "Calibri", fontSize: 16, bold: true, color: NAVY });
+    s.addText(c.desc, { x: x + 0.3, y: y + 0.95, w: cardW - 0.6, h: 2.2, fontFace: "Calibri", fontSize: 12.5, color: INK, valign: "top", lineSpacingMultiple: 1.25 });
+    x += cardW + gap;
+  });
+  return s;
+}
+
 // ---- a simple demand/supply diagram built from shapes (for Lesson 2) ----
 function dsDiagram(s, x, y, w, h, mode) {
   const axisColor = INK;
@@ -206,11 +281,70 @@ function buildLesson2() {
   return pres;
 }
 
+function buildLesson3() {
+  const pres = new pptxgen();
+  pres.layout = "LAYOUT_WIDE";
+  titleSlide(pres, "Lesson 3 · Syllabus 2.6", "Price Elasticity of Demand", "If Tom raises his prices, does he lose a few customers — or a lot?");
+
+  bodySlide(pres, "Same price rise, different reactions", [
+    "Tom puts up the price of custom padel grips by 10%.",
+    "Would he lose a few customers, or a lot? What would that actually depend on?",
+  ]);
+
+  const s3 = pres.addSlide();
+  s3.background = { color: WHITE };
+  s3.addText("Definition & formula", { x: 0.7, y: 0.7, w: 11.9, h: 0.8, fontFace: "Cambria", fontSize: 30, color: NAVY, bold: true });
+  s3.addText("PED measures how responsive quantity demanded is to a change in price.", { x: 0.9, y: 1.8, w: 10.5, h: 0.7, fontFace: "Calibri", fontSize: 17, color: INK });
+  s3.addShape("roundRect", { x: 2.9, y: 2.7, w: 7.5, h: 1.3, rectRadius: 0.14, fill: { color: NAVY }, line: { type: "none" } });
+  s3.addText("PED = %ΔQd ÷ %ΔP", { x: 2.9, y: 2.7, w: 7.5, h: 1.3, align: "center", valign: "middle", fontFace: "Cambria", fontSize: 30, bold: true, color: "CADCFC" });
+  s3.addText("PED is technically always negative (law of demand) — economists usually just discuss its size, ignoring the minus sign.", { x: 0.9, y: 4.3, w: 10.5, h: 0.9, fontFace: "Calibri", fontSize: 15, color: MUTED, italic: true });
+
+  calcSlide(pres, "🎾 Worked example: elastic", "Padel club casual court booking",
+    ["Price: $20 → $22  (+10%)", "Quantity: 100 → 80 bookings/week  (−20%)"],
+    "PED = −20 ÷ 10 = −2 → Elastic");
+
+  calcSlide(pres, "🧩 Worked example: inelastic", "Retired Lego set, resale market",
+    ["Price: $50 → $55  (+10%)", "Quantity: 40 → 38 sets/month  (−5%)"],
+    "PED = −5 ÷ 10 = −0.5 → Inelastic");
+
+  pedSpectrumSlide(pres);
+
+  cardRowSlide(pres, "Determinants of PED (1/2)", [
+    { name: "Substitutes", desc: "More/closer substitutes = more elastic. A generic Lego set (many alternatives) vs. a specific retired set (no substitute)." },
+    { name: "Necessity vs luxury", desc: "Necessities are more inelastic. Court resurfacing (has to happen) vs. novelty keychains (impulse buy)." },
+    { name: "Share of income", desc: "Bigger share of income = more elastic. A cheap grip (barely noticed) vs. an annual club membership (very noticeable)." },
+  ]);
+
+  cardRowSlide(pres, "Determinants of PED (2/2)", [
+    { name: "Habit-forming", desc: "Addictive goods are more inelastic (classic example: cigarettes)." },
+    { name: "Time period", desc: "More elastic in the long run — customers keep buying out of habit short-term, then switch supplier over time." },
+    { name: "Width of definition", desc: "\"3D-printed products\" broadly (hard to avoid) vs. \"Tom's specific grip design\" narrowly (easy to switch away from)." },
+  ]);
+
+  bodySlide(pres, "Quick check", [
+    "A 10% price rise causes quantity demanded to fall by 25%. Elastic or inelastic?",
+    "Which makes demand more elastic: many substitutes, or being a necessity?",
+  ]);
+
+  bodySlide(pres, "Recap", [
+    "PED = %ΔQd ÷ %ΔP",
+    "0 → perfectly inelastic  ·  0–1 → inelastic  ·  1 → unitary  ·  >1 → elastic  ·  ∞ → perfectly elastic",
+    "Determinants: substitutes, necessity, income share, habit, time, width of definition.",
+  ]);
+
+  closingSlide(pres, "Next lesson", "PED: revenue & significance",
+    "What PED means for how much money Tom actually makes when he changes his prices.");
+
+  return pres;
+}
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   await buildLesson1().writeFile({ fileName: path.join(BASE, "lesson-01", "slides.pptx") });
   console.log("wrote lesson-01/slides.pptx");
   await buildLesson2().writeFile({ fileName: path.join(BASE, "lesson-02", "slides.pptx") });
   console.log("wrote lesson-02/slides.pptx");
+  await buildLesson3().writeFile({ fileName: path.join(BASE, "lesson-03", "slides.pptx") });
+  console.log("wrote lesson-03/slides.pptx");
 }
 run();

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 03 Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted:#898781;
+    --blue:#2a78d6; --orange:#eb6834; --border:rgba(11,11,11,0.12); --grid:#e1e0d9;
+    --warn-bg:#fdf1de; --warn-border:#eb6834;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --blue:#3987e5; --orange:#d95926; --border:rgba(255,255,255,0.14); --grid:#2c2c2a;
+      --warn-bg:#2a2117; --warn-border:#d95926; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 14px; }
+  th, td { border: 1px solid var(--grid); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--grid); font-weight: 600; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 3 — Teaching Guide &amp; Script</h1>
+<p><strong>Syllabus ref: 2.6 Price elasticity of demand (PED)</strong> (2.6.1 Definition · 2.6.2 Calculation &amp; interpretation · 2.6.3 Determinants)<br />
+Linked materials: <code>worksheet.html</code> / <code>worksheet.docx</code> · <code>slides.html</code> / <code>slides.pptx</code> · <code>flashcards.txt</code> — all cover this same syllabus point.</p>
+<h2>Learning objectives</h2>
+<p>By the end of this lesson Tom can:</p>
+<ol>
+<li>Define price elasticity of demand (PED).</li>
+<li>Calculate PED using the formula and classify the result (perfectly inelastic, inelastic, unitary, elastic, perfectly elastic).</li>
+<li>Explain the main determinants of whether demand for a good is elastic or inelastic.</li>
+</ol>
+<h2>Timing breakdown (30 minutes)</h2>
+<p><strong>0–4 min — Hook</strong><br />
+Ask Tom: "If Tom's Print Co. raised the price of custom padel grips by 10%, would he lose a <em>few</em> customers, or a <em>lot</em>? What would that depend on?" Let him speculate — don't correct yet, just surface the intuition that responsiveness varies by product.</p>
+<p><strong>4–8 min — Definition and formula</strong><br />
+State it plainly: PED measures how responsive quantity demanded is to a change in price.</p>
+<p>PED = (% change in quantity demanded) ÷ (% change in price)</p>
+<p>Flag immediately: PED is technically always negative (price up → quantity down, or vice versa — the law of demand), but economists usually just discuss its <em>size</em>, ignoring the minus sign.</p>
+<p><strong>8–16 min — Worked calculations</strong><br />
+Walk through both worked examples on the worksheet together:<br />
+- Padel club casual court bookings: price $20→$22 (+10%), quantity 100→80 bookings/week (−20%). PED = −20/10 = <strong>−2</strong> → elastic (plenty of substitute sports/venues).<br />
+- A retired Lego set on the resale market: price $50→$55 (+10%), quantity 40→38 sets/month (−5%). PED = −5/10 = <strong>−0.5</strong> → inelastic (collectors have no substitute for <em>that exact</em> set).</p>
+<p>For each, get Tom to say out loud which category it falls into: perfectly inelastic (PED = 0) · inelastic (0 to 1) · unitary (exactly 1) · elastic (greater than 1) · perfectly elastic (infinite). Sketch the demand curve shape for each category — steep/vertical for inelastic, flat/horizontal for elastic.</p>
+<p><strong>16–24 min — Determinants of PED</strong><br />
+Go through each, always landing on a Tom's Print Co./padel/Lego example:</p>
+<ul>
+<li><strong>Substitutes</strong> — more/closer substitutes = more elastic. A generic Lego set (many toy alternatives) vs. a specific retired set (no substitute).</li>
+<li><strong>Necessity vs luxury</strong> — necessities are more inelastic. A padel club's court resurfacing (has to happen) vs. Tom's novelty keychains (impulse buy).</li>
+<li><strong>Proportion of income spent</strong> — bigger share of income = more elastic. A cheap grip (tiny share of pocket money, barely noticed) vs. a padel club's annual membership (big share, very noticeable).</li>
+<li><strong>Addictiveness/habit</strong> — habit-forming goods are more inelastic (classic textbook example: cigarettes).</li>
+<li><strong>Time period</strong> — demand is more elastic in the long run as people find alternatives. Tom's regular customers might keep buying grips short-term out of habit even at a higher price, but switch to a rival supplier over a few months.</li>
+<li><strong>Width of definition of the good</strong> — broadly defined goods are more inelastic than narrowly defined ones. "3D-printed products" in general (hard to avoid) vs. "Tom's specific grip design" narrowly (easy to switch to a competitor's).</li>
+</ul>
+<p><strong>24–28 min — Guided practice</strong><br />
+Run through worksheet Section C verbally before Tom writes anything.</p>
+<p><strong>28–30 min — Wrap-up</strong><br />
+Set the worksheet + flashcards for self-directed time. Preview next lesson: "Next time — what PED means for how much <em>money</em> Tom actually makes when he changes his prices."</p>
+<h2>Common misconceptions to watch for</h2>
+<ol>
+<li><strong>Sign confusion.</strong> PED is mathematically negative, but "elastic vs inelastic" is about the <em>size</em> of the number, not its sign. Don't let a negative PED get mistaken for "demand fell."</li>
+<li><strong>Elastic ≠ "big price change."</strong> Elastic means quantity demanded is <em>highly responsive relative to</em> the price change — a small price change causing a big swing in quantity, not just "a big number somewhere."</li>
+<li><strong>Confusing PED determinants with demand shifters.</strong> These explain how <em>responsive</em> demand is, not what <em>shifts</em> the demand curve — don't blend this with the shift-vs-movement distinction from Lesson 2.</li>
+<li><strong>Assuming steepness alone tells you everything.</strong> A steep-looking curve is a useful visual cue for inelastic at this level, but remind Tom the real test is always the calculated percentage change, not just how the line looks.</li>
+</ol>
+<h2>Next lesson</h2>
+<p>Lesson 4 — 2.6 PED continued: revenue relationship &amp; significance.</p>
+</div>
+</body>
+</html>

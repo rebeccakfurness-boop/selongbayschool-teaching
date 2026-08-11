@@ -231,11 +231,67 @@ const LESSON2 = {
   ],
 };
 
+const LESSON3 = {
+  title: "Lesson 3 Worksheet — Price Elasticity of Demand (PED)",
+  syllabusRef: "2.6",
+  sections: [
+    {
+      heading: "Section A — Definitions",
+      items: [
+        { type: "qa", q: "**1a.** Define price elasticity of demand (PED)." },
+        { type: "qa", q: "**1b.** Write out the formula for PED." },
+        { type: "text", text: "**1c.** Fill in the table: match each PED value range to its category." },
+        { type: "table", headers: ["PED value", "Category"], rows: [["0", ""], ["Between 0 and 1", ""], ["Exactly 1", ""], ["Greater than 1", ""], ["Infinite", ""]] },
+      ],
+    },
+    {
+      heading: "Section B — Worked calculations",
+      items: [
+        { type: "qa", q: "**2a.** The padel club raises the price of a casual court booking from $20 to $22. Weekly bookings fall from 100 to 80. Calculate PED and state whether demand is elastic or inelastic." },
+        { type: "qa", q: "**2b.** A retired Lego set's resale price rises from $50 to $55. Monthly sales fall from 40 to 38. Calculate PED and state whether demand is elastic or inelastic." },
+        { type: "qa", q: "**2c.** Tom raises the price of his custom padel grips from $8 to $10. Weekly sales fall from 60 to 54. Calculate PED and state whether demand is elastic or inelastic." },
+      ],
+    },
+    {
+      heading: "Section C — Determinants",
+      items: [
+        { type: "qa", q: "**3a.** Explain why a specific, retired Lego set tends to have inelastic demand, using the idea of substitutes." },
+        { type: "qa", q: "**3b.** Explain why a padel club's annual membership fee is likely to have more elastic demand than a single cheap accessory, using the idea of proportion of income." },
+        { type: "qa", q: "**3c.** Give one reason why demand for \"3D-printed products\" in general is more inelastic than demand for \"Tom's specific grip design\" alone." },
+      ],
+    },
+    {
+      heading: "Section D — Exam-style practice",
+      items: [
+        { type: "mcq", q: "**4.** *(Paper 1 style MCQ)* A 10% rise in price causes quantity demanded to fall by 25%. This good's demand is:", options: ["A. Perfectly inelastic", "B. Inelastic", "C. Unitary", "D. Elastic"] },
+        { type: "mcq", q: "**5.** *(Paper 1 style MCQ)* Which of the following would most likely make demand for a good MORE elastic?", options: ["A. The good is addictive", "B. The good has many close substitutes", "C. The good takes up a tiny share of a buyer's income", "D. The good is a necessity"] },
+        { type: "qa", q: "**6.** *(Paper 2 style, 6 marks)* Explain **three** factors that determine whether demand for a good is elastic or inelastic. Use examples from Tom's Print Co., the padel club, or Lego in your answer." },
+      ],
+    },
+  ],
+  answerKey: [
+    { type: "text", text: "**1a.** A measure of how responsive quantity demanded is to a change in price." },
+    { type: "text", text: "**1b.** PED = % change in quantity demanded ÷ % change in price." },
+    { type: "text", text: "**1c.**" },
+    { type: "table", headers: ["PED value", "Category"], rows: [["0", "Perfectly inelastic"], ["Between 0 and 1", "Inelastic"], ["Exactly 1", "Unitary"], ["Greater than 1", "Elastic"], ["Infinite", "Perfectly elastic"]] },
+    { type: "text", text: "**2a.** % change in price = +10%. % change in quantity = −20%. PED = −20/10 = −2. Elastic (ignoring the sign, size is 2, greater than 1)." },
+    { type: "text", text: "**2b.** % change in price = +10%. % change in quantity = −5%. PED = −5/10 = −0.5. Inelastic (size is 0.5, between 0 and 1)." },
+    { type: "text", text: "**2c.** % change in price = +25%. % change in quantity = −10%. PED = −10/25 = −0.4. Inelastic (size is 0.4, between 0 and 1)." },
+    { type: "text", text: "**3a.** Collectors have no substitute for that exact retired set — nothing else will do — so they keep buying even at a higher price, making demand inelastic." },
+    { type: "text", text: "**3b.** The membership fee is a much larger share of a family's leisure budget than a cheap accessory, so a price rise is far more noticeable and more likely to change behaviour — making demand more elastic. A cheap accessory's price change barely registers, so demand stays inelastic." },
+    { type: "text", text: "**3c.** A broadly defined good (all 3D-printed products) has few or no substitutes — you'd have to go without entirely — whereas a narrowly defined good (one specific design) has an easy substitute in a competitor's version, so demand for the broad category is more inelastic." },
+    { type: "text", text: "**4.** D — the percentage change in quantity demanded (25%) is larger than the percentage change in price (10%), so PED's size is greater than 1." },
+    { type: "text", text: "**5.** B — more substitutes make it easier for buyers to switch away when price rises, making demand more responsive (elastic). A, C and D all point toward inelastic demand." },
+    { type: "text", text: "**6.** Look for **three** developed points (AO2 chains), each identifying a determinant and explaining why it affects responsiveness, e.g.: (i) availability of substitutes — Tom's specific grip design has rival products buyers can switch to, making its demand elastic; (ii) necessity vs luxury — the padel club's court resurfacing is close to essential for the club to keep operating, making it inelastic; (iii) proportion of income — a Lego minifigure accessory is a tiny share of pocket money, so a price rise barely changes buying behaviour, making it inelastic. Full marks need identification + explanation of the effect on responsiveness, not just a list of factors." },
+  ],
+};
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   const jobs = [
     { lesson: "lesson-01", data: LESSON1 },
     { lesson: "lesson-02", data: LESSON2 },
+    { lesson: "lesson-03", data: LESSON3 },
   ];
   for (const job of jobs) {
     const doc = buildDoc(job.data);
