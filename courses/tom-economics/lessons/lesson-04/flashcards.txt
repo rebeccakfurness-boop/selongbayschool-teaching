@@ -1,0 +1,17 @@
+Total revenue (TR): The total amount of money a firm receives from selling its product. TR = Price × Quantity sold.
+
+PED and revenue when demand is inelastic (PED < 1): Price and revenue move in the same direction — a price rise increases total revenue, a price fall decreases total revenue, because quantity demanded changes only a little.
+
+PED and revenue when demand is elastic (PED > 1): Price and revenue move in opposite directions — a price rise decreases total revenue, a price fall increases total revenue, because quantity demanded changes proportionally more than price.
+
+PED and revenue when demand is unitary elastic (PED = 1): Total revenue stays the same whether price rises or falls, because the percentage change in quantity demanded exactly offsets the percentage change in price.
+
+Worked example — elastic demand: Padel club casual court booking. Price $20 to $22 (+10%), quantity 100 to 80 bookings/week (-20%), PED = -2. TR before = $2000, TR after = $1760. Revenue fell despite the price rise.
+
+Worked example — inelastic demand: Retired Lego set resale. Price $50 to $55 (+10%), quantity 40 to 38 sets/month (-5%), PED = -0.5. TR before = $2000, TR after = $2090. Revenue rose.
+
+Significance of PED for firms: Firms use PED to set prices for maximum revenue — raising prices on products with inelastic demand increases revenue, while raising prices on products with elastic demand decreases revenue, so firms with elastic-demand products should consider lowering price or competing on quality instead.
+
+Significance of PED for consumers: A price rise in a good with inelastic demand (a necessity, e.g. electricity) affects a household's budget more than a price rise in a good with elastic demand (a luxury), because inelastic goods are harder to cut back on or substitute away from.
+
+Significance of PED for government: Governments prefer to tax goods with inelastic demand (e.g. fuel, cigarettes) because quantity demanded falls only a little when the tax raises price, so the tax raises substantial and reliable revenue. Taxing a good with elastic demand raises much less revenue, since quantity demanded falls sharply.

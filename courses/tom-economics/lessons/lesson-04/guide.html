@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 04 Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted:#898781;
+    --blue:#2a78d6; --orange:#eb6834; --border:rgba(11,11,11,0.12); --grid:#e1e0d9;
+    --warn-bg:#fdf1de; --warn-border:#eb6834;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --blue:#3987e5; --orange:#d95926; --border:rgba(255,255,255,0.14); --grid:#2c2c2a;
+      --warn-bg:#2a2117; --warn-border:#d95926; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 14px; }
+  th, td { border: 1px solid var(--grid); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--grid); font-weight: 600; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 4 — Comprehensive Teaching Script</h1>
+<p><strong>Syllabus ref: 2.6 Price elasticity of demand — continued</strong> (2.6.4 PED, consumer expenditure &amp; firms' revenue · 2.6.5 Significance of PED)<br />
+Linked materials: <code>worksheet.html</code> / <code>worksheet.docx</code> · <code>slides.html</code> / <code>slides.pptx</code> · <code>flashcards.txt</code></p>
+<p>This is a full script, not just a lesson outline — it's written so you can follow it slide-by-slide live, with what to say, what to ask, what she might ask back, and extra depth if she wants it. You don't need to read it word for word — paraphrase in your own voice — but every idea it covers should land before you move on.</p>
+<h2>Learning objectives</h2>
+<p>By the end of this lesson she can:</p>
+<ol>
+<li>Calculate total revenue (TR = P × Q) before and after a price change.</li>
+<li>Explain why revenue rises or falls after a price change, depending on whether demand is elastic or inelastic.</li>
+<li>Explain why PED matters for the pricing decisions of firms, for consumers' budgets, and for government tax policy.</li>
+</ol>
+<h2>Before you start: what this lesson is responding to</h2>
+<p>Her Lesson 2 worksheet showed two things worth fixing early, and one real gap worth re-teaching. Slides 2–3 handle this directly — don't skip them even though they're not "new content," they're load-bearing for everything that follows today.</p>
+<h2>Slide-by-slide script</h2>
+<h3>Slide 1 — Title</h3>
+<p><em>Say:</em> "Today we're answering a question that actually decides whether Tom's Print Co. makes more or less money: if he raises his prices, does he end up richer or poorer?"</p>
+<h3>Slide 2 — Quick fix: land vs. free goods</h3>
+<p><em>Say:</em> "Quick one before we start — in your factors of production notes, you had land down as a free good. Let's untangle that, because they're actually two separate ideas from two different lessons."<br />
+<em>Ask her:</em> "What's the actual difference between land as a factor of production, and a free good?"<br />
+<em>What a good answer sounds like:</em> Land (1.2) is a factor of production — a resource used to produce things, like the raw filament material. A free good (1.1.3) is something with no opportunity cost to obtain — like sunlight. Land is usually scarce and often costs money (rent); most free goods aren't factors of production at all.<br />
+<em>If she's stuck:</em> Point back to Lesson 1's Tom's Print Co. example — the filament (land) has a real cost and a real supplier. Sunlight doesn't cost Tom anything and nobody's selling it to him.<br />
+<em>If she asks "so is land ever free?":</em> Occasionally something classed as land-type (like a naturally occurring resource nobody's claimed) could be free, but for exam purposes, don't conflate the two categories — they're tested separately.</p>
+<h3>Slide 3 — Quick fix: causes vs. consequences of a price change</h3>
+<p><em>Say:</em> "Second quick one. In Lesson 2 you described a shortage or surplus as what <em>causes</em> a price change. Really close, but the order's flipped — let's fix that now because today's whole lesson builds on it."<br />
+<em>Ask her:</em> "What actually causes a price to change in a market?"<br />
+<em>What a good answer sounds like:</em> A shift in demand and/or supply — caused by a change in one of their non-price determinants (income, tastes, cost of production, number of buyers/sellers, etc.). A shortage or surplus is what you get when price <em>isn't</em> at the new equilibrium yet — it's a symptom, not the cause.<br />
+<em>If she's stuck:</em> Walk it in order: something changes (e.g. more people want padel) → that shifts the demand curve → <em>that</em> creates a shortage at the old price → <em>that</em> is what pushes price up. The shortage is step 3, not step 1.<br />
+<em>Extra context:</em> This is exactly the distinction AO2 marks reward — "identify → explain the mechanism → state the effect" as a chain, not just naming the end state.</p>
+<h3>Slide 4 — Hook</h3>
+<p><em>Say:</em> "So here's today's real question. Tom puts up the price of his padel grips. More money per grip sold... but does he actually end up with <em>more total money</em>? Guess, and tell me why."<br />
+Let her guess before moving on — don't confirm or deny yet, just note what she says so you can circle back to it after Slide 7.</p>
+<h3>Slide 5 — Total revenue formula</h3>
+<p><em>Say:</em> "Revenue is just price times quantity — TR = P × Q. Simple formula, but it's the whole engine of today's lesson: a price change moves P, but it <em>also</em> moves Q, because of PED — and those two moves can fight each other."<br />
+<em>Ask her:</em> "If price goes up but quantity goes down, why isn't it obvious whether total revenue goes up or down?"<br />
+<em>What a good answer sounds like:</em> Because it depends on which effect is bigger — how much price rose vs. how much quantity fell. That's exactly what PED tells you.</p>
+<h3>Slide 6 — Worked example 1 setup: padel bookings (elastic)</h3>
+<p><em>Say:</em> "Remember this one from last lesson — the padel club's 6–8pm slot. Price went from $20 to $22, up 10%. Quantity fell from 100 to 80 bookings a week, down 20%. We calculated PED = −2, elastic. Before I show you — guess: does revenue go up or down?"<br />
+Let her guess and give a reason before revealing.</p>
+<h3>Slide 7 — Reveal: revenue falls</h3>
+<p><em>Say:</em> "TR before: $20 × 100 = $2000. TR after: $22 × 80 = $1760. Revenue actually <em>fell</em>, even though price went up! Because demand is elastic, quantity fell proportionally <em>more</em> than price rose, and that effect wins."<br />
+<em>Ask her:</em> "So if you ran the club, would raising the evening price be a good idea?"<br />
+<em>What a good answer sounds like:</em> It solves the shortage problem (fewer people wanting a slot), but it comes at a real revenue cost — a genuine trade-off, not a free win. Reward her if she spots that these are two <em>different</em> goals (fixing a shortage vs. maximising revenue) that don't automatically point the same way.<br />
+<em>If she asks "so should the club never raise prices?":</em> No — it depends what the club's actual goal is. If the goal is to ration the limited courts fairly, the price rise still makes sense even if revenue dips slightly.</p>
+<h3>Slide 8 — Worked example 2 setup: Lego resale (inelastic)</h3>
+<p><em>Say:</em> "Now the retired Lego set. Price $50 to $55, up 10%. Quantity 40 to 38 sets, down 5%. PED was −0.5, inelastic. Guess again — revenue up or down this time?"</p>
+<h3>Slide 9 — Reveal: revenue rises</h3>
+<p><em>Say:</em> "TR before: $50 × 40 = $2000. TR after: $55 × 38 = $2090. This time revenue <em>rose</em>. Because demand is inelastic, quantity barely moved, so the higher price mostly just... stuck."<br />
+<em>Ask her:</em> "What's the actual rule hiding in these two examples?"<br />
+<em>What a good answer sounds like:</em> When demand is elastic, a price rise loses more in quantity than it gains in price, so revenue falls. When demand is inelastic, a price rise loses very little quantity, so revenue rises. Don't give her the rule yet if she's close — let Slide 12 confirm it.</p>
+<h3>Slide 10 — Your turn: Tom's grips</h3>
+<p><em>Say:</em> "Your turn to do the maths. Tom's grips: price $8 to $10, quantity 60 to 54 — same numbers as last lesson, where you found PED = −0.4, inelastic. Work out TR before and after."<br />
+Let her actually calculate this herself — resist doing it for her. Prompt with "what's the formula again?" if she stalls.</p>
+<h3>Slide 11 — Check: Tom's grips answer</h3>
+<p><em>Say:</em> "Let's check — TR before: $8 × 60 = $480. TR after: $10 × 54 = $540. Revenue rose, and that tracks — inelastic demand again."<br />
+<em>If she got it wrong:</em> Find out whether it was the arithmetic or the concept. If she predicted revenue would fall despite inelastic demand, that's a sign the <em>rule</em> hasn't landed yet — go back to Slide 9's contrast before moving on.</p>
+<h3>Slide 12 — The rule (summary table)</h3>
+<p><em>Say:</em> "Here's the whole lesson in one table. Inelastic demand: price up means revenue up, price down means revenue down — they move together. Elastic demand: price up means revenue down, price down means revenue up — they move opposite. Unitary: revenue doesn't change either way."<br />
+<em>Ask her:</em> "Without a calculator — if a firm knows its product has very elastic demand, should it raise or lower price to boost revenue?"<br />
+<em>What a good answer sounds like:</em> Lower it — elastic demand means a price cut brings in proportionally more extra customers than the discount costs, so revenue rises.</p>
+<h3>Slide 13 — Why it matters: firms, consumers, government</h3>
+<p><em>Say:</em> "This isn't just a maths trick — PED actually drives real decisions. Firms use it to set prices for maximum revenue. Consumers feel it hardest when the things they can't avoid buying — inelastic necessities — go up in price, since they can't easily cut back. And governments use it to choose what to tax: taxing something inelastic, like fuel or cigarettes, raises a lot of reliable revenue because people keep buying it anyway."<br />
+<em>Ask her:</em> "Why might a government prefer to put a tax on cigarettes rather than on, say, a luxury holiday package?"<br />
+<em>What a good answer sounds like:</em> Cigarette demand is inelastic (habit-forming, few substitutes) so the tax raises substantial, predictable revenue without quantity falling much. A luxury holiday has elastic demand — a tax would cause a big drop in bookings, undermining the revenue the tax was meant to raise.<br />
+<em>Extra context if she's interested:</em> This is also <em>why</em> "sin taxes" are popular with governments even when the stated goal is to discourage consumption — inelastic demand means the tax doesn't actually reduce consumption much, but it does raise a lot of money. Worth flagging as a genuine policy tension.</p>
+<h3>Slide 14 — Quick check</h3>
+<p>Ask both questions verbally, out loud, no need to reveal anything on-screen — by now she's seen the pattern three times.<br />
+1. "A firm's product has PED = −3. It's thinking about a price rise. Good idea or bad idea, and why?" <em>(Bad — highly elastic, revenue would fall.)</em><br />
+2. "A firm's product has PED = −0.2. Same question." <em>(Good — very inelastic, revenue would rise.)</em></p>
+<h3>Slide 15 — Recap</h3>
+<p><em>Say:</em> "TR = P × Q. Inelastic demand: price and revenue move together. Elastic demand: price and revenue move opposite. That's why PED matters to firms setting prices, consumers feeling the pinch, and governments choosing what to tax."</p>
+<h3>Slide 16 — Next lesson</h3>
+<p><em>Say:</em> "Next time we do the supply-side version of all this — price elasticity of supply. Same structure, new letter."</p>
+<h2>Wrap-up</h2>
+<p>Set the worksheet for self-directed time, and mention <code>flashcards.txt</code> for NotebookLM. Circle back to her Slide 4 guess once you've done Slide 7 — if she originally guessed "more revenue," that's a good, honest teaching moment to name out loud: the intuitive answer and the correct answer aren't always the same, and that's <em>exactly</em> what PED is for.</p>
+<h2>Next lesson</h2>
+<p>Lesson 5 — 2.7 Price elasticity of supply (PES).</p>
+</div>
+</body>
+</html>

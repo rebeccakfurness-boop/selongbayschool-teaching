@@ -286,12 +286,66 @@ const LESSON3 = {
   ],
 };
 
+const LESSON4 = {
+  title: "Lesson 4 Worksheet — PED: Revenue & Significance",
+  syllabusRef: "2.6 (2.6.4 / 2.6.5)",
+  sections: [
+    {
+      heading: "Section A — Definitions",
+      items: [
+        { type: "qa", q: "**1a.** Write out the formula for total revenue (TR)." },
+        { type: "text", text: "**1b.** Fill in the table: for each PED category, state what happens to revenue when price rises." },
+        { type: "table", headers: ["PED", "Effect on revenue when price RISES"], rows: [["Inelastic (PED < 1)", ""], ["Elastic (PED > 1)", ""], ["Unitary (PED = 1)", ""]] },
+      ],
+    },
+    {
+      heading: "Section B — New calculations",
+      items: [
+        { type: "qa", q: "**2a.** Tom's Print Co. raises the price of its Lego-compatible minifigure accessories from $5 to $6. Weekly sales fall from 200 to 140. Calculate PED, state whether demand is elastic or inelastic, then calculate TR before and after. Did revenue rise or fall?" },
+        { type: "qa", q: "**2b.** The padel club raises its annual membership price from $300 to $330. Membership numbers fall from 150 to 145. Calculate PED, state whether demand is elastic or inelastic, then calculate TR before and after. Did revenue rise or fall?" },
+        { type: "qa", q: "**2c.** Looking at 2a and 2b together: why did the same direction of price change (a rise) lead to opposite effects on revenue?" },
+      ],
+    },
+    {
+      heading: "Section C — Significance",
+      items: [
+        { type: "qa", q: "**3a.** Explain why a firm would want to know whether its product has elastic or inelastic demand before deciding to raise prices." },
+        { type: "qa", q: "**3b.** Explain why a rise in the price of an inelastic necessity (like electricity) affects a household's budget more than a rise in the price of an elastic luxury (like a padel club's casual walk-in rate)." },
+        { type: "qa", q: "**3c.** Explain why governments often place taxes on goods with inelastic demand, such as fuel or cigarettes." },
+      ],
+    },
+    {
+      heading: "Section D — Exam-style practice",
+      items: [
+        { type: "mcq", q: "**4.** *(Paper 1 style MCQ)* A firm's product has PED = −0.3. If the firm raises its price, total revenue will:", options: ["A. Rise", "B. Fall", "C. Stay exactly the same", "D. Become impossible to calculate"] },
+        { type: "mcq", q: "**5.** *(Paper 1 style MCQ)* A firm wants to increase its total revenue and knows its product has highly elastic demand. It should:", options: ["A. Raise the price", "B. Lower the price", "C. Leave the price unchanged, since PED doesn't affect revenue", "D. Double the price"] },
+        { type: "qa", q: "**6.** *(Paper 2 style, 6 marks)* Explain how a government's choice of which goods to tax might be influenced by price elasticity of demand. Use an example in your answer." },
+      ],
+    },
+  ],
+  answerKey: [
+    { type: "text", text: "**1a.** TR = Price × Quantity." },
+    { type: "text", text: "**1b.**" },
+    { type: "table", headers: ["PED", "Effect on revenue when price RISES"], rows: [["Inelastic (PED < 1)", "Revenue rises"], ["Elastic (PED > 1)", "Revenue falls"], ["Unitary (PED = 1)", "No change"]] },
+    { type: "text", text: "**2a.** % change in price = +20%. % change in quantity = −30%. PED = −30/20 = −1.5, elastic. TR before = $5 × 200 = $1000. TR after = $6 × 140 = $840. Revenue fell — consistent with elastic demand." },
+    { type: "text", text: "**2b.** % change in price = +10%. % change in quantity ≈ −3.3% (145 is about a 3.3% fall from 150). PED ≈ −0.33, inelastic. TR before = $300 × 150 = $45,000. TR after = $330 × 145 = $47,850. Revenue rose — consistent with inelastic demand." },
+    { type: "text", text: "**2c.** Because the two goods have different PED: the accessories have elastic demand (many substitute toys/accessories), so quantity fell proportionally more than price rose, cutting revenue. The membership has inelastic demand (members are committed, few close substitutes for their specific club), so quantity barely fell, and revenue rose. Same direction of price change, opposite effect on revenue, because of the underlying elasticity." },
+    { type: "text", text: "**3a.** Knowing PED lets a firm predict what will actually happen to revenue, not just to price — a firm with inelastic demand can safely raise prices to raise revenue, but a firm with elastic demand would see revenue fall if it raised prices, so it should look at other strategies (e.g. improving quality, cutting costs) instead." },
+    { type: "text", text: "**3b.** A household can't easily cut back on an inelastic necessity like electricity, so a price rise there directly increases their spending with no easy substitute — it eats into the budget. An elastic luxury like a casual padel booking is easy to cut back on or substitute away from, so a price rise there has much less impact on the household's overall spending, since they simply buy less of it." },
+    { type: "text", text: "**3c.** Taxing an inelastic good means quantity demanded barely falls when the tax pushes the price up, so the government collects a large, reliable amount of tax revenue. Taxing an elastic good would cause a big fall in quantity demanded, undermining the amount of revenue the tax actually raises. Example: governments commonly tax fuel or cigarettes (both fairly inelastic, due to few substitutes/habit) rather than, say, luxury holidays (elastic, easily cut back on)." },
+    { type: "text", text: "**4.** A — PED size is 0.3, inelastic, so a price rise increases revenue." },
+    { type: "text", text: "**5.** B — with elastic demand, lowering price brings in proportionally more extra sales than the discount costs, raising total revenue." },
+    { type: "text", text: "**6.** Look for: identification that governments prefer taxing goods with inelastic demand; explanation that this is because quantity demanded falls only a little when price rises due to the tax, so the tax raises substantial and predictable revenue; a named example (fuel, cigarettes, alcohol) with a brief reason why its demand is inelastic (necessity, habit-forming, few substitutes); ideally a contrast with what would happen taxing an elastic good instead (revenue undermined by a bigger fall in quantity). Full marks need the mechanism explained, not just \"governments tax inelastic goods.\"" },
+  ],
+};
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   const jobs = [
     { lesson: "lesson-01", data: LESSON1 },
     { lesson: "lesson-02", data: LESSON2 },
     { lesson: "lesson-03", data: LESSON3 },
+    { lesson: "lesson-04", data: LESSON4 },
   ];
   for (const job of jobs) {
     const doc = buildDoc(job.data);

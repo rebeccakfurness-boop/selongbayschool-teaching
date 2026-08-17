@@ -7,10 +7,19 @@ const path = require("path");
 const NAVY = "1E2761";
 const CORAL = "F96167";
 const GOLD = "D98C00";
+const AQUA = "1BAF7A";
 const WHITE = "FFFFFF";
 const CARD = "F4F5F7";
 const INK = "1A1A1A";
 const MUTED = "5B5B5B";
+
+// NB: pptxgenjs fill colors must be plain 6-digit hex, never 8-digit/alpha-baked (corrupts the
+// file) — use `transparency` for a light tint instead of concatenating an alpha suffix.
+function tagPill(s, label, color) {
+  const w = 0.35 + label.length * 0.11;
+  s.addShape("roundRect", { x: 0.7, y: 0.55, w, h: 0.4, rectRadius: 0.2, fill: { color, transparency: 82 }, line: { type: "none" } });
+  s.addText(label, { x: 0.7, y: 0.55, w, h: 0.4, align: "center", valign: "middle", fontFace: "Calibri", fontSize: 12, bold: true, color });
+}
 
 function titleSlide(pres, eyebrow, title, subtitle) {
   const s = pres.addSlide();
@@ -66,15 +75,56 @@ function bodySlide(pres, title, bodyLines, opts = {}) {
   return s;
 }
 
-function calcSlide(pres, eyebrow, title, lines, result) {
+function calcSlide(pres, eyebrow, title, lines, result, opts = {}) {
   const s = pres.addSlide();
   s.background = { color: WHITE };
-  s.addText(eyebrow, { x: 0.7, y: 0.7, w: 11.9, h: 0.6, fontFace: "Calibri", fontSize: 22, color: NAVY, bold: true });
-  s.addShape("roundRect", { x: 3.9, y: 1.8, w: 5.5, h: 3.6, rectRadius: 0.14, fill: { color: CARD }, line: { type: "none" } });
-  s.addText(title, { x: 4.2, y: 2.1, w: 4.9, h: 0.4, fontFace: "Calibri", fontSize: 14, color: MUTED, bold: true });
+  if (opts.tag) tagPill(s, opts.tag, opts.tagColor || CORAL);
+  s.addText(eyebrow, { x: 0.7, y: opts.tag ? 1.15 : 0.7, w: 11.9, h: 0.6, fontFace: "Calibri", fontSize: 22, color: NAVY, bold: true });
+  s.addShape("roundRect", { x: 3.9, y: 2.1, w: 5.5, h: 3.4, rectRadius: 0.14, fill: { color: CARD }, line: { type: "none" } });
+  s.addText(title, { x: 4.2, y: 2.4, w: 4.9, h: 0.4, fontFace: "Calibri", fontSize: 14, color: MUTED, bold: true });
   const paras = lines.map(t => ({ text: t, options: { breakLine: true, paraSpaceAfter: 6, color: INK, fontSize: 15, fontFace: "Calibri" } }));
-  s.addText(paras, { x: 4.2, y: 2.6, w: 4.9, h: 1.6, valign: "top" });
-  s.addText(result, { x: 4.2, y: 4.3, w: 4.9, h: 0.9, fontFace: "Cambria", fontSize: 20, color: NAVY, bold: true });
+  s.addText(paras, { x: 4.2, y: 2.9, w: 4.9, h: 1.6, valign: "top" });
+  s.addText(result, { x: 4.2, y: 4.6, w: 4.9, h: 0.8, fontFace: "Cambria", fontSize: 18, bold: true, color: opts.resultColor || NAVY });
+  return s;
+}
+
+function ruleTableSlide(pres, title, rows) {
+  const s = pres.addSlide();
+  s.background = { color: WHITE };
+  s.addText(title, { x: 0.7, y: 0.6, w: 11.9, h: 0.8, fontFace: "Cambria", fontSize: 32, color: NAVY, bold: true });
+  const tableRows = rows.map((r, i) => r.map((cell, ci) => {
+    const isHeader = i === 0;
+    let color = INK;
+    if (!isHeader && ci > 0) color = cell.toLowerCase().includes("rise") ? AQUA : cell.toLowerCase().includes("fall") ? CORAL : INK;
+    return {
+      text: cell,
+      options: {
+        bold: isHeader || ci === 0,
+        color: isHeader ? MUTED : color,
+        fill: { color: isHeader ? CARD : WHITE },
+        fontFace: "Calibri",
+        fontSize: 15,
+        align: ci === 0 ? "left" : "center",
+      },
+    };
+  }));
+  s.addTable(tableRows, { x: 2.9, y: 2.0, w: 7.5, colW: [2.5, 2.5, 2.5], border: { type: "solid", color: "D8D8D8", pt: 1 }, autoPage: false });
+  return s;
+}
+
+function blankCalcSlide(pres, eyebrow, title, lines, opts = {}) {
+  const s = pres.addSlide();
+  s.background = { color: WHITE };
+  if (opts.tag) tagPill(s, opts.tag, opts.tagColor || CORAL);
+  s.addText(eyebrow, { x: 0.7, y: opts.tag ? 1.15 : 0.7, w: 11.9, h: 0.6, fontFace: "Calibri", fontSize: 22, color: NAVY, bold: true });
+  s.addShape("roundRect", { x: 3.9, y: 2.1, w: 5.5, h: 3.4, rectRadius: 0.14, fill: { color: CARD }, line: { type: "none" } });
+  s.addText(title, { x: 4.2, y: 2.4, w: 4.9, h: 0.4, fontFace: "Calibri", fontSize: 14, color: MUTED, bold: true });
+  const paras = lines.map(t => ({ text: t, options: { breakLine: true, paraSpaceAfter: 8, color: INK, fontSize: 15, fontFace: "Calibri" } }));
+  s.addText(paras, { x: 4.2, y: 2.9, w: 4.9, h: 1.4, valign: "top" });
+  s.addShape("line", { x: 4.2, y: 4.75, w: 2.0, h: 0, line: { color: MUTED, width: 1.5 } });
+  s.addText("TR before = $____", { x: 4.2, y: 4.35, w: 4.6, h: 0.35, fontFace: "Calibri", fontSize: 14, color: INK });
+  s.addShape("line", { x: 4.2, y: 5.15, w: 2.0, h: 0, line: { color: MUTED, width: 1.5 } });
+  s.addText("TR after = $____", { x: 4.2, y: 4.75, w: 4.6, h: 0.35, fontFace: "Calibri", fontSize: 14, color: INK });
   return s;
 }
 
@@ -338,6 +388,91 @@ function buildLesson3() {
   return pres;
 }
 
+function buildLesson4() {
+  const pres = new pptxgen();
+  pres.layout = "LAYOUT_WIDE";
+  titleSlide(pres, "Lesson 4 · Syllabus 2.6", "PED: Revenue & Significance", "If Tom raises his prices, does he end up richer — or poorer?");
+
+  const fix1 = pres.addSlide();
+  fix1.background = { color: WHITE };
+  tagPill(fix1, "🔧 Quick fix", NAVY);
+  fix1.addText("Land vs. free goods", { x: 0.7, y: 1.4, w: 11.9, h: 0.9, fontFace: "Cambria", fontSize: 30, color: NAVY, bold: true });
+  fix1.addText("Your notes had land down as a free good. What's the actual difference between land as a factor of production, and a free good?", { x: 0.9, y: 2.6, w: 10.8, h: 1.5, fontFace: "Calibri", fontSize: 18, color: INK });
+
+  const fix2 = pres.addSlide();
+  fix2.background = { color: WHITE };
+  tagPill(fix2, "🔧 Quick fix", NAVY);
+  fix2.addText("Causes vs. consequences", { x: 0.7, y: 1.4, w: 11.9, h: 0.9, fontFace: "Cambria", fontSize: 30, color: NAVY, bold: true });
+  fix2.addText("Last lesson, a shortage/surplus got named as the cause of a price change. What actually causes a price to change in a market?", { x: 0.9, y: 2.6, w: 10.8, h: 1.5, fontFace: "Calibri", fontSize: 18, color: INK });
+
+  bodySlide(pres, "Today's real question", [
+    "Tom puts up the price of his padel grips.",
+    "More money per grip sold... but does he end up with more total money?",
+    "Guess — and tell me why.",
+  ]);
+
+  const f = pres.addSlide();
+  f.background = { color: WHITE };
+  f.addText("Total revenue", { x: 0.7, y: 0.7, w: 11.9, h: 0.8, fontFace: "Cambria", fontSize: 30, color: NAVY, bold: true });
+  f.addShape("roundRect", { x: 2.9, y: 1.8, w: 7.5, h: 1.3, rectRadius: 0.14, fill: { color: NAVY }, line: { type: "none" } });
+  f.addText("TR = P × Q", { x: 2.9, y: 1.8, w: 7.5, h: 1.3, align: "center", valign: "middle", fontFace: "Cambria", fontSize: 30, bold: true, color: "CADCFC" });
+  f.addText("A price change moves P. But it also moves Q, because of PED. Those two moves can fight each other — that's the whole lesson.", { x: 0.9, y: 3.4, w: 10.5, h: 1.0, fontFace: "Calibri", fontSize: 16, color: INK });
+
+  calcSlide(pres, "🎾 Padel bookings (elastic)", "Guess before you check",
+    ["Price: $20 → $22  (+10%)", "Quantity: 100 → 80 bookings/week  (−20%)", "PED = −2 (elastic)"],
+    "Revenue: up, down, or the same?", { tag: "🤔 Guess first", tagColor: CORAL });
+
+  calcSlide(pres, "🎾 Padel bookings — answer", "The reveal",
+    ["TR before = $20 × 100 = $2000", "TR after = $22 × 80 = $1760"],
+    "Revenue FELL, despite the price rise", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  calcSlide(pres, "🧩 Retired Lego set (inelastic)", "Guess before you check",
+    ["Price: $50 → $55  (+10%)", "Quantity: 40 → 38 sets/month  (−5%)", "PED = −0.5 (inelastic)"],
+    "Revenue: up, down, or the same?", { tag: "🤔 Guess first", tagColor: CORAL });
+
+  calcSlide(pres, "🧩 Retired Lego set — answer", "The reveal",
+    ["TR before = $50 × 40 = $2000", "TR after = $55 × 38 = $2090"],
+    "Revenue ROSE this time", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  blankCalcSlide(pres, "🖨️ Tom's padel grips", "Your turn — work it out",
+    ["Price: $8 → $10", "Quantity: 60 → 54", "(PED = −0.4, from last lesson)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+
+  calcSlide(pres, "🖨️ Tom's grips — answer", "Check your answer",
+    ["TR before = $8 × 60 = $480", "TR after = $10 × 54 = $540"],
+    "Revenue rose — inelastic, again", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  ruleTableSlide(pres, "The rule", [
+    ["PED", "Price rises", "Price falls"],
+    ["Inelastic (<1)", "Revenue rises", "Revenue falls"],
+    ["Elastic (>1)", "Revenue falls", "Revenue rises"],
+    ["Unitary (=1)", "No change", "No change"],
+  ]);
+
+  cardRowSlide(pres, "Why it matters", [
+    { name: "Firms", desc: "Use PED to set prices for maximum revenue — raise prices on inelastic products, avoid raising (or cut) prices on elastic ones." },
+    { name: "Consumers", desc: "Inelastic necessities hurt household budgets most when prices rise — you can't easily cut back." },
+    { name: "Government", desc: "Taxes work best on inelastic goods (fuel, cigarettes) — quantity barely falls, so tax revenue stays high and reliable." },
+  ]);
+
+  bodySlide(pres, "Quick check", [
+    "A firm's product has PED = −3. It's considering a price rise. Good idea or bad idea?",
+    "A firm's product has PED = −0.2. Same question.",
+  ]);
+
+  bodySlide(pres, "Recap", [
+    "TR = P × Q",
+    "Inelastic demand: price & revenue move together.",
+    "Elastic demand: price & revenue move opposite.",
+    "That's why PED matters to firms' pricing, consumers' budgets, and government tax choices.",
+  ]);
+
+  closingSlide(pres, "Next lesson", "Price elasticity of supply (PES)",
+    "Same structure, new letter — how responsive is quantity supplied to a price change?");
+
+  return pres;
+}
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   await buildLesson1().writeFile({ fileName: path.join(BASE, "lesson-01", "slides.pptx") });
@@ -346,5 +481,7 @@ async function run() {
   console.log("wrote lesson-02/slides.pptx");
   await buildLesson3().writeFile({ fileName: path.join(BASE, "lesson-03", "slides.pptx") });
   console.log("wrote lesson-03/slides.pptx");
+  await buildLesson4().writeFile({ fileName: path.join(BASE, "lesson-04", "slides.pptx") });
+  console.log("wrote lesson-04/slides.pptx");
 }
 run();
