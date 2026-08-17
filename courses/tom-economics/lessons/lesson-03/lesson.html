@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 3 — Price Elasticity of Demand</title>
+<link rel="stylesheet" href="../../assets/lesson-kit.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brandrow">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div class="brand-text">Cambridge IGCSE Economics 0455 · Syllabus 2.6</div>
+      </div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">8</span></div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</div>
+
+<div class="app">
+<div class="stage">
+
+  <section class="step active" data-step="0">
+    <span class="kicker">Lesson 3 · 30 minutes</span>
+    <h1 class="title">Price Elasticity of Demand</h1>
+    <p class="lede">If Tom raises his prices, does he lose a few customers — or a lot? First, a quick check that Lesson 2 stuck.</p>
+    <div class="grid grid-2" id="recapFlips"></div>
+    <p class="note">Tap each card to flip it and check the answer.</p>
+  </section>
+
+  <section class="step" data-step="1">
+    <span class="kicker">Hook</span>
+    <h1 class="title">Same Price Rise, Different Reactions</h1>
+    <div class="card card-dark">
+      Tom puts up the price of custom padel grips by 10%. Would he lose a few customers, or a lot? What would that actually depend on?
+    </div>
+  </section>
+
+  <section class="step" data-step="2">
+    <span class="kicker">Definition &amp; formula</span>
+    <h1 class="title">PED</h1>
+    <p class="lede">Measures how responsive quantity demanded is to a change in price.</p>
+    <div class="card card-gold" style="text-align:center; font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:600;">
+      PED = %&Delta;Qd &divide; %&Delta;P
+    </div>
+    <p class="note" style="margin-top:14px;">PED is technically always negative (law of demand) — economists usually just discuss its size, ignoring the minus sign.</p>
+  </section>
+
+  <section class="step" data-step="3">
+    <span class="kicker">Calculator</span>
+    <h1 class="title">Work Out the PED</h1>
+    <p class="lede">Pick a scenario and see the calculation live.</p>
+    <div class="reader-wrap">
+      <div class="reader-btns" id="readerBtns"></div>
+      <div class="reader-readout" id="readerOut"></div>
+      <p class="note" id="readerNote"></p>
+    </div>
+  </section>
+
+  <section class="step" data-step="4">
+    <span class="kicker">The spectrum</span>
+    <h1 class="title">Five Categories of PED</h1>
+    <p class="lede">Tap each one to see its value and an example.</p>
+    <div class="grid grid-3" id="spectrumGrid"></div>
+  </section>
+
+  <section class="step" data-step="5">
+    <span class="kicker">Determinants</span>
+    <h1 class="title">What Makes Demand Elastic or Inelastic?</h1>
+    <p class="lede">Tap each factor to reveal how it affects PED.</p>
+    <div class="grid grid-3" id="detGrid"></div>
+  </section>
+
+  <section class="step" data-step="6">
+    <span class="kicker">Quick check</span>
+    <h1 class="title">Before Homework...</h1>
+    <div id="quizList"></div>
+  </section>
+
+  <section class="step" data-step="7">
+    <span class="kicker">Recap + homework</span>
+    <h1 class="title">Today's Key Words</h1>
+    <div id="vocabList"></div>
+    <div class="card card-dark" style="margin-top:22px;">
+      <div class="kicker" style="background:rgba(255,255,255,0.12); color:var(--gold);">🏠 Homework — Worksheet 3</div>
+      <ul class="hw-list" id="hwList"></ul>
+    </div>
+    <p class="lede" style="margin-top:20px;">🎉 You can now calculate and classify PED. Next up: what it means for revenue!</p>
+  </section>
+
+</div>
+
+<div class="navbar">
+  <button class="btn btn-ghost" id="prevBtn">← Back</button>
+  <button class="btn btn-primary" id="nextBtn">Next →</button>
+</div>
+</div>
+
+<script src="../../assets/lesson-kit.js"></script>
+<script>
+const recapData = [
+  {term:"Market Disequilibrium", back:"When quantity demanded and quantity supplied are not equal at the current price."},
+  {term:"Shortage", back:"Quantity demanded exceeds quantity supplied at the current price."},
+  {term:"Surplus", back:"Quantity supplied exceeds quantity demanded at the current price."},
+  {term:"Cause of a price change", back:"A shift in demand and/or supply — not the shortage/surplus itself, which is a symptom."}
+];
+
+const readerData = [
+  {label:"🎾 Padel booking", p1:20, p2:22, q1:100, q2:80, ped:"−2.0", cat:"Elastic"},
+  {label:"🧩 Retired Lego set", p1:50, p2:55, q1:40, q2:38, ped:"−0.5", cat:"Inelastic"},
+  {label:"🖨️ Tom's padel grips", p1:8, p2:10, q1:60, q2:54, ped:"−0.4", cat:"Inelastic"}
+];
+const readerNotes = {
+  "Elastic": "Quantity demanded changed proportionally MORE than price — buyers have easy substitutes.",
+  "Inelastic": "Quantity demanded barely changed — buyers have few substitutes, or it's close to a necessity."
+};
+
+const spectrumData = [
+  {emj:"📍", lbl:"Perfectly inelastic", desc:"PED = 0. Quantity demanded doesn't change at all, whatever the price."},
+  {emj:"🐢", lbl:"Inelastic", desc:"0 < PED < 1. Quantity changes proportionally less than price. e.g. the retired Lego set."},
+  {emj:"⚖️", lbl:"Unitary", desc:"PED = 1 exactly. Quantity changes by exactly the same % as price."},
+  {emj:"🐇", lbl:"Elastic", desc:"PED > 1. Quantity changes proportionally more than price. e.g. padel casual bookings."},
+  {emj:"♾️", lbl:"Perfectly elastic", desc:"PED = infinite. Any price rise at all sends quantity demanded to zero."}
+];
+
+const detData = [
+  {emj:"🔄", lbl:"Substitutes", desc:"More/closer substitutes = MORE elastic. Easy to switch away."},
+  {emj:"🍞", lbl:"Necessity vs luxury", desc:"Necessities = MORE inelastic. Hard to go without."},
+  {emj:"💷", lbl:"Share of income", desc:"Bigger share of income = MORE elastic. Price change is noticeable."},
+  {emj:"🚬", lbl:"Habit-forming", desc:"Addictive goods = MORE inelastic. Buyers keep buying anyway."},
+  {emj:"⏳", lbl:"Time period", desc:"MORE elastic in the long run — buyers find alternatives over time."},
+  {emj:"🔎", lbl:"Width of definition", desc:"Broadly defined goods = MORE inelastic than narrowly defined ones."}
+];
+
+const quizData = [
+  {q:"A 10% price rise causes quantity demanded to fall by 25%. This good's demand is:", opts:["Perfectly inelastic","Inelastic","Unitary","Elastic"], correct:3, fb:"25% > 10%, so PED's size is greater than 1 — elastic."},
+  {q:"Which would most likely make demand for a good MORE elastic?", opts:["The good is addictive","The good has many close substitutes","The good is a tiny share of income","The good is a necessity"], correct:1, fb:"More substitutes make it easy to switch away when price rises — more elastic."},
+  {q:"Retired Lego set: price +10%, quantity −5%. What's the PED category?", opts:["Elastic","Perfectly elastic","Inelastic","Perfectly inelastic"], correct:2, fb:"PED = −5/10 = −0.5 — size between 0 and 1, so inelastic."}
+];
+
+const vocabData = [
+  {t:"PED", d:"Price elasticity of demand — how responsive quantity demanded is to a price change."},
+  {t:"PED formula", d:"% change in quantity demanded ÷ % change in price."},
+  {t:"Elastic / Inelastic", d:"PED size > 1 = elastic (very responsive). PED size < 1 = inelastic (not very responsive)."},
+  {t:"Determinants", d:"Substitutes, necessity, income share, habit, time period, width of definition."}
+];
+
+const hwItems = ["Definitions + PED category table", "Worked calculations", "Determinants questions", "Exam-style MCQs + 6-mark question"];
+
+LessonKit.buildFlipGrid(document.getElementById('recapFlips'), recapData);
+LessonKit.buildReader(
+  document.getElementById('readerBtns'),
+  document.getElementById('readerOut'),
+  readerData,
+  [{key:'ped', label:'PED'}, {key:'cat', label:'Category'}],
+  (item) => {
+    document.getElementById('readerNote').textContent =
+      `Price $${item.p1} → $${item.p2}, quantity ${item.q1} → ${item.q2}. ` + readerNotes[item.cat];
+  }
+);
+LessonKit.buildShiftGrid(document.getElementById('spectrumGrid'), spectrumData);
+LessonKit.buildShiftGrid(document.getElementById('detGrid'), detData);
+LessonKit.buildQuiz(document.getElementById('quizList'), quizData);
+LessonKit.buildVocabList(document.getElementById('vocabList'), vocabData);
+LessonKit.buildHomeworkChecklist(document.getElementById('hwList'), hwItems);
+LessonKit.initStepper();
+</script>
+</body>
+</html>

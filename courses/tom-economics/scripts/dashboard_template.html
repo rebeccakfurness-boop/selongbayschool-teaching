@@ -351,25 +351,25 @@ function phaseLabel(phase) {
   }[phase] || phase;
 }
 
-// Builds the "Open guide / Worksheet (+Word) / Slides (+PowerPoint) / Flashcards" buttons
+// Builds the "Open guide / Worksheet (+Word) / Lesson (+PowerPoint) / Flashcards" buttons
 // for the Up Next card. Word/PowerPoint only appear as a small secondary link when generated.
 function homeMaterialButtons(l) {
   const f = l.files || {};
   const parts = [];
-  if (f.guide_html) parts.push(`<a class="btn btn-secondary" href="${l.folder}/guide.html" target="_blank">📘 Open guide</a>`);
+  if (f.guide_html) parts.push(`<a class="btn btn-secondary" href="${l.folder}/guide.html" target="_blank">📘 Teaching script</a>`);
   if (f.worksheet_html) {
     const docx = f.worksheet_docx ? ` <a class="mat-link" href="${l.folder}/worksheet.docx" target="_blank">(.docx)</a>` : '';
     parts.push(`<span class="btn btn-secondary"><a href="${l.folder}/worksheet.html" target="_blank" style="text-decoration:none;color:inherit;">📝 Worksheet</a>${docx}</span>`);
   }
-  if (f.slides_html) {
+  if (f.lesson_html) {
     const pptx = f.slides_pptx ? ` <a class="mat-link" href="${l.folder}/slides.pptx" target="_blank">(.pptx)</a>` : '';
-    parts.push(`<span class="btn btn-secondary"><a href="${l.folder}/slides.html" target="_blank" style="text-decoration:none;color:inherit;">🖥️ Slides</a>${pptx}</span>`);
+    parts.push(`<span class="btn btn-secondary"><a href="${l.folder}/lesson.html" target="_blank" style="text-decoration:none;color:inherit;">🖥️ Interactive lesson</a>${pptx}</span>`);
   }
   if (f.flashcards) parts.push(`<a class="btn btn-secondary" href="${l.folder}/flashcards.txt" target="_blank">🃏 Flashcards</a>`);
   return parts.join('\n');
 }
 
-// Compact "guide · worksheet (docx) · slides (pptx) · cards" line for the Full Sequence table.
+// Compact "guide · worksheet (docx) · lesson (pptx) · cards" line for the Full Sequence table.
 function seqMaterialLinks(l) {
   const f = l.files || {};
   if (!f.guide_html) return `<span class="muted-link">not generated</span>`;
@@ -379,9 +379,9 @@ function seqMaterialLinks(l) {
     const docx = f.worksheet_docx ? ` / <a class="mat-link" href="${l.folder}/worksheet.docx" target="_blank">docx</a>` : '';
     bits.push(`<a class="mat-link" href="${l.folder}/worksheet.html" target="_blank">worksheet</a>${docx}`);
   }
-  if (f.slides_html) {
+  if (f.lesson_html) {
     const pptx = f.slides_pptx ? ` / <a class="mat-link" href="${l.folder}/slides.pptx" target="_blank">pptx</a>` : '';
-    bits.push(`<a class="mat-link" href="${l.folder}/slides.html" target="_blank">slides</a>${pptx}`);
+    bits.push(`<a class="mat-link" href="${l.folder}/lesson.html" target="_blank">lesson</a>${pptx}`);
   }
   if (f.flashcards) bits.push(`<a class="mat-link" href="${l.folder}/flashcards.txt" target="_blank">cards</a>`);
   return bits.join(' · ');

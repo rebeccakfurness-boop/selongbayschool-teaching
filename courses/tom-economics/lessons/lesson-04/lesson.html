@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 4 — PED: Revenue & Significance</title>
+<link rel="stylesheet" href="../../assets/lesson-kit.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brandrow">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div class="brand-text">Cambridge IGCSE Economics 0455 · Syllabus 2.6</div>
+      </div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">9</span></div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</div>
+
+<div class="app">
+<div class="stage">
+
+  <section class="step active" data-step="0">
+    <span class="kicker">Lesson 4 · 30 minutes</span>
+    <h1 class="title">PED: Revenue &amp; Significance</h1>
+    <p class="lede">If Tom raises his prices, does he end up richer — or poorer? First, two quick fixes from last time.</p>
+    <div id="fixList"></div>
+  </section>
+
+  <section class="step" data-step="1">
+    <span class="kicker">Hook</span>
+    <h1 class="title">Today's Real Question</h1>
+    <div class="card card-dark">
+      Tom puts up the price of his padel grips. More money per grip sold... but does he end up with more <i>total</i> money? Guess — and tell me why.
+    </div>
+  </section>
+
+  <section class="step" data-step="2">
+    <span class="kicker">Formula</span>
+    <h1 class="title">Total Revenue</h1>
+    <div class="card card-gold" style="text-align:center; font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:600;">
+      TR = P &times; Q
+    </div>
+    <p class="lede" style="margin-top:16px;">A price change moves P. But it also moves Q, because of PED. Those two moves can fight each other — that's the whole lesson.</p>
+  </section>
+
+  <section class="step" data-step="3">
+    <span class="kicker">Guess, then reveal</span>
+    <h1 class="title">Does Revenue Rise or Fall?</h1>
+    <p class="lede">Guess out loud before you tap each one.</p>
+    <div id="revealList"></div>
+  </section>
+
+  <section class="step" data-step="4">
+    <span class="kicker">Revenue lab</span>
+    <h1 class="title">All Three, Side by Side</h1>
+    <table class="data-table" id="revTable"></table>
+    <p class="note">Notice: the two inelastic products both gained revenue from a price rise. The elastic one lost revenue, despite the higher price.</p>
+  </section>
+
+  <section class="step" data-step="5">
+    <span class="kicker">The rule</span>
+    <h1 class="title">Revenue &amp; PED — the Rule</h1>
+    <table class="cmp" id="ruleTable"></table>
+  </section>
+
+  <section class="step" data-step="6">
+    <span class="kicker">Why it matters</span>
+    <h1 class="title">Firms, Consumers, Government</h1>
+    <p class="lede">Tap each one.</p>
+    <div class="grid grid-3" id="matterGrid"></div>
+  </section>
+
+  <section class="step" data-step="7">
+    <span class="kicker">Quick check</span>
+    <h1 class="title">Before Homework...</h1>
+    <div id="quizList"></div>
+  </section>
+
+  <section class="step" data-step="8">
+    <span class="kicker">Recap + homework</span>
+    <h1 class="title">Today's Key Words</h1>
+    <div id="vocabList"></div>
+    <div class="card card-dark" style="margin-top:22px;">
+      <div class="kicker" style="background:rgba(255,255,255,0.12); color:var(--gold);">🏠 Homework — Worksheet 4</div>
+      <ul class="hw-list" id="hwList"></ul>
+    </div>
+    <p class="lede" style="margin-top:20px;">🎉 You now know why the "obvious" answer (raise price = more money) isn't always true!</p>
+  </section>
+
+</div>
+
+<div class="navbar">
+  <button class="btn btn-ghost" id="prevBtn">← Back</button>
+  <button class="btn btn-primary" id="nextBtn">Next →</button>
+</div>
+</div>
+
+<script src="../../assets/lesson-kit.js"></script>
+<script>
+const fixData = [
+  {text:"🔧 Quick fix: what's the difference between land as a factor of production, and a free good?", ans:"Land (1.2) is a factor of production — a resource used to produce things, like the raw filament material. A free good (1.1.3) has no opportunity cost to obtain, like sunlight. Land is usually scarce and often costs money (rent); most free goods aren't factors of production at all."},
+  {text:"🔧 Quick fix: what actually CAUSES a price to change in a market?", ans:"A shift in demand and/or supply — caused by a change in a non-price determinant. A shortage or surplus is a symptom of price not yet being at the new equilibrium, not the cause."}
+];
+
+const revealData = [
+  {text:"🎾 Padel bookings: $20→$22 (+10%), 100→80 bookings (−20%). PED = −2, elastic. Revenue?", ans:"TR before = $20×100 = $2000. TR after = $22×80 = $1760. Revenue FELL, despite the price rise!", tags:[{label:"FELL ↓", cls:"tag-down"}]},
+  {text:"🧩 Retired Lego set: $50→$55 (+10%), 40→38 sets (−5%). PED = −0.5, inelastic. Revenue?", ans:"TR before = $50×40 = $2000. TR after = $55×38 = $2090. Revenue ROSE this time.", tags:[{label:"ROSE ↑", cls:"tag-up"}]},
+  {text:"🖨️ Tom's grips: $8→$10, 60→54 (PED = −0.4, inelastic — your turn to work it out). Revenue?", ans:"TR before = $8×60 = $480. TR after = $10×54 = $540. Revenue rose — inelastic, again.", tags:[{label:"ROSE ↑", cls:"tag-up"}]}
+];
+
+const revRows = [
+  ["🎾 Padel booking", "$20 → $22", "100 → 80", "$2000 → $1760", "Elastic"],
+  ["🧩 Retired Lego set", "$50 → $55", "40 → 38", "$2000 → $2090", "Inelastic"],
+  ["🖨️ Tom's grips", "$8 → $10", "60 → 54", "$480 → $540", "Inelastic"]
+];
+
+const ruleRows = [
+  ["PED", "Price rises", "Price falls"],
+  ["Inelastic (&lt;1)", "Revenue rises", "Revenue falls"],
+  ["Elastic (&gt;1)", "Revenue falls", "Revenue rises"],
+  ["Unitary (=1)", "No change", "No change"]
+];
+
+const matterData = [
+  {emj:"🏭", lbl:"Firms", desc:"Use PED to set prices for maximum revenue — raise prices on inelastic products, avoid raising (or cut) prices on elastic ones."},
+  {emj:"🛒", lbl:"Consumers", desc:"Inelastic necessities hurt household budgets most when prices rise — you can't easily cut back."},
+  {emj:"🏛️", lbl:"Government", desc:"Taxes work best on inelastic goods (fuel, cigarettes) — quantity barely falls, so tax revenue stays high and reliable."}
+];
+
+const quizData = [
+  {q:"A firm's product has PED = −3. It's considering a price rise. Good idea or bad idea?", opts:["Good idea — revenue will rise","Bad idea — revenue will fall"], correct:1, fb:"PED = −3 is highly elastic — a price rise causes a bigger proportional fall in quantity, so revenue falls."},
+  {q:"A firm's product has PED = −0.2. Same question — raise the price?", opts:["Good idea — revenue will rise","Bad idea — revenue will fall"], correct:0, fb:"PED = −0.2 is very inelastic — quantity barely falls, so revenue rises."},
+  {q:"Why do governments often tax fuel and cigarettes rather than luxury holidays?", opts:["Fuel/cigarettes have inelastic demand — tax revenue stays high and reliable","Luxury holidays are illegal to tax","Fuel/cigarettes are free goods","There's no reason — it's random"], correct:0, fb:"Inelastic demand means quantity barely falls when tax raises price, so the tax raises substantial, reliable revenue."}
+];
+
+const vocabData = [
+  {t:"Total Revenue (TR)", d:"TR = Price × Quantity — the total money a firm receives from sales."},
+  {t:"Inelastic demand & revenue", d:"Price and revenue move together — a price rise increases revenue."},
+  {t:"Elastic demand & revenue", d:"Price and revenue move opposite — a price rise decreases revenue."},
+  {t:"Significance of PED", d:"Guides firms' pricing decisions, explains consumer budget impact, and shapes government tax policy."}
+];
+
+const hwItems = ["TR formula + rule table", "Two new worked calculations", "Significance essay questions", "Exam-style MCQs + 6-mark question"];
+
+LessonKit.buildRevealCards(document.getElementById('fixList'), fixData, {buttonLabel:'Reveal'});
+LessonKit.buildRevealCards(document.getElementById('revealList'), revealData);
+LessonKit.buildDataTable(document.getElementById('revTable'), ["Scenario","Price","Quantity","TR before → after","PED"], revRows, -1);
+document.getElementById('ruleTable').innerHTML = ruleRows.map((r,i)=>`<tr>${r.map(c=>`<${i===0?'th':'td'}>${c}</${i===0?'th':'td'}>`).join('')}</tr>`).join('');
+LessonKit.buildShiftGrid(document.getElementById('matterGrid'), matterData);
+LessonKit.buildQuiz(document.getElementById('quizList'), quizData);
+LessonKit.buildVocabList(document.getElementById('vocabList'), vocabData);
+LessonKit.buildHomeworkChecklist(document.getElementById('hwList'), hwItems);
+LessonKit.initStepper();
+</script>
+</body>
+</html>

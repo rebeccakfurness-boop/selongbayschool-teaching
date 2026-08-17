@@ -213,7 +213,7 @@ for i, ((phase, ref, title), date) in enumerate(zip(units, lesson_dates), 1):
         "guide_html": has_file(folder_name, "guide.html"),
         "worksheet_html": has_file(folder_name, "worksheet.html"),
         "worksheet_docx": has_file(folder_name, "worksheet.docx"),
-        "slides_html": has_file(folder_name, "slides.html"),
+        "lesson_html": has_file(folder_name, "lesson.html"),
         "slides_pptx": has_file(folder_name, "slides.pptx"),
         "flashcards": has_file(folder_name, "flashcards.txt"),
     }
