@@ -145,6 +145,33 @@
     container.innerHTML = items.map((t) => `<li><div class="hw-box"></div>${t}</li>`).join('');
   };
 
+  // ---------- Worked-example step-by-step walkthrough ----------
+  // steps: [{ label, detail }] — the last item is auto-highlighted as the final answer.
+  LessonKit.buildStepsList = function (container, steps) {
+    steps.forEach((s, i) => {
+      const isFinal = i === steps.length - 1;
+      const item = document.createElement('div');
+      item.className = 'step-item' + (isFinal ? ' final' : '');
+      item.innerHTML = `<div class="step-num">${isFinal ? '✓' : i + 1}</div>
+        <div class="step-body"><div class="step-label">${s.label}</div><div class="step-detail">${s.detail}</div></div>`;
+      container.appendChild(item);
+    });
+  };
+
+  // ---------- Bar comparison (e.g. quantity demanded vs supplied) ----------
+  // bars: [{ label, value, color }], opts: { max } (defaults to the largest value present)
+  LessonKit.buildBarCompare = function (container, bars, opts = {}) {
+    const max = opts.max || Math.max(...bars.map((b) => b.value)) * 1.1;
+    bars.forEach((b) => {
+      const pct = Math.max(6, Math.round((b.value / max) * 100));
+      const row = document.createElement('div');
+      row.className = 'bar-row';
+      row.innerHTML = `<div class="bar-top"><span>${b.label}</span><span>${b.value}</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:${pct}%; background:${b.color};"><span>${b.value}</span></div></div>`;
+      container.appendChild(row);
+    });
+  };
+
   // ---------- Stepper navigation engine ----------
   // Call once after all step content is built. Wires dots, prev/next buttons, keyboard arrows.
   LessonKit.initStepper = function (opts = {}) {

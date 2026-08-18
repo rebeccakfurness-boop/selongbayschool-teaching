@@ -15,7 +15,7 @@
         <div class="brand-mark"></div>
         <div class="brand-text">Cambridge IGCSE Economics 0455 · Syllabus 2.6</div>
       </div>
-      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">8</span></div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">11</span></div>
     </div>
     <div class="dots" id="dots"></div>
   </div>
@@ -41,19 +41,29 @@
   </section>
 
   <section class="step" data-step="2">
-    <span class="kicker">Definition &amp; formula</span>
-    <h1 class="title">PED</h1>
-    <p class="lede">Measures how responsive quantity demanded is to a change in price.</p>
+    <span class="kicker">New idea</span>
+    <h1 class="title">Introducing PED</h1>
+    <p class="lede">Price elasticity of demand (PED) measures how <b>responsive</b> quantity demanded is to a change in price — in other words, exactly the question we just asked about Tom's grips.</p>
     <div class="card card-gold" style="text-align:center; font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:600;">
       PED = %&Delta;Qd &divide; %&Delta;P
     </div>
-    <p class="note" style="margin-top:14px;">PED is technically always negative (law of demand) — economists usually just discuss its size, ignoring the minus sign.</p>
+    <div class="card" style="margin-top:16px;">
+      Read it as: "the percentage change in quantity demanded, divided by the percentage change in price." It's a ratio — it tells you how many times bigger (or smaller) the reaction in quantity is, compared to the change in price that caused it.
+    </div>
+    <p class="note" style="margin-top:14px;">PED is technically always negative (law of demand: price and quantity move opposite ways) — economists usually just discuss its size, ignoring the minus sign.</p>
   </section>
 
   <section class="step" data-step="3">
-    <span class="kicker">Calculator</span>
+    <span class="kicker">Worked together</span>
+    <h1 class="title">Let's Calculate One, Step by Step</h1>
+    <p class="lede">Padel club casual court booking: price rises from $20 to $22, and weekly bookings fall from 100 to 80.</p>
+    <div class="steps-flow" id="workedSteps"></div>
+  </section>
+
+  <section class="step" data-step="4">
+    <span class="kicker">Now you try</span>
     <h1 class="title">Work Out the PED</h1>
-    <p class="lede">Pick a scenario and see the calculation live.</p>
+    <p class="lede">Pick a different scenario and calculate it the same way.</p>
     <div class="reader-wrap">
       <div class="reader-btns" id="readerBtns"></div>
       <div class="reader-readout" id="readerOut"></div>
@@ -61,27 +71,39 @@
     </div>
   </section>
 
-  <section class="step" data-step="4">
+  <section class="step" data-step="5">
+    <span class="kicker">Why classify it?</span>
+    <h1 class="title">Naming the Categories</h1>
+    <p class="lede">A PED number on its own isn't that useful to say out loud in an exam — Cambridge wants you to know which <i>category</i> it falls into, because each category behaves differently and matters for different reasons (we'll see exactly why next lesson, when we look at revenue). There are five categories, running from "doesn't react at all" to "reacts infinitely."</p>
+  </section>
+
+  <section class="step" data-step="6">
     <span class="kicker">The spectrum</span>
     <h1 class="title">Five Categories of PED</h1>
     <p class="lede">Tap each one to see its value and an example.</p>
     <div class="grid grid-3" id="spectrumGrid"></div>
   </section>
 
-  <section class="step" data-step="5">
+  <section class="step" data-step="7">
+    <span class="kicker">New question</span>
+    <h1 class="title">Why Are Some Goods Elastic and Others Aren't?</h1>
+    <p class="lede">Padel casual bookings turned out elastic. The retired Lego set turned out inelastic. That's not random — specific features of a good push its PED one way or the other. Six factors decide it.</p>
+  </section>
+
+  <section class="step" data-step="8">
     <span class="kicker">Determinants</span>
     <h1 class="title">What Makes Demand Elastic or Inelastic?</h1>
     <p class="lede">Tap each factor to reveal how it affects PED.</p>
     <div class="grid grid-3" id="detGrid"></div>
   </section>
 
-  <section class="step" data-step="6">
+  <section class="step" data-step="9">
     <span class="kicker">Quick check</span>
     <h1 class="title">Before Homework...</h1>
     <div id="quizList"></div>
   </section>
 
-  <section class="step" data-step="7">
+  <section class="step" data-step="10">
     <span class="kicker">Recap + homework</span>
     <h1 class="title">Today's Key Words</h1>
     <div id="vocabList"></div>
@@ -109,8 +131,14 @@ const recapData = [
   {term:"Cause of a price change", back:"A shift in demand and/or supply — not the shortage/surplus itself, which is a symptom."}
 ];
 
+const workedStepsData = [
+  {label:"Step 1 — % change in price", detail:"($22 − $20) ÷ $20 = +10%"},
+  {label:"Step 2 — % change in quantity demanded", detail:"(80 − 100) ÷ 100 = −20%"},
+  {label:"Step 3 — divide quantity change by price change", detail:"PED = −20% ÷ 10% = −2"},
+  {label:"Step 4 — classify it (ignore the minus sign)", detail:"Size is 2, which is greater than 1 → Elastic"}
+];
+
 const readerData = [
-  {label:"🎾 Padel booking", p1:20, p2:22, q1:100, q2:80, ped:"−2.0", cat:"Elastic"},
   {label:"🧩 Retired Lego set", p1:50, p2:55, q1:40, q2:38, ped:"−0.5", cat:"Inelastic"},
   {label:"🖨️ Tom's padel grips", p1:8, p2:10, q1:60, q2:54, ped:"−0.4", cat:"Inelastic"}
 ];
@@ -152,6 +180,7 @@ const vocabData = [
 const hwItems = ["Definitions + PED category table", "Worked calculations", "Determinants questions", "Exam-style MCQs + 6-mark question"];
 
 LessonKit.buildFlipGrid(document.getElementById('recapFlips'), recapData);
+LessonKit.buildStepsList(document.getElementById('workedSteps'), workedStepsData);
 LessonKit.buildReader(
   document.getElementById('readerBtns'),
   document.getElementById('readerOut'),

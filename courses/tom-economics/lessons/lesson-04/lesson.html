@@ -15,7 +15,7 @@
         <div class="brand-mark"></div>
         <div class="brand-text">Cambridge IGCSE Economics 0455 · Syllabus 2.6</div>
       </div>
-      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">9</span></div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">13</span></div>
     </div>
     <div class="dots" id="dots"></div>
   </div>
@@ -40,48 +40,82 @@
   </section>
 
   <section class="step" data-step="2">
-    <span class="kicker">Formula</span>
+    <span class="kicker">New idea</span>
     <h1 class="title">Total Revenue</h1>
+    <p class="lede">Revenue isn't profit — it's simply the total money coming <b>in</b> from sales, before any costs are subtracted.</p>
     <div class="card card-gold" style="text-align:center; font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:600;">
       TR = P &times; Q
     </div>
-    <p class="lede" style="margin-top:16px;">A price change moves P. But it also moves Q, because of PED. Those two moves can fight each other — that's the whole lesson.</p>
+    <div class="card" style="margin-top:16px;">
+      If Tom sells 60 grips at $8 each, his revenue is $480 — that's <i>all</i> the money changing hands, regardless of what it cost him to make them.
+    </div>
   </section>
 
   <section class="step" data-step="3">
-    <span class="kicker">Guess, then reveal</span>
-    <h1 class="title">Does Revenue Rise or Fall?</h1>
-    <p class="lede">Guess out loud before you tap each one.</p>
-    <div id="revealList"></div>
+    <span class="kicker">Why isn't this obvious?</span>
+    <h1 class="title">Two Things Move at Once</h1>
+    <p class="lede">When Tom changes his price, it doesn't just change P. Because of PED, it also changes Q — quantity sold moves too. And TR depends on <i>both</i>.</p>
+    <div class="card">
+      Raise the price, and P goes up — that alone would raise revenue. But quantity demanded falls at the same time — that alone would lower revenue. <b>Which effect wins depends entirely on PED.</b> That's the whole lesson, and it's why "just raise the price" isn't always the right call.
+    </div>
   </section>
 
   <section class="step" data-step="4">
+    <span class="kicker">Worked together</span>
+    <h1 class="title">Let's Work One Through Fully</h1>
+    <p class="lede">Padel casual bookings: price $20 → $22 (+10%), quantity 100 → 80 (−20%). We know from Lesson 3 this is PED = −2, elastic.</p>
+    <div class="steps-flow" id="workedSteps"></div>
+  </section>
+
+  <section class="step" data-step="5">
+    <span class="kicker">Now you try</span>
+    <h1 class="title">Does Revenue Rise or Fall?</h1>
+    <p class="lede">Same method — guess out loud before you tap each one.</p>
+    <div id="revealList"></div>
+  </section>
+
+  <section class="step" data-step="6">
     <span class="kicker">Revenue lab</span>
     <h1 class="title">All Three, Side by Side</h1>
     <table class="data-table" id="revTable"></table>
     <p class="note">Notice: the two inelastic products both gained revenue from a price rise. The elastic one lost revenue, despite the higher price.</p>
   </section>
 
-  <section class="step" data-step="5">
+  <section class="step" data-step="7">
+    <span class="kicker">Spot the pattern</span>
+    <h1 class="title">So What's the Actual Rule?</h1>
+    <p class="lede">Look back at those three results. Notice the pattern isn't about whether price went up — it's about how <i>elastic</i> the demand was.</p>
+    <div class="card">
+      When demand is <b>inelastic</b>, quantity barely reacts, so the higher price mostly just sticks — revenue rises. When demand is <b>elastic</b>, quantity reacts more than price did, so the loss in sales outweighs the higher price — revenue falls. The same logic works in reverse for a price <i>cut</i>.
+    </div>
+  </section>
+
+  <section class="step" data-step="8">
     <span class="kicker">The rule</span>
     <h1 class="title">Revenue &amp; PED — the Rule</h1>
     <table class="cmp" id="ruleTable"></table>
   </section>
 
-  <section class="step" data-step="6">
+  <section class="step" data-step="9">
+    <span class="kicker">Zooming out</span>
+    <h1 class="title">Why Does Any of This Matter?</h1>
+    <p class="lede">This isn't just a maths trick you'll never use again — PED genuinely drives real decisions for three different groups.</p>
+  </section>
+
+  <section class="step" data-step="10">
     <span class="kicker">Why it matters</span>
     <h1 class="title">Firms, Consumers, Government</h1>
     <p class="lede">Tap each one.</p>
     <div class="grid grid-3" id="matterGrid"></div>
   </section>
 
-  <section class="step" data-step="7">
+  <section class="step" data-step="11">
     <span class="kicker">Quick check</span>
     <h1 class="title">Before Homework...</h1>
     <div id="quizList"></div>
   </section>
 
-  <section class="step" data-step="8">
+  <section class="step" data-step="12">
     <span class="kicker">Recap + homework</span>
     <h1 class="title">Today's Key Words</h1>
     <div id="vocabList"></div>
@@ -107,8 +141,14 @@ const fixData = [
   {text:"🔧 Quick fix: what actually CAUSES a price to change in a market?", ans:"A shift in demand and/or supply — caused by a change in a non-price determinant. A shortage or surplus is a symptom of price not yet being at the new equilibrium, not the cause."}
 ];
 
+const workedStepsData = [
+  {label:"Step 1 — total revenue BEFORE the price change", detail:"TR = $20 × 100 = $2000"},
+  {label:"Step 2 — total revenue AFTER the price change", detail:"TR = $22 × 80 = $1760"},
+  {label:"Step 3 — compare", detail:"$1760 is LESS than $2000"},
+  {label:"Result", detail:"Revenue FELL by $240, despite the price rise — because demand is elastic"}
+];
+
 const revealData = [
-  {text:"🎾 Padel bookings: $20→$22 (+10%), 100→80 bookings (−20%). PED = −2, elastic. Revenue?", ans:"TR before = $20×100 = $2000. TR after = $22×80 = $1760. Revenue FELL, despite the price rise!", tags:[{label:"FELL ↓", cls:"tag-down"}]},
   {text:"🧩 Retired Lego set: $50→$55 (+10%), 40→38 sets (−5%). PED = −0.5, inelastic. Revenue?", ans:"TR before = $50×40 = $2000. TR after = $55×38 = $2090. Revenue ROSE this time.", tags:[{label:"ROSE ↑", cls:"tag-up"}]},
   {text:"🖨️ Tom's grips: $8→$10, 60→54 (PED = −0.4, inelastic — your turn to work it out). Revenue?", ans:"TR before = $8×60 = $480. TR after = $10×54 = $540. Revenue rose — inelastic, again.", tags:[{label:"ROSE ↑", cls:"tag-up"}]}
 ];
@@ -148,6 +188,7 @@ const vocabData = [
 const hwItems = ["TR formula + rule table", "Two new worked calculations", "Significance essay questions", "Exam-style MCQs + 6-mark question"];
 
 LessonKit.buildRevealCards(document.getElementById('fixList'), fixData, {buttonLabel:'Reveal'});
+LessonKit.buildStepsList(document.getElementById('workedSteps'), workedStepsData);
 LessonKit.buildRevealCards(document.getElementById('revealList'), revealData);
 LessonKit.buildDataTable(document.getElementById('revTable'), ["Scenario","Price","Quantity","TR before → after","PED"], revRows, -1);
 document.getElementById('ruleTable').innerHTML = ruleRows.map((r,i)=>`<tr>${r.map(c=>`<${i===0?'th':'td'}>${c}</${i===0?'th':'td'}>`).join('')}</tr>`).join('');

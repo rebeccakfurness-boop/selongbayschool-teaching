@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lesson 1 — Factors of Production</title>
 <link rel="stylesheet" href="../../assets/lesson-kit.css">
+<style>
+  .factor-badge{display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:700; padding:6px 14px; border-radius:20px; background:var(--gold-light); color:var(--gold-dark); margin-top:14px;}
+</style>
 </head>
 <body>
 
@@ -15,7 +18,7 @@
         <div class="brand-mark"></div>
         <div class="brand-text">Cambridge IGCSE Economics 0455 · Syllabus 1.2</div>
       </div>
-      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">8</span></div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">14</span></div>
     </div>
     <div class="dots" id="dots"></div>
   </div>
@@ -43,44 +46,115 @@
   </section>
 
   <section class="step" data-step="2">
-    <span class="kicker">Sort it · Factors of production</span>
-    <h1 class="title">Which Factor Is It?</h1>
-    <p class="lede">Everything Tom's Print Co. uses falls into one of four factors of production. Sort each input.</p>
-    <div id="sortList"></div>
-  </section>
-
-  <section class="step" data-step="3">
-    <span class="kicker">Rewards</span>
-    <h1 class="title">Every Factor Earns a Reward</h1>
-    <p class="lede">Tap each factor to reveal what it's paid.</p>
-    <div class="grid grid-2" id="rewardFlips"></div>
-    <div class="card card-gold" style="margin-top:16px;">
-      <b>Watch out:</b> profit is different from the other three rewards. Rent, wages and interest are usually agreed in advance and guaranteed. Profit is what's left over — and it can be negative.
+    <span class="kicker">The big idea</span>
+    <h1 class="title">Four Categories, Every Business, Always</h1>
+    <p class="lede">Every single thing any business produces — a Lego set, a haircut, a padel court booking, a 3D-printed grip — is only possible because it combines resources from four categories. Economists call these the <b>factors of production</b>.</p>
+    <div class="card">
+      No matter how different two businesses are, everything they use to produce something sorts into one of just four boxes: <b>Land</b>, <b>Labour</b>, <b>Capital</b>, or <b>Enterprise</b>. Spotting which one something is — that's the actual exam skill. Let's go through each one properly, with Tom's Print Co. as our example the whole way through.
     </div>
   </section>
 
+  <section class="step" data-step="3">
+    <span class="kicker">Factor 1 of 4</span>
+    <h1 class="title">🌍 Land</h1>
+    <div class="card card-gold">
+      <b>Definition:</b> Land means any <b>natural resource</b> used in production — not just literal ground or soil. It includes raw materials, minerals, oil, water, forests — anything nature provides that a business uses.
+    </div>
+    <div class="card" style="margin-top:14px;">
+      <b>In Tom's Print Co.:</b> the PLA plastic filament Tom prints with is made from petroleum — a natural resource. Even though a spool of filament doesn't look anything like "land" in the everyday sense, in economics it counts as land, because it's a raw material taken from nature and turned into something usable.
+    </div>
+    <div class="factor-badge">💰 Reward for supplying land: RENT</div>
+  </section>
+
   <section class="step" data-step="4">
-    <span class="kicker">Quantity vs Quality</span>
-    <h1 class="title">Same Factor, Two Kinds of Change</h1>
-    <p class="lede">Tap each scenario — is it a change in QUANTITY or QUALITY of a factor of production?</p>
-    <div class="grid grid-3" id="qqGrid"></div>
+    <span class="kicker">Factor 2 of 4</span>
+    <h1 class="title">🧑‍🔧 Labour</h1>
+    <div class="card card-gold">
+      <b>Definition:</b> Labour means human physical or mental <b>effort</b> used in production — anyone actually doing the work.
+    </div>
+    <div class="card" style="margin-top:14px;">
+      <b>In Tom's Print Co.:</b> every hour Tom spends designing a CAD file, running the printer, sanding a rough edge, or packaging an order for posting — that's labour. If Tom hired a friend to help pack orders, their time would be labour too.
+    </div>
+    <div class="factor-badge">💰 Reward for supplying labour: WAGES</div>
   </section>
 
   <section class="step" data-step="5">
+    <span class="kicker">Factor 3 of 4</span>
+    <h1 class="title">🖨️ Capital</h1>
+    <div class="card card-gold">
+      <b>Definition:</b> Capital means <b>manufactured goods</b> used to produce other goods or services — machinery, tools, equipment, buildings.
+    </div>
+    <div class="card" style="margin-top:14px;">
+      <b>In Tom's Print Co.:</b> the 3D printer itself, Tom's laptop for designing, his calipers and sandpaper — all capital.
+    </div>
+    <div class="card" style="margin-top:14px; border-color:var(--coral); background:var(--coral-light);">
+      <b>⚠️ The #1 mix-up:</b> in everyday language "capital" often means money or savings. In economics it does <b>not</b>. Capital is the physical machinery itself. The cash Tom used to <i>buy</i> the printer is finance, not capital — the printer sitting in his workshop is the capital.
+    </div>
+    <div class="factor-badge">💰 Reward for supplying capital: INTEREST</div>
+  </section>
+
+  <section class="step" data-step="6">
+    <span class="kicker">Factor 4 of 4</span>
+    <h1 class="title">🎲 Enterprise</h1>
+    <div class="card card-gold">
+      <b>Definition:</b> Enterprise means the willingness and ability to take <b>risks</b> and <b>organise</b> the other three factors, in pursuit of profit.
+    </div>
+    <div class="card" style="margin-top:14px;">
+      <b>In Tom's Print Co.:</b> Tom deciding to actually start the business — choosing what to make, risking his own savings on a printer that might not pay off, organising the land, labour and capital into something that works. That decision-making and risk-taking is enterprise.
+    </div>
+    <div class="factor-badge">💰 Reward for supplying enterprise: PROFIT</div>
+    <p class="note" style="margin-top:14px;">Profit is different from the other three rewards. Rent, wages and interest are usually agreed in advance and guaranteed. Profit is what's left over — and it can be negative.</p>
+  </section>
+
+  <section class="step" data-step="7">
+    <span class="kicker">Now you try</span>
+    <h1 class="title">Which Factor Is It?</h1>
+    <p class="lede">Sort each input from Tom's Print Co. into the correct factor.</p>
+    <div id="sortList"></div>
+  </section>
+
+  <section class="step" data-step="8">
+    <span class="kicker">Quick memory check</span>
+    <h1 class="title">Match the Reward</h1>
+    <p class="lede">Tap each factor to check you've got its reward memorised.</p>
+    <div class="grid grid-2" id="rewardFlips"></div>
+  </section>
+
+  <section class="step" data-step="9">
+    <span class="kicker">A second dimension</span>
+    <h1 class="title">Factors Can Also Change</h1>
+    <p class="lede">So far we've named the four factors. But each one can also change in two different ways:</p>
+    <div class="card">
+      <b>QUANTITY</b> means how much of a factor exists — more machines, more workers, more raw material available. It's <i>more of the same</i>.
+    </div>
+    <div class="card" style="margin-top:14px;">
+      <b>QUALITY</b> means how good that factor is — a better machine, a more skilled worker, a stronger material. It's the <i>same amount, but improved</i>.
+    </div>
+    <p class="lede" style="margin-top:16px;">Example: Tom buying a <b>second</b> 3D printer is a change in <b>quantity</b> of capital. Tom upgrading to a <b>faster, more precise</b> printer is a change in <b>quality</b> of capital — same number of machines, just a better one.</p>
+  </section>
+
+  <section class="step" data-step="10">
+    <span class="kicker">Now you try</span>
+    <h1 class="title">Quantity or Quality?</h1>
+    <p class="lede">Tap each scenario to check your answer.</p>
+    <div class="grid grid-3" id="qqGrid"></div>
+  </section>
+
+  <section class="step" data-step="11">
     <span class="kicker">Common mix-ups</span>
     <h1 class="title">Watch Out For These</h1>
     <p class="lede">Guess first, then tap to reveal.</p>
     <div id="mythList"></div>
   </section>
 
-  <section class="step" data-step="6">
+  <section class="step" data-step="12">
     <span class="kicker">Quick check</span>
     <h1 class="title">Before Homework...</h1>
     <p class="lede">Three quick ones to make sure it's all clicked into place.</p>
     <div id="quizList"></div>
   </section>
 
-  <section class="step" data-step="7">
+  <section class="step" data-step="13">
     <span class="kicker">Recap + homework</span>
     <h1 class="title">Today's Key Words</h1>
     <div id="vocabList"></div>

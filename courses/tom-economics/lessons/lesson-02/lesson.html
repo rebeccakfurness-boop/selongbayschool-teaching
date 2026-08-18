@@ -15,7 +15,7 @@
         <div class="brand-mark"></div>
         <div class="brand-text">Cambridge IGCSE Economics 0455 · Syllabus 2.4.3 / 2.5</div>
       </div>
-      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">8</span></div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">12</span></div>
     </div>
     <div class="dots" id="dots"></div>
   </div>
@@ -44,6 +44,28 @@
   </section>
 
   <section class="step" data-step="2">
+    <span class="kicker">New idea</span>
+    <h1 class="title">When Price Gets It "Wrong"</h1>
+    <p class="lede">You already know equilibrium: the price where quantity demanded exactly equals quantity supplied. But real markets don't always sit at that exact price.</p>
+    <div class="card">
+      Whenever the current price is <b>not</b> the equilibrium price, quantity demanded and quantity supplied won't match. Economists call this <b>market disequilibrium</b>. It comes in two opposite flavours — and the padel club actually has both happening on the same day, at different times.
+    </div>
+  </section>
+
+  <section class="step" data-step="3">
+    <span class="kicker">Two flavours</span>
+    <h1 class="title">Shortage vs Surplus</h1>
+    <div class="card card-gold">
+      <b>Shortage:</b> quantity <b>demanded</b> is greater than quantity <b>supplied</b> at the current price. There isn't enough to go around.
+    </div>
+    <div class="bar-compare" id="barShortage"></div>
+    <div class="card card-gold" style="margin-top:22px;">
+      <b>Surplus:</b> quantity <b>supplied</b> is greater than quantity <b>demanded</b> at the current price. There's too much sitting unused.
+    </div>
+    <div class="bar-compare" id="barSurplus"></div>
+  </section>
+
+  <section class="step" data-step="4">
     <span class="kicker">Explore it</span>
     <h1 class="title">Shortage or Surplus?</h1>
     <p class="lede">Pick a time slot and see what's actually happening in that market.</p>
@@ -54,34 +76,57 @@
     </div>
   </section>
 
-  <section class="step" data-step="3">
-    <span class="kicker">Clearing it</span>
+  <section class="step" data-step="5">
+    <span class="kicker">How markets fix themselves</span>
+    <h1 class="title">The Price Mechanism</h1>
+    <p class="lede">Disequilibrium doesn't last forever — price does the fixing.</p>
+    <div class="card">
+      When there's a <b>shortage</b>, sellers notice far more buyers want the product than they can supply. They raise the price. That reduces quantity demanded (a movement along the demand curve) until it matches the fixed quantity supplied — a new, higher equilibrium.
+    </div>
+    <div class="card" style="margin-top:14px;">
+      When there's a <b>surplus</b>, sellers notice unsold stock piling up. They cut the price to attract more buyers. That increases quantity demanded until it matches quantity supplied — a new, lower equilibrium.
+    </div>
+    <p class="note">This is exactly why the padel club could charge more at 6-8pm and less at 9am — it's pushing each time slot's price toward its own true equilibrium.</p>
+  </section>
+
+  <section class="step" data-step="6">
+    <span class="kicker">Now you try</span>
     <h1 class="title">What Should the Club Do?</h1>
     <p class="lede">Guess first, then tap to reveal.</p>
     <div id="clearList"></div>
   </section>
 
-  <section class="step" data-step="4">
+  <section class="step" data-step="7">
     <span class="kicker">A second example</span>
     <h1 class="title">🧩 Retired Lego Sets</h1>
-    <p class="lede">A set is discontinued. New supply stops, but collectors still want it. Guess, then reveal.</p>
+    <p class="lede">The exact same mechanism shows up in a completely different market. A Lego set gets discontinued by the manufacturer — no more will ever be made — but plenty of collectors still want one. Guess, then reveal.</p>
     <div id="legoList"></div>
   </section>
 
-  <section class="step" data-step="5">
+  <section class="step" data-step="8">
     <span class="kicker">Watch out</span>
     <h1 class="title">Causes vs. Consequences</h1>
-    <p class="lede">A shortage or surplus is <b>not</b> what causes a price change — it's the other way round. Guess first, then tap to reveal.</p>
+    <p class="lede">This is the easiest thing to mix up in this whole topic — worth being really precise about.</p>
+    <div class="card">
+      A shortage or surplus is <b>not</b> what causes a price to change — it's the other way round. The actual chain is: something changes (e.g. more people want padel) → that <b>shifts</b> demand and/or supply → <b>that</b> creates a shortage/surplus at the <i>old</i> price → <b>that</b> is what pushes the price to move.
+    </div>
+    <p class="note">A shortage/surplus is a symptom that price hasn't caught up yet — not the original cause.</p>
+  </section>
+
+  <section class="step" data-step="9">
+    <span class="kicker">Now you try</span>
+    <h1 class="title">Causes vs. Consequences — Check</h1>
+    <p class="lede">Guess first, then tap to reveal.</p>
     <div id="cvcList"></div>
   </section>
 
-  <section class="step" data-step="6">
+  <section class="step" data-step="10">
     <span class="kicker">Quick check</span>
     <h1 class="title">Before Homework...</h1>
     <div id="quizList"></div>
   </section>
 
-  <section class="step" data-step="7">
+  <section class="step" data-step="11">
     <span class="kicker">Recap + homework</span>
     <h1 class="title">Today's Key Words</h1>
     <div id="vocabList"></div>
@@ -149,6 +194,14 @@ const vocabData = [
 const hwItems = ["Definitions", "Apply it: padel club scenario", "Lego resale prediction", "Causes vs consequences", "Exam-style MCQs + 6-mark question"];
 
 LessonKit.buildFlipGrid(document.getElementById('recapFlips'), recapData);
+LessonKit.buildBarCompare(document.getElementById('barShortage'), [
+  {label:"Quantity demanded (6–8pm)", value:140, color:"#F2643B"},
+  {label:"Quantity supplied (fixed courts)", value:90, color:"#0E7C86"}
+]);
+LessonKit.buildBarCompare(document.getElementById('barSurplus'), [
+  {label:"Quantity demanded (9am)", value:40, color:"#F2643B"},
+  {label:"Quantity supplied (fixed courts)", value:90, color:"#0E7C86"}
+], {max:154});
 LessonKit.buildReader(
   document.getElementById('readerBtns'),
   document.getElementById('readerOut'),
