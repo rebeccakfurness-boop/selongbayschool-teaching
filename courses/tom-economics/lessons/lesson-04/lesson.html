@@ -46,12 +46,8 @@
   <section class="step" data-step="2">
     <span class="kicker">Warm-up</span>
     <h1 class="title">Practice: Calculate the PED</h1>
-    <p class="lede">Three new scenarios, same method as last lesson. Pick one, work it out on paper first, then tap to check.</p>
-    <div class="reader-wrap">
-      <div class="reader-btns" id="warmupBtns"></div>
-      <div class="reader-readout" id="warmupOut"></div>
-      <p class="note" id="warmupNote"></p>
-    </div>
+    <p class="lede">Three new scenarios, same method as last lesson. Work each one out on paper first, then tap to reveal the answer.</p>
+    <div id="warmupList"></div>
   </section>
 
   <section class="step" data-step="3">
@@ -165,15 +161,10 @@ const fixData = [
 ];
 
 const warmupData = [
-  {label:"🎾 Racket restring service", p1:15, p2:18, q1:50, q2:45, ped:"−0.5", cat:"Inelastic"},
-  {label:"🏓 Limited-edition padel paddle", p1:150, p2:165, q1:20, q2:18, ped:"−1", cat:"Unitary"},
-  {label:"🧱 Generic Lego minifigure", p1:5, p2:6, q1:100, q2:70, ped:"−1.5", cat:"Elastic"}
+  {text:"🎾 Racket restring service: price $15 → $18 (+20%), 50 → 45 bookings/week (−10%). Calculate the PED and classify it.", ans:"PED = −10% ÷ 20% = −0.5 → Inelastic. Restringing is routine maintenance for a paying padel player — hard to skip, and there's no obvious substitute.", tags:[{label:"INELASTIC", cls:"tag-neutral"}]},
+  {text:"🏓 Limited-edition padel paddle: price $150 → $165 (+10%), 20 → 18 sold (−10%). Calculate the PED and classify it.", ans:"PED = −10% ÷ 10% = −1 → Unitary. A rare \"knife-edge\" case — quantity changed by exactly the same percentage as price.", tags:[{label:"UNITARY", cls:"tag-neutral"}]},
+  {text:"🧱 Generic Lego minifigure: price $5 → $6 (+20%), 100 → 70 sold (−30%). Calculate the PED and classify it.", ans:"PED = −30% ÷ 20% = −1.5 → Elastic. Generic, still-in-production minifigures have loads of close substitutes — easy to switch away from, unlike the one-off retired set from Lesson 3.", tags:[{label:"ELASTIC", cls:"tag-neutral"}]}
 ];
-const warmupNotes = {
-  "Inelastic": "Quantity barely reacted — restringing is routine maintenance, not easy to skip.",
-  "Unitary": "Quantity changed by exactly the same percentage as price — a rare, perfectly balanced case.",
-  "Elastic": "Quantity reacted more than price did — generic minifigures have loads of substitutes, so buyers switch away easily."
-};
 
 const workedStepsData = [
   {label:"Step 1 — total revenue BEFORE the price change", detail:"TR = $20 × 100 = $2000"},
@@ -222,16 +213,7 @@ const vocabData = [
 const hwItems = ["TR formula + rule table", "Two new worked calculations", "Significance essay questions", "Exam-style MCQs + 6-mark question"];
 
 LessonKit.buildRevealCards(document.getElementById('fixList'), fixData, {buttonLabel:'Reveal'});
-LessonKit.buildReader(
-  document.getElementById('warmupBtns'),
-  document.getElementById('warmupOut'),
-  warmupData,
-  [{key:'ped', label:'PED'}, {key:'cat', label:'Category'}],
-  (item) => {
-    document.getElementById('warmupNote').textContent =
-      `Price $${item.p1} → $${item.p2}, quantity ${item.q1} → ${item.q2}. ` + warmupNotes[item.cat];
-  }
-);
+LessonKit.buildRevealCards(document.getElementById('warmupList'), warmupData, {buttonLabel:'Reveal answer'});
 LessonKit.buildStepsList(document.getElementById('workedSteps'), workedStepsData);
 LessonKit.buildRevealCards(document.getElementById('revealList'), revealData);
 LessonKit.buildDataTable(document.getElementById('revTable'), ["Scenario","Price","Quantity","TR before → after","PED"], revRows, -1);
