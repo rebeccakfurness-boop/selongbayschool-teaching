@@ -405,6 +405,25 @@ function buildLesson4() {
   fix2.addText("Causes vs. consequences", { x: 0.7, y: 1.4, w: 11.9, h: 0.9, fontFace: "Cambria", fontSize: 30, color: NAVY, bold: true });
   fix2.addText("Last lesson, a shortage/surplus got named as the cause of a price change. What actually causes a price to change in a market?", { x: 0.9, y: 2.6, w: 10.8, h: 1.5, fontFace: "Calibri", fontSize: 18, color: INK });
 
+  const ref = pres.addSlide();
+  ref.background = { color: WHITE };
+  ref.addText("Quick PED refresher", { x: 0.7, y: 0.7, w: 11.9, h: 0.8, fontFace: "Cambria", fontSize: 30, color: NAVY, bold: true });
+  ref.addShape("roundRect", { x: 2.9, y: 1.8, w: 7.5, h: 1.3, rectRadius: 0.14, fill: { color: NAVY }, line: { type: "none" } });
+  ref.addText("PED = %ΔQd ÷ %ΔP", { x: 2.9, y: 1.8, w: 7.5, h: 1.3, align: "center", valign: "middle", fontFace: "Cambria", fontSize: 30, bold: true, color: "CADCFC" });
+  ref.addText("Size < 1 = inelastic. Size > 1 = elastic. Size = 1 = unitary. Let's get a few reps in before we look at revenue.", { x: 0.9, y: 3.4, w: 10.5, h: 1.0, fontFace: "Calibri", fontSize: 16, color: INK });
+
+  calcSlide(pres, "🎾 Racket restring service", "Practice: calculate the PED",
+    ["Price: $15 → $18  (+20%)", "Quantity: 50 → 45 per week  (−10%)"],
+    "PED = −10 ÷ 20 = −0.5 → Inelastic", { tag: "✍️ Practice", tagColor: CORAL });
+
+  calcSlide(pres, "🏓 Limited-edition padel paddle", "Practice: calculate the PED",
+    ["Price: $150 → $165  (+10%)", "Quantity: 20 → 18 sold  (−10%)"],
+    "PED = −10 ÷ 10 = −1 → Unitary", { tag: "✍️ Practice", tagColor: CORAL });
+
+  calcSlide(pres, "🧱 Generic Lego minifigure", "Practice: calculate the PED",
+    ["Price: $5 → $6  (+20%)", "Quantity: 100 → 70 sold  (−30%)"],
+    "PED = −30 ÷ 20 = −1.5 → Elastic", { tag: "✍️ Practice", tagColor: CORAL });
+
   bodySlide(pres, "Today's real question", [
     "Tom puts up the price of his padel grips.",
     "More money per grip sold... but does he end up with more total money?",

@@ -15,7 +15,7 @@
         <div class="brand-mark"></div>
         <div class="brand-text">Cambridge IGCSE Economics 0455 · Syllabus 2.6</div>
       </div>
-      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">13</span></div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">15</span></div>
     </div>
     <div class="dots" id="dots"></div>
   </div>
@@ -32,6 +32,29 @@
   </section>
 
   <section class="step" data-step="1">
+    <span class="kicker">Recap</span>
+    <h1 class="title">Quick PED Refresher</h1>
+    <p class="lede">Last lesson you learned to calculate and classify PED. Before we build on it today, let's remind ourselves of the formula.</p>
+    <div class="card card-gold" style="text-align:center; font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:600;">
+      PED = %&Delta;Qd &divide; %&Delta;P
+    </div>
+    <div class="card" style="margin-top:16px;">
+      Work out the % change in price, work out the % change in quantity demanded, then divide quantity's % change by price's % change. Size &lt; 1 = inelastic. Size &gt; 1 = elastic. Size = 1 = unitary.
+    </div>
+  </section>
+
+  <section class="step" data-step="2">
+    <span class="kicker">Warm-up</span>
+    <h1 class="title">Practice: Calculate the PED</h1>
+    <p class="lede">Three new scenarios, same method as last lesson. Pick one, work it out on paper first, then tap to check.</p>
+    <div class="reader-wrap">
+      <div class="reader-btns" id="warmupBtns"></div>
+      <div class="reader-readout" id="warmupOut"></div>
+      <p class="note" id="warmupNote"></p>
+    </div>
+  </section>
+
+  <section class="step" data-step="3">
     <span class="kicker">Hook</span>
     <h1 class="title">Today's Real Question</h1>
     <div class="card card-dark">
@@ -39,7 +62,7 @@
     </div>
   </section>
 
-  <section class="step" data-step="2">
+  <section class="step" data-step="4">
     <span class="kicker">New idea</span>
     <h1 class="title">Total Revenue</h1>
     <p class="lede">Revenue isn't profit — it's simply the total money coming <b>in</b> from sales, before any costs are subtracted.</p>
@@ -51,7 +74,7 @@
     </div>
   </section>
 
-  <section class="step" data-step="3">
+  <section class="step" data-step="5">
     <span class="kicker">Why isn't this obvious?</span>
     <h1 class="title">Two Things Move at Once</h1>
     <p class="lede">When Tom changes his price, it doesn't just change P. Because of PED, it also changes Q — quantity sold moves too. And TR depends on <i>both</i>.</p>
@@ -60,28 +83,28 @@
     </div>
   </section>
 
-  <section class="step" data-step="4">
+  <section class="step" data-step="6">
     <span class="kicker">Worked together</span>
     <h1 class="title">Let's Work One Through Fully</h1>
     <p class="lede">Padel casual bookings: price $20 → $22 (+10%), quantity 100 → 80 (−20%). We know from Lesson 3 this is PED = −2, elastic.</p>
     <div class="steps-flow" id="workedSteps"></div>
   </section>
 
-  <section class="step" data-step="5">
+  <section class="step" data-step="7">
     <span class="kicker">Now you try</span>
     <h1 class="title">Does Revenue Rise or Fall?</h1>
     <p class="lede">Same method — guess out loud before you tap each one.</p>
     <div id="revealList"></div>
   </section>
 
-  <section class="step" data-step="6">
+  <section class="step" data-step="8">
     <span class="kicker">Revenue lab</span>
     <h1 class="title">All Three, Side by Side</h1>
     <table class="data-table" id="revTable"></table>
     <p class="note">Notice: the two inelastic products both gained revenue from a price rise. The elastic one lost revenue, despite the higher price.</p>
   </section>
 
-  <section class="step" data-step="7">
+  <section class="step" data-step="9">
     <span class="kicker">Spot the pattern</span>
     <h1 class="title">So What's the Actual Rule?</h1>
     <p class="lede">Look back at those three results. Notice the pattern isn't about whether price went up — it's about how <i>elastic</i> the demand was.</p>
@@ -90,32 +113,32 @@
     </div>
   </section>
 
-  <section class="step" data-step="8">
+  <section class="step" data-step="10">
     <span class="kicker">The rule</span>
     <h1 class="title">Revenue &amp; PED — the Rule</h1>
     <table class="cmp" id="ruleTable"></table>
   </section>
 
-  <section class="step" data-step="9">
+  <section class="step" data-step="11">
     <span class="kicker">Zooming out</span>
     <h1 class="title">Why Does Any of This Matter?</h1>
     <p class="lede">This isn't just a maths trick you'll never use again — PED genuinely drives real decisions for three different groups.</p>
   </section>
 
-  <section class="step" data-step="10">
+  <section class="step" data-step="12">
     <span class="kicker">Why it matters</span>
     <h1 class="title">Firms, Consumers, Government</h1>
     <p class="lede">Tap each one.</p>
     <div class="grid grid-3" id="matterGrid"></div>
   </section>
 
-  <section class="step" data-step="11">
+  <section class="step" data-step="13">
     <span class="kicker">Quick check</span>
     <h1 class="title">Before Homework...</h1>
     <div id="quizList"></div>
   </section>
 
-  <section class="step" data-step="12">
+  <section class="step" data-step="14">
     <span class="kicker">Recap + homework</span>
     <h1 class="title">Today's Key Words</h1>
     <div id="vocabList"></div>
@@ -140,6 +163,17 @@ const fixData = [
   {text:"🔧 Quick fix: what's the difference between land as a factor of production, and a free good?", ans:"Land (1.2) is a factor of production — a resource used to produce things, like the raw filament material. A free good (1.1.3) has no opportunity cost to obtain, like sunlight. Land is usually scarce and often costs money (rent); most free goods aren't factors of production at all."},
   {text:"🔧 Quick fix: what actually CAUSES a price to change in a market?", ans:"A shift in demand and/or supply — caused by a change in a non-price determinant. A shortage or surplus is a symptom of price not yet being at the new equilibrium, not the cause."}
 ];
+
+const warmupData = [
+  {label:"🎾 Racket restring service", p1:15, p2:18, q1:50, q2:45, ped:"−0.5", cat:"Inelastic"},
+  {label:"🏓 Limited-edition padel paddle", p1:150, p2:165, q1:20, q2:18, ped:"−1", cat:"Unitary"},
+  {label:"🧱 Generic Lego minifigure", p1:5, p2:6, q1:100, q2:70, ped:"−1.5", cat:"Elastic"}
+];
+const warmupNotes = {
+  "Inelastic": "Quantity barely reacted — restringing is routine maintenance, not easy to skip.",
+  "Unitary": "Quantity changed by exactly the same percentage as price — a rare, perfectly balanced case.",
+  "Elastic": "Quantity reacted more than price did — generic minifigures have loads of substitutes, so buyers switch away easily."
+};
 
 const workedStepsData = [
   {label:"Step 1 — total revenue BEFORE the price change", detail:"TR = $20 × 100 = $2000"},
@@ -188,6 +222,16 @@ const vocabData = [
 const hwItems = ["TR formula + rule table", "Two new worked calculations", "Significance essay questions", "Exam-style MCQs + 6-mark question"];
 
 LessonKit.buildRevealCards(document.getElementById('fixList'), fixData, {buttonLabel:'Reveal'});
+LessonKit.buildReader(
+  document.getElementById('warmupBtns'),
+  document.getElementById('warmupOut'),
+  warmupData,
+  [{key:'ped', label:'PED'}, {key:'cat', label:'Category'}],
+  (item) => {
+    document.getElementById('warmupNote').textContent =
+      `Price $${item.p1} → $${item.p2}, quantity ${item.q1} → ${item.q2}. ` + warmupNotes[item.cat];
+  }
+);
 LessonKit.buildStepsList(document.getElementById('workedSteps'), workedStepsData);
 LessonKit.buildRevealCards(document.getElementById('revealList'), revealData);
 LessonKit.buildDataTable(document.getElementById('revTable'), ["Scenario","Price","Quantity","TR before → after","PED"], revRows, -1);
