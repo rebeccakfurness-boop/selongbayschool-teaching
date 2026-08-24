@@ -503,6 +503,20 @@ function buildLesson5() {
     "You already know this cold — today's about the seller's side instead.",
   ]);
 
+  blankCalcSlide(pres, "🔑 Warm-up: Tom's Print Co keychain", "Your turn — PED practice",
+    ["Price: $4 → $5  (+25%)", "Quantity: 80 → 60 per week  (−25%)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "🔑 Keychain — answer", "Check your answer",
+    ["% change in price = +25%", "% change in quantity = −25%"],
+    "PED = −25 ÷ 25 = −1 → Unitary", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  blankCalcSlide(pres, "🎾 Warm-up: padel kids' coaching", "Your turn — PED + TR practice",
+    ["Price: $15 → $18  (+20%)", "Quantity: 40 → 36 sessions/week  (−10%)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "🎾 Kids' coaching — answer", "Check your answer",
+    ["PED = −10 ÷ 20 = −0.5 (inelastic)", "TR before = $15 × 40 = $600", "TR after = $18 × 36 = $648"],
+    "Revenue ROSE — inelastic + price rise", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
   bodySlide(pres, "Who can react faster?", [
     "The padel club wants more courts this summer because demand is booming.",
     "Tom wants to make more grips this week because a big order just came in.",
@@ -582,6 +596,20 @@ function buildLesson6() {
     "PES = %ΔQs ÷ %ΔP, almost always positive.",
     "Determinants: spare capacity, factor mobility, time period, stock, production period, number of producers.",
   ]);
+
+  blankCalcSlide(pres, "👜 Warm-up: padel club tote bag", "Your turn — PED practice",
+    ["Price: $12 → $15  (+25%)", "Quantity: 50 → 30 per month  (−40%)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "👜 Tote bag — answer", "Check your answer",
+    ["% change in price = +25%", "% change in quantity = −40%"],
+    "PED = −40 ÷ 25 = −1.6 → Elastic", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  blankCalcSlide(pres, "📱 Warm-up: Tom's Print Co phone stands", "Your turn — PED + TR practice (a price CUT)",
+    ["Price: $10 → $8  (−20%)", "Quantity: 45 → 63 per week  (+40%)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "📱 Phone stands — answer", "Check your answer",
+    ["PED = 40 ÷ −20 = −2 (elastic)", "TR before = $10 × 45 = $450", "TR after = $8 × 63 = $504"],
+    "Revenue ROSE — elastic + price cut", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
 
   bodySlide(pres, "Nobody's in charge — so how does it work?", [
     "Nobody at Tom's Print Co has ever received a government order saying \"make 60 grips this week, price them at $8.\"",

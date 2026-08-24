@@ -15,7 +15,7 @@
         <div class="brand-mark"></div>
         <div class="brand-text">Cambridge IGCSE Economics 0455 · Syllabus 2.7</div>
       </div>
-      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">11</span></div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">12</span></div>
     </div>
     <div class="dots" id="dots"></div>
   </div>
@@ -33,6 +33,13 @@
   </section>
 
   <section class="step" data-step="1">
+    <span class="kicker">Calculation practice</span>
+    <h1 class="title">Keep PED &amp; TR Sharp</h1>
+    <p class="lede">Before we start a new elasticity, let's make sure last time's skills — PED and total revenue — are still solid. Work each one out on paper first, then tap to reveal the answer.</p>
+    <div id="calcPracticeList"></div>
+  </section>
+
+  <section class="step" data-step="2">
     <span class="kicker">Hook</span>
     <h1 class="title">Who Can React Faster?</h1>
     <div class="card card-dark">
@@ -41,7 +48,7 @@
     </div>
   </section>
 
-  <section class="step" data-step="2">
+  <section class="step" data-step="3">
     <span class="kicker">New idea</span>
     <h1 class="title">Introducing PES</h1>
     <p class="lede">Price elasticity of supply (PES) measures how <b>responsive</b> quantity supplied is to a change in price — exactly the question we just asked about courts vs. grips.</p>
@@ -53,53 +60,53 @@
     </div>
   </section>
 
-  <section class="step" data-step="3">
+  <section class="step" data-step="4">
     <span class="kicker">Worked together</span>
     <h1 class="title">Let's Calculate One, Step by Step</h1>
     <p class="lede">Tom's padel grips: an order surge pushes the price from $8 to $10, and Tom ramps up weekly production from 60 to 90 grips.</p>
     <div class="steps-flow" id="workedSteps"></div>
   </section>
 
-  <section class="step" data-step="4">
+  <section class="step" data-step="5">
     <span class="kicker">Now you try</span>
     <h1 class="title">Practice: Calculate the PES</h1>
     <p class="lede">Three new scenarios. Work each one out on paper first, then tap to reveal the answer.</p>
     <div id="practiceList"></div>
   </section>
 
-  <section class="step" data-step="5">
+  <section class="step" data-step="6">
     <span class="kicker">Why classify it?</span>
     <h1 class="title">Naming the Categories</h1>
     <p class="lede">Just like with PED, Cambridge wants you to name the <i>category</i> a PES value falls into, not just quote the number. Same five-point spectrum, same logic — just applied to sellers this time.</p>
   </section>
 
-  <section class="step" data-step="6">
+  <section class="step" data-step="7">
     <span class="kicker">The spectrum</span>
     <h1 class="title">Five Categories of PES</h1>
     <p class="lede">Tap each one to see its value and an example.</p>
     <div class="grid grid-3" id="spectrumGrid"></div>
   </section>
 
-  <section class="step" data-step="7">
+  <section class="step" data-step="8">
     <span class="kicker">New question</span>
     <h1 class="title">Why Can Some Suppliers React Faster?</h1>
     <p class="lede">Tom's grips turned out elastic. The padel club's courts turned out inelastic. That's not random — specific features of a producer's situation push its PES one way or the other. Six factors decide it.</p>
   </section>
 
-  <section class="step" data-step="8">
+  <section class="step" data-step="9">
     <span class="kicker">Determinants</span>
     <h1 class="title">What Makes Supply Elastic or Inelastic?</h1>
     <p class="lede">Tap each factor to reveal how it affects PES.</p>
     <div class="grid grid-3" id="detGrid"></div>
   </section>
 
-  <section class="step" data-step="9">
+  <section class="step" data-step="10">
     <span class="kicker">Quick check</span>
     <h1 class="title">Before Homework...</h1>
     <div id="quizList"></div>
   </section>
 
-  <section class="step" data-step="10">
+  <section class="step" data-step="11">
     <span class="kicker">Recap + homework</span>
     <h1 class="title">Today's Key Words</h1>
     <div id="vocabList"></div>
@@ -125,6 +132,11 @@ const recapData = [
   {term:"Inelastic demand & revenue", back:"Price and revenue move together — a price rise increases revenue."},
   {term:"Elastic demand & revenue", back:"Price and revenue move opposite — a price rise decreases revenue."},
   {term:"Significance of PED", back:"Guides firms' pricing, explains consumer budget impact, and shapes government tax policy."}
+];
+
+const calcPracticeData = [
+  {text:"🔑 Tom's Print Co keychain: price $4 → $5 (+25%), weekly sales 80 → 60 (−25%). Calculate the PED and classify it.", ans:"PED = −25% ÷ 25% = −1 → Unitary. A rare knife-edge case — quantity changed by exactly the same percentage as price.", tags:[{label:"UNITARY", cls:"tag-neutral"}]},
+  {text:"🎾 Padel club kids' coaching: price $15 → $18 (+20%), attendance 40 → 36 sessions/week (−10%). Calculate the PED, then TR before and after. Did revenue rise or fall?", ans:"PED = −10% ÷ 20% = −0.5 → Inelastic. TR before = $15 × 40 = $600. TR after = $18 × 36 = $648. Revenue ROSE — consistent with inelastic demand and a price rise.", tags:[{label:"ROSE ↑", cls:"tag-up"}]}
 ];
 
 const workedStepsData = [
@@ -173,6 +185,7 @@ const vocabData = [
 const hwItems = ["Definitions + PES formula", "Worked calculations", "Determinants questions", "Exam-style MCQs + 6-mark question"];
 
 LessonKit.buildFlipGrid(document.getElementById('recapFlips'), recapData);
+LessonKit.buildRevealCards(document.getElementById('calcPracticeList'), calcPracticeData, {buttonLabel:'Reveal answer'});
 LessonKit.buildStepsList(document.getElementById('workedSteps'), workedStepsData);
 LessonKit.buildRevealCards(document.getElementById('practiceList'), practiceData, {buttonLabel:'Reveal answer'});
 LessonKit.buildShiftGrid(document.getElementById('spectrumGrid'), spectrumData);
