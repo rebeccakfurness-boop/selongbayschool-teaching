@@ -339,6 +339,118 @@ const LESSON4 = {
   ],
 };
 
+const LESSON5 = {
+  title: "Lesson 5 Worksheet — Price Elasticity of Supply (PES)",
+  syllabusRef: "2.7",
+  sections: [
+    {
+      heading: "Section A — Definitions",
+      items: [
+        { type: "qa", q: "**1a.** Define price elasticity of supply (PES)." },
+        { type: "qa", q: "**1b.** Write out the formula for PES." },
+        { type: "qa", q: "**1c.** Is PES usually positive or negative? Explain why, using the law of supply." },
+        { type: "text", text: "**1d.** Fill in the table: match each PES value range to its category." },
+        { type: "table", headers: ["PES value", "Category"], rows: [["0", ""], ["Between 0 and 1", ""], ["Exactly 1", ""], ["Greater than 1", ""], ["Infinite", ""]] },
+      ],
+    },
+    {
+      heading: "Section B — Worked calculations",
+      items: [
+        { type: "qa", q: "**2a.** An order surge pushes the price of Tom's padel grips from $8 to $10. He ramps up weekly production from 60 to 90. Calculate PES and state whether supply is elastic or inelastic." },
+        { type: "qa", q: "**2b.** Court hire prices at the padel club rise 15% for the peak evening slot, but the club cannot add courts before next year — quantity supplied stays unchanged. Calculate PES and state whether supply is elastic or inelastic." },
+        { type: "qa", q: "**2c.** The price of a limited-edition padel paddle rises from $150 to $180 in the resale market. Because no more will ever be made, quantity supplied stays fixed. Calculate PES and state whether supply is elastic or inelastic." },
+      ],
+    },
+    {
+      heading: "Section C — Determinants",
+      items: [
+        { type: "qa", q: "**3a.** Explain why Tom's grip supply is more elastic than the padel club's court supply, using the idea of spare capacity." },
+        { type: "qa", q: "**3b.** Explain why a padel coaching session (a service) is harder to supply elastically than a padel grip (a physical good), using the idea of ability to store stock." },
+        { type: "qa", q: "**3c.** Give one reason why supply tends to become more elastic over a longer time period." },
+      ],
+    },
+    {
+      heading: "Section D — Exam-style practice",
+      items: [
+        { type: "mcq", q: "**4.** *(Paper 1 style MCQ)* A 5% rise in price causes quantity supplied to rise by 15%. This good's supply is:", options: ["A. Perfectly inelastic", "B. Inelastic", "C. Unitary", "D. Elastic"] },
+        { type: "mcq", q: "**5.** *(Paper 1 style MCQ)* Which of the following would most likely make a firm's supply MORE elastic?", options: ["A. The firm is already running at full capacity", "B. The firm has spare machinery capacity it isn't using", "C. The good takes many months to produce", "D. The firm has no way to store finished stock"] },
+        { type: "qa", q: "**6.** *(Paper 2 style, 6 marks)* Explain **three** factors that determine whether supply of a good is elastic or inelastic. Use examples from Tom's Print Co., the padel club, or Lego in your answer." },
+      ],
+    },
+  ],
+  answerKey: [
+    { type: "text", text: "**1a.** A measure of how responsive quantity supplied is to a change in price." },
+    { type: "text", text: "**1b.** PES = % change in quantity supplied ÷ % change in price." },
+    { type: "text", text: "**1c.** Almost always positive. The law of supply says a higher price gives producers a stronger incentive to supply more, so price and quantity supplied move in the same direction — unlike demand, there's no sign to strip out." },
+    { type: "text", text: "**1d.**" },
+    { type: "table", headers: ["PES value", "Category"], rows: [["0", "Perfectly inelastic"], ["Between 0 and 1", "Inelastic"], ["Exactly 1", "Unitary"], ["Greater than 1", "Elastic"], ["Infinite", "Perfectly elastic"]] },
+    { type: "text", text: "**2a.** % change in price = +25%. % change in quantity supplied = +50%. PES = 50/25 = 2. Elastic (greater than 1)." },
+    { type: "text", text: "**2b.** % change in price = +15%. % change in quantity supplied = 0%. PES = 0/15 = 0. Perfectly inelastic." },
+    { type: "text", text: "**2c.** % change in price = +20%. % change in quantity supplied = 0%. PES = 0/20 = 0. Perfectly inelastic." },
+    { type: "text", text: "**3a.** Tom has an idle second printer he can switch on immediately, so a price rise lets him increase output fast with no new investment needed. The padel club has no spare courts sitting unused — every court is already in use — so it has no equivalent way to respond quickly." },
+    { type: "text", text: "**3b.** A grip can be 3D-printed in advance and held as stock, ready to sell the moment price rises. A coaching session can't be produced ahead of time and stored — it only exists when a coach is actually delivering it — so supply is limited to however many coaches are available right now, whatever the price." },
+    { type: "text", text: "**3c.** Over a longer time period, producers have more opportunity to build new capacity, retrain or hire staff, and new firms have time to enter the market — all of which let quantity supplied respond more fully to a price change." },
+    { type: "text", text: "**4.** D — the percentage change in quantity supplied (15%) is larger than the percentage change in price (5%), so PES's size is greater than 1." },
+    { type: "text", text: "**5.** B — spare machinery capacity lets a firm increase output quickly when price rises, without needing new investment, making supply more responsive (elastic). A, C and D all point toward inelastic supply." },
+    { type: "text", text: "**6.** Look for **three** developed points (AO2 chains), each identifying a determinant and explaining why it affects responsiveness, e.g.: (i) spare capacity — Tom's idle second printer lets him ramp up output fast, making his supply elastic; (ii) length of production/gestation period — building a new padel court takes months, making court supply inelastic in the short run; (iii) ability to store stock — a Lego minifigure accessory can be produced in advance and stockpiled, making its supply more elastic than a service like coaching that can't be stored. Full marks need identification + explanation of the effect on responsiveness, not just a list of factors." },
+  ],
+};
+
+const LESSON6 = {
+  title: "Lesson 6 Worksheet — The Market Economic System",
+  syllabusRef: "2.8",
+  sections: [
+    {
+      heading: "Section A — Definitions",
+      items: [
+        { type: "qa", q: "**1a.** Define the price mechanism." },
+        { type: "qa", q: "**1b.** Define a market economic system." },
+        { type: "qa", q: "**1c.** Define effective demand." },
+        { type: "qa", q: "**1d.** List the five characteristics of a market economic system." },
+      ],
+    },
+    {
+      heading: "Section B — The three basic questions",
+      items: [
+        { type: "qa", q: "**2a.** In a market economy, what decides *what* gets produced?" },
+        { type: "qa", q: "**2b.** In a market economy, what decides *how* it gets produced?" },
+        { type: "qa", q: "**2c.** In a market economy, what decides *for whom* it gets produced?" },
+      ],
+    },
+    {
+      heading: "Section C — Apply it: Tom's Print Co scenarios",
+      items: [
+        { type: "qa", q: "**3a.** Three rival 3D-print shops open near the padel club and compete hard for Tom's customers. Which characteristic of a market economy does this show, and what effect would you expect it to have on price and quality?" },
+        { type: "qa", q: "**3b.** Tom's 3D printer produces plastic waste that ends up in a local stream, but this cost isn't reflected in the $8 price of a grip. Which disadvantage of the market system does this show? Name the concept." },
+        { type: "qa", q: "**3c.** A family that wants to play padel cannot afford the court fees. Explain, using the idea of effective demand, why the market does not respond to their want to play." },
+      ],
+    },
+    {
+      heading: "Section D — Exam-style practice",
+      items: [
+        { type: "mcq", q: "**4.** *(Paper 1 style MCQ)* In a market economic system, resources are allocated mainly through:", options: ["A. Government planning committees", "B. The price mechanism", "C. A public vote", "D. Random allocation"] },
+        { type: "mcq", q: "**5.** *(Paper 1 style MCQ)* Which of the following is a genuine disadvantage of a market economic system?", options: ["A. It always produces perfectly equal outcomes", "B. It automatically accounts for the cost of pollution", "C. It can leave genuine needs unmet if buyers cannot afford to pay", "D. It requires a large government planning department"] },
+        { type: "qa", q: "**6.** *(Paper 2 style, 6 marks)* Explain **three** advantages and/or disadvantages of relying on the price mechanism to allocate resources. Use examples from Tom's Print Co. or the padel club in your answer." },
+      ],
+    },
+  ],
+  answerKey: [
+    { type: "text", text: "**1a.** The system where prices, driven by supply and demand, coordinate what gets produced, how, and for whom — without central planning." },
+    { type: "text", text: "**1b.** An economy where resources are allocated mainly through the price mechanism, with private ownership of resources and minimal government intervention." },
+    { type: "text", text: "**1c.** Wanting a good or service *and* having the money to actually buy it — only this combination counts in the market; want alone is not enough." },
+    { type: "text", text: "**1d.** Private ownership, profit motive, freedom of choice, competition, minimal government role." },
+    { type: "text", text: "**2a.** Whatever earns a profit — signalled by what consumers are willing to pay for." },
+    { type: "text", text: "**2b.** However keeps costs lowest — competition punishes producers who waste resources with lower profit." },
+    { type: "text", text: "**2c.** Whoever is willing and able to pay the market price — not decided by need, by lottery, or by the state." },
+    { type: "text", text: "**3a.** Competition. Rival producers competing for the same customers tends to push prices down and push quality/service up, since each shop has to work to win business rather than being guaranteed sales." },
+    { type: "text", text: "**3b.** A negative externality. The cost of the pollution falls on people who live near the stream, who were not part of the transaction between Tom and his customer, so the market price does not reflect it." },
+    { type: "text", text: "**3c.** The market only responds to effective demand — wanting something *and* being able to pay for it. The family wants to play but doesn't have the money to back that want up, so as far as the price mechanism is concerned, that demand doesn't exist — genuine need with no money behind it goes unmet." },
+    { type: "text", text: "**4.** B — the price mechanism, driven by supply and demand, is what coordinates resource allocation in a market system." },
+    { type: "text", text: "**5.** C — effective demand requires ability to pay, so real need with no money behind it goes unmet; A, B and D all describe planned-economy features or false claims about markets." },
+    { type: "text", text: "**6.** Look for **three** developed points (AO2 chains), each identifying an advantage or disadvantage and explaining why it follows from relying on the price mechanism, e.g.: (i) efficient allocation — resources flow toward whatever padel players and Lego collectors actually want, without a planner needing to guess demand in advance; (ii) inequality — a family that cannot afford court fees is priced out even if their need to be active is genuine, since the market responds only to effective demand; (iii) ignored externalities — the plastic waste from Tom's printer isn't priced into a grip's cost, so the market allocates resources without accounting for that pollution. Full marks need identification + explanation of the effect, not just a list of terms." },
+  ],
+};
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   const jobs = [
@@ -346,6 +458,8 @@ async function run() {
     { lesson: "lesson-02", data: LESSON2 },
     { lesson: "lesson-03", data: LESSON3 },
     { lesson: "lesson-04", data: LESSON4 },
+    { lesson: "lesson-05", data: LESSON5 },
+    { lesson: "lesson-06", data: LESSON6 },
   ];
   for (const job of jobs) {
     const doc = buildDoc(job.data);

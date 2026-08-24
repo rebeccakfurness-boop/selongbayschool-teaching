@@ -1,0 +1,39 @@
+Price mechanism: The system where prices, driven by supply and demand, coordinate what gets produced, how it's produced, and for whom — without any central planner.
+
+Market economic system: An economy where resources are allocated mainly through the price mechanism, with private ownership of resources and minimal government intervention.
+
+The three basic economic questions: Every economy must answer what to produce, how to produce it, and for whom. A market system answers all three through prices, not central planning.
+
+What to produce (market answer): Whatever earns a profit — signalled by what consumers are willing to pay for.
+
+How to produce (market answer): However keeps costs lowest — competition punishes wasteful producers with lower profit.
+
+For whom to produce (market answer): Whoever is willing AND able to pay the market price — not decided by need, lottery, or the state.
+
+Characteristic — private ownership: Individuals and firms own resources, not the state. Tom owns his 3D printer and business outright.
+
+Characteristic — profit motive: Producers are driven by the goal of making a profit — that's what decides what gets made.
+
+Characteristic — freedom of choice: Consumers choose what to buy; producers choose what to sell and at what price.
+
+Characteristic — competition: Rival producers compete for customers, pushing prices down and quality/innovation up.
+
+Characteristic — minimal government role: The state mostly stays out of day-to-day production and pricing decisions.
+
+Advantage — efficient allocation: Resources flow toward whatever consumers actually want, without anyone needing to plan or predict demand in advance.
+
+Advantage — consumer choice: Buyers pick from many competing products rather than one state-approved option.
+
+Advantage — incentive to innovate: Competition rewards firms that cut costs or build something better, since profit depends on it.
+
+Advantage — no costly bureaucracy: There's no need to pay an army of planners to decide production levels for millions of goods.
+
+Effective demand: Wanting a good or service AND having the money to actually buy it. Only this combination counts in the market — need alone is not enough.
+
+Disadvantage — inequality: The market only responds to effective demand, so someone who needs something but can't afford it simply doesn't count, market-wise.
+
+Externality: A cost or benefit of a transaction that spills over onto a third party not involved in it, e.g. pollution from a 3D printer affecting people who live near a stream.
+
+Disadvantage — public goods under-provided: Some useful goods (like street lighting) can't easily be sold to individual buyers, so no private firm has a profit incentive to provide them.
+
+Disadvantage — monopoly power: If competition breaks down and one firm dominates a market, it can raise prices and cut quality without losing many customers.

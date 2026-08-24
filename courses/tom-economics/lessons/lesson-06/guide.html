@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 06 Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted:#898781;
+    --blue:#2a78d6; --orange:#eb6834; --border:rgba(11,11,11,0.12); --grid:#e1e0d9;
+    --warn-bg:#fdf1de; --warn-border:#eb6834;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --blue:#3987e5; --orange:#d95926; --border:rgba(255,255,255,0.14); --grid:#2c2c2a;
+      --warn-bg:#2a2117; --warn-border:#d95926; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 14px; }
+  th, td { border: 1px solid var(--grid); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--grid); font-weight: 600; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 6 — Comprehensive Teaching Script</h1>
+<p><strong>Syllabus ref: 2.8 Market economic system</strong><br />
+Linked materials: <code>worksheet.html</code> / <code>worksheet.docx</code> · <code>lesson.html</code> (interactive) / <code>slides.pptx</code> · <code>flashcards.txt</code></p>
+<p>This is a full script, not just a lesson outline — written so you can follow it slide-by-slide live (using <code>slides.pptx</code> as backup, or the interactive <code>lesson.html</code>), with what to say, what to ask, what he might ask back, and extra depth if he wants it. Paraphrase in your own voice, but every idea should land before you move on. Note: this lesson has no calculations — it's a step up in abstraction from Lessons 3–5, so lean extra hard on the Tom's Print Co / padel club examples to keep it concrete.</p>
+<h2>Learning objectives</h2>
+<p>By the end of this lesson he can:</p>
+<ol>
+<li>Explain how the price mechanism allocates resources in a market economy, without central planning.</li>
+<li>State the five characteristics of a market economic system, and classify real scenarios as market-based or not.</li>
+<li>Explain the advantages and disadvantages of relying on the price mechanism to allocate resources.</li>
+</ol>
+<h2>Slide-by-slide script</h2>
+<h3>Slide 1 — Title</h3>
+<p><em>Say:</em> "Today we zoom out. Instead of looking at one market at a time, we're looking at the whole economic system — how does a country actually decide what gets made, at all?"</p>
+<h3>Slide 2 — Quick recap</h3>
+<p><em>Say:</em> "Quick recap first."<br />
+<em>Ask him:</em> "What's the PES formula, and is it usually positive or negative?"<br />
+<em>What a good answer sounds like:</em> PES = % change in quantity supplied ÷ % change in price. Almost always positive, since price and quantity supplied move the same direction.</p>
+<h3>Slide 3 — Hook</h3>
+<p><em>Say:</em> "Nobody at Tom's Print Co has ever gotten a government memo saying 'make 60 padel grips this week, price them at $8.' Nobody told the padel club how many courts to build. And yet, roughly the right amount of stuff gets made, priced, and sold. How does that actually happen with nobody in charge?"<br />
+Let him have a genuine go at this before moving on — most students land somewhere near "people just buy what they want and sellers respond," which is exactly the intuition you're about to formalise.</p>
+<h3>Slide 4 — The price mechanism</h3>
+<p><em>Say:</em> "What you're describing is the price mechanism. In a market economic system, prices — driven by supply and demand — coordinate everything, without any central planner giving instructions."<br />
+<em>Ask him:</em> "If more people suddenly want padel grips than Tom is currently making, what happens to the price, and what does that price change actually tell Tom to do?"<br />
+<em>What a good answer sounds like:</em> The price gets bid up. That higher price signals to Tom that there's extra profit available, so he makes more.<br />
+<em>Extra context:</em> This is sometimes called the "invisible hand" — millions of tiny price signals, happening constantly across every market, pulling resources toward whatever people actually want, without anyone planning it centrally.</p>
+<h3>Slide 5 — Three questions every economy answers</h3>
+<p><em>Say:</em> "Every economic system, whatever kind, has to answer the same three basic questions: what to produce, how to produce it, and for whom. What's distinctive about a market system is <em>how</em> it answers them."<br />
+<em>Ask him, one at a time:</em> "In a market system, what decides <em>what</em> gets produced? <em>How</em> it gets produced? <em>For whom</em>?"<br />
+<em>What a good answer sounds like:</em> What — whatever earns a profit, signalled by what consumers will pay for. How — however keeps costs lowest, since competition punishes waste. For whom — whoever is willing <em>and able</em> to pay the market price.<br />
+<em>If he's stuck on "for whom":</em> Push on the word "able." It's not enough to want something — you need the money to back that want up. That distinction becomes really important a few slides from now.</p>
+<h3>Slide 6 — Characteristics of a market economy (1/2)</h3>
+<p><em>Say:</em> "Five characteristics define a 'pure' market economy. First three: private ownership, the profit motive, and freedom of choice."<br />
+<em>Ask him:</em> "Tom owns his 3D printer and his business outright. What characteristic does that show, and why does it matter?"<br />
+<em>What a good answer sounds like:</em> Private ownership — resources belong to individuals and firms, not the state, so Tom (not a government department) decides what to do with them.</p>
+<h3>Slide 7 — Characteristics of a market economy (2/2)</h3>
+<p><em>Say:</em> "Last two: competition, and a minimal role for government."<br />
+<em>Ask him:</em> "If three different 3D-print shops open up near the padel club, all competing for Tom's customers, what effect does that tend to have?"<br />
+<em>What a good answer sounds like:</em> Prices tend to fall and quality/service tends to improve, since each shop has to work to win customers rather than being guaranteed sales.</p>
+<h3>Slide 8 — Now you try: market or planned?</h3>
+<p>Read each statement out loud and ask him to classify it as showing a market economy or a planned economy, then discuss briefly:<br />
+1. "Tom decides what to make based on what sells best." <em>(Market — responds to price signals, not orders.)</em><br />
+2. "A government official sets the price of padel court hire for every club in the country." <em>(Planned — central authority sets prices, not supply and demand.)</em><br />
+3. "Anyone can start a 3D-printing business if they think they can make a profit." <em>(Market — freedom of enterprise, low barriers to entry.)</em><br />
+4. "The government owns and runs every padel club, deciding how many courts each town gets." <em>(Planned — state ownership and central allocation.)</em></p>
+<h3>Slide 9 — Advantages</h3>
+<p><em>Say:</em> "Relying on the price mechanism instead of a planner has real strengths: efficient allocation of resources toward what people actually want, wide consumer choice, a built-in incentive to innovate and cut costs, and no need for an expensive planning bureaucracy."<br />
+<em>Ask him:</em> "Why doesn't a market economy need a government department to decide how many padel grips get made each week?"<br />
+<em>What a good answer sounds like:</em> The price mechanism does that job automatically — rising or falling prices signal producers to make more or less, without anyone needing to plan it in advance.</p>
+<h3>Slide 10 — Advantages in action</h3>
+<p><em>Say:</em> "Two quick examples. First: three 3D-print shops open near the padel club, all competing hard for customers. Second: Tom notices players want faster delivery, so on his own initiative he redesigns his workflow to cut turnaround from a week to two days."<br />
+<em>Ask him:</em> "Which advantage does each one show?"<br />
+<em>What a good answer sounds like:</em> The competing shops show efficiency and consumer choice — competition usually pushes prices down and quality up. Tom's redesign shows innovation driven by the profit motive — nobody ordered him to improve, the chance of more profit was enough.</p>
+<h3>Slide 11 — Disadvantages</h3>
+<p><em>Say:</em> "But the same price mechanism creates real problems too: inequality, under-provided public goods, ignored externalities, and the risk of monopoly power."<br />
+<em>Ask him:</em> "What do you think 'effective demand' means, and why might it cause inequality?"<br />
+<em>What a good answer sounds like:</em> Effective demand means wanting something <em>and</em> being able to pay for it. The market only responds to that combination — genuine need with no money behind it simply doesn't register, however real the need is.</p>
+<h3>Slide 12 — Disadvantages in action</h3>
+<p><em>Say:</em> "Three scenarios. One: Tom's printer produces plastic waste that ends up in a local stream. Two: a family that can't afford court fees wants to play padel, but has no money to back that want. Three: nobody privately installs streetlights on the path to the club, even though everyone using it at night would benefit."<br />
+<em>Ask him, for each:</em> "What problem does this show?"<br />
+<em>What a good answer sounds like:</em> Waste in the stream — a negative externality, since that cost falls on people who weren't part of the transaction and isn't reflected in the $8 grip price. The family — inequality, since the market only responds to effective demand. The streetlights — a public good problem, since it's hard to charge individual walkers for something they'd benefit from anyway, so there's no profit incentive to provide it privately.<br />
+<em>Extra context:</em> Flag that "public goods" and "externalities" will both come back properly in the very next topic, market failure — today's just the first taste.</p>
+<h3>Slide 13 — Quick check</h3>
+<p>Ask both questions verbally, no need to reveal anything on-screen:<br />
+1. "In a market economy, who decides who goods actually go to?" <em>(Whoever is willing and able to pay the market price.)</em><br />
+2. "Is it true that a pure market system automatically accounts for pollution costs?" <em>(No — that's exactly what an externality is: a cost the market price leaves out.)</em></p>
+<h3>Slide 14 — Recap</h3>
+<p><em>Say:</em> "The price mechanism coordinates a market economy without central planning, by answering what/how/for whom through prices. Five characteristics: private ownership, profit motive, freedom of choice, competition, minimal government role. Real strengths — efficiency, choice, innovation. Real weaknesses — inequality, under-provided public goods, ignored externalities, monopoly risk."</p>
+<h3>Slide 15 — Next lesson</h3>
+<p><em>Say:</em> "Next time we go deeper into exactly where markets break down — market failure — starting with the key definitions."</p>
+<h2>Wrap-up</h2>
+<p>Set the worksheet for self-directed time, and mention <code>flashcards.txt</code> for NotebookLM. This lesson is more abstract than the last few — if he's fuzzy on any of the five characteristics or the advantages/disadvantages by the end, it's worth a very quick verbal round-trip back through the Tom's Print Co examples before moving to the worksheet, since those concrete anchors are what make the abstract vocabulary stick.</p>
+<h2>Next lesson</h2>
+<p>Lesson 7 — 2.9 Market failure: key definitions.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 5 — Price Elasticity of Supply</title>
+<link rel="stylesheet" href="../../assets/lesson-kit.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brandrow">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div class="brand-text">Cambridge IGCSE Economics 0455 · Syllabus 2.7</div>
+      </div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">11</span></div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</div>
+
+<div class="app">
+<div class="stage">
+
+  <section class="step active" data-step="0">
+    <span class="kicker">Lesson 5 · 30 minutes</span>
+    <h1 class="title">Price Elasticity of Supply</h1>
+    <p class="lede">Last lesson was all about how buyers react to price. Today it's the seller's turn. First, a quick check that revenue stuck.</p>
+    <div class="grid grid-2" id="recapFlips"></div>
+    <p class="note">Tap each card to flip it and check the answer.</p>
+  </section>
+
+  <section class="step" data-step="1">
+    <span class="kicker">Hook</span>
+    <h1 class="title">Who Can React Faster?</h1>
+    <div class="card card-dark">
+      The padel club wants more courts this summer because demand is booming. Tom wants to make more grips this week because an order just came in.<br><br>
+      Which one can actually ramp up supply faster — and why?
+    </div>
+  </section>
+
+  <section class="step" data-step="2">
+    <span class="kicker">New idea</span>
+    <h1 class="title">Introducing PES</h1>
+    <p class="lede">Price elasticity of supply (PES) measures how <b>responsive</b> quantity supplied is to a change in price — exactly the question we just asked about courts vs. grips.</p>
+    <div class="card card-gold" style="text-align:center; font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:600;">
+      PES = %&Delta;Qs &divide; %&Delta;P
+    </div>
+    <div class="card" style="margin-top:16px;">
+      Same shape as the PED formula, but for sellers, not buyers. One key difference: PES is (almost) always <b>positive</b> — the law of supply says price and quantity supplied move in the <i>same</i> direction, so there's no minus sign to ignore this time.
+    </div>
+  </section>
+
+  <section class="step" data-step="3">
+    <span class="kicker">Worked together</span>
+    <h1 class="title">Let's Calculate One, Step by Step</h1>
+    <p class="lede">Tom's padel grips: an order surge pushes the price from $8 to $10, and Tom ramps up weekly production from 60 to 90 grips.</p>
+    <div class="steps-flow" id="workedSteps"></div>
+  </section>
+
+  <section class="step" data-step="4">
+    <span class="kicker">Now you try</span>
+    <h1 class="title">Practice: Calculate the PES</h1>
+    <p class="lede">Three new scenarios. Work each one out on paper first, then tap to reveal the answer.</p>
+    <div id="practiceList"></div>
+  </section>
+
+  <section class="step" data-step="5">
+    <span class="kicker">Why classify it?</span>
+    <h1 class="title">Naming the Categories</h1>
+    <p class="lede">Just like with PED, Cambridge wants you to name the <i>category</i> a PES value falls into, not just quote the number. Same five-point spectrum, same logic — just applied to sellers this time.</p>
+  </section>
+
+  <section class="step" data-step="6">
+    <span class="kicker">The spectrum</span>
+    <h1 class="title">Five Categories of PES</h1>
+    <p class="lede">Tap each one to see its value and an example.</p>
+    <div class="grid grid-3" id="spectrumGrid"></div>
+  </section>
+
+  <section class="step" data-step="7">
+    <span class="kicker">New question</span>
+    <h1 class="title">Why Can Some Suppliers React Faster?</h1>
+    <p class="lede">Tom's grips turned out elastic. The padel club's courts turned out inelastic. That's not random — specific features of a producer's situation push its PES one way or the other. Six factors decide it.</p>
+  </section>
+
+  <section class="step" data-step="8">
+    <span class="kicker">Determinants</span>
+    <h1 class="title">What Makes Supply Elastic or Inelastic?</h1>
+    <p class="lede">Tap each factor to reveal how it affects PES.</p>
+    <div class="grid grid-3" id="detGrid"></div>
+  </section>
+
+  <section class="step" data-step="9">
+    <span class="kicker">Quick check</span>
+    <h1 class="title">Before Homework...</h1>
+    <div id="quizList"></div>
+  </section>
+
+  <section class="step" data-step="10">
+    <span class="kicker">Recap + homework</span>
+    <h1 class="title">Today's Key Words</h1>
+    <div id="vocabList"></div>
+    <div class="card card-dark" style="margin-top:22px;">
+      <div class="kicker" style="background:rgba(255,255,255,0.12); color:var(--gold);">🏠 Homework — Worksheet 5</div>
+      <ul class="hw-list" id="hwList"></ul>
+    </div>
+    <p class="lede" style="margin-top:20px;">🎉 You can now calculate and classify PES, and explain what drives it. Next up: how a whole market economy actually decides what gets made!</p>
+  </section>
+
+</div>
+
+<div class="navbar">
+  <button class="btn btn-ghost" id="prevBtn">← Back</button>
+  <button class="btn btn-primary" id="nextBtn">Next →</button>
+</div>
+</div>
+
+<script src="../../assets/lesson-kit.js"></script>
+<script>
+const recapData = [
+  {term:"Total Revenue (TR)", back:"TR = Price × Quantity — the total money a firm receives from sales, before costs."},
+  {term:"Inelastic demand & revenue", back:"Price and revenue move together — a price rise increases revenue."},
+  {term:"Elastic demand & revenue", back:"Price and revenue move opposite — a price rise decreases revenue."},
+  {term:"Significance of PED", back:"Guides firms' pricing, explains consumer budget impact, and shapes government tax policy."}
+];
+
+const workedStepsData = [
+  {label:"Step 1 — % change in price", detail:"($10 − $8) ÷ $8 = +25%"},
+  {label:"Step 2 — % change in quantity supplied", detail:"(90 − 60) ÷ 60 = +50%"},
+  {label:"Step 3 — divide quantity change by price change", detail:"PES = 50% ÷ 25% = 2"},
+  {label:"Result", detail:"PES = 2, which is greater than 1 → Elastic"}
+];
+
+const practiceData = [
+  {text:"🎾 Padel courts this summer: price of court hire rises 20%, but the club can't build new courts before autumn — quantity supplied stays at 0% change. Calculate the PES and classify it.", ans:"PES = 0% ÷ 20% = 0 → Perfectly inelastic. No matter how high the price goes this summer, supply can't respond — courts take months to build.", tags:[{label:"PERFECTLY INELASTIC", cls:"tag-neutral"}]},
+  {text:"🧩 Custom Lego minifigure accessories: price rises 10%, and Tom's spare printer capacity lets weekly output rise 30%. Calculate the PES and classify it.", ans:"PES = 30% ÷ 10% = 3 → Elastic. Spare capacity plus a fast production process means Tom can ramp up quickly when price rises.", tags:[{label:"ELASTIC", cls:"tag-up"}]},
+  {text:"🕹️ A retired Lego set (no more will ever be made): price rises 50% in the resale market, but quantity supplied stays at 0% change. Calculate the PES and classify it.", ans:"PES = 0% ÷ 50% = 0 → Perfectly inelastic. This is exactly why the resale price just kept climbing in Lesson 2 — supply literally cannot increase, whatever collectors are willing to pay.", tags:[{label:"PERFECTLY INELASTIC", cls:"tag-neutral"}]}
+];
+
+const spectrumData = [
+  {emj:"📍", lbl:"Perfectly inelastic", desc:"PES = 0. Quantity supplied doesn't change at all, whatever the price. e.g. this summer's padel courts."},
+  {emj:"🐢", lbl:"Inelastic", desc:"0 < PES < 1. Quantity supplied changes proportionally less than price."},
+  {emj:"⚖️", lbl:"Unitary", desc:"PES = 1 exactly. Quantity supplied changes by exactly the same % as price."},
+  {emj:"🐇", lbl:"Elastic", desc:"PES > 1. Quantity supplied changes proportionally more than price. e.g. Tom's grips."},
+  {emj:"♾️", lbl:"Perfectly elastic", desc:"PES = infinite. Producers will supply any amount at one exact price, and none below it."}
+];
+
+const detData = [
+  {emj:"🏭", lbl:"Spare capacity", desc:"Unused machinery/staff time = MORE elastic. Tom's idle second printer can start up immediately."},
+  {emj:"🔄", lbl:"Factor mobility", desc:"Easy for labour/capital to switch tasks = MORE elastic. Hard-to-retrain specialist staff = MORE inelastic."},
+  {emj:"⏳", lbl:"Time period", desc:"MORE elastic in the long run — more time to build capacity, hire staff, or build new courts."},
+  {emj:"📦", lbl:"Ability to store stock", desc:"Goods that can be stockpiled and released later = MORE elastic. A padel lesson (a service) can't be stored — MORE inelastic."},
+  {emj:"🏗️", lbl:"Production/gestation period", desc:"Quick to make = MORE elastic (a grip prints in minutes). Slow to make = MORE inelastic (a new court takes months)."},
+  {emj:"🔢", lbl:"Number of producers", desc:"More producers able to enter the market = MORE elastic supply, especially in the long run."}
+];
+
+const quizData = [
+  {q:"A padel club can't add courts this season no matter the price. What's its PES this season?", opts:["PES = 0, perfectly inelastic","PES = infinite, perfectly elastic","PES = 1, unitary","Cannot be calculated"], correct:0, fb:"Quantity supplied literally cannot change — PES = 0, perfectly inelastic."},
+  {q:"Which factor would make Tom's grip supply MORE elastic?", opts:["His printer is already running 24/7 with no spare capacity","He has a second, idle printer ready to switch on","Filament takes 6 months to order in","He's the only 3D-print supplier in town"], correct:1, fb:"Spare capacity lets a producer ramp up output quickly when price rises — more elastic."},
+  {q:"Why is a retired Lego set's supply perfectly inelastic, even at a very high resale price?", opts:["Collectors don't want more of them","The manufacturer refuses to sell them","No more can physically be made — supply is fixed at whatever exists already","The price never actually rises"], correct:2, fb:"Once production stops, the total quantity in existence is fixed — no price can increase it."}
+];
+
+const vocabData = [
+  {t:"PES", d:"Price elasticity of supply — how responsive quantity supplied is to a price change."},
+  {t:"PES formula", d:"% change in quantity supplied ÷ % change in price. Almost always positive."},
+  {t:"Elastic / Inelastic supply", d:"PES size > 1 = elastic (very responsive). PES size < 1 = inelastic (not very responsive)."},
+  {t:"Determinants", d:"Spare capacity, factor mobility, time period, ability to store stock, production period, number of producers."}
+];
+
+const hwItems = ["Definitions + PES formula", "Worked calculations", "Determinants questions", "Exam-style MCQs + 6-mark question"];
+
+LessonKit.buildFlipGrid(document.getElementById('recapFlips'), recapData);
+LessonKit.buildStepsList(document.getElementById('workedSteps'), workedStepsData);
+LessonKit.buildRevealCards(document.getElementById('practiceList'), practiceData, {buttonLabel:'Reveal answer'});
+LessonKit.buildShiftGrid(document.getElementById('spectrumGrid'), spectrumData);
+LessonKit.buildShiftGrid(document.getElementById('detGrid'), detData);
+LessonKit.buildQuiz(document.getElementById('quizList'), quizData);
+LessonKit.buildVocabList(document.getElementById('vocabList'), vocabData);
+LessonKit.buildHomeworkChecklist(document.getElementById('hwList'), hwItems);
+LessonKit.initStepper();
+</script>
+</body>
+</html>

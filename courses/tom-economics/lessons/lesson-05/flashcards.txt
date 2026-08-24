@@ -1,0 +1,25 @@
+Price elasticity of supply (PES): A measure of how responsive quantity supplied is to a change in price.
+
+PES formula: PES = % change in quantity supplied ÷ % change in price. Unlike PED, PES is almost always positive, since the law of supply means price and quantity supplied move in the same direction.
+
+Perfectly inelastic supply: PES = 0. Quantity supplied does not change at all when price changes, e.g. this summer's padel courts (fixed — no new courts can be built in time).
+
+Inelastic supply: PES is between 0 and 1. Quantity supplied changes proportionally less than price.
+
+Unitary elastic supply: PES = 1 exactly. Quantity supplied changes by exactly the same percentage as price.
+
+Elastic supply: PES is greater than 1. Quantity supplied changes proportionally more than price, e.g. Tom's padel grips (price +25%, quantity +50%, PES = 2).
+
+Perfectly elastic supply: PES is infinite. Producers will supply any quantity at one exact price, and none below it.
+
+Determinant — spare capacity: Unused machinery or staff time makes supply more elastic, since a producer can increase output quickly without new investment. Tom's idle second 3D printer is an example.
+
+Determinant — factor mobility: Supply is more elastic when labour and capital can easily switch between uses, and more inelastic when factors are specialised and hard to redeploy.
+
+Determinant — time period: Supply tends to become more elastic over a longer time period, since producers have more time to build capacity, hire staff, or for new firms to enter.
+
+Determinant — ability to store stock: Goods that can be produced in advance and stockpiled have more elastic supply. Services that can't be stored (like a padel coaching session) have more inelastic supply.
+
+Determinant — production/gestation period: A short production time (a grip prints in minutes) makes supply more elastic. A long production time (a new padel court takes months to build) makes supply more inelastic.
+
+Determinant — number of producers: The more producers able to enter a market, the more elastic supply tends to be, especially in the long run.

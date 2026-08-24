@@ -149,16 +149,16 @@ function pedMiniDiagram(s, x, y, size, slopeType, color) {
   }
 }
 
-function pedSpectrumSlide(pres) {
+function pedSpectrumSlide(pres, title = "The PED spectrum", unit = "PED") {
   const s = pres.addSlide();
   s.background = { color: WHITE };
-  s.addText("The PED spectrum", { x: 0.7, y: 0.6, w: 11.9, h: 0.8, fontFace: "Cambria", fontSize: 32, color: NAVY, bold: true });
+  s.addText(title, { x: 0.7, y: 0.6, w: 11.9, h: 0.8, fontFace: "Cambria", fontSize: 32, color: NAVY, bold: true });
   const items = [
-    { slope: "vertical", label: "Perfectly inelastic", sub: "PED = 0", color: NAVY },
-    { slope: "steep", label: "Inelastic", sub: "0 < PED < 1", color: NAVY },
-    { slope: "mid", label: "Unitary", sub: "PED = 1", color: CORAL },
-    { slope: "shallow", label: "Elastic", sub: "PED > 1", color: "1BAF7A" },
-    { slope: "horizontal", label: "Perfectly elastic", sub: "PED = ∞", color: "1BAF7A" },
+    { slope: "vertical", label: "Perfectly inelastic", sub: `${unit} = 0`, color: NAVY },
+    { slope: "steep", label: "Inelastic", sub: `0 < ${unit} < 1`, color: NAVY },
+    { slope: "mid", label: "Unitary", sub: `${unit} = 1`, color: CORAL },
+    { slope: "shallow", label: "Elastic", sub: `${unit} > 1`, color: "1BAF7A" },
+    { slope: "horizontal", label: "Perfectly elastic", sub: `${unit} = ∞`, color: "1BAF7A" },
   ];
   const dSize = 1.7, gap = 0.5;
   const totalW = items.length * dSize + (items.length - 1) * gap;
@@ -492,6 +492,174 @@ function buildLesson4() {
   return pres;
 }
 
+function buildLesson5() {
+  const pres = new pptxgen();
+  pres.layout = "LAYOUT_WIDE";
+  titleSlide(pres, "Lesson 5 · Syllabus 2.7", "Price Elasticity of Supply", "Who can react faster to a price change — buyers, or sellers?");
+
+  bodySlide(pres, "Quick recap", [
+    "Inelastic demand: price & revenue move together.",
+    "Elastic demand: price & revenue move opposite.",
+    "You already know this cold — today's about the seller's side instead.",
+  ]);
+
+  bodySlide(pres, "Who can react faster?", [
+    "The padel club wants more courts this summer because demand is booming.",
+    "Tom wants to make more grips this week because a big order just came in.",
+    "Which one can actually ramp up supply faster — and why?",
+  ]);
+
+  const s3 = pres.addSlide();
+  s3.background = { color: WHITE };
+  s3.addText("Definition & formula", { x: 0.7, y: 0.7, w: 11.9, h: 0.8, fontFace: "Cambria", fontSize: 30, color: NAVY, bold: true });
+  s3.addText("PES measures how responsive quantity supplied is to a change in price.", { x: 0.9, y: 1.8, w: 10.5, h: 0.7, fontFace: "Calibri", fontSize: 17, color: INK });
+  s3.addShape("roundRect", { x: 2.9, y: 2.7, w: 7.5, h: 1.3, rectRadius: 0.14, fill: { color: NAVY }, line: { type: "none" } });
+  s3.addText("PES = %ΔQs ÷ %ΔP", { x: 2.9, y: 2.7, w: 7.5, h: 1.3, align: "center", valign: "middle", fontFace: "Cambria", fontSize: 30, bold: true, color: "CADCFC" });
+  s3.addText("Unlike PED, PES is almost always positive — the law of supply says price and quantity supplied move in the same direction, so there's no minus sign to ignore this time.", { x: 0.9, y: 4.3, w: 10.5, h: 0.9, fontFace: "Calibri", fontSize: 15, color: MUTED, italic: true });
+
+  calcSlide(pres, "🖨️ Worked example: Tom's grips", "An order surge",
+    ["Price: $8 → $10  (+25%)", "Quantity supplied: 60 → 90 grips/week  (+50%)"],
+    "PES = 50 ÷ 25 = 2 → Elastic");
+
+  blankCalcSlide(pres, "🎾 Padel courts this summer", "Your turn — work it out",
+    ["Price: court hire +20%", "Quantity supplied: fixed — no new courts before autumn"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "🎾 Padel courts — answer", "Check your answer",
+    ["% change in price = +20%", "% change in quantity supplied = 0%"],
+    "PES = 0 ÷ 20 = 0 → Perfectly inelastic", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  blankCalcSlide(pres, "🧩 Custom Lego accessories", "Your turn — work it out",
+    ["Price: +10%", "Quantity supplied: +30% (spare printer capacity)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "🧩 Custom Lego accessories — answer", "Check your answer",
+    ["% change in price = +10%", "% change in quantity supplied = +30%"],
+    "PES = 30 ÷ 10 = 3 → Elastic", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  blankCalcSlide(pres, "🕹️ Retired Lego set (resale)", "Your turn — work it out",
+    ["Price: +50%", "Quantity supplied: fixed — no more will ever be made"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "🕹️ Retired Lego set — answer", "Check your answer",
+    ["% change in price = +50%", "% change in quantity supplied = 0%"],
+    "PES = 0 ÷ 50 = 0 → Perfectly inelastic", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  pedSpectrumSlide(pres, "The PES spectrum", "PES");
+
+  cardRowSlide(pres, "Determinants of PES (1/2)", [
+    { name: "Spare capacity", desc: "Unused machinery/staff time = more elastic. Tom's idle second printer can start immediately." },
+    { name: "Factor mobility", desc: "Easy for labour/capital to switch tasks = more elastic. Hard-to-retrain specialist staff = more inelastic." },
+    { name: "Time period", desc: "More elastic in the long run — more time to build capacity, hire staff, or build new courts." },
+  ]);
+
+  cardRowSlide(pres, "Determinants of PES (2/2)", [
+    { name: "Ability to store stock", desc: "Goods that can be stockpiled and released later = more elastic. A padel lesson (a service) can't be stored — more inelastic." },
+    { name: "Production period", desc: "Quick to make = more elastic (a grip prints in minutes). Slow to make = more inelastic (a new court takes months)." },
+    { name: "Number of producers", desc: "More producers able to enter the market = more elastic supply, especially in the long run." },
+  ]);
+
+  bodySlide(pres, "Quick check", [
+    "A padel club can't add courts this season no matter the price. What's its PES this season?",
+    "Which makes Tom's grip supply MORE elastic: running at full capacity, or having a spare idle printer?",
+  ]);
+
+  bodySlide(pres, "Recap", [
+    "PES = %ΔQs ÷ %ΔP — almost always positive.",
+    "0 → perfectly inelastic  ·  0–1 → inelastic  ·  1 → unitary  ·  >1 → elastic  ·  ∞ → perfectly elastic",
+    "Determinants: spare capacity, factor mobility, time period, ability to store stock, production period, number of producers.",
+  ]);
+
+  closingSlide(pres, "Next lesson", "The market economic system",
+    "Zooming out from single markets to a whole economy — how does a market system decide what gets made, with nobody in charge?");
+
+  return pres;
+}
+
+function buildLesson6() {
+  const pres = new pptxgen();
+  pres.layout = "LAYOUT_WIDE";
+  titleSlide(pres, "Lesson 6 · Syllabus 2.8", "The Market Economic System", "Who's actually in charge of what gets made?");
+
+  bodySlide(pres, "Quick recap", [
+    "PES = %ΔQs ÷ %ΔP, almost always positive.",
+    "Determinants: spare capacity, factor mobility, time period, stock, production period, number of producers.",
+  ]);
+
+  bodySlide(pres, "Nobody's in charge — so how does it work?", [
+    "Nobody at Tom's Print Co has ever received a government order saying \"make 60 grips this week, price them at $8.\"",
+    "Nobody told the padel club how many courts to build.",
+    "Yet roughly the right amount of stuff gets made, priced, and sold. How?",
+  ]);
+
+  bodySlide(pres, "The price mechanism", [
+    "In a market economic system, prices — driven by supply and demand — coordinate everything, with no central planner.",
+    "More people want grips than Tom is making → price gets bid up → that signals \"make more, there's profit in it.\"",
+    "Millions of these tiny signals, constantly, are sometimes called the \"invisible hand.\"",
+  ]);
+
+  cardRowSlide(pres, "Three questions every economy answers", [
+    { name: "What to produce?", desc: "Whatever earns a profit — signalled by what consumers are willing to pay for." },
+    { name: "How to produce?", desc: "However keeps costs lowest — competition punishes wasteful producers with lower profit." },
+    { name: "For whom?", desc: "Whoever is willing AND able to pay the market price — not need, lottery, or the state." },
+  ]);
+
+  cardRowSlide(pres, "Characteristics of a market economy (1/2)", [
+    { name: "Private ownership", desc: "Individuals and firms own resources — Tom owns his printer and business, not the state." },
+    { name: "Profit motive", desc: "Producers are driven by the goal of making a profit — that decides what gets made." },
+    { name: "Freedom of choice", desc: "Consumers choose what to buy; producers choose what to sell and at what price." },
+  ]);
+
+  cardRowSlide(pres, "Characteristics of a market economy (2/2)", [
+    { name: "Competition", desc: "Rival producers compete for customers, pushing prices down and quality/innovation up." },
+    { name: "Minimal government role", desc: "The state mostly stays out of day-to-day production and pricing decisions." },
+  ]);
+
+  bodySlide(pres, "Now you try: market or planned?", [
+    "Tom decides what to make based on what sells best.",
+    "A government official sets padel court prices for the whole country.",
+    "Anyone can start a 3D-printing business if they think they can profit.",
+    "The government owns every padel club and decides how many courts each town gets.",
+  ]);
+
+  bodySlide(pres, "Advantages of the market system", [
+    "Efficient allocation — resources flow toward what consumers actually want.",
+    "Consumer choice — many competing products, not one state-approved option.",
+    "Incentive to innovate — competition rewards cutting costs or building something better.",
+    "No costly bureaucracy — no army of planners needed to set production levels.",
+  ]);
+
+  twoColSlide(pres, "Advantages in action",
+    "Efficiency & choice", "Three 3D-print shops open near the padel club, all competing for Tom's customers.\n\nCompetition usually means lower prices and better quality for buyers.",
+    "Innovation", "Tom redesigns his workflow to cut delivery from a week to two days — no government told him to.\n\nThe profit motive drove the improvement on his own initiative.");
+
+  bodySlide(pres, "Disadvantages of the market system", [
+    "Inequality — the market only responds to effective demand (want + ability to pay).",
+    "Public goods under-provided — hard to charge individuals for things like street lighting.",
+    "Externalities ignored — market price often leaves out spillover costs, like pollution.",
+    "Monopoly power — a dominant firm can raise prices and cut quality unchallenged.",
+  ]);
+
+  cardRowSlide(pres, "Disadvantages in action", [
+    { name: "Externality", desc: "Tom's printer produces plastic waste in a local stream — not reflected in the $8 grip price." },
+    { name: "Inequality", desc: "A family that can't afford court fees wants to play — the market doesn't respond to that want." },
+    { name: "Public goods", desc: "Nobody privately installs streetlights on the path to the club — no profit incentive to." },
+  ]);
+
+  bodySlide(pres, "Quick check", [
+    "In a market economy, who decides who goods actually go to?",
+    "Does a pure market system automatically account for pollution costs?",
+  ]);
+
+  bodySlide(pres, "Recap", [
+    "The price mechanism coordinates a market economy without central planning.",
+    "Characteristics: private ownership, profit motive, freedom of choice, competition, minimal government role.",
+    "Strengths: efficiency, choice, innovation. Weaknesses: inequality, public goods, externalities, monopoly risk.",
+  ]);
+
+  closingSlide(pres, "Next lesson", "Market failure",
+    "Going deeper into exactly where markets break down — starting with the key definitions.");
+
+  return pres;
+}
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   await buildLesson1().writeFile({ fileName: path.join(BASE, "lesson-01", "slides.pptx") });
@@ -502,5 +670,9 @@ async function run() {
   console.log("wrote lesson-03/slides.pptx");
   await buildLesson4().writeFile({ fileName: path.join(BASE, "lesson-04", "slides.pptx") });
   console.log("wrote lesson-04/slides.pptx");
+  await buildLesson5().writeFile({ fileName: path.join(BASE, "lesson-05", "slides.pptx") });
+  console.log("wrote lesson-05/slides.pptx");
+  await buildLesson6().writeFile({ fileName: path.join(BASE, "lesson-06", "slides.pptx") });
+  console.log("wrote lesson-06/slides.pptx");
 }
 run();

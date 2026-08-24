@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 05 Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted:#898781;
+    --blue:#2a78d6; --orange:#eb6834; --border:rgba(11,11,11,0.12); --grid:#e1e0d9;
+    --warn-bg:#fdf1de; --warn-border:#eb6834;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --blue:#3987e5; --orange:#d95926; --border:rgba(255,255,255,0.14); --grid:#2c2c2a;
+      --warn-bg:#2a2117; --warn-border:#d95926; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 14px; }
+  th, td { border: 1px solid var(--grid); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--grid); font-weight: 600; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 5 — Comprehensive Teaching Script</h1>
+<p><strong>Syllabus ref: 2.7 Price elasticity of supply (PES)</strong><br />
+Linked materials: <code>worksheet.html</code> / <code>worksheet.docx</code> · <code>lesson.html</code> (interactive) / <code>slides.pptx</code> · <code>flashcards.txt</code></p>
+<p>This is a full script, not just a lesson outline — written so you can follow it slide-by-slide live (using <code>slides.pptx</code> as backup, or the interactive <code>lesson.html</code>), with what to say, what to ask, what he might ask back, and extra depth if he wants it. Paraphrase in your own voice, but every idea should land before you move on.</p>
+<h2>Learning objectives</h2>
+<p>By the end of this lesson he can:</p>
+<ol>
+<li>Define price elasticity of supply and state its formula.</li>
+<li>Calculate PES from price and quantity supplied data, and classify the result.</li>
+<li>Explain the six determinants of PES, using Tom's Print Co and the padel club as examples.</li>
+</ol>
+<h2>Slide-by-slide script</h2>
+<h3>Slide 1 — Title</h3>
+<p><em>Say:</em> "Last lesson was all about how buyers react to a price change. Today we flip it around — how do sellers react?"</p>
+<h3>Slide 2 — Quick recap</h3>
+<p><em>Say:</em> "Before we move on — quick recap of last lesson's revenue rule."<br />
+<em>Ask him:</em> "If demand is inelastic and a firm raises its price, what happens to revenue? What about if demand is elastic?"<br />
+<em>What a good answer sounds like:</em> Inelastic — price and revenue move together, so revenue rises. Elastic — price and revenue move opposite, so revenue falls.<br />
+<em>If he's stuck:</em> Point back to the padel booking vs. Lego set comparison from Lesson 4 — one gained revenue from a price rise, one lost it.</p>
+<h3>Slide 3 — Hook</h3>
+<p><em>Say:</em> "Here's today's question. The padel club wants more courts this summer because demand is booming. Tom wants to make more grips this week because a big order just came in. Which one can actually ramp up supply faster — and why?"<br />
+Let him guess and reason it out loud before confirming anything — the intuitive answer here (3D printing is fast, building courts is slow) is basically correct, which makes a nice bridge into the formal idea.</p>
+<h3>Slide 4 — Definition &amp; formula</h3>
+<p><em>Say:</em> "What we're describing is price elasticity of supply, PES — how responsive quantity supplied is to a change in price. Same shape of formula as PED, but for sellers."<br />
+<em>Ask him:</em> "Given what you know about PED's formula, what do you think PES's formula looks like?"<br />
+<em>What a good answer sounds like:</em> PES = % change in quantity supplied ÷ % change in price.<br />
+<em>Extra context:</em> Point out the one real difference from PED — PES is almost always <strong>positive</strong>. The law of supply says price and quantity supplied move in the <em>same</em> direction (higher price → sellers supply more), so there's no minus sign to strip out this time, unlike PED.</p>
+<h3>Slide 5 — Worked example: Tom's grips</h3>
+<p><em>Say:</em> "Let's calculate one together. An order surge pushes the price of Tom's grips from $8 to $10 — that's +25%. He ramps up weekly production from 60 to 90 — that's +50%."<br />
+<em>Ask him:</em> "So what's the PES, and what category is that?"<br />
+<em>What a good answer sounds like:</em> PES = 50% ÷ 25% = 2. Since 2 is greater than 1, that's elastic.<br />
+<em>If he's stuck:</em> Walk it exactly like a PED calculation — percentage change in the <em>quantity</em> line, divided by percentage change in the <em>price</em> line — just quantity supplied instead of quantity demanded this time.</p>
+<h3>Slide 6 — Your turn: padel courts this summer</h3>
+<p><em>Say:</em> "Your turn. Court hire price rises 20% this summer, but the club can't physically build new courts before autumn — so quantity supplied doesn't change at all, 0%. Work out the PES and classify it."<br />
+Let him actually attempt this — it should feel almost like a trick question once he tries to divide by a non-zero price change and gets a numerator of zero.</p>
+<h3>Slide 7 — Check: padel courts answer</h3>
+<p><em>Say:</em> "PES = 0% ÷ 20% = 0. Perfectly inelastic — no matter how high the price climbs this summer, supply simply cannot respond in time."<br />
+<em>Ask him:</em> "Why can't the club fix this by just deciding to build more courts?"<br />
+<em>What a good answer sounds like:</em> Building courts takes months — construction time, not willingness, is the constraint. Even with unlimited demand and a great price, physical supply this season is fixed.</p>
+<h3>Slide 8 — Your turn: custom Lego accessories</h3>
+<p><em>Say:</em> "Second one. Price of Tom's custom Lego-compatible accessories rises 10%. He's got a second, mostly idle 3D printer, so weekly output can rise 30%. PES and category?"</p>
+<h3>Slide 9 — Check: custom Lego accessories answer</h3>
+<p><em>Say:</em> "PES = 30% ÷ 10% = 3. Elastic — and notice why: spare capacity. That idle second printer is the whole reason Tom can respond so fast."<br />
+<em>Extra context if he's interested:</em> This is the mirror image of the padel court example — same formula, but here the <em>producer</em> has slack to expand, so supply reacts strongly.</p>
+<h3>Slide 10 — Your turn: retired Lego set resale</h3>
+<p><em>Say:</em> "Last one, and it should feel familiar from Lesson 2. A retired Lego set — no more will ever be made. Resale price rises 50%. What happens to quantity supplied, and what's the PES?"</p>
+<h3>Slide 11 — Check: retired Lego set answer</h3>
+<p><em>Say:</em> "Quantity supplied stays at 0% change, however much the price rises — so PES = 0% ÷ 50% = 0. Perfectly inelastic, same as the padel courts."<br />
+<em>Ask him:</em> "How does this connect back to what we said in Lesson 2 about the retired set's resale price?"<br />
+<em>What a good answer sounds like:</em> It's exactly why the price just kept climbing with no ceiling — supply is completely fixed at whatever sets already exist, so price is the only thing that can move to balance the market.</p>
+<h3>Slide 12 — The PES spectrum</h3>
+<p><em>Say:</em> "Same five categories as PED, just for supply this time: perfectly inelastic, inelastic, unitary, elastic, perfectly elastic."<br />
+<em>Ask him:</em> "Which category did each of today's three examples fall into?"<br />
+<em>What a good answer sounds like:</em> Padel courts and the retired Lego set — perfectly inelastic (PES = 0). Custom Lego accessories — elastic (PES = 3, well above 1).<br />
+<em>Extra context:</em> Perfectly elastic supply (PES = infinite) is rare in real markets — it describes a producer willing to supply <em>any</em> quantity at one exact price, but none below it. Not something he needs a real-world example memorised for, just the definition.</p>
+<h3>Slide 13 — Determinants of PES (1/2)</h3>
+<p><em>Say:</em> "Six factors decide whether supply is elastic or inelastic. First three: spare capacity, factor mobility, time period."<br />
+<em>Ask him:</em> "Why does Tom's idle second printer make his supply more elastic?"<br />
+<em>What a good answer sounds like:</em> Unused capacity means he can increase output immediately without needing to invest in new equipment first.</p>
+<h3>Slide 14 — Determinants of PES (2/2)</h3>
+<p><em>Say:</em> "Last three: ability to store stock, length of the production/gestation period, and number of producers able to enter the market."<br />
+<em>Ask him:</em> "Why is a padel lesson — a service — harder to supply elastically than a padel grip?"<br />
+<em>What a good answer sounds like:</em> A grip can be 3D-printed in advance and stored as stock, ready to sell when price rises. A coaching session is a service — it can't be stockpiled ahead of time, so supply is more constrained by how many coaches are available <em>right now</em>.<br />
+<em>Extra context:</em> This "ability to store stock" point is one Cambridge examiners like testing with services vs. physical goods — worth flagging explicitly.</p>
+<h3>Slide 15 — Quick check</h3>
+<p>Ask both questions verbally, no need to reveal anything on-screen:<br />
+1. "A padel club can't add courts this season no matter the price. What's its PES this season?" <em>(PES = 0, perfectly inelastic.)</em><br />
+2. "Which would make Tom's grip supply MORE elastic — his printer already running 24/7, or a second idle printer ready to switch on?" <em>(The idle printer — spare capacity.)</em></p>
+<h3>Slide 16 — Recap</h3>
+<p><em>Say:</em> "PES = % change in quantity supplied ÷ % change in price, and it's almost always positive. Determinants: spare capacity, factor mobility, time period, ability to store stock, production period, number of producers."</p>
+<h3>Slide 17 — Next lesson</h3>
+<p><em>Say:</em> "Next time we zoom right out — from single markets to a whole economic system, and how a 'market economy' decides what gets made without anyone being in charge."</p>
+<h2>Wrap-up</h2>
+<p>Set the worksheet for self-directed time, and mention <code>flashcards.txt</code> for NotebookLM. If time allows, it's worth pointing out explicitly that today's lesson mirrors Lesson 3's structure almost exactly (same formula shape, same five categories, same "determinants" idea) — recognising that pattern is genuinely useful for retention and for spotting how Cambridge likes to test parallel concepts.</p>
+<h2>Next lesson</h2>
+<p>Lesson 6 — 2.8 Market economic system.</p>
+</div>
+</body>
+</html>
