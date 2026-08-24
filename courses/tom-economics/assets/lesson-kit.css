@@ -94,7 +94,7 @@ p.lede{font-size:17px; color:var(--ink-soft); max-width:680px; line-height:1.55;
   background:var(--card); border:1px solid var(--line); border-radius:16px;
   padding:18px 20px; box-shadow:var(--shadow);
 }
-.card-dark{background:var(--ink); color:#fff; border:none;}
+.card-dark{background:var(--ink); color:var(--bg); border:none;}
 .card-gold{background:var(--gold-light); border:none;}
 
 /* ===== Flip cards (term front, definition back) ===== */
@@ -150,14 +150,14 @@ p.lede{font-size:17px; color:var(--ink-soft); max-width:680px; line-height:1.55;
 /* ===== Comparison / data tables ===== */
 table.cmp{width:100%; border-collapse:collapse; margin:18px 0; border-radius:14px; overflow:hidden; box-shadow:var(--shadow);}
 table.cmp th, table.cmp td{padding:12px 14px; text-align:left; font-size:14px; border-bottom:1px solid var(--line);}
-table.cmp th{background:var(--ink); color:#fff; font-family:'Space Grotesk',sans-serif; font-size:13px;}
+table.cmp th{background:var(--ink); color:var(--bg); font-family:'Space Grotesk',sans-serif; font-size:13px;}
 table.cmp td{background:var(--card);}
 table.cmp tr:last-child td{border-bottom:none;}
 .tick{color:var(--teal); font-weight:700;} .cross{color:var(--coral); font-weight:700;}
 
 .data-table{width:100%; border-collapse:collapse; margin-top:16px;}
 .data-table th, .data-table td{padding:10px 12px; font-size:13.5px; text-align:center; border-bottom:1px solid var(--line);}
-.data-table th{font-family:'Space Grotesk',sans-serif; background:var(--ink); color:#fff; font-size:12px;}
+.data-table th{font-family:'Space Grotesk',sans-serif; background:var(--ink); color:var(--bg); font-size:12px;}
 .data-table tr.best td{background:var(--gold-light); font-weight:700;}
 .data-table td{font-family:'IBM Plex Mono',monospace; color:var(--ink);}
 
