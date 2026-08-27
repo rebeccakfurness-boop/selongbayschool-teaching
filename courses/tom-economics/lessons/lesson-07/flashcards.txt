@@ -1,0 +1,31 @@
+Market failure: When the price mechanism fails to allocate resources efficiently, leading to over- or under-production of a good or service compared to what's best for society.
+
+Private cost: What the producer or consumer themselves actually pays. For Tom, the plastic and electricity behind an $8 padel grip.
+
+External cost: A cost dumped on someone not involved in the transaction, e.g. the pollution cost paid by people living near the stream where Tom's plastic waste ends up.
+
+Social cost: Private cost + external cost — the full, true cost to society of an economic activity. Whenever social cost is greater than private cost, that gap is where market failure comes from.
+
+Private benefit and external benefit: The same private/external split applies to benefit as to cost — private benefit goes to the producer/consumer, external benefit spills onto a third party.
+
+Externality: A cost or benefit of a transaction that spills over onto a third party not involved in it.
+
+Negative production externality: A cost created while a good is being produced, imposed on someone uninvolved, e.g. Tom's plastic waste polluting the stream.
+
+Negative consumption externality: A cost created while a good is being consumed, imposed on someone uninvolved, e.g. loud music from a late padel match disturbing neighbours.
+
+Positive production externality: A benefit created as a side effect of production, received by someone who paid nothing for it, e.g. a beekeeper's bees pollinating a neighbouring farmer's crops.
+
+Positive consumption externality: A benefit created as a side effect of consumption, received by someone who paid nothing for it, e.g. a flu vaccine lowering the chance of others catching the disease.
+
+Private good: Excludable (non-payers can be stopped from using it) and rivalrous (one person's use reduces how much is left for others), e.g. a padel court booking.
+
+Public good: Non-excludable (can't stop non-payers benefiting) and non-rivalrous (one person's use doesn't reduce another's), e.g. street lighting.
+
+The free-rider problem: Because a public good is non-excludable, anyone can benefit without paying. No private firm can profit from providing it, so the market fails to supply it at all, even though people genuinely want it.
+
+Merit good: Under-provided by the market because people undervalue its benefit to themselves, or ignore the positive externality it creates for others, e.g. education, healthcare, vaccination.
+
+Demerit good: Over-provided by the market because people undervalue its cost to themselves, or ignore the negative externality it creates for others, e.g. cigarettes, junk food.
+
+Why market failure matters: It's the umbrella topic covering every way the price mechanism can misallocate resources — externalities, public goods, and merit/demerit goods are three distinct causes, each needing a different kind of government response.

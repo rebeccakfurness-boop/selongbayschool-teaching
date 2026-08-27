@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 07 Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted:#898781;
+    --blue:#2a78d6; --orange:#eb6834; --border:rgba(11,11,11,0.12); --grid:#e1e0d9;
+    --warn-bg:#fdf1de; --warn-border:#eb6834;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --blue:#3987e5; --orange:#d95926; --border:rgba(255,255,255,0.14); --grid:#2c2c2a;
+      --warn-bg:#2a2117; --warn-border:#d95926; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 14px; }
+  th, td { border: 1px solid var(--grid); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--grid); font-weight: 600; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 7 — Comprehensive Teaching Script</h1>
+<p><strong>Syllabus ref: 2.9 Market failure — key definitions</strong><br />
+Linked materials: <code>worksheet.html</code> / <code>worksheet.docx</code> · <code>lesson.html</code> (interactive) / <code>slides.pptx</code> · <code>flashcards.txt</code></p>
+<p>This is a full script, not just a lesson outline — written so you can follow it slide-by-slide live (using <code>slides.pptx</code> as backup, or the interactive <code>lesson.html</code>), with what to say, what to ask, what he might ask back, and extra depth if he wants it. Paraphrase in your own voice, but every idea should land before you move on. This lesson is purely definitional — no calculations — so it leans hard on concrete Tom's Print Co / padel club examples, plus a couple of classic textbook examples he'll recognise from exam questions. Lesson 6 ended by flagging that "public goods" and "externalities" would come back properly here — remind him of that if he doesn't recall it himself.</p>
+<h2>Learning objectives</h2>
+<p>By the end of this lesson he can:</p>
+<ol>
+<li>Define market failure, and explain it using private cost/benefit vs. social cost/benefit.</li>
+<li>Define externality, name its four types (negative/positive × production/consumption), and classify real scenarios.</li>
+<li>Distinguish private goods from public goods using excludability and rivalry, and explain the free-rider problem.</li>
+<li>Distinguish merit goods from demerit goods, and explain why the market under- or over-provides each.</li>
+</ol>
+<h2>Slide-by-slide script</h2>
+<h3>Slide 1 — Title</h3>
+<p><em>Say:</em> "Last lesson I promised we'd come back properly to two things I only teased — externalities and public goods. Today's the day: market failure, the topic covering exactly where the price mechanism breaks down."</p>
+<h3>Slide 2 — Quick recap</h3>
+<p><em>Say:</em> "Quick recap of Lesson 6 first."<br />
+<em>Ask him:</em> "In a market economy, what actually decides what gets produced, how, and for whom?"<br />
+<em>What a good answer sounds like:</em> What — whatever earns a profit. How — however keeps costs lowest. For whom — whoever is willing and able to pay.</p>
+<h3>Slide 3 — Warm-up: PED &amp; PES practice</h3>
+<p><em>Say:</em> "Before today's new topic, let's keep PED and PES sharp — both keep showing up in exam questions even once we've moved past their own topics."<br />
+Work through both together, letting him calculate on paper before you confirm each:</p>
+<p>1. "Padel club energy drinks: price $3 to $3.60, that's +20%. Weekly sales fall from 80 to 56, that's −30%. Calculate the PED and classify it." <em>(PED = −30% ÷ 20% = −1.5 → elastic — plenty of substitute drinks nearby.)</em><br />
+2. "Tom's Print Co: a sudden trend pushes the price of his desk organisers up from $15 to $18, that's +20%. He ramps up weekly output from 40 to 44, that's +10%. Calculate the PES and classify it." <em>(PES = 10% ÷ 20% = 0.5 → inelastic — his printer capacity can't scale output as fast as the price is rising.)</em></p>
+<h3>Slide 4 — Hook</h3>
+<p><em>Say:</em> "Remember the plastic waste from Tom's printer ending up in the stream, and the streetlights nobody privately installs on the path to the padel club? Both of those are market failure in action. Today we put proper names on exactly what's going wrong in each case."</p>
+<h3>Slide 5 — Defining market failure</h3>
+<p><em>Say:</em> "Market failure is when the price mechanism fails to allocate resources efficiently — it leads to either too much or too little of something being produced, compared to what's actually best for society as a whole."<br />
+<em>Ask him:</em> "In the stream-pollution example, is Tom's printer producing more or less than what's actually best for society, once you account for the pollution?"<br />
+<em>What a good answer sounds like:</em> More — the market price only reflects Tom's own costs, not the cost to people near the stream, so from society's point of view too many grips get produced at that price.</p>
+<h3>Slide 6 — Private, external, and social cost/benefit</h3>
+<p><em>Say:</em> "To make that precise, economists split cost and benefit into three related ideas. Private cost is what the producer or consumer themselves pays. External cost is the cost dumped on someone else who wasn't part of the deal. Social cost is simply the two added together — private cost plus external cost. The exact same split applies to benefit."<br />
+<em>Ask him:</em> "For a padel grip Tom sells for $8, what's the private cost, and what's the external cost?"<br />
+<em>What a good answer sounds like:</em> Private cost — the plastic and electricity Tom actually pays for, reflected in the $8. External cost — the cost of the pollution in the stream, paid by nobody involved in the transaction.<br />
+<em>Extra context:</em> Whenever social cost is greater than private cost (or social benefit is less than private benefit), that gap is exactly where market failure comes from — the price only ever reflects the private side.</p>
+<h3>Slide 7 — Externalities defined</h3>
+<p><em>Say:</em> "That external cost or benefit — the bit that spills onto a third party not involved in the transaction — is called an externality. There are four types, sorted by whether they happen at production or consumption, and whether they're negative or positive."<br />
+<em>Ask him:</em> "Which of the four do you think the stream pollution is?"<br />
+<em>What a good answer sounds like:</em> A negative production externality — it's a cost created while Tom is producing, imposed on someone who isn't part of the sale.</p>
+<h3>Slide 8 — All four types, with examples</h3>
+<p><em>Say:</em> "Four cards, one for each type — tap through them."<br />
+<strong>Negative production externality:</strong> Tom's plastic waste polluting the stream while he manufactures.<br />
+<strong>Negative consumption externality:</strong> Loud music from a late padel match disturbing neighbours who aren't playing or paying.<br />
+<strong>Positive production externality:</strong> A classic textbook one — a beekeeper's bees pollinate a neighbouring farmer's crops as a side effect of producing honey, with nobody paying for that benefit.<br />
+<strong>Positive consumption externality:</strong> Someone getting a flu vaccine also reduces the chance everyone around them catches it — a benefit to people who never got the jab themselves.<br />
+<em>If he asks why the beekeeper example matters if it's not Tom-related:</em> Exam questions often use classic textbook contexts like this one directly — worth recognising it by name, not just the Tom's Print Co version.</p>
+<h3>Slide 9 — Now you try: classify the externality</h3>
+<p>Read each scenario and ask him to name which of the four types it is, then discuss:<br />
+1. "A padel court resurfacing project kicks up dust that settles on a neighbour's washing line." <em>(Negative production externality.)</em><br />
+2. "A homeowner who repaints their house nicely raises the whole street's property values, including neighbours who never asked for it." <em>(Positive production or consumption externality — accept either with reasoning; commonly classed as a production-side spillover from the improvement work.)</em><br />
+3. "Someone smoking a cigarette on the padel club terrace forces nearby players to breathe second-hand smoke." <em>(Negative consumption externality.)</em></p>
+<h3>Slide 10 — Public goods vs. private goods</h3>
+<p><em>Say:</em> "Second big idea today: not every good behaves the same way in a market. Two properties decide the difference. Excludability — can you stop someone who hasn't paid from using it? Rivalry — does one person using it reduce how much is left for someone else?"<br />
+<em>Ask him:</em> "Is a padel court booking excludable and rivalrous?"<br />
+<em>What a good answer sounds like:</em> Yes to both — the club can refuse entry to non-payers (excludable), and if Tom's on the court, someone else can't use that same court at that same time (rivalrous). That makes it a private good.<br />
+<em>Then ask:</em> "Now what about a streetlight on the path to the club?"<br />
+<em>What a good answer sounds like:</em> Not excludable — you can't stop a passer-by benefiting from the light even if they never paid for it. Not rivalrous — one person walking under it doesn't leave less light for the next person. That makes it a public good.</p>
+<h3>Slide 11 — The free-rider problem</h3>
+<p><em>Say:</em> "Because a public good is non-excludable, anyone can benefit without paying — that's called free-riding. Why does that cause market failure?"<br />
+<em>What a good answer sounds like:</em> If a private firm installed the streetlight, it couldn't charge the passers-by who benefit from it, so there's no profit in providing it — the market simply won't supply it, even though people genuinely want it. That's why public goods are usually provided by government instead.</p>
+<h3>Slide 12 — Public or private good?</h3>
+<p>Guess-then-reveal, one at a time:<br />
+1. "A 3D-printed padel grip Tom sells." <em>(Private good — excludable and rivalrous.)</em><br />
+2. "National flood defences protecting an entire coastline." <em>(Public good — classic example: non-excludable, non-rivalrous.)</em><br />
+3. "A padel club membership." <em>(Private good — the club can exclude non-members, and a place on a busy court is rivalrous.)</em></p>
+<h3>Slide 13 — Merit goods vs. demerit goods</h3>
+<p><em>Say:</em> "Last idea: some goods the market gets the <em>quantity</em> wrong on, in a predictable direction. A merit good is one the market under-provides, because people undervalue the benefit to themselves, or ignore the positive externality to others — think education or healthcare. A demerit good is the opposite: over-provided, because people undervalue the cost to themselves, or ignore the negative externality to others — think cigarettes or junk food."<br />
+<em>Ask him:</em> "Playing padel regularly has real health and social benefits players often don't fully weigh up when deciding whether to sign up. Is that closer to a merit good or a demerit good?"<br />
+<em>What a good answer sounds like:</em> Merit good — left purely to individual choice, some people under-value the long-term health benefit and under-consume it, so there's a case for encouraging or subsidising it.</p>
+<h3>Slide 14 — Merit or demerit?</h3>
+<p>Guess-then-reveal:<br />
+1. "Cigarettes sold at a kiosk near the club." <em>(Demerit good — smokers tend to undervalue the long-term health cost to themselves, and impose a negative externality via second-hand smoke.)</em><br />
+2. "A subsidised after-school coding class Tom might run using his 3D printer." <em>(Merit good — parents/students may undervalue the long-term benefit, and society benefits too from more STEM skills.)</em></p>
+<h3>Slide 15 — Quick check</h3>
+<p>Ask both questions verbally:<br />
+1. "What's the difference between private cost and social cost?" <em>(Social cost = private cost + external cost — the bit the market price leaves out.)</em><br />
+2. "Name the two properties that make something a public good." <em>(Non-excludable and non-rivalrous.)</em></p>
+<h3>Slide 16 — Recap + next lesson</h3>
+<p><em>Say:</em> "Market failure happens when the price mechanism misallocates resources. Externalities are the spillover costs or benefits behind a lot of it — four types, split by production/consumption and negative/positive. Public goods fail differently — non-excludable and non-rivalrous, so free-riding means the market won't supply them at all. Merit and demerit goods are under- and over-provided respectively, because people misjudge the true benefit or cost."<br />
+Next time: causes and consequences of market failure in more depth — what governments actually do about each of these problems (2.10 territory starts to overlap here too).</p>
+<h2>Wrap-up</h2>
+<p>Set the worksheet for self-directed time, and mention <code>flashcards.txt</code> for NotebookLM. This lesson introduces four fairly abstract distinctions in one sitting (private/social, the four externality types, public/private goods, merit/demerit goods) — if he's mixing up which is which by the end, it's worth one more very quick round-trip through the Tom's Print Co and padel club examples before moving to the worksheet, since those are what make the vocabulary stick.</p>
+<h2>Next lesson</h2>
+<p>Lesson 8 — 2.9 Market failure: causes &amp; consequences.</p>
+</div>
+</body>
+</html>

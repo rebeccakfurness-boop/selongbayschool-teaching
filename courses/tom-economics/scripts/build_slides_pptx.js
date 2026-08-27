@@ -688,6 +688,111 @@ function buildLesson6() {
   return pres;
 }
 
+function buildLesson7() {
+  const pres = new pptxgen();
+  pres.layout = "LAYOUT_WIDE";
+  titleSlide(pres, "Lesson 7 · Syllabus 2.9", "Market Failure: Key Definitions", "Two things we left hanging, finally named properly.");
+
+  bodySlide(pres, "Quick recap", [
+    "In a market economy: what to produce (whatever earns profit), how (however keeps costs lowest), for whom (whoever can pay).",
+    "The price mechanism coordinates all of it, with no central planner.",
+  ]);
+
+  blankCalcSlide(pres, "🥤 Warm-up: padel club energy drinks", "Your turn — PED practice",
+    ["Price: $3 → $3.60  (+20%)", "Quantity: 80 → 56 per week  (−30%)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "🥤 Energy drinks — answer", "Check your answer",
+    ["% change in price = +20%", "% change in quantity = −30%"],
+    "PED = −30 ÷ 20 = −1.5 → Elastic", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  blankCalcSlide(pres, "🖨️ Warm-up: Tom's Print Co desk organisers", "Your turn — PES practice",
+    ["Price: $15 → $18  (+20%)", "Quantity: 40 → 44 per week  (+10%)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "🖨️ Desk organisers — answer", "Check your answer",
+    ["% change in price = +20%", "% change in quantity supplied = +10%"],
+    "PES = 10 ÷ 20 = 0.5 → Inelastic", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  bodySlide(pres, "Two things we left hanging", [
+    "Remember the plastic waste from Tom's printer ending up in the stream?",
+    "And the streetlights nobody privately installs on the path to the padel club?",
+    "Both are market failure in action. Today we name exactly what's going wrong in each case.",
+  ]);
+
+  bodySlide(pres, "What is market failure?", [
+    "Market failure: the price mechanism fails to allocate resources efficiently — too much or too little gets produced, compared to what's best for society.",
+    "Example: a padel grip's price only reflects Tom's own cost, not the pollution cost to people near the stream — so more grips get produced than is actually efficient.",
+  ]);
+
+  cardRowSlide(pres, "Private, external, and social cost", [
+    { name: "Private cost", desc: "What the producer or consumer themselves pays. For Tom: the plastic and electricity behind an $8 grip." },
+    { name: "External cost", desc: "A cost dumped on someone not involved in the transaction. The pollution cost paid by people near the stream." },
+    { name: "Social cost", desc: "Private cost + external cost — the true cost to society. Whenever social > private, that gap is market failure." },
+  ]);
+
+  bodySlide(pres, "Externalities: naming the spillover", [
+    "The external cost or benefit that spills onto a third party is called an externality.",
+    "Four types — split by production vs. consumption, and negative vs. positive.",
+  ]);
+
+  cardRowSlide(pres, "Externality types (1/2)", [
+    { name: "Negative — production", desc: "Tom's plastic waste polluting the stream while he manufactures grips — a cost created during production, dumped on someone uninvolved." },
+    { name: "Negative — consumption", desc: "Loud music from a late padel match disturbing neighbours who aren't playing or paying — a cost created while the good is consumed." },
+  ]);
+
+  cardRowSlide(pres, "Externality types (2/2)", [
+    { name: "Positive — production", desc: "Classic example: a beekeeper's bees pollinate a neighbouring farmer's crops as a side effect of producing honey — a free, unpaid-for benefit." },
+    { name: "Positive — consumption", desc: "Someone getting a flu vaccine also lowers the chance everyone around them catches it — a benefit to people who never got the jab themselves." },
+  ]);
+
+  bodySlide(pres, "Now you try: which externality?", [
+    "Padel court resurfacing kicks up dust onto a neighbour's washing line.",
+    "A homeowner's fresh paint job raises the whole street's property values.",
+    "Someone smoking on the club terrace forces nearby players to breathe second-hand smoke.",
+  ]);
+
+  twoColSlide(pres, "Public goods vs. private goods",
+    "Private good", "Excludable — can stop non-payers.\nRivalrous — one person's use reduces another's.\n\nA padel court booking: the club can refuse non-payers, and one match on it means nobody else can use that court then.",
+    "Public good", "Non-excludable — can't stop non-payers benefiting.\nNon-rivalrous — one person's use doesn't reduce another's.\n\nA streetlight on the path to the club: can't stop a passer-by benefiting, and one walker doesn't leave less light for the next.");
+
+  bodySlide(pres, "The free-rider problem", [
+    "Because a public good is non-excludable, anyone can benefit without paying — free-riding.",
+    "A private firm installing a streetlight couldn't charge the passers-by who benefit from it.",
+    "No profit, no incentive to supply it — even though people genuinely want it. That's why government usually provides public goods instead.",
+  ]);
+
+  bodySlide(pres, "Public good or private good?", [
+    "A 3D-printed padel grip Tom sells → Private good (excludable, rivalrous).",
+    "National flood defences protecting a coastline → Public good (non-excludable, non-rivalrous).",
+    "A padel club membership → Private good (the club can exclude non-members).",
+  ]);
+
+  twoColSlide(pres, "Merit goods vs. demerit goods",
+    "Merit good", "Under-provided by the market.\n\nPeople undervalue the benefit to themselves, or ignore the positive externality to others.\n\nE.g. education, healthcare, vaccination.",
+    "Demerit good", "Over-provided by the market.\n\nPeople undervalue the cost to themselves, or ignore the negative externality to others.\n\nE.g. cigarettes, junk food.");
+
+  bodySlide(pres, "Merit good or demerit good?", [
+    "Cigarettes sold near the club → Demerit good (undervalued health cost + second-hand smoke externality).",
+    "A subsidised coding workshop using Tom's 3D printer → Merit good (undervalued long-term benefit + skills spillover).",
+  ]);
+
+  bodySlide(pres, "Quick check", [
+    "What's the difference between private cost and social cost?",
+    "Name the two properties that make something a public good.",
+  ]);
+
+  bodySlide(pres, "Recap", [
+    "Market failure: the price mechanism misallocates resources.",
+    "Externalities: four types, split by production/consumption and negative/positive.",
+    "Public goods: non-excludable + non-rivalrous → free-riding → the market under-supplies them.",
+    "Merit goods under-provided, demerit goods over-provided — people misjudge the true benefit or cost.",
+  ]);
+
+  closingSlide(pres, "Next lesson", "Market failure: causes & consequences",
+    "What governments actually do about each of these problems.");
+
+  return pres;
+}
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   await buildLesson1().writeFile({ fileName: path.join(BASE, "lesson-01", "slides.pptx") });
@@ -702,5 +807,7 @@ async function run() {
   console.log("wrote lesson-05/slides.pptx");
   await buildLesson6().writeFile({ fileName: path.join(BASE, "lesson-06", "slides.pptx") });
   console.log("wrote lesson-06/slides.pptx");
+  await buildLesson7().writeFile({ fileName: path.join(BASE, "lesson-07", "slides.pptx") });
+  console.log("wrote lesson-07/slides.pptx");
 }
 run();
