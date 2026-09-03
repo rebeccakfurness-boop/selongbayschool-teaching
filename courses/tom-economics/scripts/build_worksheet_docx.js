@@ -510,6 +510,79 @@ const LESSON7 = {
   ],
 };
 
+const REVIEW1 = {
+  title: "Review Session 1 Worksheet — PED, Total Revenue & PES",
+  syllabusRef: "2.6 / 2.7",
+  sections: [
+    {
+      heading: "Section A — Definitions",
+      items: [
+        { type: "qa", q: "**1a.** Define PED, in your own words (not just the formula)." },
+        { type: "qa", q: "**1b.** Define total revenue and give its formula." },
+        { type: "qa", q: "**1c.** Define PES, in your own words." },
+        { type: "qa", q: "**1d.** PED and PES have the same shape of formula, but one key difference. What is it, and why?" },
+      ],
+    },
+    {
+      heading: "Section B — PED practice",
+      items: [
+        { type: "qa", q: "**2a.** Padel club sun hats: price $10 → $8, weekly sales 40 → 60. Calculate the PED and classify it." },
+        { type: "qa", q: "**2b.** Tom's Print Co keychain multipack: price $6 → $9, weekly sales 90 → 30. Calculate the PED and classify it." },
+        { type: "qa", q: "**2c.** Padel club bottled water: price $2 → $2.20, weekly sales 300 → 285. Calculate the PED and classify it." },
+      ],
+    },
+    {
+      heading: "Section C — PED + total revenue",
+      items: [
+        { type: "qa", q: "**3a.** Padel club adult casual entry: price $15 → $18, weekly visits 200 → 150. Calculate the PED, then TR before and after. Did revenue rise or fall?" },
+        { type: "qa", q: "**3b.** Tom's Print Co desk lamps: price $30 → $24, weekly sales 20 → 30. Calculate the PED, then TR before and after. Did revenue rise or fall?" },
+      ],
+    },
+    {
+      heading: "Section D — PES practice",
+      items: [
+        { type: "qa", q: "**4a.** Padel club ball-machine rental: price $8 → $10, quantity supplied 50 → 60 per week. Calculate the PES and classify it." },
+        { type: "qa", q: "**4b.** Tom's Print Co custom keyring output: price $5 → $6, quantity supplied 100 → 140 per week. Calculate the PES and classify it." },
+        { type: "qa", q: "**4c.** A vintage Lego minifigure (no more can ever be made): price $40 → $60, quantity supplied stays at 15 either way. Calculate the PES and classify it." },
+      ],
+    },
+    {
+      heading: "Section E — PED or PES? Decide first",
+      items: [
+        { type: "qa", q: "**5a.** Padel club coaching price rises $25 → $30, and weekly attendance falls 80 → 64. Is this a PED or PES scenario? Calculate it." },
+        { type: "qa", q: "**5b.** Tom's grip price rises $8 → $9, and his own weekly output rises 50 → 65. Is this a PED or PES scenario? Calculate it." },
+      ],
+    },
+    {
+      heading: "Section F — Exam-style practice",
+      items: [
+        { type: "mcq", q: "**6.** *(Paper 1 style MCQ)* A firm with elastic demand wants to increase its total revenue. It should:", options: ["A. Raise its price", "B. Cut its price", "C. Leave its price unchanged", "D. It is impossible to increase revenue"] },
+        { type: "mcq", q: "**7.** *(Paper 1 style MCQ)* Which of the following would make a firm's PES more elastic?", options: ["A. No spare production capacity", "B. A long, slow production process", "C. Spare machinery capacity ready to switch on", "D. Being the only producer in the market"] },
+        { type: "qa", q: "**8.** *(Paper 2 style, 6 marks)* Explain, using PED, total revenue, and PES, why a business owner and a government might each care about elasticity when making a decision. Use examples from Tom's Print Co or the padel club." },
+      ],
+    },
+  ],
+  answerKey: [
+    { type: "text", text: "**1a.** A measure of how much quantity demanded changes when price changes, how strongly buyers react." },
+    { type: "text", text: "**1b.** The total money a firm receives from sales, before costs. TR = Price × Quantity." },
+    { type: "text", text: "**1c.** A measure of how much quantity supplied changes when price changes, how strongly sellers can react." },
+    { type: "text", text: "**1d.** PED is (almost) always negative, since price and quantity demanded move in opposite directions. PES is (almost) always positive, since price and quantity supplied move in the same direction (the law of supply)." },
+    { type: "text", text: "**2a.** % price = −20%, % quantity = +50%. PED = 50 ÷ −20 = −2.5 → Elastic." },
+    { type: "text", text: "**2b.** % price = +50%, % quantity = −66.7%. PED = −66.7 ÷ 50 = −1.33 → Elastic." },
+    { type: "text", text: "**2c.** % price = +10%, % quantity = −5%. PED = −5 ÷ 10 = −0.5 → Inelastic." },
+    { type: "text", text: "**3a.** % price = +20%, % quantity = −25%. PED = −25 ÷ 20 = −1.25 → Elastic. TR before = $15 × 200 = $3,000. TR after = $18 × 150 = $2,700. Revenue FELL, elastic demand, price rise, revenue falls." },
+    { type: "text", text: "**3b.** % price = −20%, % quantity = +50%. PED = 50 ÷ −20 = −2.5 → Elastic. TR before = $30 × 20 = $600. TR after = $24 × 30 = $720. Revenue ROSE, elastic demand, price cut, revenue rises." },
+    { type: "text", text: "**4a.** % price = +25%, % quantity supplied = +20%. PES = 20 ÷ 25 = 0.8 → Inelastic." },
+    { type: "text", text: "**4b.** % price = +20%, % quantity supplied = +40%. PES = 40 ÷ 20 = 2.0 → Elastic." },
+    { type: "text", text: "**4c.** % price = +50%, % quantity supplied = 0%. PES = 0 ÷ 50 = 0 → Perfectly inelastic. Once production stops, no price can increase how many exist." },
+    { type: "text", text: "**5a.** PED, this describes buyers' reaction (attendance) to a price change. % price = +20%, % quantity = −20%. PED = −20 ÷ 20 = −1.0 → Unitary." },
+    { type: "text", text: "**5b.** PES, this describes the seller's (Tom's) own output response to a price change. % price = +12.5%, % quantity supplied = +30%. PES = 30 ÷ 12.5 = 2.4 → Elastic." },
+    { type: "text", text: "**6.** B, with elastic demand, a price cut brings in proportionally more extra sales than the discount costs, growing revenue." },
+    { type: "text", text: "**7.** C, spare capacity lets a producer ramp up output quickly when price rises, making supply more elastic." },
+    { type: "text", text: "**8.** Look for **two** developed points (AO2 chains), each naming a decision-maker and explaining how elasticity informs it, e.g.: (i) a business owner like Tom uses PED and TR together to decide whether raising or cutting price grows revenue; (ii) a government taxing an inelastic good like cigarettes knows demand won't fall much, so the tax mainly raises revenue rather than changing behaviour; (iii) a producer uses PES to judge how fast they can respond to a price change, e.g. spare printer capacity versus a padel court that takes months to build. Full marks need identification + explanation of the effect on the decision, not just definitions." },
+  ],
+};
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   const jobs = [
@@ -520,6 +593,7 @@ async function run() {
     { lesson: "lesson-05", data: LESSON5 },
     { lesson: "lesson-06", data: LESSON6 },
     { lesson: "lesson-07", data: LESSON7 },
+    { lesson: "review-01-ped-tr-pes", data: REVIEW1 },
   ];
   for (const job of jobs) {
     const doc = buildDoc(job.data);

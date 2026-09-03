@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Review Session 1 Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted:#898781;
+    --blue:#2a78d6; --orange:#eb6834; --border:rgba(11,11,11,0.12); --grid:#e1e0d9;
+    --warn-bg:#fdf1de; --warn-border:#eb6834;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --blue:#3987e5; --orange:#d95926; --border:rgba(255,255,255,0.14); --grid:#2c2c2a;
+      --warn-bg:#2a2117; --warn-border:#d95926; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 14px; }
+  th, td { border: 1px solid var(--grid); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--grid); font-weight: 600; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Review Session 1 — Comprehensive Teaching Script</h1>
+<p><strong>Covers: PED (2.6), Total Revenue, PES (2.7) — consolidation, not new content</strong><br />
+Linked materials: <code>worksheet.html</code> / <code>worksheet.docx</code> · <code>lesson.html</code> (interactive) · <code>flashcards.txt</code></p>
+<p>This sits between Lesson 5 (PES) and Lesson 6 (the market economic system). No new syllabus content today — the goal is to make sure PED, total revenue, and PES are genuinely solid, in both meaning and mechanical calculation, before we build the next topic on top of them. Follow the interactive <code>lesson.html</code> live; this script gives you what to say and ask alongside it.</p>
+<h2>Learning objectives</h2>
+<p>By the end of this session he can:</p>
+<ol>
+<li>Explain, in his own words (not just recite the formula), what PED, total revenue, and PES each actually measure and why a real business or government would care.</li>
+<li>Calculate and correctly classify PED and PES from a price/quantity scenario, without hesitation.</li>
+<li>Calculate total revenue before and after a price change, and correctly predict whether it rises or falls from the elasticity alone, before doing the arithmetic.</li>
+<li>Given an unlabelled scenario, correctly identify whether it's describing the buyer's side (PED) or the seller's side (PES) before calculating anything.</li>
+</ol>
+<h2>Slide-by-slide script</h2>
+<h3>Slide 1 — Why today exists</h3>
+<p><em>Say:</em> "Before we move on to a brand new topic next lesson, I want one session where we don't learn anything new — we just make sure PED, revenue, and PES are completely solid. If any of the three are shaky, everything after this gets harder, so it's worth the extra session now."</p>
+<h3>Slide 2 — What PED actually tells you</h3>
+<p><em>Say:</em> "Before we calculate anything, tell me in plain English — not the formula — what PED is actually measuring."<br />
+<em>What a good answer sounds like:</em> How much buyers change how much they buy, when the price changes. A big PED means buyers react strongly; a small one means they barely react.<br />
+<em>If he just recites the formula:</em> That's fine as a backup, but push for the plain-English version first — that's what actually gets tested in extended-response questions, not just the formula.</p>
+<h3>Slide 3 — What total revenue actually tells you</h3>
+<p><em>Ask him:</em> "Why does a firm even care about PED? What's the actual business question it answers?"<br />
+<em>What a good answer sounds like:</em> Whether raising or cutting price will grow or shrink the money coming in — total revenue. Elastic demand: a price cut grows revenue. Inelastic demand: a price rise grows revenue.<br />
+<em>If he's stuck:</em> Ask him directly: "If Tom has elastic demand and wants more revenue, should he raise or cut his price?" (Cut it.)</p>
+<h3>Slide 4 — What PES actually tells you</h3>
+<p><em>Ask him:</em> "PES looks almost identical to PED. What's actually different about it?"<br />
+<em>What a good answer sounds like:</em> It's the seller's side, not the buyer's — how much a producer can ramp up (or down) output when price changes. And the sign is different: PES is almost always positive, since price and quantity supplied move the same direction, unlike PED.</p>
+<h3>Slide 5 — The real-world payoff</h3>
+<p><em>Say:</em> "One more time, why any of this matters outside an exam: for a firm, it's a pricing decision. For a government taxing something like cigarettes, PED tells them whether people will actually cut back, or just keep paying the higher price (meaning the tax mostly just raises money without changing behaviour much). For a producer, PES tells them how fast they can actually respond to a price change."</p>
+<h3>Slides 6–9 — Four practice blocks</h3>
+<p>Work through all four blocks in the interactive lesson in order: PED only, PED + TR, PES only, then the mixed "PED or PES?" block. For every question, make him state <strong>out loud, before calculating</strong>: (1) which side of the market it's describing, and (2) whether he expects the answer to be elastic or inelastic, based on the story alone (spare capacity, substitutes, necessity, etc.) — then calculate and check the prediction against the number. This out-loud prediction step is the actual point of the review; getting the arithmetic right without being able to predict the direction first means the underlying understanding isn't there yet.</p>
+<p>On the mixed block specifically, if he calculates before identifying which formula applies, stop him and make him name it first — that's the exact skill this block exists to build, since real exam questions don't label themselves "this is a PED question."</p>
+<h3>Slides 10–11 — Determinants recap</h3>
+<p>Quick-fire round through both determinant grids. For each one, ask "does this make it MORE elastic or MORE inelastic?" rather than "what is this factor" — he already knows the list from Lessons 3 and 5, so test application, not recall.</p>
+<h3>Slide 12 — Final check</h3>
+<p>Run the four-question quiz. If he gets any wrong, don't just show the right answer — ask him to explain back why his first answer was wrong, in his own words.</p>
+<h3>Slide 13 — Recap + next lesson</h3>
+<p><em>Say:</em> "PED, total revenue, and PES are done — properly done, not just formula-memorised. Next lesson we leave elasticity behind for now and zoom out to the whole market economic system: how a whole economy decides what gets made, with nobody in charge."</p>
+<h2>Wrap-up</h2>
+<p>Set the review worksheet for self-directed time. This is a genuinely good checkpoint to be honest with yourself about: if he's still slow or unsure on the mixed "PED or PES?" block by the end, that's worth a further five minutes of verbal-only scenarios (no writing) before calling the session done — the calculation itself was never the hard part; knowing which calculation to reach for is.</p>
+<h2>Next lesson</h2>
+<p>Lesson 6 — 2.8 The market economic system.</p>
+</div>
+</body>
+</html>
