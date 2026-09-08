@@ -242,9 +242,74 @@ const doc2 = new Document({
   }],
 });
 
+const doc3 = new Document({
+  sections: [{
+    properties: { page: { size: { width: 12240, height: 15840 } } },
+    children: [
+      new Paragraph({
+        heading: HeadingLevel.HEADING_1,
+        children: [new TextRun({ text: "Lesson 3 Worksheet: The Reproductive System", bold: true })],
+        spacing: { after: 80 },
+      }),
+      para("**Cambridge Primary Science, Stage 6, Unit 1.3**"),
+
+      heading("Focus"),
+      para("**1.** Use the words in the box to complete the sentences. You will use some words more than once."),
+      wordBox(["puberty", "hormones", "sperm", "ova", "fertilisation", "reproductive system"]),
+      para("The stage in life when your body changes and becomes able to reproduce is called _______________."),
+      para("These changes are caused by chemical messengers in your body called _______________."),
+      para("The male sex cells are called _______________. The female sex cells are called _______________."),
+      para("The job of the _______________ is to make sex cells needed for reproduction."),
+      para("When a sperm and an egg join together, this is called _______________."),
+      para("**2.** Match each word in List 1 with its clue in List 2. Draw a line to link each one (the order is scrambled on purpose)."),
+      makeTable(["List 1", "List 2"], [
+        ["Testes", "Where a baby develops"],
+        ["Ovaries", "Produce sperm"],
+        ["Uterus", "Where fertilisation takes place"],
+        ["Oviduct", "Produce ova (eggs)"],
+      ]),
+      new Paragraph({ text: "", spacing: { after: 160 } }),
+
+      heading("Practice"),
+      para("**3.** Circle the letter of the correct answer."),
+      para("**a** The main job of the reproductive system is to...\nA. pump blood    B. make sex cells for reproduction    C. help you breathe"),
+      para("**b** Puberty is caused by...\nA. exercise    B. hormones    C. diet"),
+      para("**c** Fertilisation happens when...\nA. puberty starts    B. a sperm and an egg join together    C. a baby is born"),
+      para("**d** A fertilised egg develops into a baby inside the...\nA. ovaries    B. oviduct    C. uterus"),
+
+      heading("Challenge"),
+      para("**4.** A class recorded how much height each person had gained over the past year."),
+      makeTable(
+        ["Student", "Age", "Height gained (cm)"],
+        [["Amara", "9", "5"], ["Ben", "10", "6"], ["Chloe", "11", "11"], ["Daniel", "12", "4"], ["Ella", "12", "3"], ["Farid", "13", "9"]]
+      ),
+      new Paragraph({ text: "", spacing: { after: 160 } }),
+      para("**a** Which student(s) do you think have probably started their growth spurt? Explain why.\nAnswer:"),
+      para("**b** Which student(s) have probably not started puberty yet? Explain why.\nAnswer:"),
+      para("**c** Daniel and Ella are both 12, but gained much less height than Farid, who is 13. Suggest a reason for this.\nAnswer:"),
+      para("**d** Write one sentence to conclude what this data shows about puberty and growth.\nAnswer:"),
+
+      new Paragraph({
+        heading: HeadingLevel.HEADING_2,
+        spacing: { before: 360, after: 140 },
+        children: [new TextRun({ text: "Answer key (tutor copy, not for Mila)", bold: true, color: ORANGE })],
+        shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT },
+      }),
+      para("**1.** The stage in life when your body changes and becomes able to reproduce is called **puberty**. These changes are caused by chemical messengers in your body called **hormones**. The male sex cells are called **sperm**. The female sex cells are called **ova**. The job of the **reproductive system** is to make sex cells needed for reproduction. When a sperm and an egg join together, this is called **fertilisation**.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**2.** Testes: produce sperm. Ovaries: produce ova (eggs). Uterus: where a baby develops. Oviduct: where fertilisation takes place.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**3a.** B: make sex cells for reproduction. **3b.** B: hormones. **3c.** B: a sperm and an egg join together. **3d.** C: uterus.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**4a.** Chloe (11 cm) and Farid (9 cm) have gained the most height, a strong sign they've likely started their growth spurt, one of the first signs of puberty.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**4b.** Amara, Ben, Daniel and Ella have gained relatively little height, suggesting they may not have started puberty yet, or are only just beginning.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**4c.** Puberty doesn't start at exactly the same age for everyone. Farid may have already started his growth spurt, while Daniel and Ella have not started theirs yet, even though they are the same age or older.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**4d.** Accept any reasonable conclusion, e.g. people go through puberty, and the growth spurt that comes with it, at different ages, so two people the same age can be at very different stages.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+    ],
+  }],
+});
+
 const jobs = [
   { doc: doc1, out: path.join(__dirname, "..", "lessons", "lesson-01-circulatory-system", "worksheet.docx") },
   { doc: doc2, out: path.join(__dirname, "..", "lessons", "lesson-02-respiratory-system", "worksheet.docx") },
+  { doc: doc3, out: path.join(__dirname, "..", "lessons", "lesson-03-reproductive-system", "worksheet.docx") },
 ];
 (async () => {
   for (const job of jobs) {
