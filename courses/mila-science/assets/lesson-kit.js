@@ -121,7 +121,7 @@
         btn.onclick = () => {
           if (fb.classList.contains('correct')) return;
           const ok = Number(btn.dataset.i) === item.correct;
-          fb.textContent = (ok ? '✓ ' : '✗ Not quite — ') + item.fb;
+          fb.textContent = (ok ? '✓ ' : '✗ Not quite. ') + item.fb;
           fb.className = 'quiz-fb ' + (ok ? 'correct' : 'wrong');
           if (ok) { btn.style.background = 'var(--teal)'; btn.style.color = '#fff'; }
         };
