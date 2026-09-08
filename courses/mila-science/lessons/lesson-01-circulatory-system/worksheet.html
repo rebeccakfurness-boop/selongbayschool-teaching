@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 1 Worksheet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7fbfb; --surface: #fcfefe; --ink: #12313f; --ink2: #4e6b78; --muted:#7b939d;
+    --blue:#1c93a6; --orange:#f0663b; --border:rgba(18,49,63,0.12); --grid:#dceaec;
+    --warn-bg:#fdeed8; --warn-border:#f2b138;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0e1b21; --surface:#16262c; --ink:#eaf6f8; --ink2:#9fc2cb; --muted:#7b939d;
+      --blue:#3fb8cc; --orange:#ff9068; --border:rgba(255,255,255,0.14); --grid:#284048;
+      --warn-bg:#2a2410; --warn-border:#f2b138; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 14px; }
+  th, td { border: 1px solid var(--grid); padding: 8px 10px; text-align: center; vertical-align: top; }
+  th { background: var(--grid); font-weight: 600; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .word-box { background: var(--grid); border-radius: 10px; padding: 12px 18px; margin: 10px 0 18px; font-weight: 600; display: flex; gap: 24px; flex-wrap: wrap; }
+  .draw-box { border: 1.5px dashed var(--muted); border-radius: 10px; min-height: 160px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-style: italic; font-size: 13px; }
+  .graph-box { border: 1px solid var(--grid); border-radius: 10px; height: 240px; position: relative; margin: 14px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 1 Worksheet — The Circulatory System</h1>
+<p><strong>Cambridge Primary Science, Stage 6 · Unit 1.1</strong></p>
+
+<h2>Focus</h2>
+<p><strong>1.</strong> Name the three parts of the circulatory system.</p>
+<p>a _______________ &nbsp;&nbsp; b _______________ &nbsp;&nbsp; c _______________</p>
+
+<p><strong>2.</strong> Use the words in the box to complete the sentences. You will use some words more than once.</p>
+<div class="word-box"><span>blood vessels</span><span>oxygen</span><span>blood</span><span>waste products</span><span>food</span><span>lungs</span></div>
+<p>The heart pumps _______________ through the body.</p>
+<p>The left side of the heart pumps _______________ that contains _______________.</p>
+<p>The right side of the heart pumps _______________ without _______________ to the _______________.</p>
+<p>Blood is carried in the _______________.</p>
+<p>Blood carries _______________ and _______________ to all parts of the body and takes away _______________.</p>
+
+<p><strong>3.</strong> In your own words:</p>
+<p><strong>a</strong> What two things does blood carry <em>to</em> your cells, and why do your cells need them?<br>Answer:</p>
+<p><strong>b</strong> What does blood carry <em>away</em> from your cells, and why does it need to get rid of it?<br>Answer:</p>
+
+<h2>Practice</h2>
+<p><strong>4.</strong> Match each word in List 1 with its clue in List 2. Draw a line to link each one (the order is scrambled on purpose!).</p>
+<table>
+<tr><th>List 1</th><th>List 2</th></tr>
+<tr><td>Artery</td><td>Tiny tube with super-thin walls, connects the other two</td></tr>
+<tr><td>Vein</td><td>Carries blood away from the heart</td></tr>
+<tr><td>Capillary</td><td>Carries blood back to the heart</td></tr>
+</table>
+
+<p><strong>5.</strong> Circle the letter of the correct answer.</p>
+<p><strong>a</strong> Your heart pumping blood through the body is called...<br>
+A. heartbeat &nbsp;&nbsp; B. circulation &nbsp;&nbsp; C. pulsing</p>
+<p><strong>b</strong> The circulatory system is made up of...<br>
+A. the heart only &nbsp;&nbsp; B. the heart and blood vessels &nbsp;&nbsp; C. the heart, blood vessels, and blood</p>
+<p><strong>c</strong> Which blood vessels bring oxygen to body cells and carry away waste?<br>
+A. arteries &nbsp;&nbsp; B. veins &nbsp;&nbsp; C. capillaries</p>
+<p><strong>d</strong> The organ that helps you think and controls your whole body is the...<br>
+A. heart &nbsp;&nbsp; B. brain &nbsp;&nbsp; C. stomach</p>
+
+<h2>Challenge</h2>
+<p><strong>6.</strong> Priya measured her pulse rate sitting still, then after five different activities. Here are her results.</p>
+<table>
+<tr><th>Activity</th><th>Pulse rate (heartbeats per minute)</th></tr>
+<tr><td>Sitting still</td><td>78</td></tr>
+<tr><td>Walking</td><td>90</td></tr>
+<tr><td>Climbing stairs</td><td>105</td></tr>
+<tr><td>Jumping jacks</td><td>118</td></tr>
+<tr><td>Dancing</td><td>130</td></tr>
+</table>
+<p><strong>a</strong> Draw a bar chart of Priya's results. Use a different colour for each activity.</p>
+<div class="graph-box"></div>
+<p><strong>b</strong> When was Priya's pulse rate lowest? Why do you think that is?<br>Answer:</p>
+<p><strong>c</strong> Which activity caused the highest pulse rate?<br>Answer:</p>
+<p><strong>d</strong> Predict what would happen to Priya's pulse rate if she danced for even longer. Explain your answer.<br>Answer:</p>
+<p><strong>e</strong> Write one sentence to conclude what Priya's results show.<br>Answer:</p>
+
+<div class="tutor-box"><h2>Answer key (tutor copy — not for Mila)</h2>
+<p><strong>1.</strong> a. the heart &nbsp; b. blood vessels &nbsp; c. blood</p>
+<p><strong>2.</strong> The heart pumps <strong>blood</strong> through the body. The left side of the heart pumps <strong>blood</strong> that contains <strong>oxygen</strong>. The right side of the heart pumps <strong>blood</strong> without <strong>oxygen</strong> to the <strong>lungs</strong>. Blood is carried in the <strong>blood vessels</strong>. Blood carries <strong>food</strong> and <strong>oxygen</strong> to all parts of the body and takes away <strong>waste products</strong>.</p>
+<p><strong>3a.</strong> Blood carries food and oxygen to your cells. Cells need food for fuel/energy, and oxygen to release the energy from that food.<br>
+<strong>3b.</strong> Blood carries away waste, such as carbon dioxide. It needs to get rid of it because it's a waste gas the body doesn't need — the lungs and kidneys are the organs that help get rid of it.</p>
+<p><strong>4.</strong> Artery → carries blood away from the heart. Vein → carries blood back to the heart. Capillary → tiny tube with super-thin walls, connects the other two.</p>
+<p><strong>5a.</strong> B — circulation. <strong>5b.</strong> C — the heart, blood vessels, and blood. <strong>5c.</strong> C — capillaries (their thin walls let oxygen and food pass through to cells, and waste pass back). <strong>5d.</strong> B — the brain.</p>
+<p><strong>6a.</strong> A bar chart with five bars rising roughly in order: sitting (lowest) → walking → climbing stairs → jumping jacks → dancing (highest).</p>
+<p><strong>6b.</strong> Sitting still, at 78 bpm — her body wasn't working hard, so her muscles didn't need much extra oxygen delivered.</p>
+<p><strong>6c.</strong> Dancing, at 130 bpm — likely her most physically demanding activity in this set.</p>
+<p><strong>6d.</strong> Accept any reasonable answer with a reason, e.g. it would likely stay high or rise a little further while dancing continues, since her muscles keep needing extra oxygen delivered quickly, then fall back down once she stops and rests.</p>
+<p><strong>6e.</strong> The harder Priya's body works, the faster her pulse rate gets, because her heart needs to deliver oxygen and food to her muscles more quickly.</p>
+</div>
+</div>
+</body>
+</html>

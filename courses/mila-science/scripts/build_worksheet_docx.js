@@ -104,7 +104,82 @@ function flowRow(words) {
   return new Table({ width: { size: 9000, type: WidthType.DXA }, rows: [new TableRow({ children: cells })] });
 }
 
-const doc = new Document({
+const doc1 = new Document({
+  sections: [{
+    properties: { page: { size: { width: 12240, height: 15840 } } },
+    children: [
+      new Paragraph({
+        heading: HeadingLevel.HEADING_1,
+        children: [new TextRun({ text: "Lesson 1 Worksheet — The Circulatory System", bold: true })],
+        spacing: { after: 80 },
+      }),
+      para("**Cambridge Primary Science, Stage 6 · Unit 1.1**"),
+
+      heading("Focus"),
+      para("**1.** Name the three parts of the circulatory system."),
+      para("a _______________     b _______________     c _______________"),
+      para("**2.** Use the words in the box to complete the sentences. You will use some words more than once."),
+      wordBox(["blood vessels", "oxygen", "blood", "waste products", "food", "lungs"]),
+      para("The heart pumps _______________ through the body."),
+      para("The left side of the heart pumps _______________ that contains _______________."),
+      para("The right side of the heart pumps _______________ without _______________ to the _______________."),
+      para("Blood is carried in the _______________."),
+      para("Blood carries _______________ and _______________ to all parts of the body and takes away _______________."),
+      para("**3.** In your own words:"),
+      para("**a** What two things does blood carry *to* your cells, and why do your cells need them?\nAnswer:"),
+      para("**b** What does blood carry *away* from your cells, and why does it need to get rid of it?\nAnswer:"),
+
+      heading("Practice"),
+      para("**4.** Match each word in List 1 with its clue in List 2. Draw a line to link each one (the order is scrambled on purpose!)."),
+      makeTable(["List 1", "List 2"], [
+        ["Artery", "Tiny tube with super-thin walls, connects the other two"],
+        ["Vein", "Carries blood away from the heart"],
+        ["Capillary", "Carries blood back to the heart"],
+      ]),
+      new Paragraph({ text: "", spacing: { after: 160 } }),
+      para("**5.** Circle the letter of the correct answer."),
+      para("**a** Your heart pumping blood through the body is called...\nA. heartbeat    B. circulation    C. pulsing"),
+      para("**b** The circulatory system is made up of...\nA. the heart only    B. the heart and blood vessels    C. the heart, blood vessels, and blood"),
+      para("**c** Which blood vessels bring oxygen to body cells and carry away waste?\nA. arteries    B. veins    C. capillaries"),
+      para("**d** The organ that helps you think and controls your whole body is the...\nA. heart    B. brain    C. stomach"),
+
+      heading("Challenge"),
+      para("**6.** Priya measured her pulse rate sitting still, then after five different activities. Here are her results."),
+      makeTable(
+        ["Activity", "Pulse rate (bpm)"],
+        [["Sitting still", "78"], ["Walking", "90"], ["Climbing stairs", "105"], ["Jumping jacks", "118"], ["Dancing", "130"]]
+      ),
+      new Paragraph({ text: "", spacing: { after: 160 } }),
+      para("**a** Draw a bar chart of Priya's results. Use a different colour for each activity."),
+      drawBox("Bar chart"),
+      new Paragraph({ text: "", spacing: { after: 200 } }),
+      para("**b** When was Priya's pulse rate lowest? Why do you think that is?\nAnswer:"),
+      para("**c** Which activity caused the highest pulse rate?\nAnswer:"),
+      para("**d** Predict what would happen to Priya's pulse rate if she danced for even longer. Explain your answer.\nAnswer:"),
+      para("**e** Write one sentence to conclude what Priya's results show.\nAnswer:"),
+
+      new Paragraph({
+        heading: HeadingLevel.HEADING_2,
+        spacing: { before: 360, after: 140 },
+        children: [new TextRun({ text: "Answer key (tutor copy — not for Mila)", bold: true, color: ORANGE })],
+        shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT },
+      }),
+      para("**1.** a. the heart   b. blood vessels   c. blood", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**2.** The heart pumps **blood** through the body. The left side of the heart pumps **blood** that contains **oxygen**. The right side of the heart pumps **blood** without **oxygen** to the **lungs**. Blood is carried in the **blood vessels**. Blood carries **food** and **oxygen** to all parts of the body and takes away **waste products**.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**3a.** Blood carries food and oxygen to your cells. Cells need food for fuel/energy, and oxygen to release the energy from that food.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**3b.** Blood carries away waste, such as carbon dioxide. It needs to get rid of it because it's a waste gas the body doesn't need — the lungs and kidneys are the organs that help get rid of it.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**4.** Artery → carries blood away from the heart. Vein → carries blood back to the heart. Capillary → tiny tube with super-thin walls, connects the other two.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**5a.** B — circulation. **5b.** C — the heart, blood vessels, and blood. **5c.** C — capillaries (their thin walls let oxygen and food pass through to cells, and waste pass back). **5d.** B — the brain.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**6a.** A bar chart with five bars rising roughly in order: sitting (lowest) → walking → climbing stairs → jumping jacks → dancing (highest).", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**6b.** Sitting still, at 78 bpm — her body wasn't working hard, so her muscles didn't need much extra oxygen delivered.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**6c.** Dancing, at 130 bpm — likely her most physically demanding activity in this set.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**6d.** Accept any reasonable answer with a reason, e.g. it would likely stay high or rise a little further while dancing continues, since her muscles keep needing extra oxygen delivered quickly, then fall back down once she stops and rests.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+      para("**6e.** The harder Priya's body works, the faster her pulse rate gets, because her heart needs to deliver oxygen and food to her muscles more quickly.", { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }),
+    ],
+  }],
+});
+
+const doc2 = new Document({
   sections: [{
     properties: { page: { size: { width: 12240, height: 15840 } } },
     children: [
@@ -167,8 +242,14 @@ const doc = new Document({
   }],
 });
 
-const OUT = path.join(__dirname, "..", "lessons", "lesson-02-respiratory-system", "worksheet.docx");
-Packer.toBuffer(doc).then(buf => {
-  fs.writeFileSync(OUT, buf);
-  console.log("wrote", OUT);
-});
+const jobs = [
+  { doc: doc1, out: path.join(__dirname, "..", "lessons", "lesson-01-circulatory-system", "worksheet.docx") },
+  { doc: doc2, out: path.join(__dirname, "..", "lessons", "lesson-02-respiratory-system", "worksheet.docx") },
+];
+(async () => {
+  for (const job of jobs) {
+    const buf = await Packer.toBuffer(job.doc);
+    fs.writeFileSync(job.out, buf);
+    console.log("wrote", job.out);
+  }
+})();

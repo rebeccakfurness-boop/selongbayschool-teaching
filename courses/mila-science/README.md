@@ -13,19 +13,26 @@ mila-science/
     lesson-kit.js        <- shared interactive widgets — identical to tom-economics' kit,
                              copied as-is since it's subject-agnostic
   lessons/
-    lesson-02-respiratory-system/
+    lesson-01-circulatory-system/
       guide.html          <- teaching script for the tutor
       lesson.html         <- the interactive single-page tool, worked through live with Mila
       worksheet.html      <- practice questions + answer key (boxed off), quick-view
       worksheet.docx       <- same worksheet as an editable/printable Word doc
+    lesson-02-respiratory-system/
+      (same file layout as lesson-01)
   scripts/
-    build_worksheet_docx.js  <- regenerates worksheet.docx (node build_worksheet_docx.js;
-                                 npm install once first — docx package, not committed)
+    build_worksheet_docx.js  <- regenerates worksheet.docx for both lessons (node
+                                 build_worksheet_docx.js; npm install once first — docx
+                                 package, not committed)
 ```
 
-Lesson numbering starts at 2 because Lesson 1 (1.1 The circulatory system) was an existing
-worksheet made outside this system — it isn't reproduced here, only referenced as prior
-knowledge in Lesson 2's recap.
+Lesson 1 was originally just a bare worksheet (no teaching content, no interactive lesson) —
+it turned out too hard on first use, since it asked Mila to independently research a full
+vein/artery/capillary comparison table with nothing taught first. It was rebuilt as a proper
+lesson: organs in the body → heart function → what blood carries and why → blood vessels,
+introduced gently and only after the foundation is solid. It's a 40-minute lesson with a
+question built into nearly every step, aligned to the actual Cambridge Primary Science
+Learner's Book 6 (not just the practice-only Workbook).
 
 ## Content alignment
 
@@ -38,12 +45,14 @@ activities are original.
 
 ## Diagrams
 
-The respiratory-system illustrations in Lesson 2 (`lesson.html`) are original inline SVG —
-simple labelled shapes (ellipses, rounded-cap stroke paths) rather than photorealistic
-anatomy, matching the plain, friendly illustration style appropriate for this age group.
+Every anatomy illustration (the heart in the chest, the heart/lungs/body blood loop, the
+respiratory system, the breathing in/out comparison) is original inline SVG — simple labelled
+shapes (ellipses, rounded-cap stroke paths) rather than photorealistic anatomy, matching the
+plain, friendly illustration style appropriate for this age group.
 
 ## Adding the next lesson
 
 Follow 1.3 The reproductive system next, continuing the same numbering and folder pattern as
-`lesson-02-respiratory-system`. No `dashboard.html`/`data/*.json` pipeline exists yet for this
-course (see `tom-economics/` for that pattern, if it's ever worth building here too).
+`lesson-01-circulatory-system`/`lesson-02-respiratory-system`. No `dashboard.html`/
+`data/*.json` pipeline exists yet for this course (see `tom-economics/` for that pattern, if
+it's ever worth building here too).

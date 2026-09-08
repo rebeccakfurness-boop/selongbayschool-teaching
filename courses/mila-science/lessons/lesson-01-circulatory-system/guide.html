@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 1 Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7fbfb; --surface: #fcfefe; --ink: #12313f; --ink2: #4e6b78; --muted:#7b939d;
+    --blue:#1c93a6; --orange:#f0663b; --border:rgba(18,49,63,0.12); --grid:#dceaec;
+    --warn-bg:#fdeed8; --warn-border:#f2b138;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0e1b21; --surface:#16262c; --ink:#eaf6f8; --ink2:#9fc2cb; --muted:#7b939d;
+      --blue:#3fb8cc; --orange:#ff9068; --border:rgba(255,255,255,0.14); --grid:#284048;
+      --warn-bg:#2a2410; --warn-border:#f2b138; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 1 — Comprehensive Teaching Script</h1>
+<p><strong>Cambridge Primary Science, Stage 6 · Unit 1.1 The circulatory system</strong><br />
+Linked materials: <code>worksheet.html</code> / <code>worksheet.docx</code> · <code>lesson.html</code> (interactive)</p>
+<p><strong>Rebuild note:</strong> this replaces the bare worksheet Mila had last time, which asked her to independently research a full vein/artery/capillary comparison table with no teaching first — reasonably too hard for a first-ever science lesson. This version teaches everything needed <em>before</em> asking her to apply it, and restructures the order: organs in the body → what the heart does → what blood carries → <em>then</em> blood vessels, gently. It's a full 40-minute script with a question built into nearly every step — don't let any step pass without her actually answering something, even just out loud.</p>
+<h2>Learning objectives</h2>
+<p>By the end of this lesson she can:</p>
+<ol>
+<li>Name several organs and roughly where they're found in the body.</li>
+<li>Explain that the heart is a muscle whose job is to pump blood, and that this is felt as a heartbeat/pulse.</li>
+<li>Explain that blood carries food and oxygen to cells, and carries waste away.</li>
+<li>Name the three parts of the circulatory system, and the three types of blood vessel with one distinguishing fact about each.</li>
+<li>Describe, in order, the loop blood travels: heart → lungs → heart → body → heart.</li>
+</ol>
+<h2>Step-by-step script</h2>
+<h3>Step 1 — What's inside you?</h3>
+<p><em>Say:</em> "Today's your first proper science lesson, so we're going right back to basics — the parts inside your own body."<br />
+<em>Ask her:</em> "Have a guess — which organ do you think pumps blood around your body? And can you name one organ in your head?"<br />
+Let her guess freely, don't correct yet — we check both guesses very soon.</p>
+<h3>Step 2 — Meet some organs</h3>
+<p>Six tap-cards: brain, heart, lungs, stomach, kidneys, intestines.<br />
+<em>For each one, before she taps:</em> "What do you think this one does?" Only after her guess, let her tap to check.</p>
+<h3>Step 3 — Where is it? (sort activity)</h3>
+<p>She sorts each organ into Head / Chest / Tummy. Let her do this herself without help first — if she gets one wrong, ask "why do you think it might actually be there?" rather than just telling her.</p>
+<h3>Step 4 — Meet your heart</h3>
+<p><em>Say:</em> "Put your hand flat on your chest right now."<br />
+<em>Ask her:</em> "Point to exactly where you think your heart is."<br />
+Then reveal the diagram together and compare to her guess. <em>Ask:</em> "Was your guess close? Now make a fist — that's about the size of your own heart!"</p>
+<h3>Step 5 — Why does your heart beat?</h3>
+<p><em>Say:</em> "Your heart is a muscle. Its one job, all day, all night, without ever stopping, is to pump blood round your whole body."<br />
+<em>Ask her:</em> "What do you think would happen to the rest of your body if your heart stopped, even for a few seconds?" Let her reason it through — she doesn't need a perfect answer, just the instinct that everything depends on that pumping.</p>
+<h3>Step 6 — Feel your own pulse</h3>
+<p>Do this together, physically. <em>Say:</em> "Two fingers on your wrist, or the side of your neck. Stay still. Can you feel a little beat?"<br />
+Once she's found it: "Let's count together — how many beats in 15 seconds?" Multiply by 4 together. <em>Ask:</em> "Is that faster or slower than you expected?"</p>
+<h3>Step 7 — What does blood actually carry?</h3>
+<p><em>Ask her first:</em> "Why do you think your cells might need things delivered to them, like a delivery service?" Then reveal: food and oxygen going out, waste (carbon dioxide) coming back.</p>
+<h3>Step 8 — The 3 parts of the circulatory system</h3>
+<p><em>Ask her:</em> "Can you name all three parts from memory, before you look?" (Heart, blood, blood vessels.) This is a genuine recall check, not a guess — she's just met all three individually across the last few steps.</p>
+<h3>Step 9 — Meet the blood vessels</h3>
+<p><em>Say:</em> "Blood travels through tubes, a bit like water through pipes."<br />
+<em>Ask her a real prediction question:</em> "Right after a heartbeat, blood gets pushed out hard. Which tube do you think needs thicker, stronger walls — the one right next to that push, or the one on the calm journey back?" Let her reason about pressure before the next step confirms it.</p>
+<h3>Step 10 — Arteries, veins &amp; capillaries (tap cards)</h3>
+<p>Check her prediction from Step 9 against what the cards actually say. If she predicted correctly, tell her so explicitly — that's a real scientific prediction she got right.</p>
+<h3>Step 11 — Artery, vein, or capillary? (sort activity)</h3>
+<p>Five statements to classify. The last one is deliberately tricky (an artery to the lungs, even though it carries no-oxygen blood) — if she gets this one wrong, that's completely expected on a first pass. Explain: <em>"Arteries and veins are named by which way the blood is travelling, not by what's in it."</em> This is the exact idea her original worksheet expected her to work out alone — now she's meeting it with full support.</p>
+<h3>Step 12 — The journey of blood</h3>
+<p>Read all six steps of the loop together, out loud. Then <em>ask her</em> to recite it back from memory, no peeking: heart → lungs → heart → body → heart.</p>
+<h3>Step 13 — The loop diagram</h3>
+<p><em>Ask her:</em> "Point to the exact spot on the diagram where blood picks up oxygen. Now point to where it drops that oxygen off." (Lungs; her own body's cells.)</p>
+<h3>Step 14 — Quick questions</h3>
+<p>Seven guess-then-reveal cards, covering everything so far. Work through all of them — this is real consolidation, not filler.</p>
+<h3>Step 15 — Quick check (quiz)</h3>
+<p>Five multiple-choice questions. If she gets one wrong, don't just show the right answer — ask her to explain her reasoning first, then correct gently.</p>
+<h3>Step 16 — Recap + homework</h3>
+<p><em>Say:</em> "Today: organs are the parts inside you that each do a job. Your heart is a muscle that pumps blood, non-stop. Blood carries food and oxygen out, and waste back. Arteries go away from the heart, veins go back, capillaries connect them. And it all moves in a loop: heart, lungs, heart, body, heart, forever."<br />
+Set the worksheet for her own time.</p>
+<h2>Wrap-up</h2>
+<p>This lesson is deliberately full of small physical/verbal check-ins rather than long stretches of reading — for a first-ever science lesson, the goal is that she's never passive for more than about a minute at a time. If any single idea feels shaky by the end (the pressure/wall-thickness reasoning and the "artery to the lungs" exception are the two most likely candidates), it's worth a very quick extra verbal round-trip on just that one idea before moving to the worksheet.</p>
+<h2>Next lesson</h2>
+<p>1.2 The respiratory system (already built).</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.1 The Circulatory System</title>
+<link rel="stylesheet" href="../../assets/lesson-kit.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brandrow">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div class="brand-text">Cambridge Primary Science · Stage 6 · 1.1</div>
+      </div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">16</span></div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</div>
+
+<div class="app">
+<div class="stage">
+
+  <section class="step active" data-step="0">
+    <span class="kicker">Welcome to Science! · 40 minutes</span>
+    <h1 class="title">What's Inside You?</h1>
+    <p class="lede">The parts inside your body are called <b>organs</b>. Each one does a different job to keep you alive and healthy. Let's meet a few of them.</p>
+    <div class="card card-dark">
+      Before we look closely — have a guess: which organ do you think pumps blood around your body? And can you name one organ that's found in your head?<br><br>
+      Say your guesses out loud. We'll check them very soon!
+    </div>
+  </section>
+
+  <section class="step" data-step="1">
+    <span class="kicker">Tap to learn</span>
+    <h1 class="title">Meet Some Organs</h1>
+    <p class="lede">For each one — guess its job first, then tap to check.</p>
+    <div class="grid grid-3" id="organsGrid"></div>
+  </section>
+
+  <section class="step" data-step="2">
+    <span class="kicker">Now you try</span>
+    <h1 class="title">Where Is It?</h1>
+    <p class="lede">Sort each organ into the part of the body where it's actually found.</p>
+    <div id="locationSort"></div>
+  </section>
+
+  <section class="step" data-step="3">
+    <span class="kicker">New idea</span>
+    <h1 class="title">Meet Your Heart</h1>
+    <p class="lede">Put your hand flat on your chest right now. Can you feel it? Point to where you think your heart is, before we check the diagram!</p>
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 320 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing where the heart is in the body">
+        <ellipse cx="160" cy="30" rx="24" ry="27" fill="none" stroke="var(--ink-soft)" stroke-width="2.5"/>
+        <line x1="151" y1="54" x2="147" y2="68" stroke="var(--ink-soft)" stroke-width="2.5"/>
+        <line x1="169" y1="54" x2="173" y2="68" stroke="var(--ink-soft)" stroke-width="2.5"/>
+        <path d="M147,68 Q112,76 105,104 L98,290 Q98,300 108,300 L212,300 Q222,300 222,290 L215,104 Q208,76 173,68" fill="none" stroke="var(--ink-soft)" stroke-width="2.5" stroke-linejoin="round"/>
+        <g stroke="var(--ink-soft)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.4">
+          <path d="M125,130 Q100,138 106,154"/>
+          <path d="M120,156 Q95,164 102,182"/>
+          <path d="M118,182 Q93,190 101,208"/>
+          <path d="M195,130 Q220,138 214,154"/>
+          <path d="M200,156 Q225,164 218,182"/>
+          <path d="M202,182 Q227,190 219,208"/>
+        </g>
+        <g transform="translate(150,175) scale(1.5)">
+          <path d="M0,10 C0,0 -14,-4 -14,6 C-14,14 -6,20 0,28 C6,20 14,14 14,6 C14,-4 0,0 0,10 Z" fill="var(--coral)" stroke="var(--coral-dark)" stroke-width="2"/>
+        </g>
+        <g font-family="Inter, sans-serif" font-size="13" fill="var(--ink)">
+          <line x1="182" y1="195" x2="255" y2="195" stroke="var(--line)" stroke-width="1.5"/>
+          <text x="257" y="191" font-weight="700">Your heart</text>
+          <text x="257" y="207" font-size="11" fill="var(--ink-soft)">a bit to the left,</text>
+          <text x="257" y="221" font-size="11" fill="var(--ink-soft)">behind your ribs</text>
+        </g>
+      </svg>
+      <p class="diagram-caption">Now make a fist with your hand — that's about the size of your heart! Was your guess close?</p>
+    </div>
+  </section>
+
+  <section class="step" data-step="4">
+    <span class="kicker">Why it matters</span>
+    <h1 class="title">Why Does Your Heart Beat?</h1>
+    <div class="card">
+      Your heart is a very special <b>muscle</b>. Its one job is to <b>pump blood</b> all around your body, all day and all night, without ever stopping — even while you sleep!<br><br>
+      Every time your heart squeezes to push blood out, that's one <b>heartbeat</b>. It takes less than a minute for your heart to send blood all the way round your whole body and back again.
+    </div>
+    <p class="note">Think about it: what do you think would happen to the rest of your body if your heart ever stopped, even for a few seconds?</p>
+  </section>
+
+  <section class="step" data-step="5">
+    <span class="kicker">Try this</span>
+    <h1 class="title">Feel Your Own Pulse</h1>
+    <div class="card card-leaf">
+      Every time your heart beats, it pushes blood through your body with a little pulse of pressure — you can actually feel it! Try this now:<br><br>
+      Place two fingers gently on the inside of your <b>wrist</b>, or the side of your <b>neck</b>. Stay still for a moment. Can you feel a small beat under your skin? That's your <b>pulse</b> — one beat for every heartbeat.
+    </div>
+    <p class="note">Try counting how many beats you feel in 15 seconds, then multiply by 4 — that's roughly your heart rate for one minute! Was it faster or slower than you expected?</p>
+  </section>
+
+  <section class="step" data-step="6">
+    <span class="kicker">New idea</span>
+    <h1 class="title">What Does Blood Actually Carry?</h1>
+    <p class="lede">Your heart isn't just pumping blood around for no reason — blood is a delivery service for your whole body. Why do you think your cells might need things delivered to them?</p>
+    <div class="card">
+      <b>On the way out:</b> blood carries <b>food</b> and <b>oxygen</b> to every single cell in your body, so they have the fuel and the air they need to work.<br><br>
+      <b>On the way back:</b> blood picks up <b>waste</b> your cells don't need any more — like <b>carbon dioxide</b> — and carries it away to be got rid of.
+    </div>
+  </section>
+
+  <section class="step" data-step="7">
+    <span class="kicker">Putting it together</span>
+    <h1 class="title">The 3 Parts of the Circulatory System</h1>
+    <p class="lede">Heart, blood, and the tubes that carry it — together they're called your <b>circulatory system</b>. Can you name all three from memory before you tap?</p>
+    <div class="grid grid-3" id="systemGrid"></div>
+  </section>
+
+  <section class="step" data-step="8">
+    <span class="kicker">New idea</span>
+    <h1 class="title">Meet the Blood Vessels</h1>
+    <p class="lede">Blood doesn't just float around loose inside you — it travels through tubes called <b>blood vessels</b>, a bit like water flowing through pipes, or cars driving on roads.</p>
+    <div class="card">
+      There are three kinds of blood vessels, and each one has a different job:<br><br>
+      <b>Arteries</b> — carry blood <i>away</i> from the heart<br>
+      <b>Veins</b> — carry blood <i>back to</i> the heart<br>
+      <b>Capillaries</b> — tiny tubes that connect arteries to veins, where blood actually drops off its delivery
+    </div>
+    <p class="note">Quick guess: right after a heartbeat, blood is pushed out under high pressure. Which do you think needs thicker, stronger walls — the tube right next to that push, or the tube on the quiet journey back?</p>
+  </section>
+
+  <section class="step" data-step="9">
+    <span class="kicker">Tap to learn</span>
+    <h1 class="title">Arteries, Veins &amp; Capillaries</h1>
+    <p class="lede">Tap each one to check your guess and learn a bit more.</p>
+    <div class="grid grid-3" id="vesselsGrid"></div>
+  </section>
+
+  <section class="step" data-step="10">
+    <span class="kicker">Now you try</span>
+    <h1 class="title">Artery, Vein, or Capillary?</h1>
+    <p class="lede">Sort each clue into the correct type of blood vessel.</p>
+    <div id="vesselSort"></div>
+  </section>
+
+  <section class="step" data-step="11">
+    <span class="kicker">See the loop</span>
+    <h1 class="title">The Journey of Blood</h1>
+    <p class="lede">Blood never stops moving — it travels round and round in a loop, forever. Here's the journey, step by step.</p>
+    <div class="steps-flow" id="journeySteps"></div>
+  </section>
+
+  <section class="step" data-step="12">
+    <span class="kicker">See it in a diagram</span>
+    <h1 class="title">Heart, Lungs &amp; Body — the Loop</h1>
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of blood flowing between the heart, lungs and body">
+        <rect x="10" y="15" width="110" height="55" rx="16" fill="var(--teal-light)" stroke="var(--teal-dark)" stroke-width="2"/>
+        <text x="65" y="48" text-anchor="middle" font-family="Baloo 2, sans-serif" font-weight="700" font-size="17" fill="var(--teal-dark)">LUNGS</text>
+        <rect x="100" y="165" width="100" height="55" rx="16" fill="var(--coral-light)" stroke="var(--coral-dark)" stroke-width="2"/>
+        <text x="150" y="198" text-anchor="middle" font-family="Baloo 2, sans-serif" font-weight="700" font-size="17" fill="var(--coral-dark)">HEART</text>
+        <rect x="215" y="165" width="95" height="55" rx="16" fill="var(--gold-light)" stroke="var(--gold-dark)" stroke-width="2"/>
+        <text x="262" y="198" text-anchor="middle" font-family="Baloo 2, sans-serif" font-weight="700" font-size="17" fill="var(--gold-dark)">BODY</text>
+
+        <path d="M120,165 Q60,100 65,72" fill="none" stroke="var(--teal)" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowTeal)"/>
+        <path d="M95,72 Q120,120 150,165" fill="none" stroke="var(--coral)" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowCoral)"/>
+        <path d="M200,178 Q207,178 215,180" fill="none" stroke="var(--coral)" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowCoral)"/>
+        <path d="M215,206 Q207,206 200,204" fill="none" stroke="var(--teal)" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowTeal)"/>
+
+        <defs>
+          <marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--teal)"/></marker>
+          <marker id="arrowCoral" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--coral)"/></marker>
+        </defs>
+      </svg>
+      <p class="diagram-caption">🔴 coral = blood carrying oxygen &nbsp;&nbsp; 🔵 teal = blood that has dropped its oxygen off</p>
+    </div>
+    <p class="note">Can you point to the exact spot on the diagram where blood picks up oxygen? Where does it drop that oxygen off?</p>
+  </section>
+
+  <section class="step" data-step="13">
+    <span class="kicker">Now you try</span>
+    <h1 class="title">Quick Questions</h1>
+    <p class="lede">Guess first, then tap to check.</p>
+    <div id="practiceList"></div>
+  </section>
+
+  <section class="step" data-step="14">
+    <span class="kicker">Quick check</span>
+    <h1 class="title">Before Homework...</h1>
+    <div id="quizList"></div>
+  </section>
+
+  <section class="step" data-step="15">
+    <span class="kicker">Recap + homework</span>
+    <h1 class="title">Today's Key Words</h1>
+    <div id="vocabList"></div>
+    <div class="card card-dark" style="margin-top:22px;">
+      <div class="kicker" style="background:rgba(255,255,255,0.12); color:var(--gold);">🏠 Homework — Worksheet 1.1</div>
+      <ul class="hw-list" id="hwList"></ul>
+    </div>
+    <p class="lede" style="margin-top:20px;">🎉 You now know how your heart, blood, and blood vessels work together to keep every part of you alive!</p>
+  </section>
+
+</div>
+
+<div class="navbar">
+  <button class="btn btn-ghost" id="prevBtn">← Back</button>
+  <button class="btn btn-primary" id="nextBtn">Next →</button>
+</div>
+</div>
+
+<script src="../../assets/lesson-kit.js"></script>
+<script>
+const organsGrid = [
+  {emj:"🧠", lbl:"Brain", desc:"Found in your head. It controls your whole body and helps you think."},
+  {emj:"❤️", lbl:"Heart", desc:"Found in your chest. It pumps blood all around your body."},
+  {emj:"🫁", lbl:"Lungs", desc:"Found in your chest, either side of your heart. They help you breathe."},
+  {emj:"🍽️", lbl:"Stomach", desc:"Found in your tummy. It's part of digestion — breaking down the food you eat."},
+  {emj:"🫘", lbl:"Kidneys", desc:"Found in your lower back. They clean waste out of your blood."},
+  {emj:"🍬", lbl:"Intestines", desc:"Long tubes in your tummy, also part of digestion — they take useful bits from food into your blood."}
+];
+
+const locationSortData = [
+  {name:"Brain", correct:"Head", reason:"Your brain sits inside your skull, right at the top of your body."},
+  {name:"Heart", correct:"Chest", reason:"Your heart sits in your chest, protected by your ribs."},
+  {name:"Lungs", correct:"Chest", reason:"Your lungs sit either side of your heart, also protected by your ribs."},
+  {name:"Stomach", correct:"Tummy", reason:"Your stomach is in your tummy, where digestion begins."},
+  {name:"Kidneys", correct:"Tummy", reason:"Your kidneys sit toward your lower back/tummy area, cleaning your blood."}
+];
+
+const systemGrid = [
+  {emj:"❤️", lbl:"The heart", desc:"The muscle that pumps blood around your whole body, non-stop."},
+  {emj:"🩸", lbl:"Blood", desc:"Carries food and oxygen to your cells, and carries waste away."},
+  {emj:"🩹", lbl:"Blood vessels", desc:"The tubes blood travels through to get everywhere it needs to go."}
+];
+
+const vesselsGrid = [
+  {emj:"➡️", lbl:"Arteries", desc:"Carry blood AWAY from the heart. They have thick, strong walls, because the blood is under a lot of pressure fresh from a heartbeat."},
+  {emj:"⬅️", lbl:"Veins", desc:"Carry blood BACK to the heart. Their walls are thinner, because the blood isn't under as much pressure by the time it gets here."},
+  {emj:"🔗", lbl:"Capillaries", desc:"Tiny tubes, thinner than a hair, connecting arteries to veins. Their walls are so thin that oxygen and food can pass straight through them into your cells."}
+];
+
+const vesselSortData = [
+  {name:"Carries blood away from the heart", correct:"Artery", reason:"That's the definition of an artery — direction away from the heart."},
+  {name:"Carries blood back to the heart", correct:"Vein", reason:"That's the definition of a vein — direction toward the heart."},
+  {name:"Has the thickest, strongest walls", correct:"Artery", reason:"Blood is under high pressure fresh from a heartbeat, so arteries need thick walls."},
+  {name:"Is so thin that oxygen can pass straight through its wall", correct:"Capillary", reason:"Capillaries connect arteries to veins and have super-thin walls, built for delivery."},
+  {name:"Carries blood to the lungs to pick up oxygen (even though it has no oxygen yet!)", correct:"Artery", reason:"Tricky one! It's still called an artery, because arteries are named by direction (away from the heart), not by whether they're carrying oxygen."}
+];
+
+const journeyData = [
+  {label:"Heart → Lungs", detail:"The heart pumps blood (with no oxygen yet) to the lungs."},
+  {label:"In the lungs", detail:"The blood picks up fresh oxygen from the air you just breathed in."},
+  {label:"Lungs → Heart", detail:"The oxygen-rich blood travels back to the heart."},
+  {label:"Heart → Body", detail:"The heart pumps that oxygen-rich blood out to every part of your body."},
+  {label:"At your cells", detail:"Cells use the oxygen and food, and hand back waste like carbon dioxide."},
+  {label:"Body → Heart", detail:"The blood (now low on oxygen) travels back to the heart... and the whole loop starts again!"}
+];
+
+const practiceData = [
+  {text:"Which organ pumps blood around your body?", ans:"The heart!", tags:[{label:"HEART", cls:"tag-up"}]},
+  {text:"What two things does blood carry TO your cells?", ans:"Food and oxygen.", tags:[{label:"FOOD + OXYGEN", cls:"tag-leaf"}]},
+  {text:"What does blood carry AWAY from your cells?", ans:"Waste, like carbon dioxide.", tags:[{label:"WASTE", cls:"tag-down"}]},
+  {text:"Which blood vessels carry blood AWAY from the heart?", ans:"Arteries.", tags:[{label:"ARTERIES", cls:"tag-up"}]},
+  {text:"Which blood vessels carry blood BACK to the heart?", ans:"Veins.", tags:[{label:"VEINS", cls:"tag-neutral"}]},
+  {text:"What are the three parts of the circulatory system?", ans:"The heart, blood, and blood vessels.", tags:[{label:"3 PARTS", cls:"tag-leaf"}]},
+  {text:"Why does your heart need to beat faster when you run around?", ans:"Your muscles need more food and oxygen delivered quickly, so your heart pumps faster to keep up.", tags:[{label:"EXERCISE", cls:"tag-up"}]}
+];
+
+const quizData = [
+  {q:"What is the main job of the heart?", opts:["To help you think","To pump blood around your body","To digest your food","To help you breathe"], correct:1, fb:"The heart is a muscle whose one job is to pump blood all around your body, non-stop."},
+  {q:"What do arteries do?", opts:["Carry blood away from the heart","Carry blood back to the heart","Connect arteries to veins","Clean waste from the blood"], correct:0, fb:"Arteries carry blood away from the heart, out to the rest of the body."},
+  {q:"Why do capillaries have such thin walls?", opts:["So they don't take up much space","So oxygen and food can pass through them into your cells","So blood moves through them faster","So they can stretch further"], correct:1, fb:"Capillaries are where the actual delivery happens — thin walls let oxygen and food pass straight through to your cells."},
+  {q:"Which organ is found in your head?", opts:["Stomach","Kidneys","Brain","Intestines"], correct:2, fb:"Your brain is found in your head, protected by your skull."},
+  {q:"What do you feel when you check your pulse?", opts:["Air moving through your lungs","A small beat, caused by each heartbeat pushing blood through","Your muscles contracting","Nothing — a pulse can't be felt"], correct:1, fb:"Every heartbeat pushes blood through with a little pulse of pressure you can feel in your wrist or neck."}
+];
+
+const vocabData = [
+  {t:"Organ", d:"A part inside your body that does a specific job, e.g. your heart, lungs, or stomach."},
+  {t:"Circulatory system", d:"The heart, blood, and blood vessels working together to move blood around your body."},
+  {t:"Heartbeat & pulse", d:"A heartbeat is your heart squeezing to pump blood. Your pulse is that same beat, felt in your wrist or neck."},
+  {t:"Artery", d:"A blood vessel that carries blood away from the heart."},
+  {t:"Vein", d:"A blood vessel that carries blood back to the heart."},
+  {t:"Capillary", d:"A tiny blood vessel connecting arteries to veins, where oxygen and food pass into your cells."}
+];
+
+const hwItems = ["Focus: fill in the blanks", "Practice: label the heart diagram", "Challenge: pulse rate bar chart"];
+
+LessonKit.buildShiftGrid(document.getElementById('organsGrid'), organsGrid);
+LessonKit.buildSortActivity(document.getElementById('locationSort'), locationSortData, {choices:["Head", "Chest", "Tummy"]});
+LessonKit.buildShiftGrid(document.getElementById('systemGrid'), systemGrid);
+LessonKit.buildShiftGrid(document.getElementById('vesselsGrid'), vesselsGrid);
+LessonKit.buildSortActivity(document.getElementById('vesselSort'), vesselSortData, {choices:["Artery", "Vein", "Capillary"]});
+LessonKit.buildStepsList(document.getElementById('journeySteps'), journeyData);
+LessonKit.buildRevealCards(document.getElementById('practiceList'), practiceData, {buttonLabel:'Reveal answer'});
+LessonKit.buildQuiz(document.getElementById('quizList'), quizData);
+LessonKit.buildVocabList(document.getElementById('vocabList'), vocabData);
+LessonKit.buildHomeworkChecklist(document.getElementById('hwList'), hwItems);
+LessonKit.initStepper();
+</script>
+</body>
+</html>
