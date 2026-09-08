@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 2 Worksheet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7fbfb; --surface: #fcfefe; --ink: #12313f; --ink2: #4e6b78; --muted:#7b939d;
+    --blue:#1c93a6; --orange:#f0663b; --border:rgba(18,49,63,0.12); --grid:#dceaec;
+    --warn-bg:#fdeed8; --warn-border:#f2b138;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0e1b21; --surface:#16262c; --ink:#eaf6f8; --ink2:#9fc2cb; --muted:#7b939d;
+      --blue:#3fb8cc; --orange:#ff9068; --border:rgba(255,255,255,0.14); --grid:#284048;
+      --warn-bg:#2a2410; --warn-border:#f2b138; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 14px; }
+  th, td { border: 1px solid var(--grid); padding: 8px 10px; text-align: center; vertical-align: top; }
+  th { background: var(--grid); font-weight: 600; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .word-box { background: var(--grid); border-radius: 10px; padding: 12px 18px; margin: 10px 0 18px; font-weight: 600; display: flex; gap: 24px; flex-wrap: wrap; }
+  .draw-box { border: 1.5px dashed var(--muted); border-radius: 10px; min-height: 160px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-style: italic; font-size: 13px; }
+  .flow-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 14px 0; }
+  .flow-box { border: 1.5px solid var(--ink2); border-radius: 8px; padding: 10px 18px; min-width: 90px; text-align: center; font-weight: 600; background: var(--surface); }
+  .graph-box { border: 1px solid var(--grid); border-radius: 10px; height: 260px; position: relative; margin: 14px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 2 Worksheet — The Respiratory System</h1>
+<p><strong>Cambridge Primary Science, Stage 6 · Unit 1.2</strong></p>
+
+<h2>Focus</h2>
+<p><strong>1.</strong> Use the words in the box to complete the sentences. You will use some words more than once.</p>
+<div class="word-box"><span>blood</span><span>ribs</span><span>lungs</span><span>windpipe</span><span>nose</span><span>carbon dioxide</span><span>oxygen</span></div>
+<p>We breathe in air through our _______________. The air we breathe in contains _______________ gas. The air moves down the _______________ and into our _______________.</p>
+<p>The _______________ in the air then moves from the _______________ into the _______________. We breathe out air that contains _______________ gas. The _______________ protect our respiratory system.</p>
+
+<h2>Practice</h2>
+<p><strong>2.</strong> The picture on the left shows the lungs when breathing <strong>OUT</strong>. In the empty box, draw and label what the lungs look like when breathing <strong>IN</strong>. Think about: does the chest get bigger or smaller? Do the ribs move in or out?</p>
+<table style="border:none;">
+<tr style="border:none;">
+<td style="border:none; width:50%; text-align:center;">
+<svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:220px;">
+  <path d="M62,50 Q40,58 44,70 L36,214 Q36,226 48,226 L172,226 Q184,226 184,214 L176,70 Q180,58 158,50" fill="none" stroke="#4e6b78" stroke-width="2.5" stroke-linejoin="round"/>
+  <ellipse cx="82" cy="138" rx="34" ry="58" fill="#fdeed8" stroke="#c3860e" stroke-width="2" transform="rotate(-9 82 138)"/>
+  <ellipse cx="138" cy="138" rx="34" ry="58" fill="#fdeed8" stroke="#c3860e" stroke-width="2" transform="rotate(9 138 138)"/>
+  <path d="M42,196 Q110,206 178,196" fill="none" stroke="#c3860e" stroke-width="12" stroke-linecap="round"/>
+</svg>
+<p style="font-size:12px; color:var(--muted);">Breathing OUT</p>
+</td>
+<td style="border:none; width:50%;">
+<div class="draw-box">Draw &amp; label: Breathing IN</div>
+</td>
+</tr>
+</table>
+
+<p><strong>3.</strong> Put these words in order to show the path of oxygen when we breathe in: <strong>lungs, nose, blood, windpipe</strong>.</p>
+<div class="flow-row">
+  <div class="flow-box">&nbsp;</div> <span>→</span>
+  <div class="flow-box">&nbsp;</div> <span>→</span>
+  <div class="flow-box">&nbsp;</div> <span>→</span>
+  <div class="flow-box">&nbsp;</div>
+</div>
+
+<h2>Challenge</h2>
+<p><strong>4.</strong> A class measured the breathing rate and pulse rate of 8 people straight after light exercise. Here are their results.</p>
+<table>
+<tr><th>Person</th><th>Breathing rate (breaths per minute)</th><th>Pulse rate (heartbeats per minute)</th></tr>
+<tr><td>1</td><td>20</td><td>80</td></tr>
+<tr><td>2</td><td>24</td><td>92</td></tr>
+<tr><td>3</td><td>28</td><td>100</td></tr>
+<tr><td>4</td><td>22</td><td>88</td></tr>
+<tr><td>5</td><td>32</td><td>112</td></tr>
+<tr><td>6</td><td>26</td><td>96</td></tr>
+<tr><td>7</td><td>30</td><td>145</td></tr>
+<tr><td>8</td><td>34</td><td>118</td></tr>
+</table>
+<p><strong>a</strong> Draw a scatter graph of the results (breathing rate along the bottom, pulse rate up the side).</p>
+<div class="graph-box"></div>
+<p><strong>b</strong> Describe the pattern you observe in the results.<br>Answer:</p>
+<p><strong>c i</strong> Identify any result that does not fit the pattern.<br>Answer:</p>
+<p><strong>ii</strong> Suggest a reason for this.<br>Answer:</p>
+<p><strong>d</strong> Use the graph to predict the pulse rate of a person whose breathing rate is 36 breaths per minute.<br>Answer:</p>
+<p><strong>e</strong> Suggest a conclusion the class can make from these results.<br>Answer:</p>
+
+<div class="tutor-box"><h2>Answer key (tutor copy — not for Mila)</h2>
+<p><strong>1.</strong> We breathe in air through our <strong>nose</strong>. The air we breathe in contains <strong>oxygen</strong> gas. The air moves down the <strong>windpipe</strong> and into our <strong>lungs</strong>. The <strong>oxygen</strong> in the air then moves from the <strong>lungs</strong> into the <strong>blood</strong>. We breathe out air that contains <strong>carbon dioxide</strong> gas. The <strong>ribs</strong> protect our respiratory system.</p>
+<p><strong>2.</strong> Breathing IN: the ribs move outward and upward, the diaphragm flattens and pulls down, and the lungs get bigger, taking up more space in the chest than in the "breathing out" picture.</p>
+<p><strong>3.</strong> nose → windpipe → lungs → blood.</p>
+<p><strong>4a.</strong> A rising trend: as breathing rate increases along the bottom axis, pulse rate generally increases up the side axis too, except for person 7.</p>
+<p><strong>4b.</strong> As breathing rate goes up, pulse rate also tends to go up — the two are linked, because harder-working muscles need more oxygen delivered faster (higher pulse) and taken in faster (higher breathing rate).</p>
+<p><strong>4c i.</strong> Person 7 (30 breaths/min, 145 bpm) does not fit the pattern — their pulse rate is much higher than the other people with a similar breathing rate.</p>
+<p><strong>4c ii.</strong> Accept any sensible suggestion, e.g. this person may have been more nervous or anxious, may have measured their pulse incorrectly, may have a different fitness level, or the exercise may have been harder for them personally.</p>
+<p><strong>4d.</strong> Accept any value that reasonably continues the trend, e.g. around 125–130 bpm (following the pattern set by persons 3, 5, 6 and 8, ignoring the anomaly at person 7).</p>
+<p><strong>4e.</strong> Breathing rate and pulse rate rise together during exercise, because the body needs to take in more oxygen and deliver it faster to working muscles. One result (person 7) did not fit this pattern and may need to be checked or re-measured.</p>
+</div>
+</div>
+</body>
+</html>

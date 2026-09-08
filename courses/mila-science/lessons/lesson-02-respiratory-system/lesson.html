@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.2 The Respiratory System</title>
+<link rel="stylesheet" href="../../assets/lesson-kit.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brandrow">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div class="brand-text">Cambridge Primary Science · Stage 6 · 1.2</div>
+      </div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">11</span></div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</div>
+
+<div class="app">
+<div class="stage">
+
+  <section class="step active" data-step="0">
+    <span class="kicker">Recap · Lesson 1</span>
+    <h1 class="title">Before We Start: The Circulatory System</h1>
+    <p class="lede">Last lesson was all about your heart, blood vessels, and blood. Quick check that it stuck before we move on.</p>
+    <div class="grid grid-2" id="recapFlips"></div>
+    <p class="note">Tap each card to flip it and check the answer.</p>
+  </section>
+
+  <section class="step" data-step="1">
+    <span class="kicker">Try this</span>
+    <h1 class="title">Why Do We Breathe?</h1>
+    <div class="card card-dark">
+      Hold your breath for as long as feels comfortable. Now let it go!<br><br>
+      Right now, without even thinking about it, your body has breathed in and out again. It does this thousands of times a day, completely automatically. Why? What is your body actually collecting every time you breathe in — and what is it getting rid of every time you breathe out?
+    </div>
+  </section>
+
+  <section class="step" data-step="2">
+    <span class="kicker">New idea</span>
+    <h1 class="title">Meet Your Respiratory System</h1>
+    <p class="lede">These are the parts of your body that get oxygen in, and carbon dioxide out.</p>
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Labelled diagram of the human respiratory system">
+        <!-- body outline -->
+        <ellipse cx="160" cy="34" rx="25" ry="29" fill="none" stroke="var(--ink-soft)" stroke-width="2.5"/>
+        <line x1="150" y1="60" x2="146" y2="76" stroke="var(--ink-soft)" stroke-width="2.5"/>
+        <line x1="170" y1="60" x2="174" y2="76" stroke="var(--ink-soft)" stroke-width="2.5"/>
+        <path d="M146,76 Q108,84 100,116 L92,308 Q92,320 104,320 L216,320 Q228,320 228,308 L220,116 Q212,84 174,76" fill="none" stroke="var(--ink-soft)" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- nostrils + air-in arrow -->
+        <circle cx="155" cy="53" r="1.8" fill="var(--ink-soft)"/>
+        <circle cx="165" cy="53" r="1.8" fill="var(--ink-soft)"/>
+        <path d="M160,4 L160,16" stroke="var(--teal)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowIn)"/>
+        <!-- windpipe -->
+        <rect x="149" y="60" width="22" height="62" rx="9" fill="var(--teal-light)" stroke="var(--teal-dark)" stroke-width="2"/>
+        <line x1="153" y1="74" x2="167" y2="74" stroke="var(--teal-dark)" stroke-width="1.5" opacity="0.6"/>
+        <line x1="153" y1="86" x2="167" y2="86" stroke="var(--teal-dark)" stroke-width="1.5" opacity="0.6"/>
+        <line x1="153" y1="98" x2="167" y2="98" stroke="var(--teal-dark)" stroke-width="1.5" opacity="0.6"/>
+        <line x1="153" y1="110" x2="167" y2="110" stroke="var(--teal-dark)" stroke-width="1.5" opacity="0.6"/>
+        <!-- bronchi -->
+        <path d="M155,120 Q128,132 112,152" fill="none" stroke="var(--teal-dark)" stroke-width="10" stroke-linecap="round"/>
+        <path d="M165,120 Q192,132 208,152" fill="none" stroke="var(--teal-dark)" stroke-width="10" stroke-linecap="round"/>
+        <!-- ribs (behind lungs) -->
+        <g stroke="var(--ink-soft)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.45">
+          <path d="M118,150 Q95,158 100,172"/>
+          <path d="M113,172 Q90,180 96,196"/>
+          <path d="M111,196 Q88,204 95,220"/>
+          <path d="M112,220 Q90,228 98,244"/>
+          <path d="M115,244 Q94,252 103,266"/>
+          <path d="M202,150 Q225,158 220,172"/>
+          <path d="M207,172 Q230,180 224,196"/>
+          <path d="M209,196 Q232,204 225,220"/>
+          <path d="M208,220 Q230,228 222,244"/>
+          <path d="M205,244 Q226,252 217,266"/>
+        </g>
+        <!-- lungs -->
+        <ellipse cx="98" cy="205" rx="40" ry="66" fill="var(--coral-light)" stroke="var(--coral-dark)" stroke-width="2.5" transform="rotate(-9 98 205)"/>
+        <ellipse cx="222" cy="205" rx="40" ry="66" fill="var(--coral-light)" stroke="var(--coral-dark)" stroke-width="2.5" transform="rotate(9 222 205)"/>
+        <!-- diaphragm -->
+        <path d="M96,272 Q160,300 224,272" fill="none" stroke="var(--gold-dark)" stroke-width="15" stroke-linecap="round"/>
+        <!-- labels -->
+        <g font-family="Inter, sans-serif" font-size="13" fill="var(--ink)">
+          <line x1="160" y1="8" x2="60" y2="8" stroke="var(--line)" stroke-width="1.5"/>
+          <text x="10" y="12" font-weight="700">Nose</text>
+          <line x1="171" y1="90" x2="255" y2="90" stroke="var(--line)" stroke-width="1.5"/>
+          <text x="257" y="94" font-weight="700">Windpipe</text>
+          <line x1="55" y1="205" x2="20" y2="205" stroke="var(--line)" stroke-width="1.5"/>
+          <text x="4" y="209" font-weight="700">Lungs</text>
+          <line x1="86" y1="176" x2="30" y2="150" stroke="var(--line)" stroke-width="1.5"/>
+          <text x="4" y="146" font-weight="700">Ribs</text>
+          <line x1="224" y1="284" x2="270" y2="300" stroke="var(--line)" stroke-width="1.5"/>
+          <text x="205" y="330" font-weight="700">Diaphragm</text>
+        </g>
+        <defs>
+          <marker id="arrowIn" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="var(--teal)"/>
+          </marker>
+        </defs>
+      </svg>
+      <p class="diagram-caption">Air travels: nose → windpipe → bronchi → lungs.</p>
+    </div>
+  </section>
+
+  <section class="step" data-step="3">
+    <span class="kicker">Tap to learn</span>
+    <h1 class="title">What Does Each Part Do?</h1>
+    <p class="lede">Tap each card to reveal what that part is actually for.</p>
+    <div class="grid grid-3" id="partsGrid"></div>
+  </section>
+
+  <section class="step" data-step="4">
+    <span class="kicker">Follow the air</span>
+    <h1 class="title">The Journey of a Breath</h1>
+    <p class="lede">Follow one breath of air, from the moment it enters your nose to the moment it does its job.</p>
+    <div class="steps-flow" id="journeySteps"></div>
+  </section>
+
+  <section class="step" data-step="5">
+    <span class="kicker">Compare</span>
+    <h1 class="title">Breathing IN vs. Breathing OUT</h1>
+    <p class="lede">Your ribs and diaphragm move differently depending on whether you're breathing in or out. Compare the two.</p>
+    <div class="grid grid-2">
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of the chest breathing in">
+          <path d="M55,50 Q30,58 34,72 L26,220 Q26,232 38,232 L182,232 Q194,232 194,220 L186,72 Q190,58 165,50" fill="none" stroke="var(--ink-soft)" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M110,10 L110,26" stroke="var(--teal)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowInB)"/>
+          <ellipse cx="76" cy="140" rx="42" ry="72" fill="var(--coral-light)" stroke="var(--coral-dark)" stroke-width="2.5" transform="rotate(-11 76 140)"/>
+          <ellipse cx="144" cy="140" rx="42" ry="72" fill="var(--coral-light)" stroke="var(--coral-dark)" stroke-width="2.5" transform="rotate(11 144 140)"/>
+          <g stroke="var(--ink-soft)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.45">
+            <path d="M40,90 Q18,98 24,114"/>
+            <path d="M36,120 Q14,128 20,146"/>
+            <path d="M180,90 Q202,98 196,114"/>
+            <path d="M184,120 Q206,128 200,146"/>
+          </g>
+          <path d="M30,214 Q110,236 190,214" fill="none" stroke="var(--gold-dark)" stroke-width="14" stroke-linecap="round"/>
+          <path d="M110,236 L110,222" stroke="var(--gold-dark)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowDownB)"/>
+          <defs>
+            <marker id="arrowInB" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--teal)"/></marker>
+            <marker id="arrowDownB" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--gold-dark)"/></marker>
+          </defs>
+        </svg>
+        <p class="diagram-caption"><b>Breathing IN</b> — ribs move out, diaphragm flattens and pulls down, lungs get bigger.</p>
+      </div>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of the chest breathing out">
+          <path d="M62,50 Q40,58 44,70 L36,214 Q36,226 48,226 L172,226 Q184,226 184,214 L176,70 Q180,58 158,50" fill="none" stroke="var(--ink-soft)" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M110,26 L110,10" stroke="var(--coral)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowOutB)"/>
+          <ellipse cx="82" cy="138" rx="34" ry="58" fill="var(--coral-light)" stroke="var(--coral-dark)" stroke-width="2.5" transform="rotate(-9 82 138)"/>
+          <ellipse cx="138" cy="138" rx="34" ry="58" fill="var(--coral-light)" stroke="var(--coral-dark)" stroke-width="2.5" transform="rotate(9 138 138)"/>
+          <g stroke="var(--ink-soft)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.45">
+            <path d="M50,86 Q30,92 35,106"/>
+            <path d="M47,112 Q27,118 32,134"/>
+            <path d="M170,86 Q190,92 185,106"/>
+            <path d="M173,112 Q193,118 188,134"/>
+          </g>
+          <path d="M42,196 Q110,206 178,196" fill="none" stroke="var(--gold-dark)" stroke-width="14" stroke-linecap="round"/>
+          <path d="M110,196 L110,180" stroke="var(--gold-dark)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowUpB)"/>
+          <defs>
+            <marker id="arrowOutB" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--coral)"/></marker>
+            <marker id="arrowUpB" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--gold-dark)"/></marker>
+          </defs>
+        </svg>
+        <p class="diagram-caption"><b>Breathing OUT</b> — ribs move in, diaphragm relaxes and domes up, lungs get smaller.</p>
+      </div>
+    </div>
+    <p class="note">Put your hands on your ribs right now and take a big breath in — can you feel them move?</p>
+  </section>
+
+  <section class="step" data-step="6">
+    <span class="kicker">Where Lesson 1 meets Lesson 2</span>
+    <h1 class="title">Handing It Over to the Blood</h1>
+    <div class="card card-leaf">
+      Remember blood, from last lesson? <b>This is where it picks up its cargo.</b> Inside your lungs, oxygen from the air moves into your blood. At the very same moment, <b>carbon dioxide</b> — a waste gas your body doesn't need — moves out of your blood and into your lungs, ready to be breathed out.<br><br>
+      Then your heart (Lesson 1!) pumps that oxygen-rich blood all the way round your body, to every single cell.
+    </div>
+  </section>
+
+  <section class="step" data-step="7">
+    <span class="kicker">Now you try</span>
+    <h1 class="title">Quick Questions</h1>
+    <p class="lede">Guess first, then tap to check.</p>
+    <div id="practiceList"></div>
+  </section>
+
+  <section class="step" data-step="8">
+    <span class="kicker">Data challenge</span>
+    <h1 class="title">Breathing Rate &amp; Pulse Rate</h1>
+    <p class="lede">Tap each activity level to see what happens to breathing rate and pulse rate together.</p>
+    <div class="reader-wrap">
+      <div class="reader-btns" id="activityBtns"></div>
+      <div class="reader-readout" id="activityReadout"></div>
+    </div>
+    <p class="note">What do you notice about the two numbers as activity increases?</p>
+  </section>
+
+  <section class="step" data-step="9">
+    <span class="kicker">Quick check</span>
+    <h1 class="title">Before Homework...</h1>
+    <div id="quizList"></div>
+  </section>
+
+  <section class="step" data-step="10">
+    <span class="kicker">Recap + homework</span>
+    <h1 class="title">Today's Key Words</h1>
+    <div id="vocabList"></div>
+    <div class="card card-dark" style="margin-top:22px;">
+      <div class="kicker" style="background:rgba(255,255,255,0.12); color:var(--gold);">🏠 Homework — Worksheet 1.2</div>
+      <ul class="hw-list" id="hwList"></ul>
+    </div>
+    <p class="lede" style="margin-top:20px;">🎉 You can now explain how air gets into your body, and what your lungs do with it!</p>
+  </section>
+
+</div>
+
+<div class="navbar">
+  <button class="btn btn-ghost" id="prevBtn">← Back</button>
+  <button class="btn btn-primary" id="nextBtn">Next →</button>
+</div>
+</div>
+
+<script src="../../assets/lesson-kit.js"></script>
+<script>
+const recapData = [
+  {term:"The 3 parts of the circulatory system", back:"The heart, blood vessels, and blood."},
+  {term:"What does blood carry?", back:"Oxygen and food to your cells — and it carries away waste products."},
+  {term:"What do blood vessels do?", back:"They're the tubes that carry blood all around your body."},
+  {term:"Which side of the heart pumps blood to the lungs?", back:"The right side — it sends blood without oxygen to the lungs to pick more up."}
+];
+
+const partsGrid = [
+  {emj:"👃", lbl:"Nose", desc:"Air enters here. Tiny hairs and sticky mucus catch dust and germs before they reach your lungs."},
+  {emj:"🫁", lbl:"Windpipe", desc:"A tube that carries air down toward your lungs. Rings of cartilage keep it open, like the coils in a vacuum-cleaner hose."},
+  {emj:"🎈", lbl:"Lungs", desc:"Two spongy organs where oxygen moves into your blood, and carbon dioxide moves out."},
+  {emj:"🦴", lbl:"Ribs", desc:"A bony cage that protects your lungs and heart from bumps and knocks."},
+  {emj:"💪", lbl:"Diaphragm", desc:"A dome-shaped muscle under your lungs. It flattens and pulls down when you breathe in, then relaxes back up when you breathe out."}
+];
+
+const journeyData = [
+  {label:"Nose", detail:"Air enters through your nose (or mouth) and is warmed and filtered."},
+  {label:"Windpipe", detail:"Travels down the windpipe toward your chest."},
+  {label:"Bronchi", detail:"Splits into two tubes, one leading to each lung."},
+  {label:"Lungs", detail:"Arrives at your lungs, where the real work happens."},
+  {label:"Blood", detail:"Oxygen passes from your lungs into your blood, ready to travel round your whole body."}
+];
+
+const practiceData = [
+  {text:"What gas do we breathe IN a lot of?", ans:"Oxygen — our body needs it to release energy from the food we eat.", tags:[{label:"OXYGEN", cls:"tag-up"}]},
+  {text:"What gas do we breathe OUT a lot of?", ans:"Carbon dioxide — a waste gas made by our cells.", tags:[{label:"CARBON DIOXIDE", cls:"tag-down"}]},
+  {text:"Which part of your respiratory system has rings of cartilage to keep it open?", ans:"The windpipe (trachea).", tags:[{label:"WINDPIPE", cls:"tag-neutral"}]},
+  {text:"Where exactly does oxygen move from the air into your blood?", ans:"Inside your lungs.", tags:[{label:"LUNGS", cls:"tag-leaf"}]}
+];
+
+const activityData = [
+  {label:"Resting", breathing:16, pulse:75},
+  {label:"Walking", breathing:22, pulse:95},
+  {label:"Jogging", breathing:34, pulse:130},
+  {label:"Sprinting", breathing:48, pulse:165}
+];
+
+const quizData = [
+  {q:"What is the job of the diaphragm?", opts:["It pumps blood around the body","It's a muscle that helps you breathe in and out","It filters dust from the air","It protects your ribs"], correct:1, fb:"The diaphragm is a dome-shaped muscle under your lungs — it flattens to help you breathe in, and relaxes to help you breathe out."},
+  {q:"Which gas moves OUT of your blood and into your lungs, ready to be breathed out?", opts:["Oxygen","Carbon dioxide","Nitrogen","Water"], correct:1, fb:"Carbon dioxide is the waste gas your blood drops off in your lungs, to be breathed out."},
+  {q:"Why do your ribs move outward when you breathe in?", opts:["To protect your heart","To make more space so your lungs can expand","To push air out faster","To warm the air up"], correct:1, fb:"Moving your ribs out (and your diaphragm down) makes extra space inside your chest for your lungs to fill with air."},
+  {q:"As breathing rate goes up during exercise, what usually happens to pulse rate?", opts:["It goes up too","It goes down","It stays exactly the same","There's no connection at all"], correct:0, fb:"Both rise together — your muscles need more oxygen, so your heart beats faster to deliver it, and you breathe faster to take more in."}
+];
+
+const vocabData = [
+  {t:"Respiratory system", d:"The parts of your body that get oxygen into you, and carbon dioxide out."},
+  {t:"Windpipe (trachea)", d:"The tube that carries air from your throat down toward your lungs."},
+  {t:"Lungs", d:"Two spongy organs where oxygen moves into your blood, and carbon dioxide moves out."},
+  {t:"Diaphragm", d:"A dome-shaped muscle beneath your lungs that helps you breathe in and out."},
+  {t:"Oxygen", d:"The gas your body needs from the air to release energy from food."},
+  {t:"Carbon dioxide", d:"A waste gas your body gets rid of every time you breathe out."}
+];
+
+const hwItems = ["Focus: fill in the blanks", "Practice: label the breathing diagram", "Practice: order the path of air", "Challenge: breathing rate & pulse rate graph"];
+
+LessonKit.buildFlipGrid(document.getElementById('recapFlips'), recapData);
+LessonKit.buildShiftGrid(document.getElementById('partsGrid'), partsGrid);
+LessonKit.buildStepsList(document.getElementById('journeySteps'), journeyData);
+LessonKit.buildRevealCards(document.getElementById('practiceList'), practiceData, {buttonLabel:'Reveal answer'});
+LessonKit.buildReader(
+  document.getElementById('activityBtns'),
+  document.getElementById('activityReadout'),
+  activityData,
+  [{key:'breathing', label:'Breaths per minute'}, {key:'pulse', label:'Heartbeats per minute'}]
+);
+LessonKit.buildQuiz(document.getElementById('quizList'), quizData);
+LessonKit.buildVocabList(document.getElementById('vocabList'), vocabData);
+LessonKit.buildHomeworkChecklist(document.getElementById('hwList'), hwItems);
+LessonKit.initStepper();
+</script>
+</body>
+</html>

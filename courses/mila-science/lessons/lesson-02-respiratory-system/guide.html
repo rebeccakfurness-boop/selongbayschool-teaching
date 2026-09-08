@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 2 Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7fbfb; --surface: #fcfefe; --ink: #12313f; --ink2: #4e6b78; --muted:#7b939d;
+    --blue:#1c93a6; --orange:#f0663b; --border:rgba(18,49,63,0.12); --grid:#dceaec;
+    --warn-bg:#fdeed8; --warn-border:#f2b138;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0e1b21; --surface:#16262c; --ink:#eaf6f8; --ink2:#9fc2cb; --muted:#7b939d;
+      --blue:#3fb8cc; --orange:#ff9068; --border:rgba(255,255,255,0.14); --grid:#284048;
+      --warn-bg:#2a2410; --warn-border:#f2b138; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 2 — Comprehensive Teaching Script</h1>
+<p><strong>Cambridge Primary Science, Stage 6 · Unit 1.2 The respiratory system</strong><br />
+Linked materials: <code>worksheet.html</code> / <code>worksheet.docx</code> · <code>lesson.html</code> (interactive)</p>
+<p>This follows straight on from Mila's Lesson 1 worksheet (1.1 The circulatory system). It's a full script, not just an outline — written so you can follow it step-by-step live using the interactive <code>lesson.html</code>, with what to say, what to ask, what a good answer sounds like, and what to do if she's stuck. This unit is aligned to Cambridge Primary Science Workbook 6 (1.2 The respiratory system), with fresh questions and original diagrams rather than reproductions of the workbook's own pages.</p>
+<h2>Learning objectives</h2>
+<p>By the end of this lesson she can:</p>
+<ol>
+<li>Name the main parts of the respiratory system (nose, windpipe, bronchi, lungs, ribs, diaphragm) and explain what each one does.</li>
+<li>Describe the path air takes from the nose to the lungs, and explain that oxygen then passes into the blood while carbon dioxide passes out of it.</li>
+<li>Explain how ribs and the diaphragm move differently when breathing in compared to breathing out.</li>
+<li>Read a simple data table/graph pattern and explain why breathing rate and pulse rate rise together during exercise.</li>
+</ol>
+<h2>Step-by-step script</h2>
+<h3>Step 1 — Recap: the circulatory system</h3>
+<p><em>Say:</em> "Before we start something new, let's check last lesson stuck. Quick round of questions."<br />
+<em>Ask her:</em> "What are the three parts of the circulatory system?"<br />
+<em>What a good answer sounds like:</em> The heart, blood vessels, and blood.<br />
+Work through all four recap cards in the interactive lesson together — she flips each one herself after guessing.</p>
+<h3>Step 2 — Why do we breathe?</h3>
+<p><em>Say:</em> "Let's try something. Hold your breath for as long as feels comfortable — go!"<br />
+Let her actually do it for a few seconds, then let go.<br />
+<em>Ask her:</em> "What do you think your body was collecting every time you breathed in just now? And what was it getting rid of when you breathed out?"<br />
+<em>What a good answer sounds like:</em> Some sense that air going in brings something the body needs, and air going out gets rid of something. She doesn't need the exact gas names yet — that's coming next.</p>
+<h3>Step 3 — Meet the respiratory system (labelled diagram)</h3>
+<p><em>Say:</em> "Here's the whole system, labelled. Air comes in through your nose, down your windpipe, and into your lungs."<br />
+Point to each part on screen as you name it. Let her take a moment to look at the shape of the lungs and the dome of the diaphragm before moving on — she'll need to recognise this shape again shortly.</p>
+<h3>Step 4 — Tap to learn: what does each part do?</h3>
+<p>Work through all five cards (Nose, Windpipe, Lungs, Ribs, Diaphragm) together. For each one, ask her to guess the function <strong>before</strong> tapping to reveal it.<br />
+<em>If she's unsure on the windpipe:</em> Ask "why do you think it needs rings to keep it open, instead of just being a floppy tube?" (So it can't get squashed shut and block your air.)</p>
+<h3>Step 5 — The journey of a breath</h3>
+<p><em>Say:</em> "Let's follow one single breath of air, start to finish."<br />
+Read each step of the journey out loud together: nose → windpipe → bronchi → lungs → blood. Then ask her to close her eyes and recite the order back to you from memory, no peeking.</p>
+<h3>Step 6 — Breathing IN vs. breathing OUT</h3>
+<p><em>Say:</em> "Put your hands flat on your ribs, right where the sides of your chest are. Now take a big breath in."<br />
+<em>Ask her:</em> "What did you feel your ribs do?" (They moved outward.) "And breathing out?" (They moved back in.)<br />
+Then look at the two diagrams together and match what she just felt to what's shown — ribs out + diaphragm down = breathing in; ribs in + diaphragm up = breathing out.<br />
+<em>Extra context if she asks why:</em> Moving the ribs out and the diaphragm down makes your chest cavity bigger on purpose — more space means lower pressure inside, and air rushes in to fill it, a bit like pulling the plunger back on a syringe.</p>
+<h3>Step 7 — Where Lesson 1 meets Lesson 2</h3>
+<p><em>Say:</em> "Here's the bit that connects both lessons together. Inside your lungs, oxygen from the air moves into your blood — and at the same moment, carbon dioxide moves out of your blood and into your lungs, ready to be breathed out."<br />
+<em>Ask her:</em> "Once that oxygen is in the blood, what carries it around the rest of the body?" (The heart, pumping blood through the blood vessels — straight back to Lesson 1.)</p>
+<h3>Step 8 — Practice questions</h3>
+<p>Work through all four guess-then-reveal cards. These deliberately reuse the exact vocabulary from the fill-in-the-blank style she saw in Lesson 1, so the format feels familiar even though the content is new.</p>
+<h3>Step 9 — Data challenge: breathing rate &amp; pulse rate</h3>
+<p><em>Say:</em> "Tap through Resting, Walking, Jogging, and Sprinting, and watch both numbers."<br />
+<em>Ask her, after she's tapped through all four:</em> "What do you notice happening to both numbers together as the activity gets more intense?" (They both go up together.)<br />
+<em>Ask why:</em> "Why do you think your heart and your breathing both speed up when you exercise?" (Working muscles need more oxygen, so the body breathes faster to take more in, and the heart beats faster to deliver it.) This is exactly the pattern she'll be asked to describe from a real data table on the worksheet.</p>
+<h3>Step 10 — Quick check</h3>
+<p>Run all four quiz questions. If she gets the ribs/diaphragm one wrong, go back and have her physically breathe in and out again with her hands on her ribs before re-trying it — the physical feeling is the fastest fix for that misconception.</p>
+<h3>Step 11 — Recap + homework</h3>
+<p><em>Say:</em> "Today: the respiratory system gets oxygen in and carbon dioxide out. Nose, windpipe, bronchi, lungs, ribs, diaphragm. Breathing in — ribs out, diaphragm down. Breathing out — the reverse. And it all hands over to the blood from last lesson."<br />
+Set the worksheet for her own time — it has a fill-in-the-blanks section, a labelling task, an ordering task, and a data/graph challenge, matching the same Focus/Practice/Challenge structure as her Lesson 1 worksheet.</p>
+<h2>Wrap-up</h2>
+<p>This lesson leans on two physical, felt experiences — holding her breath, and feeling her own ribs move — rather than just describing them. If either concept feels shaky by the end, redo the physical version first before going back to the diagram; for this age group the felt experience usually fixes the misunderstanding faster than re-explaining the picture.</p>
+<h2>Next lesson</h2>
+<p>1.3 The reproductive system.</p>
+</div>
+</body>
+</html>
