@@ -1,0 +1,21 @@
+Socially efficient output: The amount of a good or service that's actually best for society as a whole, once all costs and benefits (not just private ones) are counted.
+
+Market output: How much actually gets produced, based only on private cost and private benefit — differs from socially efficient output whenever an externality exists.
+
+Overproduction: Producing more than the socially efficient amount, typically caused by negative externalities. The market only "sees" private cost, so production continues past the point it should stop.
+
+Underproduction: Producing less than the socially efficient amount, typically caused by positive externalities or merit goods. The market only "sees" private benefit, ignoring the wider benefit to society.
+
+Negative externalities and overproduction: Since social cost is higher than private cost, and the market ignores the difference, more gets produced than is actually best for society, e.g. Tom's Print Co continuing to pollute the stream at full output.
+
+Positive externalities/merit goods and underproduction: Since social benefit is higher than private benefit, and the market ignores the difference, less gets provided than would actually be best for society, e.g. a free coding workshop offered less often than ideal.
+
+Public goods and zero provision: Because of the free-rider problem, a private firm can't capture profit from providing a public good, so the market supplies none at all, even though people clearly want it.
+
+Consequence for consumers: May pay for goods that quietly harm others (negative externalities), or miss out on merit goods that would genuinely benefit them.
+
+Consequence for producers: No market signal to change, since nobody is actually charging them for the externality they create — from their own perspective, nothing looks wrong.
+
+Consequence for government: Must judge whether the gap between market output and socially efficient output is large enough to justify a policy response, and how.
+
+Government's toolkit (preview): Taxes (discourage demerit goods/negative externalities), subsidies (encourage merit goods/positive externalities), regulation (rules and limits), and direct provision (government supplies public goods itself) — covered in full next lesson.

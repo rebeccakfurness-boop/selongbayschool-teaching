@@ -793,6 +793,93 @@ function buildLesson7() {
   return pres;
 }
 
+function buildLesson8() {
+  const pres = new pptxgen();
+  pres.layout = "LAYOUT_WIDE";
+  titleSlide(pres, "Lesson 8 · Syllabus 2.9", "Market Failure: Causes & Consequences", "Naming the problem isn't the same as knowing its effect.");
+
+  bodySlide(pres, "Quick recap", [
+    "Market failure: the price mechanism misallocates resources.",
+    "Four types named last lesson: externalities, public goods, merit goods, demerit goods.",
+  ]);
+
+  blankCalcSlide(pres, "📱 Warm-up: Tom's Print Co phone cases", "Your turn — PED practice",
+    ["Price: $6 → $7.50  (+25%)", "Quantity: 80 → 56 per week  (−30%)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "📱 Phone cases — answer", "Check your answer",
+    ["% change in price = +25%", "% change in quantity = −30%"],
+    "PED = −30 ÷ 25 = −1.2 → Elastic", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  blankCalcSlide(pres, "🎾 Warm-up: padel club racket restringing", "Your turn — PES practice",
+    ["Price: $12 → $15  (+25%)", "Quantity: 20 → 22 slots/week  (+10%)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "🎾 Restringing — answer", "Check your answer",
+    ["% change in price = +25%", "% change in quantity supplied = +10%"],
+    "PES = 10 ÷ 25 = 0.4 → Inelastic", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  bodySlide(pres, "So what actually happens?", [
+    "Naming a problem isn't the same as knowing its effect.",
+    "Today: exactly what goes wrong with the amount produced, who gets affected, and a first look at government's response.",
+  ]);
+
+  twoColSlide(pres, "Market output vs. socially efficient output",
+    "Market output", "How much actually gets produced.\n\nBased on private cost and private benefit alone.",
+    "Socially efficient output", "How much SHOULD get produced.\n\nBased on social cost and social benefit — the true cost/benefit to everyone.");
+
+  bodySlide(pres, "Negative externalities → overproduction", [
+    "Tom's stream pollution: social cost is higher than private cost.",
+    "The market only 'sees' private cost, so production keeps going past the point where it should stop.",
+    "Result: MORE grips get produced than is actually best for society.",
+  ]);
+
+  bodySlide(pres, "Positive externalities & merit goods → underproduction", [
+    "Tom's free coding workshop: social benefit is higher than private benefit.",
+    "The market only 'sees' private benefit.",
+    "Result: LESS of it gets provided than would actually be best for society.",
+  ]);
+
+  bodySlide(pres, "Public goods → zero provision", [
+    "The free-rider problem means a private firm can't capture profit from something like streetlights.",
+    "Result: the market provides NONE at all, even though people clearly want it.",
+  ]);
+
+  bodySlide(pres, "Now you try: which consequence?", [
+    "Tom keeps printing extra grips even though the pollution cost is never paid by him.",
+    "A free vaccination programme reaches fewer people than would benefit society.",
+    "Nobody builds a lighthouse, because no single ship owner will pay for something every ship benefits from for free.",
+  ]);
+
+  cardRowSlide(pres, "Who bears the consequences?", [
+    { name: "Consumers", desc: "May pay for goods that quietly harm others, or miss out on merit goods that would genuinely benefit them." },
+    { name: "Producers", desc: "No market signal to change — nobody's actually charging them for the externality they create." },
+    { name: "Government", desc: "Must decide whether the gap is big enough to justify stepping in, and how." },
+  ]);
+
+  bodySlide(pres, "A first look at government's toolkit", [
+    "Taxes — to discourage demerit goods and negative externalities.",
+    "Subsidies — to encourage merit goods and positive externalities.",
+    "Regulation — rules and limits on behaviour.",
+    "Direct provision — government builds or provides public goods itself.",
+  ]);
+
+  bodySlide(pres, "Quick check", [
+    "A factory's negative externality — more or less than the socially efficient amount?",
+    "Why does a merit good get under-provided by the market?",
+    "What is the free-rider problem a direct cause of?",
+  ]);
+
+  bodySlide(pres, "Recap", [
+    "Negative externalities cause overproduction. Positive externalities and merit goods cause underproduction.",
+    "Public goods get zero private provision.",
+    "Consumers, producers, and government are all affected differently.",
+  ]);
+
+  closingSlide(pres, "Next lesson", "Mixed economy & price controls",
+    "The actual tools — taxes, subsidies, regulation — in depth.");
+
+  return pres;
+}
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   await buildLesson1().writeFile({ fileName: path.join(BASE, "lesson-01", "slides.pptx") });
@@ -809,5 +896,7 @@ async function run() {
   console.log("wrote lesson-06/slides.pptx");
   await buildLesson7().writeFile({ fileName: path.join(BASE, "lesson-07", "slides.pptx") });
   console.log("wrote lesson-07/slides.pptx");
+  await buildLesson8().writeFile({ fileName: path.join(BASE, "lesson-08", "slides.pptx") });
+  console.log("wrote lesson-08/slides.pptx");
 }
 run();

@@ -583,6 +583,59 @@ const REVIEW1 = {
   ],
 };
 
+const LESSON8 = {
+  title: "Lesson 8 Worksheet — Market Failure: Causes & Consequences",
+  syllabusRef: "2.9",
+  sections: [
+    {
+      heading: "Section A — Definitions",
+      items: [
+        { type: "qa", q: "**1a.** Define socially efficient output." },
+        { type: "qa", q: "**1b.** Define market output, and explain how it differs from socially efficient output." },
+        { type: "qa", q: "**1c.** Define overproduction and underproduction, as they relate to market failure." },
+      ],
+    },
+    {
+      heading: "Section B — Which consequence is this?",
+      items: [
+        { type: "qa", q: "**2a.** A dry-cleaning shop's chemical fumes irritate nearby office workers, a cost never reflected in its prices, so the shop keeps operating at full capacity. Overproduced, underproduced, or not provided at all?" },
+        { type: "qa", q: "**2b.** A private tutoring company could offer subsidised classes for struggling students (a clear benefit to the wider community), but doesn't, since it can't charge for that wider benefit. Overproduced, underproduced, or not provided at all?" },
+        { type: "qa", q: "**2c.** No private company installs flood barriers along a public riverbank, even though every nearby resident would benefit, because no single resident will pay for something everyone gets free. Overproduced, underproduced, or not provided at all?" },
+      ],
+    },
+    {
+      heading: "Section C — Apply it: Tom's Print Co & the padel club",
+      items: [
+        { type: "qa", q: "**3a.** Tom's plastic waste pollutes the stream, but he keeps producing at the same rate regardless. Using the ideas of private cost and social cost, explain why this leads to overproduction." },
+        { type: "qa", q: "**3b.** The padel club would ideally run more free taster sessions for local schools (positive externality: healthier, more active kids), but only runs a few, since it can't capture that wider benefit as revenue. Explain why this leads to underproduction." },
+        { type: "qa", q: "**3c.** Explain why a producer like Tom has no built-in incentive to fix a negative externality on his own, without government involvement." },
+      ],
+    },
+    {
+      heading: "Section D — Exam-style practice",
+      items: [
+        { type: "mcq", q: "**4.** *(Paper 1 style MCQ)* When a negative externality exists, the market tends to produce:", options: ["A. Exactly the socially efficient amount", "B. More than the socially efficient amount", "C. Less than the socially efficient amount", "D. Nothing at all"] },
+        { type: "mcq", q: "**5.** *(Paper 1 style MCQ)* The free-rider problem is a direct cause of which consequence?", options: ["A. Overproduction of demerit goods", "B. Zero private provision of public goods", "C. Perfectly efficient markets", "D. Falling prices for merit goods"] },
+        { type: "qa", q: "**6.** *(Paper 2 style, 6 marks)* Explain, using examples, the consequences of market failure for **two** different groups (choose from consumers, producers, and government). Use examples from Tom's Print Co or the padel club in your answer." },
+      ],
+    },
+  ],
+  answerKey: [
+    { type: "text", text: "**1a.** The amount of a good or service that's actually best for society as a whole, once all costs and benefits (not just private ones) are counted." },
+    { type: "text", text: "**1b.** Market output is how much actually gets produced, based only on private cost and private benefit. It differs from socially efficient output whenever an externality exists, since the market ignores costs or benefits to third parties." },
+    { type: "text", text: "**1c.** Overproduction is producing more than the socially efficient amount, typically caused by negative externalities. Underproduction is producing less than the socially efficient amount, typically caused by positive externalities or merit goods." },
+    { type: "text", text: "**2a.** Overproduced — a negative externality (the fumes) isn't reflected in the shop's costs, so it keeps producing past the socially efficient point." },
+    { type: "text", text: "**2b.** Underproduced — a positive externality (community benefit) isn't captured as revenue, so less gets provided than would be socially efficient." },
+    { type: "text", text: "**2c.** Not provided at all — a classic public good; the free-rider problem means no private firm can profit from providing it." },
+    { type: "text", text: "**3a.** Tom's private cost only includes his own materials and electricity, not the pollution cost to people near the stream. Since social cost (private cost + external cost) is higher than what Tom actually pays, the market keeps producing past the point where output is actually efficient for society — leading to overproduction." },
+    { type: "text", text: "**3b.** The club's private benefit is only the revenue it earns directly. The wider social benefit (healthier, more active kids) isn't something the club can charge for, so it under-provides taster sessions relative to what would be best for society." },
+    { type: "text", text: "**3c.** There's no market signal telling Tom to change — nobody is actually charging him for the pollution he creates, so from his own private cost-and-revenue perspective, nothing looks wrong. Only an outside intervention (like government regulation or a tax) would change that signal." },
+    { type: "text", text: "**4.** B — a negative externality means social cost exceeds private cost, so the market overproduces relative to the socially efficient amount." },
+    { type: "text", text: "**5.** B — since non-payers can't be excluded from a public good, no private firm has a profit incentive to supply it, so the market provides none at all." },
+    { type: "text", text: "**6.** Look for **two** developed points (AO2 chains), each naming a group and explaining the specific consequence they face, e.g.: (i) consumers — a family near Tom's stream suffers the effects of pollution they never agreed to and aren't compensated for; (ii) producers — Tom has no financial incentive to change his production process, since the externality cost never appears in his own accounts; (iii) government — must judge whether the gap between market and socially efficient output (e.g. for the padel club's community taster sessions) is large enough to justify a policy response. Full marks need identification + explanation of the effect on that specific group, not just a list of terms." },
+  ],
+};
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   const jobs = [
@@ -593,6 +646,7 @@ async function run() {
     { lesson: "lesson-05", data: LESSON5 },
     { lesson: "lesson-06", data: LESSON6 },
     { lesson: "lesson-07", data: LESSON7 },
+    { lesson: "lesson-08", data: LESSON8 },
     { lesson: "review-01-ped-tr-pes", data: REVIEW1 },
   ];
   for (const job of jobs) {
