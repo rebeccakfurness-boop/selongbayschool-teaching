@@ -691,7 +691,7 @@ function buildLesson6() {
 function buildLesson7() {
   const pres = new pptxgen();
   pres.layout = "LAYOUT_WIDE";
-  titleSlide(pres, "Lesson 7 · Syllabus 2.9", "Market Failure: Key Definitions", "Two things we left hanging, finally named properly.");
+  titleSlide(pres, "Lesson 7 · Syllabus 2.9", "Market Failure: Definitions, Causes & Consequences", "Two things we left hanging, finally named properly — and what they actually cause.");
 
   bodySlide(pres, "Quick recap", [
     "In a market economy: what to produce (whatever earns profit), how (however keeps costs lowest), for whom (whoever can pay).",
@@ -775,47 +775,10 @@ function buildLesson7() {
     "A subsidised coding workshop using Tom's 3D printer → Merit good (undervalued long-term benefit + skills spillover).",
   ]);
 
-  bodySlide(pres, "Quick check", [
+  bodySlide(pres, "Quick check: definitions", [
     "What's the difference between private cost and social cost?",
     "Name the two properties that make something a public good.",
   ]);
-
-  bodySlide(pres, "Recap", [
-    "Market failure: the price mechanism misallocates resources.",
-    "Externalities: four types, split by production/consumption and negative/positive.",
-    "Public goods: non-excludable + non-rivalrous → free-riding → the market under-supplies them.",
-    "Merit goods under-provided, demerit goods over-provided — people misjudge the true benefit or cost.",
-  ]);
-
-  closingSlide(pres, "Next lesson", "Market failure: causes & consequences",
-    "What governments actually do about each of these problems.");
-
-  return pres;
-}
-
-function buildLesson8() {
-  const pres = new pptxgen();
-  pres.layout = "LAYOUT_WIDE";
-  titleSlide(pres, "Lesson 8 · Syllabus 2.9", "Market Failure: Causes & Consequences", "Naming the problem isn't the same as knowing its effect.");
-
-  bodySlide(pres, "Quick recap", [
-    "Market failure: the price mechanism misallocates resources.",
-    "Four types named last lesson: externalities, public goods, merit goods, demerit goods.",
-  ]);
-
-  blankCalcSlide(pres, "📱 Warm-up: Tom's Print Co phone cases", "Your turn — PED practice",
-    ["Price: $6 → $7.50  (+25%)", "Quantity: 80 → 56 per week  (−30%)"],
-    { tag: "✍️ Your turn", tagColor: CORAL });
-  calcSlide(pres, "📱 Phone cases — answer", "Check your answer",
-    ["% change in price = +25%", "% change in quantity = −30%"],
-    "PED = −30 ÷ 25 = −1.2 → Elastic", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
-
-  blankCalcSlide(pres, "🎾 Warm-up: padel club racket restringing", "Your turn — PES practice",
-    ["Price: $12 → $15  (+25%)", "Quantity: 20 → 22 slots/week  (+10%)"],
-    { tag: "✍️ Your turn", tagColor: CORAL });
-  calcSlide(pres, "🎾 Restringing — answer", "Check your answer",
-    ["% change in price = +25%", "% change in quantity supplied = +10%"],
-    "PES = 10 ÷ 25 = 0.4 → Inelastic", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
 
   bodySlide(pres, "So what actually happens?", [
     "Naming a problem isn't the same as knowing its effect.",
@@ -862,15 +825,16 @@ function buildLesson8() {
     "Direct provision — government builds or provides public goods itself.",
   ]);
 
-  bodySlide(pres, "Quick check", [
+  bodySlide(pres, "Quick check: causes & consequences", [
     "A factory's negative externality — more or less than the socially efficient amount?",
     "Why does a merit good get under-provided by the market?",
     "What is the free-rider problem a direct cause of?",
   ]);
 
   bodySlide(pres, "Recap", [
-    "Negative externalities cause overproduction. Positive externalities and merit goods cause underproduction.",
-    "Public goods get zero private provision.",
+    "Market failure: the price mechanism misallocates resources.",
+    "Externalities, public goods, and merit/demerit goods are the causes.",
+    "Negative externalities cause overproduction. Positive externalities and merit goods cause underproduction. Public goods get zero private provision.",
     "Consumers, producers, and government are all affected differently.",
   ]);
 
@@ -896,7 +860,5 @@ async function run() {
   console.log("wrote lesson-06/slides.pptx");
   await buildLesson7().writeFile({ fileName: path.join(BASE, "lesson-07", "slides.pptx") });
   console.log("wrote lesson-07/slides.pptx");
-  await buildLesson8().writeFile({ fileName: path.join(BASE, "lesson-08", "slides.pptx") });
-  console.log("wrote lesson-08/slides.pptx");
 }
 run();

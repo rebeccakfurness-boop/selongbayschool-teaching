@@ -65,7 +65,7 @@ function buildDoc(data) {
     children: [new TextRun({ text: data.title, bold: true })],
     spacing: { after: 80 },
   }));
-  children.push(para(`**Syllabus ref: ${data.syllabusRef}** · Complete during your 30 min self-directed time.`));
+  children.push(para(`**Syllabus ref: ${data.syllabusRef}** · ${data.subtitle || "Complete during your 30 min self-directed time."}`));
 
   for (const section of data.sections) {
     children.push(heading(section.heading));
@@ -452,8 +452,9 @@ const LESSON6 = {
 };
 
 const LESSON7 = {
-  title: "Lesson 7 Worksheet — Market Failure: Key Definitions",
+  title: "Lesson 7 Worksheet — Market Failure: Definitions, Causes & Consequences",
   syllabusRef: "2.9",
+  subtitle: "This worksheet covers the full topic in one go — allow around 40 minutes of self-directed time.",
   sections: [
     {
       heading: "Section A — Definitions",
@@ -462,8 +463,8 @@ const LESSON7 = {
         { type: "qa", q: "**1b.** Define social cost, using the ideas of private cost and external cost." },
         { type: "qa", q: "**1c.** Define externality." },
         { type: "qa", q: "**1d.** Define a public good, using excludability and rivalry." },
-        { type: "qa", q: "**1e.** Define a merit good." },
-        { type: "qa", q: "**1f.** Define a demerit good." },
+        { type: "qa", q: "**1e.** Define a merit good and a demerit good." },
+        { type: "qa", q: "**1f.** Define socially efficient output, and explain how it differs from market output." },
       ],
     },
     {
@@ -475,19 +476,30 @@ const LESSON7 = {
       ],
     },
     {
-      heading: "Section C — Apply it: Tom's Print Co & the padel club",
+      heading: "Section C — Which consequence is this?",
       items: [
-        { type: "qa", q: "**3a.** A padel club installs floodlights so members can play after dark, and charges a small extra fee for evening slots. Is floodlit court time a private good or a public good? Explain using excludability and rivalry." },
-        { type: "qa", q: "**3b.** Tom is thinking about running a free basic coding workshop for local kids using his 3D printer, but is unsure it's worth his time since he can't charge much for it. Using the idea of a merit good, explain why the market alone might under-provide something like this." },
-        { type: "qa", q: "**3c.** Explain, using the ideas of private cost, external cost, and social cost, why the market price of a padel grip does not reflect the true cost to society of producing it." },
+        { type: "qa", q: "**3a.** A dry-cleaning shop's chemical fumes irritate nearby office workers, a cost never reflected in its prices, so the shop keeps operating at full capacity. Over-provided, under-provided, or not provided at all?" },
+        { type: "qa", q: "**3b.** A private tutoring company could offer subsidised classes for struggling students (a clear benefit to the wider community), but doesn't, since it can't charge for that wider benefit. Over-provided, under-provided, or not provided at all?" },
+        { type: "qa", q: "**3c.** No private company installs flood barriers along a public riverbank, even though every nearby resident would benefit, because no single resident will pay for something everyone gets free. Over-provided, under-provided, or not provided at all?" },
       ],
     },
     {
-      heading: "Section D — Exam-style practice",
+      heading: "Section D — Apply it: Tom's Print Co & the padel club",
       items: [
-        { type: "mcq", q: "**4.** *(Paper 1 style MCQ)* Which of the following best describes a positive externality?", options: ["A. A cost imposed on a third party", "B. A benefit received only by the producer", "C. A benefit that spills over onto a third party not involved in the transaction", "D. A cost that is always reflected in the market price"] },
-        { type: "mcq", q: "**5.** *(Paper 1 style MCQ)* A good is non-excludable and non-rivalrous. This is best described as:", options: ["A. A private good", "B. A demerit good", "C. A public good", "D. A merit good"] },
-        { type: "qa", q: "**6.** *(Paper 2 style, 6 marks)* Explain, using examples, why the market mechanism may fail to allocate resources efficiently. Use at least **two** different types of market failure discussed in this lesson (e.g. externalities, public goods, merit/demerit goods)." },
+        { type: "qa", q: "**4a.** A padel club installs floodlights so members can play after dark, and charges a small extra fee for evening slots. Is floodlit court time a private good or a public good? Explain using excludability and rivalry." },
+        { type: "qa", q: "**4b.** Explain, using the ideas of private cost, external cost, and social cost, why the market price of a padel grip does not reflect the true cost to society of producing it — and why this leads to overproduction." },
+        { type: "qa", q: "**4c.** Tom is thinking about running a free basic coding workshop for local kids using his 3D printer, but is unsure it's worth his time since he can't charge much for it. Using the idea of a merit good, explain why the market alone might under-provide something like this." },
+        { type: "qa", q: "**4d.** Explain why a producer like Tom has no built-in incentive to fix a negative externality on his own, without government involvement." },
+      ],
+    },
+    {
+      heading: "Section E — Exam-style practice",
+      items: [
+        { type: "mcq", q: "**5.** *(Paper 1 style MCQ)* Which of the following best describes a positive externality?", options: ["A. A cost imposed on a third party", "B. A benefit received only by the producer", "C. A benefit that spills over onto a third party not involved in the transaction", "D. A cost that is always reflected in the market price"] },
+        { type: "mcq", q: "**6.** *(Paper 1 style MCQ)* A good is non-excludable and non-rivalrous. This is best described as:", options: ["A. A private good", "B. A demerit good", "C. A public good", "D. A merit good"] },
+        { type: "mcq", q: "**7.** *(Paper 1 style MCQ)* When a negative externality exists, the market tends to produce:", options: ["A. Exactly the socially efficient amount", "B. More than the socially efficient amount", "C. Less than the socially efficient amount", "D. Nothing at all"] },
+        { type: "mcq", q: "**8.** *(Paper 1 style MCQ)* The free-rider problem is a direct cause of which consequence?", options: ["A. Overproduction of demerit goods", "B. Zero private provision of public goods", "C. Perfectly efficient markets", "D. Falling prices for merit goods"] },
+        { type: "qa", q: "**9.** *(Paper 2 style, 6 marks)* Explain, using examples, the causes of market failure and their consequences for **two** different groups (choose from consumers, producers, and government). Use examples from Tom's Print Co or the padel club in your answer." },
       ],
     },
   ],
@@ -496,17 +508,23 @@ const LESSON7 = {
     { type: "text", text: "**1b.** Social cost is the full cost to society of an economic activity — private cost (what the producer/consumer pays) plus external cost (the cost dumped on third parties not involved in the transaction)." },
     { type: "text", text: "**1c.** An externality is a cost or benefit of a transaction that spills over onto a third party not involved in it." },
     { type: "text", text: "**1d.** A public good is non-excludable (nobody can be stopped from benefiting even without paying) and non-rivalrous (one person's use doesn't reduce how much is available to others)." },
-    { type: "text", text: "**1e.** A merit good is under-provided by the market because people undervalue its benefit to themselves, or ignore the positive externality it creates for others (e.g. education, healthcare)." },
-    { type: "text", text: "**1f.** A demerit good is over-provided by the market because people undervalue its cost to themselves, or ignore the negative externality it creates for others (e.g. cigarettes)." },
+    { type: "text", text: "**1e.** A merit good is under-provided by the market because people undervalue its benefit to themselves, or ignore the positive externality it creates for others (e.g. education, healthcare). A demerit good is over-provided because people undervalue its cost to themselves, or ignore the negative externality it creates for others (e.g. cigarettes)." },
+    { type: "text", text: "**1f.** Socially efficient output is the amount of a good or service that's actually best for society once all costs and benefits are counted. Market output is how much actually gets produced based only on private cost and private benefit — the two differ whenever an externality exists." },
     { type: "text", text: "**2a.** Negative production externality — the pollution cost is created during the factory's manufacturing process and imposed on people uninvolved in the transaction." },
     { type: "text", text: "**2b.** Positive production externality — the pleasant smell is a side effect of the bakery's production process, benefiting passersby who paid nothing for it." },
     { type: "text", text: "**2c.** Negative consumption externality — the disturbance is created while the good (the music) is being consumed, imposed on residents nearby." },
-    { type: "text", text: "**3a.** A private good. Excludable — the club can refuse entry to evening slots to anyone who won't pay the extra fee. Rivalrous — if one group is booked onto the court for that slot, no other group can use the same court at the same time." },
-    { type: "text", text: "**3b.** It's a merit good. Kids and parents may undervalue the long-term benefit of coding skills, and there's a positive externality to the wider community (more skilled future workers) that Tom isn't paid for. Because Tom can't capture the full value of what he creates, the free market alone tends to under-provide it — the classic argument for subsidising or grant-funding this kind of activity." },
-    { type: "text", text: "**3c.** The $8 price only reflects Tom's private cost (materials and electricity). It leaves out the external cost of the plastic pollution affecting people near the stream. Social cost = private cost + external cost, so the true cost to society of producing that grip is higher than the market price shows — meaning, from society's point of view, more grips get produced than is actually efficient." },
-    { type: "text", text: "**4.** C — a positive externality is a benefit that spills over onto a third party not involved in the transaction; A and D describe costs, not benefits, and B describes a purely private benefit with no spillover." },
-    { type: "text", text: "**5.** C — non-excludable and non-rivalrous is the definition of a public good; a private good is excludable and rivalrous, and merit/demerit goods are defined by under/over-consumption, not these two properties." },
-    { type: "text", text: "**6.** Look for **two** developed points (AO2 chains), each identifying a type of market failure and explaining why it causes resources to be misallocated, e.g.: (i) negative externalities — Tom's plastic waste pollutes the stream, a cost not reflected in the $8 price, leading to over-production relative to the social optimum; (ii) public goods — streetlights near the padel club are non-excludable and non-rivalrous, so no private firm has a profit incentive to supply them, leading to under-provision via the free-rider problem; (iii) merit goods — a free coding workshop may be under-provided since Tom can't capture its full social benefit. Full marks need identification + explanation of the misallocation mechanism, not just a definition." },
+    { type: "text", text: "**3a.** Over-provided — a negative externality (the fumes) isn't reflected in the shop's costs, so it keeps producing past the socially efficient point." },
+    { type: "text", text: "**3b.** Under-provided — a positive externality (community benefit) isn't captured as revenue, so less gets provided than would be socially efficient." },
+    { type: "text", text: "**3c.** Not provided at all — a classic public good; the free-rider problem means no private firm can profit from providing it." },
+    { type: "text", text: "**4a.** A private good. Excludable — the club can refuse entry to evening slots to anyone who won't pay the extra fee. Rivalrous — if one group is booked onto the court for that slot, no other group can use the same court at the same time." },
+    { type: "text", text: "**4b.** The $8 price only reflects Tom's private cost (materials and electricity). It leaves out the external cost of the plastic pollution affecting people near the stream. Social cost = private cost + external cost, so the true cost to society of producing that grip is higher than the market price shows. Since the market only \"sees\" private cost, production keeps going past the point where it's actually efficient for society — leading to overproduction." },
+    { type: "text", text: "**4c.** It's a merit good. Kids and parents may undervalue the long-term benefit of coding skills, and there's a positive externality to the wider community (more skilled future workers) that Tom isn't paid for. Because Tom can't capture the full value of what he creates, the free market alone tends to under-provide it." },
+    { type: "text", text: "**4d.** There's no market signal telling Tom to change — nobody is actually charging him for the pollution he creates, so from his own private cost-and-revenue perspective, nothing looks wrong. Only an outside intervention (like government regulation or a tax) would change that signal." },
+    { type: "text", text: "**5.** C — a positive externality is a benefit that spills over onto a third party not involved in the transaction; A and D describe costs, not benefits, and B describes a purely private benefit with no spillover." },
+    { type: "text", text: "**6.** C — non-excludable and non-rivalrous is the definition of a public good." },
+    { type: "text", text: "**7.** B — a negative externality means social cost exceeds private cost, so the market overproduces relative to the socially efficient amount." },
+    { type: "text", text: "**8.** B — since non-payers can't be excluded from a public good, no private firm has a profit incentive to supply it, so the market provides none at all." },
+    { type: "text", text: "**9.** Look for **two** developed points (AO2 chains), each naming a cause of market failure, identifying the consequence it produces, and explaining the effect on a specific group, e.g.: (i) consumers — a family near Tom's stream suffers the effects of pollution (a negative externality causing overproduction) they never agreed to and aren't compensated for; (ii) producers — Tom has no financial incentive to change his production process, since the externality cost never appears in his own accounts; (iii) government — must judge whether the gap between market output and socially efficient output (e.g. for the padel club's community taster sessions, a case of underproduction) is large enough to justify a policy response. Full marks need identification of the cause + the consequence + explanation of the effect on that specific group, not just a list of terms." },
   ],
 };
 
@@ -583,59 +601,6 @@ const REVIEW1 = {
   ],
 };
 
-const LESSON8 = {
-  title: "Lesson 8 Worksheet — Market Failure: Causes & Consequences",
-  syllabusRef: "2.9",
-  sections: [
-    {
-      heading: "Section A — Definitions",
-      items: [
-        { type: "qa", q: "**1a.** Define socially efficient output." },
-        { type: "qa", q: "**1b.** Define market output, and explain how it differs from socially efficient output." },
-        { type: "qa", q: "**1c.** Define overproduction and underproduction, as they relate to market failure." },
-      ],
-    },
-    {
-      heading: "Section B — Which consequence is this?",
-      items: [
-        { type: "qa", q: "**2a.** A dry-cleaning shop's chemical fumes irritate nearby office workers, a cost never reflected in its prices, so the shop keeps operating at full capacity. Overproduced, underproduced, or not provided at all?" },
-        { type: "qa", q: "**2b.** A private tutoring company could offer subsidised classes for struggling students (a clear benefit to the wider community), but doesn't, since it can't charge for that wider benefit. Overproduced, underproduced, or not provided at all?" },
-        { type: "qa", q: "**2c.** No private company installs flood barriers along a public riverbank, even though every nearby resident would benefit, because no single resident will pay for something everyone gets free. Overproduced, underproduced, or not provided at all?" },
-      ],
-    },
-    {
-      heading: "Section C — Apply it: Tom's Print Co & the padel club",
-      items: [
-        { type: "qa", q: "**3a.** Tom's plastic waste pollutes the stream, but he keeps producing at the same rate regardless. Using the ideas of private cost and social cost, explain why this leads to overproduction." },
-        { type: "qa", q: "**3b.** The padel club would ideally run more free taster sessions for local schools (positive externality: healthier, more active kids), but only runs a few, since it can't capture that wider benefit as revenue. Explain why this leads to underproduction." },
-        { type: "qa", q: "**3c.** Explain why a producer like Tom has no built-in incentive to fix a negative externality on his own, without government involvement." },
-      ],
-    },
-    {
-      heading: "Section D — Exam-style practice",
-      items: [
-        { type: "mcq", q: "**4.** *(Paper 1 style MCQ)* When a negative externality exists, the market tends to produce:", options: ["A. Exactly the socially efficient amount", "B. More than the socially efficient amount", "C. Less than the socially efficient amount", "D. Nothing at all"] },
-        { type: "mcq", q: "**5.** *(Paper 1 style MCQ)* The free-rider problem is a direct cause of which consequence?", options: ["A. Overproduction of demerit goods", "B. Zero private provision of public goods", "C. Perfectly efficient markets", "D. Falling prices for merit goods"] },
-        { type: "qa", q: "**6.** *(Paper 2 style, 6 marks)* Explain, using examples, the consequences of market failure for **two** different groups (choose from consumers, producers, and government). Use examples from Tom's Print Co or the padel club in your answer." },
-      ],
-    },
-  ],
-  answerKey: [
-    { type: "text", text: "**1a.** The amount of a good or service that's actually best for society as a whole, once all costs and benefits (not just private ones) are counted." },
-    { type: "text", text: "**1b.** Market output is how much actually gets produced, based only on private cost and private benefit. It differs from socially efficient output whenever an externality exists, since the market ignores costs or benefits to third parties." },
-    { type: "text", text: "**1c.** Overproduction is producing more than the socially efficient amount, typically caused by negative externalities. Underproduction is producing less than the socially efficient amount, typically caused by positive externalities or merit goods." },
-    { type: "text", text: "**2a.** Overproduced — a negative externality (the fumes) isn't reflected in the shop's costs, so it keeps producing past the socially efficient point." },
-    { type: "text", text: "**2b.** Underproduced — a positive externality (community benefit) isn't captured as revenue, so less gets provided than would be socially efficient." },
-    { type: "text", text: "**2c.** Not provided at all — a classic public good; the free-rider problem means no private firm can profit from providing it." },
-    { type: "text", text: "**3a.** Tom's private cost only includes his own materials and electricity, not the pollution cost to people near the stream. Since social cost (private cost + external cost) is higher than what Tom actually pays, the market keeps producing past the point where output is actually efficient for society — leading to overproduction." },
-    { type: "text", text: "**3b.** The club's private benefit is only the revenue it earns directly. The wider social benefit (healthier, more active kids) isn't something the club can charge for, so it under-provides taster sessions relative to what would be best for society." },
-    { type: "text", text: "**3c.** There's no market signal telling Tom to change — nobody is actually charging him for the pollution he creates, so from his own private cost-and-revenue perspective, nothing looks wrong. Only an outside intervention (like government regulation or a tax) would change that signal." },
-    { type: "text", text: "**4.** B — a negative externality means social cost exceeds private cost, so the market overproduces relative to the socially efficient amount." },
-    { type: "text", text: "**5.** B — since non-payers can't be excluded from a public good, no private firm has a profit incentive to supply it, so the market provides none at all." },
-    { type: "text", text: "**6.** Look for **two** developed points (AO2 chains), each naming a group and explaining the specific consequence they face, e.g.: (i) consumers — a family near Tom's stream suffers the effects of pollution they never agreed to and aren't compensated for; (ii) producers — Tom has no financial incentive to change his production process, since the externality cost never appears in his own accounts; (iii) government — must judge whether the gap between market and socially efficient output (e.g. for the padel club's community taster sessions) is large enough to justify a policy response. Full marks need identification + explanation of the effect on that specific group, not just a list of terms." },
-  ],
-};
-
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   const jobs = [
@@ -646,7 +611,6 @@ async function run() {
     { lesson: "lesson-05", data: LESSON5 },
     { lesson: "lesson-06", data: LESSON6 },
     { lesson: "lesson-07", data: LESSON7 },
-    { lesson: "lesson-08", data: LESSON8 },
     { lesson: "review-01-ped-tr-pes", data: REVIEW1 },
   ];
   for (const job of jobs) {
