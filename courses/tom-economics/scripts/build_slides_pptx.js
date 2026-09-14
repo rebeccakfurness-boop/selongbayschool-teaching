@@ -844,6 +844,108 @@ function buildLesson7() {
   return pres;
 }
 
+function buildLesson8() {
+  const pres = new pptxgen();
+  pres.layout = "LAYOUT_WIDE";
+  titleSlide(pres, "Lesson 8 · Syllabus 2.10", "Mixed Economy: Price Controls, Tax & Subsidies", "Time to go deep on government's toolkit.");
+
+  bodySlide(pres, "Quick recap", [
+    "Market failure: the price mechanism misallocates resources.",
+    "Negative externalities, positive externalities/merit goods, and public goods are the causes named last lesson.",
+  ]);
+
+  blankCalcSlide(pres, "🔑 Warm-up: Tom's Print Co keyrings", "Your turn — PED practice",
+    ["Price: $4 → $5  (+25%)", "Quantity: 120 → 90 per week  (−25%)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "🔑 Keyrings — answer", "Check your answer",
+    ["% change in price = +25%", "% change in quantity = −25%"],
+    "PED = −25 ÷ 25 = −1.0 → Unitary", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  blankCalcSlide(pres, "🎾 Warm-up: padel club ball-machine rental", "Your turn — PES practice",
+    ["Price: $8 → $10  (+25%)", "Quantity: 40 → 46 slots/week  (+15%)"],
+    { tag: "✍️ Your turn", tagColor: CORAL });
+  calcSlide(pres, "🎾 Ball-machine rental — answer", "Check your answer",
+    ["% change in price = +25%", "% change in quantity supplied = +15%"],
+    "PES = 15 ÷ 25 = 0.6 → Inelastic", { tag: "✅ Revealed", tagColor: AQUA, resultColor: AQUA });
+
+  bodySlide(pres, "Time for the toolkit", [
+    "Last lesson ended with a preview: taxes, subsidies, regulation, direct provision.",
+    "Today we go deep on tax & subsidy, plus a new idea: price controls.",
+  ]);
+
+  bodySlide(pres, "What is a mixed economic system?", [
+    "Lesson 6 covered the pure market economic system — but almost no real country works purely that way.",
+    "A mixed economic system combines the market (private sector) with government intervention (public sector).",
+    "Government steps in wherever the market fails.",
+  ]);
+
+  bodySlide(pres, "Why intervene?", [
+    "Negative externalities (overproduction) → discourage them.",
+    "Positive externalities / merit goods (underproduction) → encourage them.",
+    "Public goods (zero provision) → provide them directly.",
+    "Unfair prices → control them directly.",
+  ]);
+
+  bodySlide(pres, "Indirect taxes", [
+    "A tax on spending, charged to the seller but usually passed on as a higher price.",
+    "Effect: raises the producer's cost — supply shifts LEFT. Price rises, quantity falls.",
+    "Example: a tax on padel club energy drinks (a demerit good) — fewer sold, correcting overproduction.",
+  ]);
+
+  bodySlide(pres, "Subsidies", [
+    "A payment from government to producers that lowers their cost of production.",
+    "Effect: lowers the producer's cost — supply shifts RIGHT. Price falls, quantity rises.",
+    "Example: a council grant for Tom's coding workshops (a merit good) — more offered, correcting underproduction.",
+  ]);
+
+  bodySlide(pres, "Now you try: tax or subsidy?", [
+    "A charge added to every packet of cigarettes sold near the club.",
+    "A per-panel bonus paid to solar panel installers.",
+    "A grant paid to Tom for every free coding workshop he runs.",
+    "A charge added to the fuel used to run the padel club's floodlights.",
+  ]);
+
+  twoColSlide(pres, "Price controls: two types",
+    "Maximum price", "A legal limit the price can't rise above.\n\n(\"Price ceiling\")\n\nSet below equilibrium, to make something more affordable.",
+    "Minimum price", "A legal limit the price can't fall below.\n\n(\"Price floor\")\n\nSet above equilibrium, usually to protect sellers' income.");
+
+  bodySlide(pres, "Maximum price → shortage", [
+    "Set below the free-market equilibrium price.",
+    "Effect: quantity demanded exceeds quantity supplied — a SHORTAGE.",
+    "Example: padel court rental capped at $10/hour — courts run out fast at peak times.",
+  ]);
+
+  bodySlide(pres, "Minimum price → surplus", [
+    "Set above the free-market equilibrium price.",
+    "Effect: quantity supplied exceeds quantity demanded — a SURPLUS.",
+    "Example: a minimum wage above the market-clearing wage — the labour surplus shows up as unemployment.",
+  ]);
+
+  bodySlide(pres, "Now you try: maximum or minimum price?", [
+    "City council caps padel court rental at $10/hour.",
+    "Government requires employers to pay staff at least $12/hour.",
+    "Government guarantees farmers a set price for wheat.",
+    "A city caps rented-flat prices so they can never exceed a set amount.",
+  ]);
+
+  bodySlide(pres, "Quick check", [
+    "What does an indirect tax do to the supply curve?",
+    "Why might a government subsidise a merit good?",
+    "What does a maximum price below equilibrium cause? A minimum price above it?",
+  ]);
+
+  bodySlide(pres, "Recap", [
+    "A mixed economy blends the market with government intervention.",
+    "Tax and subsidy shift supply: tax raises price and cuts quantity, subsidy lowers price and raises quantity.",
+    "Price controls work directly on price: a maximum price causes a shortage, a minimum price causes a surplus.",
+  ]);
+
+  closingSlide(pres, "Next lesson", "Other government intervention",
+    "Regulation, privatisation, nationalisation, and quotas.");
+
+  return pres;
+}
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   await buildLesson1().writeFile({ fileName: path.join(BASE, "lesson-01", "slides.pptx") });
@@ -860,5 +962,7 @@ async function run() {
   console.log("wrote lesson-06/slides.pptx");
   await buildLesson7().writeFile({ fileName: path.join(BASE, "lesson-07", "slides.pptx") });
   console.log("wrote lesson-07/slides.pptx");
+  await buildLesson8().writeFile({ fileName: path.join(BASE, "lesson-08", "slides.pptx") });
+  console.log("wrote lesson-08/slides.pptx");
 }
 run();

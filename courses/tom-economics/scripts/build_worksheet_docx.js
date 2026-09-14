@@ -58,7 +58,7 @@ function makeTable(headerRow, rows) {
   });
 }
 
-function buildDoc(data) {
+function buildDoc(data, opts = {}) {
   const children = [];
   children.push(new Paragraph({
     heading: HeadingLevel.HEADING_1,
@@ -87,22 +87,51 @@ function buildDoc(data) {
     }
   }
 
-  // Answer key — visually boxed with shading + orange heading
-  children.push(new Paragraph({
-    heading: HeadingLevel.HEADING_2,
-    spacing: { before: 360, after: 140 },
-    children: [new TextRun({ text: "Answer key (tutor copy — not for Tom)", bold: true, color: ORANGE })],
-    shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT },
-  }));
-  for (const item of data.answerKey) {
-    if (item.type === "table") {
-      children.push(makeTable(item.headers, item.rows));
-      children.push(new Paragraph({ text: "", spacing: { after: 120 }, shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }));
-    } else {
-      children.push(para(item.text, { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }));
+  // Answer key — either appended inline (visually boxed) or omitted, when this
+  // lesson's answers ship as a separate document (see buildAnswerDoc below).
+  if (!opts.skipAnswers && data.answerKey) {
+    children.push(new Paragraph({
+      heading: HeadingLevel.HEADING_2,
+      spacing: { before: 360, after: 140 },
+      children: [new TextRun({ text: "Answer key (tutor copy — not for Tom)", bold: true, color: ORANGE })],
+      shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT },
+    }));
+    for (const item of data.answerKey) {
+      if (item.type === "table") {
+        children.push(makeTable(item.headers, item.rows));
+        children.push(new Paragraph({ text: "", spacing: { after: 120 }, shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }));
+      } else {
+        children.push(para(item.text, { shading: { type: ShadingType.CLEAR, fill: AMBER_LIGHT } }));
+      }
     }
   }
 
+  return new Document({
+    sections: [{
+      properties: { page: { size: { width: 12240, height: 15840 } } },
+      children,
+    }],
+  });
+}
+
+// Standalone answer-key document, for lessons where the answers ship separately
+// from the student worksheet rather than appended to the same file.
+function buildAnswerDoc(data) {
+  const children = [];
+  children.push(new Paragraph({
+    heading: HeadingLevel.HEADING_1,
+    children: [new TextRun({ text: data.title.replace(/Worksheet/, "Worksheet Answers"), bold: true })],
+    spacing: { after: 80 },
+  }));
+  children.push(para(`**Syllabus ref: ${data.syllabusRef}** · Tutor copy — answer key only, not for Tom.`));
+  for (const item of data.answerKey) {
+    if (item.type === "table") {
+      children.push(makeTable(item.headers, item.rows));
+      children.push(new Paragraph({ text: "", spacing: { after: 120 } }));
+    } else {
+      children.push(para(item.text));
+    }
+  }
   return new Document({
     sections: [{
       properties: { page: { size: { width: 12240, height: 15840 } } },
@@ -601,6 +630,66 @@ const REVIEW1 = {
   ],
 };
 
+const LESSON8 = {
+  title: "Lesson 8 Worksheet — Mixed Economy: Price Controls, Tax & Subsidies",
+  syllabusRef: "2.10",
+  subtitle: "Complete during your 30 min self-directed time. Answers are in a separate tutor copy.",
+  sections: [
+    {
+      heading: "Section A — Definitions",
+      items: [
+        { type: "qa", q: "**1a.** Define a mixed economic system." },
+        { type: "qa", q: "**1b.** Define an indirect tax, and explain its effect on supply." },
+        { type: "qa", q: "**1c.** Define a subsidy, and explain its effect on supply." },
+        { type: "qa", q: "**1d.** Define a maximum price (price ceiling) and a minimum price (price floor)." },
+      ],
+    },
+    {
+      heading: "Section B — Which effect is this?",
+      items: [
+        { type: "qa", q: "**2a.** A government adds a tax to every bottle of a sugary soft drink sold. What happens to the price and quantity sold?" },
+        { type: "qa", q: "**2b.** A government pays a subsidy to bus companies to lower ticket prices. What happens to the price and quantity of bus journeys?" },
+        { type: "qa", q: "**2c.** A government sets a maximum price for bread, below the free-market price. What happens in that market?" },
+        { type: "qa", q: "**2d.** A government sets a minimum price for milk, above the free-market price. What happens in that market?" },
+      ],
+    },
+    {
+      heading: "Section C — Apply it: Tom's Print Co & the padel club",
+      items: [
+        { type: "qa", q: "**3a.** Government adds a tax to the plastic filament Tom uses in his printer. Using the ideas of cost and supply, explain what happens to the price and quantity of grips he sells." },
+        { type: "qa", q: "**3b.** The council offers Tom a subsidy for every free coding workshop he runs. Explain why this addresses the underproduction problem from last lesson." },
+        { type: "qa", q: "**3c.** The council caps padel court rental at $10/hour, well below the market rate at peak times. Explain, using the idea of a shortage, what happens at 6–8pm on weekdays." },
+        { type: "qa", q: "**3d.** Explain why a minimum wage set above the market-clearing wage can cause unemployment." },
+      ],
+    },
+    {
+      heading: "Section D — Exam-style practice",
+      items: [
+        { type: "mcq", q: "**4.** *(Paper 1 style MCQ)* An indirect tax on a good will most likely:", options: ["A. Increase supply and lower the price", "B. Decrease supply and raise the price", "C. Have no effect on price or quantity", "D. Increase demand for the good"] },
+        { type: "mcq", q: "**5.** *(Paper 1 style MCQ)* A minimum price set above the equilibrium price will most likely cause:", options: ["A. A shortage", "B. A surplus", "C. Prices to fall further", "D. No change in the market"] },
+        { type: "qa", q: "**6.** *(Paper 2 style, 6 marks)* Explain, using examples, how a government could use **two** different interventions (choose from tax, subsidy, maximum price, minimum price) to address problems in a market. Use examples from Tom's Print Co or the padel club in your answer." },
+      ],
+    },
+  ],
+  answerKey: [
+    { type: "text", text: "**1a.** A mixed economic system is an economy where resources are allocated partly by the market and partly by government intervention." },
+    { type: "text", text: "**1b.** An indirect tax is a tax on spending, charged to the seller but usually passed on to the buyer as a higher price. It raises the producer's cost, shifting supply left — price rises and quantity falls." },
+    { type: "text", text: "**1c.** A subsidy is a payment from government to producers that lowers their cost of production. It shifts supply right — price falls and quantity rises." },
+    { type: "text", text: "**1d.** A maximum price (price ceiling) is a legal limit the price can't rise above, set below equilibrium. A minimum price (price floor) is a legal limit the price can't fall below, set above equilibrium." },
+    { type: "text", text: "**2a.** Price rises and quantity sold falls — the tax raises the seller's cost, shifting supply left." },
+    { type: "text", text: "**2b.** Price falls and quantity of journeys rises — the subsidy lowers the bus companies' cost, shifting supply right." },
+    { type: "text", text: "**2c.** A shortage — quantity demanded exceeds quantity supplied at the capped, below-equilibrium price." },
+    { type: "text", text: "**2d.** A surplus — quantity supplied exceeds quantity demanded at the floored, above-equilibrium price." },
+    { type: "text", text: "**3a.** The tax raises Tom's cost per unit, shifting his supply curve left. At the new equilibrium, the price of grips is higher and the quantity he sells is lower." },
+    { type: "text", text: "**3b.** The subsidy lowers Tom's effective cost of running each workshop (a merit good), so he can afford to run more of them — correcting the underproduction that happens when the market ignores the positive externality." },
+    { type: "text", text: "**3c.** At the capped $10/hour price, quantity demanded for courts at peak time is far higher than the fixed number of courts available (quantity supplied) — a shortage. Courts run out fast, and people willing to pay more still miss out." },
+    { type: "text", text: "**3d.** At a wage above the market-clearing level, more people want jobs (quantity of labour supplied) than there are jobs on offer (quantity of labour demanded) — that surplus of labour is unemployment." },
+    { type: "text", text: "**4.** B — a tax raises the producer's cost, decreasing supply and raising the equilibrium price." },
+    { type: "text", text: "**5.** B — above equilibrium, quantity supplied exceeds quantity demanded, causing a surplus." },
+    { type: "text", text: "**6.** Look for **two** developed points (AO2 chains), each naming an intervention, explaining its mechanism, and applying it to an example, e.g.: (i) tax — government taxes padel club energy drinks (a demerit good), raising their price and cutting sales, correcting overproduction from the externality; (ii) subsidy — council grants for Tom's coding workshops (a merit good) lower his cost and let him run more, correcting underproduction; (iii) maximum price — a padel court rental cap makes courts more affordable but causes a shortage at peak times; (iv) minimum price — a minimum wage protects worker income but can cause unemployment. Full marks need identification + mechanism + application to a specific market, not just definitions." },
+  ],
+};
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   const jobs = [
@@ -611,14 +700,23 @@ async function run() {
     { lesson: "lesson-05", data: LESSON5 },
     { lesson: "lesson-06", data: LESSON6 },
     { lesson: "lesson-07", data: LESSON7 },
+    { lesson: "lesson-08", data: LESSON8, splitAnswers: true },
     { lesson: "review-01-ped-tr-pes", data: REVIEW1 },
   ];
   for (const job of jobs) {
-    const doc = buildDoc(job.data);
+    const doc = buildDoc(job.data, { skipAnswers: !!job.splitAnswers });
     const buf = await Packer.toBuffer(doc);
     const out = path.join(BASE, job.lesson, "worksheet.docx");
     fs.writeFileSync(out, buf);
     console.log("wrote", out);
+
+    if (job.splitAnswers) {
+      const answerDoc = buildAnswerDoc(job.data);
+      const answerBuf = await Packer.toBuffer(answerDoc);
+      const answerOut = path.join(BASE, job.lesson, "worksheet-answers.docx");
+      fs.writeFileSync(answerOut, answerBuf);
+      console.log("wrote", answerOut);
+    }
   }
 }
 run();

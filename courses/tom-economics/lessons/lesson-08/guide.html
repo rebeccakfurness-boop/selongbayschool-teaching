@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 08 Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted:#898781;
+    --blue:#2a78d6; --orange:#eb6834; --border:rgba(11,11,11,0.12); --grid:#e1e0d9;
+    --warn-bg:#fdf1de; --warn-border:#eb6834;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --blue:#3987e5; --orange:#d95926; --border:rgba(255,255,255,0.14); --grid:#2c2c2a;
+      --warn-bg:#2a2117; --warn-border:#d95926; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink);
+    margin: 0; padding: 40px 24px 80px;
+  }
+  .doc { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 48px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  h2 { font-size: 17px; margin: 32px 0 12px; color: var(--blue); border-bottom: 1px solid var(--grid); padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; }
+  p, li { font-size: 15px; line-height: 1.65; color: var(--ink); }
+  strong { color: var(--ink); }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 14px; }
+  th, td { border: 1px solid var(--grid); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--grid); font-weight: 600; }
+  code { background: var(--grid); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  hr { border: none; border-top: 1px solid var(--grid); margin: 28px 0; }
+  .tutor-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 8px; padding: 4px 24px 20px; margin-top: 20px; }
+  .tutor-box h2 { color: var(--orange); }
+  .print-btn {
+    display: inline-block; margin-bottom: 20px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--ink); border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+  }
+  @media print { .print-btn { display: none; } body { background: white; } .doc { border: none; box-shadow: none; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<button class="print-btn" onclick="window.print()">🖨️ Print</button>
+<h1>Lesson 8 — Comprehensive Teaching Script</h1>
+<p><strong>Syllabus ref: 2.10 Mixed economic system — price controls, tax &amp; subsidies</strong><br />
+Linked materials: <code>worksheet.html</code> / <code>worksheet.docx</code> + <code>worksheet-answers.docx</code> · <code>lesson.html</code> (interactive) / <code>slides.pptx</code> · <code>flashcards.txt</code></p>
+<div class="tutor-box"><h2>A note before you start</h2>
+<p>This lesson covers three government intervention tools: indirect taxes, subsidies, and price controls (maximum and minimum price). As in Lesson 2 (disequilibrium), the interactive lesson deliberately doesn't embed supply/demand diagrams — it's far more effective for him to sketch these live with you on paper. Four sketches are worth doing during this lesson: (1) a tax shifting supply left, (2) a subsidy shifting supply right, (3) a maximum price below equilibrium showing a shortage, (4) a minimum price above equilibrium showing a surplus. Keep a pen and paper (or whiteboard) ready throughout.</p></div>
+<p>This is a full script, not just a lesson outline — written so you can follow it slide-by-slide live (using <code>slides.pptx</code> as backup, or the interactive <code>lesson.html</code>), with what to say, what to ask, what he might ask back, and extra depth if he wants it. Paraphrase in your own voice, but every idea should land before you move on. Lesson 7 ended with a "first look" at government's toolkit — today goes deep on it.</p>
+<h2>Learning objectives</h2>
+<p>By the end of this lesson he can:</p>
+<ol>
+<li>Define a mixed economic system and explain why most real-world economies are mixed rather than purely market or purely planned.</li>
+<li>Explain how an indirect tax affects the market for a demerit good/negative externality (higher price, lower quantity) and why government uses it.</li>
+<li>Explain how a subsidy affects the market for a merit good/positive externality (lower price, higher quantity) and why government uses it.</li>
+<li>Define a maximum price (price ceiling) and explain why it causes a shortage.</li>
+<li>Define a minimum price (price floor) and explain why it causes a surplus.</li>
+<li>Classify real-world government interventions by type and predict their market effect.</li>
+</ol>
+<h2>Slide-by-slide script</h2>
+<h3>Slide 1 — Title</h3>
+<p><em>Say:</em> "Last lesson ended with a quick preview — taxes, subsidies, regulation, direct provision. Today we go deep on two of those: tax and subsidy, plus a brand new idea, price controls."</p>
+<h3>Slide 2 — Quick recap</h3>
+<p><em>Say:</em> "Quick recap of Lesson 7 first."<br />
+Work through all four recap cards together, letting him answer before flipping each one.</p>
+<h3>Slide 3 — Warm-up: PED &amp; PES practice</h3>
+<p>Work through both together, letting him calculate on paper before you confirm each:</p>
+<p>1. "Tom's Print Co keyrings: price $4 to $5, that's +25%. Weekly sales fall from 120 to 90, that's −25%. Calculate the PED and classify it." <em>(PED = −25% ÷ 25% = −1.0 → unitary — a 1% price rise causes exactly a 1% fall in quantity demanded.)</em><br />
+2. "Padel club ball-machine rental: price $8 to $10, that's +25%. Weekly slots offered rise from 40 to 46, that's +15%. Calculate the PES and classify it." <em>(PES = 15% ÷ 25% = 0.6 → inelastic — the club can't add much extra machine time quickly.)</em></p>
+<h3>Slide 4 — Hook</h3>
+<p><em>Say:</em> "Last lesson ended with a preview: taxes, subsidies, regulation, direct provision — the tools government uses when a market fails. Today we go deep on two of them, plus price controls, a new idea. All three of these show up constantly in exam questions."</p>
+<h3>Slide 5 — What is a mixed economic system?</h3>
+<p><em>Say:</em> "Lesson 6 covered the market economic system — the price mechanism alone decides what, how, and for whom. But almost no real country works purely that way."<br />
+<em>Ask him:</em> "Based on everything we've covered about market failure, why might a country not want to leave everything entirely to the market?"<br />
+<em>What a good answer sounds like:</em> Because markets fail in specific, predictable ways — externalities, public goods, merit/demerit goods — so pure market allocation leads to over- or under-production of things society actually needs.<br />
+<em>Extra context:</em> A mixed economic system combines the market (private sector) with government intervention (public sector). The market still does most day-to-day allocating; government steps in wherever it fails.</p>
+<h3>Slide 6 — Why intervene?</h3>
+<p><em>Say:</em> "Government intervention exists to address exactly the causes of market failure we named last lesson: negative externalities (overproduction) get discouraged, positive externalities/merit goods (underproduction) get encouraged, public goods get provided directly, and unfair prices get controlled directly."<br />
+This is a quick framing slide — no need to dwell, just set up that today's two tools map onto these problems.</p>
+<h3>Slide 7 — Indirect taxes</h3>
+<p><em>Say:</em> "An indirect tax is a tax on spending — charged to the seller, but usually passed on to the buyer as a higher price."<br />
+<em>Ask him:</em> "If Tom's cost of producing something rises because of a new tax, what happens to how much he's willing to supply at any given price?"<br />
+<em>What a good answer sounds like:</em> It falls — his cost per unit is now higher, so supply shifts left. At the new equilibrium, price is higher and quantity is lower.<br />
+<strong>Sketch it together now:</strong> draw the original supply and demand curves, then shift supply left/up, and mark the new (higher) equilibrium price and (lower) equilibrium quantity.<br />
+<em>Example:</em> government adds a tax to padel club energy drinks (a demerit good). The club's drinks now cost more, and it sells fewer — the overproduction problem from last lesson, corrected.</p>
+<h3>Slide 8 — Subsidies</h3>
+<p><em>Say:</em> "A subsidy is the opposite — a payment from government to producers that lowers their cost of production."<br />
+<em>Ask him:</em> "What happens to supply when a producer's cost falls?"<br />
+<em>What a good answer sounds like:</em> Supply shifts right — more is supplied at every price. At the new equilibrium, price is lower and quantity is higher.<br />
+<strong>Sketch it together now:</strong> shift supply right/down from the original diagram, and mark the new (lower) equilibrium price and (higher) equilibrium quantity.<br />
+<em>Example:</em> the council subsidises Tom's free coding workshops (a merit good). His effective cost drops, so he can run more of them — the underproduction problem from last lesson, corrected.</p>
+<h3>Slide 9 — Now you try: tax or subsidy?</h3>
+<p>Read each scenario and ask him to classify it, then discuss:<br />
+1. "Government adds a charge on every packet of cigarettes sold near the club." <em>(Indirect tax — discourages a demerit good.)</em><br />
+2. "Government pays solar panel installers a bonus per panel, so homeowners pay less." <em>(Subsidy — encourages a merit good/positive externality.)</em><br />
+3. "Government pays Tom a grant for every free coding workshop, covering his materials cost." <em>(Subsidy.)</em><br />
+4. "Government adds a charge to the fuel used to run the padel club's floodlights." <em>(Indirect tax — likely to discourage emissions, a negative externality.)</em></p>
+<h3>Slide 10 — Price controls: two types</h3>
+<p><em>Say:</em> "Tax and subsidy work by changing supply. Price controls work differently — government sets a legal limit on price itself, and the market can't move past it. There are two types: a maximum price, or 'price ceiling', is a limit the price can't rise above. A minimum price, or 'price floor', is a limit the price can't fall below."</p>
+<h3>Slide 11 — Maximum price → shortage</h3>
+<p><em>Say:</em> "A maximum price is set below the free-market equilibrium price, to make something more affordable."<br />
+<em>Ask him:</em> "If the price is forced below what the market would naturally charge, what happens to the gap between how much people want to buy and how much sellers are willing to supply?"<br />
+<em>What a good answer sounds like:</em> Quantity demanded rises above quantity supplied — a shortage.<br />
+<strong>Sketch it together now:</strong> draw the equilibrium, then a horizontal price line below it — quantity demanded (read off the demand curve) stretches further right than quantity supplied (read off the supply curve). Label the gap "shortage."<br />
+<em>Example:</em> the local council caps padel court rental at $10/hour, well below what the market would charge at peak times. Courts run out fast, and people willing to pay more miss out entirely.</p>
+<h3>Slide 12 — Minimum price → surplus</h3>
+<p><em>Say:</em> "A minimum price is the opposite — set above equilibrium, usually to protect sellers' income."<br />
+<em>Ask him:</em> "What happens to the gap between quantity supplied and quantity demanded this time?"<br />
+<em>What a good answer sounds like:</em> Quantity supplied rises above quantity demanded — a surplus.<br />
+<strong>Sketch it together now:</strong> draw the equilibrium, then a horizontal price line above it — quantity supplied stretches further right than quantity demanded. Label the gap "surplus."<br />
+<em>Example:</em> a minimum wage set above what some employers would otherwise pay. More people want jobs at that wage than there are jobs — the surplus shows up as unemployment.</p>
+<h3>Slide 13 — Now you try: maximum or minimum price?</h3>
+<p>Read each scenario and ask him to classify it, then discuss:<br />
+1. "City council caps padel court rental at $10/hour." <em>(Maximum price.)</em><br />
+2. "Government requires every employer to pay staff at least $12/hour." <em>(Minimum price — minimum wage.)</em><br />
+3. "Government guarantees farmers a set price for wheat, even if the market price falls lower." <em>(Minimum price — agricultural price support.)</em><br />
+4. "A city caps rented-flat prices so they can never exceed a set amount." <em>(Maximum price — rent control.)</em></p>
+<h3>Slide 14 — Apply it: which tool, and what happens?</h3>
+<p>Run through all four "apply it" cards together — each connects a scenario back to the specific market effect (supply shift, shortage, or surplus).</p>
+<h3>Slide 15 — Quick check</h3>
+<p>Run the four-question quiz.</p>
+<h3>Slide 16 — Recap + next lesson</h3>
+<p><em>Say:</em> "A mixed economy blends the market with government intervention. Tax and subsidy work by shifting supply — tax raises price and cuts quantity, subsidy lowers price and raises quantity. Price controls work directly on price — a maximum price causes a shortage, a minimum price causes a surplus. Next lesson: the other tools in government's toolkit — regulation, privatisation, nationalisation, and quotas."</p>
+<h2>Wrap-up</h2>
+<p>Set the worksheet for self-directed time (a plain student copy, with a separate answer-key doc for you), and mention <code>flashcards.txt</code> for NotebookLM. The four diagrams sketched live in this lesson (tax shift, subsidy shift, maximum price/shortage, minimum price/surplus) are exactly the kind of diagram Paper 2 data-response questions ask him to draw or interpret — if he's shaky on any one of them by the end, it's worth a quick extra sketch-through before moving to the worksheet.</p>
+<h2>Next lesson</h2>
+<p>Lesson 9 — 2.10 Other government intervention (regulation, privatisation, nationalisation, quotas).</p>
+</div>
+</body>
+</html>

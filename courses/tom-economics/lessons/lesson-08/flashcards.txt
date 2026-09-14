@@ -1,0 +1,23 @@
+Mixed economic system: An economy where resources are allocated partly by the market (price mechanism) and partly by government intervention. Most real-world economies, including Tom's, are mixed rather than purely market or purely planned.
+
+Why governments intervene: To address the causes of market failure — discourage negative externalities (overproduction), encourage positive externalities/merit goods (underproduction), provide public goods directly, and control unfair prices directly.
+
+Indirect tax: A tax on spending, charged to the seller but usually passed on to the buyer as a higher price. Raises the producer's cost, shifting supply left — price rises, quantity falls. Used to discourage demerit goods and negative externalities.
+
+Subsidy: A payment from government to producers that lowers their cost of production. Shifts supply right — price falls, quantity rises. Used to encourage merit goods and positive externalities.
+
+Maximum price (price ceiling): A legal limit the price can't rise above, set below the free-market equilibrium price, usually to make something more affordable. Causes a shortage, since quantity demanded exceeds quantity supplied at that price.
+
+Minimum price (price floor): A legal limit the price can't fall below, set above the free-market equilibrium price, usually to protect sellers' income. Causes a surplus, since quantity supplied exceeds quantity demanded at that price.
+
+Shortage: Quantity demanded exceeds quantity supplied at the current price — the result of a maximum price set below equilibrium, e.g. a padel court price cap leaving some demand unmet.
+
+Surplus: Quantity supplied exceeds quantity demanded at the current price — the result of a minimum price set above equilibrium, e.g. a minimum wage causing unemployment (a surplus of labour).
+
+Indirect tax example: A tax on padel club energy drinks (a demerit good) raises their price and cuts sales — correcting the overproduction problem from negative externalities.
+
+Subsidy example: A council grant lowers Tom's cost of running free coding workshops (a merit good), letting him offer more of them — correcting the underproduction problem from positive externalities.
+
+Maximum price example: A council-capped padel court rental price, set below the market rate at peak times, causing courts to run out fast — a shortage.
+
+Minimum price example: A minimum wage set above the market-clearing wage, causing more people to want jobs at that wage than there are jobs available — unemployment, a surplus of labour.
