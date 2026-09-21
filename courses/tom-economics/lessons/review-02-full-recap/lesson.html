@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review 2 — Full Recap: Lessons 1–8</title>
+<link rel="stylesheet" href="../../assets/lesson-kit.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brandrow">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div class="brand-text">Cambridge IGCSE Economics 0455 · Full Recap</div>
+      </div>
+      <div class="step-count mono"><span id="stepNow">1</span> / <span id="stepTotal">16</span></div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</div>
+
+<div class="app">
+<div class="stage">
+
+  <section class="step active" data-step="0">
+    <span class="kicker">Review session · 30–40 minutes</span>
+    <h1 class="title">Everything You've Learned So Far</h1>
+    <p class="lede">A rapid-fire tour through all eight lessons — quick recap, quick practice, no new content. If anything feels shaky, that's exactly what this session is for.</p>
+    <div class="card">
+      1. Factors of production &nbsp;·&nbsp; 2. Disequilibrium &amp; price changes &nbsp;·&nbsp; 3–4. PED &amp; revenue &nbsp;·&nbsp; 5. PES<br><br>
+      6. Market economic system &nbsp;·&nbsp; 7. Market failure &nbsp;·&nbsp; 8. Mixed economy: tax, subsidy &amp; price controls
+    </div>
+  </section>
+
+  <section class="step" data-step="1">
+    <span class="kicker">Lesson 1 · 1.2</span>
+    <h1 class="title">Factors of Production</h1>
+    <p class="lede">Four inputs, four rewards. Tap each to check.</p>
+    <div class="grid grid-2" id="factorsGrid"></div>
+  </section>
+
+  <section class="step" data-step="2">
+    <span class="kicker">Lesson 2 · 2.4.3 / 2.5</span>
+    <h1 class="title">Disequilibrium &amp; Price Changes</h1>
+    <p class="lede">What happens when price sits away from equilibrium. Tap each to check.</p>
+    <div class="grid grid-2" id="disequilibriumGrid"></div>
+  </section>
+
+  <section class="step" data-step="3">
+    <span class="kicker">Lesson 3 · 2.6</span>
+    <h1 class="title">PED — Core Ideas</h1>
+    <p class="lede">Tap each card to flip it and check the answer.</p>
+    <div class="grid grid-2" id="pedFlips"></div>
+  </section>
+
+  <section class="step" data-step="4">
+    <span class="kicker">Practice</span>
+    <h1 class="title">PED — Quick Calculation</h1>
+    <p class="lede">Work it out on paper first, then tap to reveal.</p>
+    <div id="pedCalc"></div>
+  </section>
+
+  <section class="step" data-step="5">
+    <span class="kicker">Lesson 4 · 2.6</span>
+    <h1 class="title">PED &amp; Total Revenue</h1>
+    <p class="lede">Using the same coaching-price scenario as the last slide. Tap to reveal.</p>
+    <div id="trCalc"></div>
+  </section>
+
+  <section class="step" data-step="6">
+    <span class="kicker">Lesson 5 · 2.7</span>
+    <h1 class="title">PES</h1>
+    <p class="lede">Tap each card to flip it, then try the calculation.</p>
+    <div class="grid grid-2" id="pesFlips"></div>
+    <div id="pesCalc" style="margin-top:16px;"></div>
+  </section>
+
+  <section class="step" data-step="7">
+    <span class="kicker">Lesson 6 · 2.8</span>
+    <h1 class="title">Market Economic System</h1>
+    <p class="lede">Tap each card to flip it and check the answer.</p>
+    <div class="grid grid-2" id="marketSystemFlips"></div>
+  </section>
+
+  <section class="step" data-step="8">
+    <span class="kicker">Lesson 7 · 2.9</span>
+    <h1 class="title">Market Failure — Cost &amp; Externalities</h1>
+    <p class="lede">Tap each card to flip it and check the answer.</p>
+    <div class="grid grid-2" id="costFlips"></div>
+  </section>
+
+  <section class="step" data-step="9">
+    <span class="kicker">Lesson 7 · 2.9</span>
+    <h1 class="title">Market Failure — Goods</h1>
+    <p class="lede">Tap each card to flip it and check the answer.</p>
+    <div class="grid grid-2" id="goodsFlips"></div>
+  </section>
+
+  <section class="step" data-step="10">
+    <span class="kicker">Lesson 7 · 2.9</span>
+    <h1 class="title">Market Failure — Consequences</h1>
+    <p class="lede">Tap each card to flip it and check the answer.</p>
+    <div class="grid grid-2" id="consequenceFlips"></div>
+  </section>
+
+  <section class="step" data-step="11">
+    <span class="kicker">Lesson 8 · 2.10</span>
+    <h1 class="title">Mixed Economy — Tax &amp; Subsidy</h1>
+    <p class="lede">Tap each card to flip it and check the answer.</p>
+    <div class="grid grid-2" id="taxSubsidyFlips"></div>
+  </section>
+
+  <section class="step" data-step="12">
+    <span class="kicker">Lesson 8 · 2.10</span>
+    <h1 class="title">Mixed Economy — Price Controls</h1>
+    <p class="lede">Tap each card to flip it and check the answer.</p>
+    <div class="grid grid-2" id="priceControlFlips"></div>
+  </section>
+
+  <section class="step" data-step="13">
+    <span class="kicker">Now you try</span>
+    <h1 class="title">Which Lesson Is This From?</h1>
+    <p class="lede">A scenario from each topic, all mixed up. Classify each, then check.</p>
+    <div id="topicSort"></div>
+  </section>
+
+  <section class="step" data-step="14">
+    <span class="kicker">Quick check</span>
+    <h1 class="title">Mixed Quiz — All 8 Lessons</h1>
+    <div id="quizList"></div>
+  </section>
+
+  <section class="step" data-step="15">
+    <span class="kicker">Recap + what's next</span>
+    <h1 class="title">Fully Caught Up</h1>
+    <div class="card card-dark">
+      That's every idea from Lessons 1–8 in one pass: factors of production, disequilibrium, PED, PES, the market system, market failure (causes and consequences), and government's response through tax, subsidy, and price controls.<br><br>
+      Next up: <b>Lesson 9</b> — the rest of government's toolkit (regulation, privatisation, nationalisation, quotas), completing Topic 2.
+    </div>
+    <p class="lede" style="margin-top:20px;">🎉 If most of this felt like a refresher rather than new learning, you're in great shape for Topic 2.</p>
+  </section>
+
+</div>
+
+<div class="navbar">
+  <button class="btn btn-ghost" id="prevBtn">← Back</button>
+  <button class="btn btn-primary" id="nextBtn">Next →</button>
+</div>
+</div>
+
+<script src="../../assets/lesson-kit.js"></script>
+<script>
+const factorsGrid = [
+  {emj:"🌾", lbl:"Land", desc:"Natural resources used in production, e.g. the raw plastic filament Tom's grips are made from. Reward: rent."},
+  {emj:"🧑‍🔧", lbl:"Labour", desc:"Human physical or mental effort in production, e.g. Tom's own time designing and printing. Reward: wages."},
+  {emj:"🖨️", lbl:"Capital", desc:"Manufactured goods used to produce other goods, e.g. the 3D printer itself. Reward: interest."},
+  {emj:"💡", lbl:"Enterprise", desc:"Risk-taking and organising the other three factors, e.g. Tom deciding to start the business. Reward: profit."}
+];
+
+const disequilibriumGrid = [
+  {emj:"📉", lbl:"Shortage", desc:"Quantity demanded exceeds quantity supplied at the current price — price is below equilibrium, so it tends to rise."},
+  {emj:"📈", lbl:"Surplus", desc:"Quantity supplied exceeds quantity demanded at the current price — price is above equilibrium, so it tends to fall."},
+  {emj:"↔️", lbl:"Movement along a curve", desc:"Caused by a price change alone — you stay on the same demand or supply curve, just at a different point on it."},
+  {emj:"🔀", lbl:"Shift of a curve", desc:"Caused by a non-price determinant changing (e.g. income, tastes, cost of production) — the whole curve moves to a new position."}
+];
+
+const pedFlips = [
+  {term:"PED formula", back:"% change in quantity demanded ÷ % change in price. Almost always negative, since price and quantity demanded move in opposite directions."},
+  {term:"Elastic demand", back:"PED further from 0 than −1 (ignoring sign). Quantity demanded is highly responsive to price — usually means plenty of substitutes exist."},
+  {term:"Inelastic demand", back:"PED between 0 and −1. Quantity demanded responds weakly to price — usually means few substitutes, or the good is a necessity."},
+  {term:"Main determinants of PED", back:"Number/closeness of substitutes, whether it's a necessity or luxury, proportion of income spent on it, and time (demand gets more elastic over longer periods)."}
+];
+
+const pedCalc = [
+  {text:"🎾 Padel club coaching: price $20 → $25 (+25%), weekly attendance 100 → 70 (−30%). Calculate the PED and classify it.", ans:"PED = −30% ÷ 25% = −1.2 → Elastic. Attendance falls proportionally more than the price rise.", tags:[{label:"ELASTIC", cls:"tag-down"}]}
+];
+
+const trCalc = [
+  {text:"Using the coaching numbers above (price $20 → $25, attendance 100 → 70): calculate total revenue before and after, and say whether it rose or fell.", ans:"TR before = $20 × 100 = $2,000. TR after = $25 × 70 = $1,750. Revenue FELL by $250 — with elastic demand, a price rise always cuts revenue, since the proportional fall in quantity outweighs the proportional rise in price.", tags:[{label:"REVENUE ↓", cls:"tag-down"}]}
+];
+
+const pesFlips = [
+  {term:"PES formula", back:"% change in quantity supplied ÷ % change in price. Almost always positive — price and quantity supplied move in the same direction (the law of supply)."},
+  {term:"Main determinants of PES", back:"Spare production capacity, length/complexity of the production process, ease of storing stock, and time (supply gets more elastic over longer periods)."}
+];
+
+const pesCalc = [
+  {text:"🖨️ Tom's Print Co custom nameplates: price $10 → $12 (+20%), weekly quantity supplied 30 → 33 (+10%). Calculate the PES and classify it.", ans:"PES = 10% ÷ 20% = 0.5 → Inelastic. Tom's printer capacity limits how fast he can ramp up output.", tags:[{label:"INELASTIC", cls:"tag-up"}]}
+];
+
+const marketSystemFlips = [
+  {term:"Market economic system", back:"An economy where the price mechanism alone — no central planner — decides what, how, and for whom to produce."},
+  {term:"The three questions", back:"What to produce (whatever earns profit), how (however keeps costs lowest), for whom (whoever is willing and able to pay)."},
+  {term:"Effective demand", back:"Wanting a good or service AND having the money to actually buy it — only this counts in the market, not just wanting something."},
+  {term:"The market system's weak spot", back:"It only responds to effective demand and ignores externalities — exactly the gap market failure (Lesson 7) names properly."}
+];
+
+const costFlips = [
+  {term:"Market failure", back:"When the price mechanism fails to allocate resources efficiently, leading to over- or under-production compared to what's best for society."},
+  {term:"Private, external & social cost", back:"Private cost: what the producer/consumer pays. External cost: the cost dumped on a third party. Social cost = private + external — the true cost to society."},
+  {term:"Externality", back:"A cost or benefit of a transaction that spills over onto a third party not involved in it — four types, split by production/consumption and negative/positive."},
+  {term:"Negative vs positive externality", back:"Negative: a cost imposed on others, e.g. Tom's plastic waste polluting the stream. Positive: a benefit given to others for free, e.g. a beekeeper's bees pollinating a neighbour's crops."}
+];
+
+const goodsFlips = [
+  {term:"Public good", back:"Non-excludable (can't stop non-payers benefiting) and non-rivalrous (one person's use doesn't reduce another's), e.g. a streetlight."},
+  {term:"Private good", back:"Excludable and rivalrous, e.g. a padel court booking — the club can refuse non-payers, and one match uses up that court."},
+  {term:"The free-rider problem", back:"Because a public good is non-excludable, anyone can benefit without paying — so no private firm can profit from providing it, and the market supplies none at all."},
+  {term:"Merit good vs demerit good", back:"Merit goods are under-provided (people undervalue the benefit, e.g. education). Demerit goods are over-provided (people undervalue the cost, e.g. cigarettes)."}
+];
+
+const consequenceFlips = [
+  {term:"Market output vs socially efficient output", back:"Market output counts only private cost/benefit. Socially efficient output counts the full social cost/benefit. Whenever they don't match, that gap is market failure's consequence."},
+  {term:"Negative externalities → overproduction", back:"Social cost exceeds private cost, but the market only 'sees' private cost — so more gets produced than is actually efficient."},
+  {term:"Positive externalities/merit goods → underproduction", back:"Social benefit exceeds private benefit, but the market only 'sees' private benefit — so less gets provided than would actually be best."},
+  {term:"Public goods → zero provision", back:"The free-rider problem means no private firm can profit from providing one, so the market supplies none at all."}
+];
+
+const taxSubsidyFlips = [
+  {term:"Mixed economic system", back:"An economy where resources are allocated partly by the market and partly by government intervention — most real economies, unlike the pure market system in Lesson 6."},
+  {term:"Indirect tax", back:"A tax on spending that raises a producer's cost, shifting supply left — price rises, quantity falls. Used to discourage demerit goods and negative externalities."},
+  {term:"Subsidy", back:"A government payment that lowers a producer's cost, shifting supply right — price falls, quantity rises. Used to encourage merit goods and positive externalities."}
+];
+
+const priceControlFlips = [
+  {term:"Maximum price (price ceiling)", back:"A legal limit the price can't rise above, set below equilibrium, usually to make something more affordable."},
+  {term:"Minimum price (price floor)", back:"A legal limit the price can't fall below, set above equilibrium, usually to protect sellers' income."},
+  {term:"Maximum price → shortage", back:"Below equilibrium, quantity demanded exceeds quantity supplied — e.g. a padel court price cap leaving demand unmet at peak times."},
+  {term:"Minimum price → surplus", back:"Above equilibrium, quantity supplied exceeds quantity demanded — e.g. a minimum wage causing unemployment, a surplus of labour."}
+];
+
+const topicSortData = [
+  {name:"Tom decides to risk his savings and start the business — which factor of production is this?", correct:"Lesson 1: Factors of production", reason:"Risk-taking and organising the other factors is enterprise."},
+  {name:"The padel club can't get a court at 6pm — quantity demanded exceeds quantity supplied at the current price", correct:"Lesson 2: Disequilibrium", reason:"That's the definition of a shortage."},
+  {name:"A 25% price rise causes a 30% fall in weekly sales", correct:"Lessons 3–4: PED", reason:"Comparing a % change in quantity demanded to a % change in price is PED."},
+  {name:"Tom's printer output only rises 10% even though price rose 20% — limited spare capacity", correct:"Lesson 5: PES", reason:"Comparing a % change in quantity supplied to a % change in price is PES."},
+  {name:"Nobody plans this from the top down — prices alone decide what Tom produces and who gets it", correct:"Lesson 6: Market economic system", reason:"The price mechanism alone allocating resources, with no central planner, is the market economic system."},
+  {name:"Nobody privately installs streetlights, since anyone could benefit without paying", correct:"Lesson 7: Market failure", reason:"The free-rider problem — a public good the market won't supply at all."},
+  {name:"Government pays Tom a grant to lower the cost of his free coding workshops", correct:"Lesson 8: Mixed economy", reason:"A subsidy — government intervention correcting underproduction of a merit good."}
+];
+
+const quizData = [
+  {q:"Which factor of production earns interest as its reward?", opts:["Land","Labour","Capital","Enterprise"], correct:2, fb:"Capital (manufactured goods used in production) earns interest."},
+  {q:"A price change alone, with no shift in the curve itself, is called:", opts:["A shift of the curve","A movement along the curve","A market failure","A subsidy"], correct:1, fb:"A price change alone moves you along the existing curve — a shift needs a non-price determinant to change."},
+  {q:"If demand is elastic and a firm raises its price, total revenue will:", opts:["Rise","Fall","Stay exactly the same","It's impossible to say"], correct:1, fb:"With elastic demand, the proportional fall in quantity outweighs the proportional price rise, so revenue falls."},
+  {q:"Which of these would make supply MORE elastic?", opts:["No spare production capacity","A long, slow production process","Spare machinery ready to switch on","Being the only producer in the market"], correct:2, fb:"Spare capacity lets a producer respond quickly to a price change, making supply more elastic."},
+  {q:"In a market economic system, what decides 'for whom' something is produced?", opts:["Government planning","Whoever is willing and able to pay","A fixed quota per person","Whoever needs it most"], correct:1, fb:"'For whom' is decided by effective demand — willingness AND ability to pay."},
+  {q:"A negative externality causes the market to produce:", opts:["Exactly the socially efficient amount","More than the socially efficient amount","Less than the socially efficient amount","Nothing at all"], correct:1, fb:"The market ignores the external cost, so it overproduces relative to the socially efficient amount."},
+  {q:"A minimum price set above equilibrium causes:", opts:["A shortage","A surplus","No change","Prices to fall further"], correct:1, fb:"Above equilibrium, quantity supplied exceeds quantity demanded — a surplus."}
+];
+
+LessonKit.buildShiftGrid(document.getElementById('factorsGrid'), factorsGrid);
+LessonKit.buildShiftGrid(document.getElementById('disequilibriumGrid'), disequilibriumGrid);
+LessonKit.buildFlipGrid(document.getElementById('pedFlips'), pedFlips);
+LessonKit.buildRevealCards(document.getElementById('pedCalc'), pedCalc, {buttonLabel:'Reveal answer'});
+LessonKit.buildRevealCards(document.getElementById('trCalc'), trCalc, {buttonLabel:'Reveal answer'});
+LessonKit.buildFlipGrid(document.getElementById('pesFlips'), pesFlips);
+LessonKit.buildRevealCards(document.getElementById('pesCalc'), pesCalc, {buttonLabel:'Reveal answer'});
+LessonKit.buildFlipGrid(document.getElementById('marketSystemFlips'), marketSystemFlips);
+LessonKit.buildFlipGrid(document.getElementById('costFlips'), costFlips);
+LessonKit.buildFlipGrid(document.getElementById('goodsFlips'), goodsFlips);
+LessonKit.buildFlipGrid(document.getElementById('consequenceFlips'), consequenceFlips);
+LessonKit.buildFlipGrid(document.getElementById('taxSubsidyFlips'), taxSubsidyFlips);
+LessonKit.buildFlipGrid(document.getElementById('priceControlFlips'), priceControlFlips);
+LessonKit.buildSortActivity(document.getElementById('topicSort'), topicSortData, {choices:["Lesson 1: Factors of production", "Lesson 2: Disequilibrium", "Lessons 3–4: PED", "Lesson 5: PES", "Lesson 6: Market economic system", "Lesson 7: Market failure", "Lesson 8: Mixed economy"]});
+LessonKit.buildQuiz(document.getElementById('quizList'), quizData);
+LessonKit.initStepper();
+</script>
+</body>
+</html>

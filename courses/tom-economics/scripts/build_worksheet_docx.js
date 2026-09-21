@@ -690,6 +690,76 @@ const LESSON8 = {
   ],
 };
 
+const REVIEW2 = {
+  title: "Review 2 Worksheet — Full Recap, Lessons 1–8",
+  syllabusRef: "1.2, 2.4–2.10",
+  subtitle: "One or two questions per lesson. Complete during your self-directed time.",
+  sections: [
+    {
+      heading: "Lesson 1 — Factors of production",
+      items: [
+        { type: "qa", q: "**1.** Tom buys a second 3D printer. Which factor of production is this, and what's its reward?" },
+      ],
+    },
+    {
+      heading: "Lesson 2 — Disequilibrium & price changes",
+      items: [
+        { type: "qa", q: "**2.** The padel club sets a price below equilibrium for peak-time courts. What results — a shortage or a surplus? Explain." },
+      ],
+    },
+    {
+      heading: "Lessons 3–4 — PED & total revenue",
+      items: [
+        { type: "qa", q: "**3a.** Tom's grips: price $8 → $10 (+25%), weekly sales 60 → 51 (−15%). Calculate the PED and classify it." },
+        { type: "qa", q: "**3b.** Using your answer to 3a, would raising the price further increase or decrease Tom's total revenue? Explain." },
+      ],
+    },
+    {
+      heading: "Lesson 5 — PES",
+      items: [
+        { type: "qa", q: "**4.** Padel club court-booking system: price $5 → $6 (+20%), quantity of bookable slots offered 50 → 51 (+2%). Calculate the PES and classify it." },
+      ],
+    },
+    {
+      heading: "Lesson 6 — Market economic system",
+      items: [
+        { type: "qa", q: "**5.** Explain, in your own words, why a market economic system doesn't need a central planner to decide what gets produced." },
+      ],
+    },
+    {
+      heading: "Lesson 7 — Market failure",
+      items: [
+        { type: "qa", q: "**6a.** Define social cost, using private cost and external cost." },
+        { type: "qa", q: "**6b.** A free flu-vaccination clinic reaches fewer people than would benefit society. Is this over-provided, under-provided, or not provided at all? Explain." },
+      ],
+    },
+    {
+      heading: "Lesson 8 — Mixed economy",
+      items: [
+        { type: "qa", q: "**7.** Government sets a minimum price for milk, above the free-market price. Explain what results in that market." },
+      ],
+    },
+    {
+      heading: "Exam-style practice",
+      items: [
+        { type: "qa", q: "**8.** *(Paper 2 style, 6 marks)* Choose **two** topics from this term (e.g. PED, market failure, price controls) and explain, using examples from Tom's Print Co or the padel club, how each affects a business decision or a government decision." },
+      ],
+    },
+  ],
+  answerKey: [
+    { type: "text", text: "**1.** Capital — a manufactured good used to produce other goods. Reward: interest." },
+    { type: "text", text: "**2.** A shortage — below equilibrium, quantity demanded exceeds quantity supplied, so courts run out and some demand goes unmet." },
+    { type: "text", text: "**3a.** % price = +25%, % quantity = −15%. PED = −15 ÷ 25 = −0.6 → Inelastic." },
+    { type: "text", text: "**3b.** Increase it — with inelastic demand, a further price rise causes a proportionally smaller fall in quantity, so total revenue rises." },
+    { type: "text", text: "**4.** % price = +20%, % quantity supplied = +2%. PES = 2 ÷ 20 = 0.1 → Very inelastic (close to perfectly inelastic) — the club can't add meaningfully more bookable slots even at a higher price, since court numbers are essentially fixed." },
+    { type: "text", text: "**5.** The price mechanism alone coordinates what gets produced (whatever earns profit), how (however keeps costs lowest), and for whom (whoever can pay) — supply and demand adjust prices to balance the market without anyone directing it centrally." },
+    { type: "text", text: "**6a.** Social cost is private cost (what the producer/consumer pays) plus external cost (the cost dumped on third parties not involved in the transaction) — the full, true cost to society." },
+    { type: "text", text: "**6b.** Under-provided — a positive externality/merit good means the market ignores the wider benefit to society, so less gets provided than would be socially efficient." },
+    { type: "text", text: "**7.** A surplus — above equilibrium, quantity supplied exceeds quantity demanded, so there's unsold milk at that price (which government may need to buy up or otherwise manage)." },
+    { type: "text", text: "**8.** Open-ended; look for **two** distinct topics, each with a clear mechanism and a Tom's Print Co/padel club example, e.g.: (i) PED — Tom uses PED to judge whether a price rise on inelastic-demand grips would raise revenue; (ii) price controls — a padel court rental cap set by the council causes a shortage at peak times, since quantity demanded exceeds the fixed number of courts. Full marks need identification + mechanism + a specific applied example for each of the two topics chosen." },
+  ],
+};
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   const jobs = [
@@ -702,6 +772,7 @@ async function run() {
     { lesson: "lesson-07", data: LESSON7 },
     { lesson: "lesson-08", data: LESSON8, splitAnswers: true },
     { lesson: "review-01-ped-tr-pes", data: REVIEW1 },
+    { lesson: "review-02-full-recap", data: REVIEW2 },
   ];
   for (const job of jobs) {
     const doc = buildDoc(job.data, { skipAnswers: !!job.splitAnswers });
