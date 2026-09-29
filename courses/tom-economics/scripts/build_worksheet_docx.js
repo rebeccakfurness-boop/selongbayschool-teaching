@@ -760,6 +760,104 @@ const REVIEW2 = {
   ],
 };
 
+const TEST1 = {
+  title: "Cambridge IGCSE Economics 0455 — Assessment 1: Topics 1-2 Mock Test",
+  syllabusRef: "1.1-1.4, 2.1-2.10",
+  subtitle: "Time allowed: 1 hour, in exam conditions. Total marks: 66. Answer all questions in both sections.",
+  sections: [
+    {
+      heading: "Section A — Multiple Choice (15 marks)",
+      intro: "Circle the letter of the one correct answer for each question. Suggested time: 15 minutes.",
+      items: [
+        { type: "mcq", q: "**1.** Which of the following is a free good?", options: ["A. Fresh air", "B. A padel court booking", "C. Plastic filament for a 3D printer", "D. Electricity"] },
+        { type: "mcq", q: "**2.** Tom is deciding whether to spend Saturday producing padel grips (expected revenue $150) or keyrings (expected revenue $120), but not both. He chooses to produce grips. What is the opportunity cost of this decision?", options: ["A. $150", "B. $120", "C. $270", "D. $30"] },
+        { type: "mcq", q: "**3.** An economy that was already using all its resources fully starts producing more of good X without producing less of good Y. What is the most likely explanation?", options: ["A. A fall in demand for good Y", "B. An improvement in technology or an increase in resources", "C. Unemployment of resources", "D. A decrease in the economy's total output"] },
+        { type: "mcq", q: "**4.** Which of the following would NOT cause a firm's demand curve for its product to shift?", options: ["A. A change in consumer income", "B. A change in the price of a substitute good", "C. A change in the price of the good itself", "D. A change in consumer tastes"] },
+        { type: "mcq", q: "**5.** What could cause the equilibrium price of padel rackets to fall?", options: ["A. A decrease in the price of a substitute racket brand", "B. An increase in the cost of raw materials used to make rackets", "C. An increase in the supply of rackets", "D. A decrease in the number of firms producing rackets"] },
+        { type: "mcq", q: "**6.** A padel club's branded towels: price rises from $10 to $12 (a 20% increase), and weekly sales fall from 50 to 35 (a 30% decrease). What is the price elasticity of demand for the towels?", options: ["A. −0.67", "B. −1.5", "C. −6.0", "D. 1.5"] },
+        { type: "mcq", q: "**7.** A firm cuts the price of its product and finds that its total revenue rises. What does this tell us about the price elasticity of demand for the product?", options: ["A. PED is less than 1, ignoring sign (inelastic)", "B. PED is greater than 1, ignoring sign (elastic)", "C. PED is exactly 0", "D. PED is positive"] },
+        { type: "mcq", q: "**8.** What could NOT happen in a mixed economic system?", options: ["A. A government setting a minimum wage", "B. A private firm being the only supplier of a good", "C. All resources being allocated purely by government planning, with no role for the market at all", "D. A firm creating pollution as a negative externality"] },
+        { type: "mcq", q: "**9.** What is the best definition of a demerit good?", options: ["A. A good that generates external benefits to third parties", "B. A good that is more harmful to the consumer than they realise", "C. A good with no external costs", "D. A good that is always illegal to sell"] },
+        { type: "mcq", q: "**10.** Which pair of properties defines a public good?", options: ["A. Excludable and rivalrous", "B. Excludable and non-rivalrous", "C. Non-excludable and rivalrous", "D. Non-excludable and non-rivalrous"] },
+        { type: "mcq", q: "**11.** A government adds an indirect tax to a good. What is the most likely effect on that market?", options: ["A. Supply shifts right, price falls", "B. Supply shifts left, price rises", "C. Demand shifts right, price rises", "D. Demand shifts left, price falls"] },
+        { type: "mcq", q: "**12.** A government pays a subsidy to producers of a merit good. What is the most likely effect?", options: ["A. Supply shifts left, price rises, quantity falls", "B. Supply shifts right, price falls, quantity rises", "C. Demand shifts right, price rises", "D. No effect on price or quantity"] },
+        { type: "mcq", q: "**13.** A government sets a maximum price for bread, below the free-market equilibrium price. What is the likely result?", options: ["A. A surplus of bread", "B. A shortage of bread", "C. No change in the quantity of bread traded", "D. The equilibrium price rises"] },
+        { type: "mcq", q: "**14.** A government sets a minimum wage above the market-clearing wage. What is the likely result in that labour market?", options: ["A. A shortage of workers", "B. A surplus of workers (unemployment)", "C. Wages fall further", "D. No change in employment"] },
+        { type: "mcq", q: "**15.** A padel club's court-booking slots: price rises from $15 to $18 (a 20% increase), and the quantity of slots offered rises from 40 to 46 (a 15% increase). What is the price elasticity of supply?", options: ["A. 0.75", "B. 1.33", "C. 3.0", "D. 0.33"] },
+      ],
+    },
+    {
+      heading: "Section B, Question 16 — The basic economic problem & factors of production [17]",
+      intro: "Tom's Print Co has one 3D printer and one free Saturday each week. He is deciding how to use that time and machine capacity. Suggested time for Section B: 45 minutes.",
+      items: [
+        { type: "qa", q: "**(a)** Define the basic economic problem. [2]" },
+        { type: "qa", q: "**(b)** State the reward earned by each of the four factors of production. [4]" },
+        { type: "qa", q: "**(c)** Tom can spend Saturday producing either padel grips (expected revenue $150) or personalised keyrings (expected revenue $120), but not both. He chooses to produce grips. Calculate the opportunity cost of this decision. [2]" },
+        { type: "qa", q: "**(d)** Explain, using the idea of a production possibility curve, how Tom's business could increase its total output of both grips and keyrings together, rather than having to choose between them. [3]" },
+        { type: "qa", q: "**(e)** Discuss whether Tom should specialise entirely in producing padel grips, rather than continuing to also make keyrings. [6]" },
+      ],
+    },
+    {
+      heading: "Section B, Question 17 — Demand, supply & elasticity [16]",
+      intro: "The padel club sells branded towels and offers bookable court slots.",
+      items: [
+        { type: "qa", q: "**(a)** Define equilibrium price. [2]" },
+        { type: "qa", q: "**(b)** Branded towels: price rises from $10 to $12, and weekly sales fall from 50 to 35. Calculate the price elasticity of demand for the towels, showing your working, and classify your answer. [3]" },
+        { type: "qa", q: "**(c)** Using your answer to (b), explain what would happen to the club's total revenue from towel sales if it raised the price further. [3]" },
+        { type: "qa", q: "**(d)** Court-booking slots: price rises from $15 to $18, and the quantity of slots offered rises from 40 to 46. Calculate the price elasticity of supply, showing your working, and classify your answer. [3]" },
+        { type: "qa", q: "**(e)** Analyse two factors that could make the padel club's supply of court-booking slots more elastic in the future. [5]" },
+      ],
+    },
+    {
+      heading: "Section B, Question 18 — Market failure & the mixed economy [18]",
+      intro: "Tom's plastic waste pollutes a stream near his workshop while he manufactures padel grips.",
+      items: [
+        { type: "qa", q: "**(a)** Define market failure. [2]" },
+        { type: "qa", q: "**(b)** Identify the type of externality created by Tom's plastic waste, and explain your answer. [3]" },
+        { type: "qa", q: "**(c)** Explain why a free market would fail to provide a public good, such as a streetlight, even though people want one. [3]" },
+        { type: "qa", q: "**(d)** Explain how a government could use an indirect tax to correct the externality caused by Tom's plastic waste. [4]" },
+        { type: "qa", q: "**(e)** Discuss whether government intervention, such as a maximum price, always improves outcomes for consumers. [6]" },
+      ],
+    },
+  ],
+  answerKey: [
+    { type: "text", text: "**Section A — Multiple Choice**" },
+    { type: "text", text: "1. A — fresh air has no opportunity cost and isn't scarce; the others all require resources to produce or provide." },
+    { type: "text", text: "2. B — the opportunity cost is the value of the next best alternative forgone, i.e. the $120 keyring revenue." },
+    { type: "text", text: "3. B — producing more of both goods at once (a point beyond the original PPC) needs the curve itself to shift outward, caused by more/better resources or improved technology." },
+    { type: "text", text: "4. C — a change in the good's own price causes a movement ALONG the existing demand curve, not a shift of the whole curve." },
+    { type: "text", text: "5. C — an increase in supply shifts the supply curve right, lowering the equilibrium price (all other options would raise price or have an unclear/opposite effect)." },
+    { type: "text", text: "6. B — % price = +20%, % quantity = −30%. PED = −30 ÷ 20 = −1.5." },
+    { type: "text", text: "7. B — a price cut only raises revenue if quantity demanded rises proportionally more than the price falls, which is the definition of elastic demand (PED greater than 1 ignoring sign)." },
+    { type: "text", text: "8. C — that describes a purely planned/command economy; a mixed economy always retains some role for the market." },
+    { type: "text", text: "9. B — a demerit good is one consumers underestimate the harm of; A describes a positive externality good, C and D are incorrect/too absolute." },
+    { type: "text", text: "10. D — non-excludable and non-rivalrous is the definition of a public good." },
+    { type: "text", text: "11. B — a tax raises the producer's cost, shifting supply left and raising the equilibrium price." },
+    { type: "text", text: "12. B — a subsidy lowers the producer's cost, shifting supply right and lowering the equilibrium price." },
+    { type: "text", text: "13. B — below equilibrium, quantity demanded exceeds quantity supplied, causing a shortage." },
+    { type: "text", text: "14. B — above the market-clearing wage, quantity of labour supplied exceeds quantity demanded, causing a surplus (unemployment)." },
+    { type: "text", text: "15. A — % price = +20%, % quantity supplied = +15%. PES = 15 ÷ 20 = 0.75." },
+    { type: "text", text: "**Section B — Question 16**" },
+    { type: "text", text: "**(a)** The basic economic problem is that human wants are unlimited, but the resources available to satisfy them are limited (scarce) — forcing individuals, firms, and governments to make choices about how resources are allocated." },
+    { type: "text", text: "**(b)** Land → rent. Labour → wages. Capital → interest. Enterprise → profit." },
+    { type: "text", text: "**(c)** $120 — the opportunity cost is the value of the next best alternative forgone, the revenue Tom would have earned from keyrings." },
+    { type: "text", text: "**(d)** The PPC shifts outward (rather than moving along the same curve) if the quantity or quality of Tom's factors of production increases — e.g. buying a second 3D printer (more capital), or Tom becoming faster/more skilled at designing and printing (better quality labour). This lets him produce more of both grips and keyrings than before, rather than only being able to trade one off against the other." },
+    { type: "text", text: "**(e)** Look for a balanced answer with a reasoned conclusion. For specialising: Tom could become faster and more efficient at producing grips specifically (learning by doing), potentially benefiting from any economies of scale, and focus his limited machine time on his most profitable product. Against specialising: he loses the diversified revenue keyrings provide, becomes entirely dependent on demand for one product (risky if padel's popularity falls or a competitor enters), and loses existing keyring customers. A good answer weighs these and reaches a justified judgement, e.g. depending on how reliable grip demand is relative to keyring demand." },
+    { type: "text", text: "**Section B — Question 17**" },
+    { type: "text", text: "**(a)** Equilibrium price is the price at which quantity demanded exactly equals quantity supplied, so there is no shortage or surplus and no pressure for price to change." },
+    { type: "text", text: "**(b)** % price = +20%, % quantity = −30%. PED = −30 ÷ 20 = −1.5 → Elastic." },
+    { type: "text", text: "**(c)** Since demand is elastic, a further price rise would cause total revenue to FALL — the proportional fall in quantity demanded would be larger than the proportional rise in price." },
+    { type: "text", text: "**(d)** % price = +20%, % quantity supplied = +15%. PES = 15 ÷ 20 = 0.75 → Inelastic." },
+    { type: "text", text: "**(e)** Accept any two well-explained factors, e.g.: (i) the club could build additional courts, giving it spare capacity to increase bookable slots more readily when price rises; (ii) the club could hire more staff or extend opening hours, making it easier to offer more slots quickly; (iii) over a longer time period, the club has more ability to adjust (e.g. build new facilities), so supply becomes more elastic. Each point needs an explanation of why it raises responsiveness, not just a label." },
+    { type: "text", text: "**Section B — Question 18**" },
+    { type: "text", text: "**(a)** Market failure is when the price mechanism fails to allocate resources efficiently, leading to over- or under-production of a good or service compared to what's best for society." },
+    { type: "text", text: "**(b)** A negative production externality — the pollution cost is created while Tom is producing (manufacturing) grips, and is imposed on people near the stream who are not involved in the transaction." },
+    { type: "text", text: "**(c)** A public good is non-excludable (nobody can be stopped from benefiting even without paying) and non-rivalrous (one person's use doesn't reduce another's). Because a private firm can't charge non-payers for a non-excludable good, there is no profit incentive to provide it — the free-rider problem — so the market supplies none at all, even though people want it." },
+    { type: "text", text: "**(d)** A tax on Tom's plastic filament (or on the pollution itself) raises his cost of production, shifting his supply curve left. This raises the market price of grips and reduces the quantity produced, bringing his output down closer to the socially efficient level by making him account for at least part of the external cost he previously ignored." },
+    { type: "text", text: "**(e)** Look for a balanced answer with a reasoned conclusion. For: a maximum price can make an essential good more affordable and accessible to lower-income consumers who might otherwise be priced out. Against: setting it below equilibrium causes a shortage, meaning some consumers who want the good at that price can't get it at all, and it can reduce sellers' incentive to maintain quality or supply in the long run, potentially leading to black markets. A good answer concludes that the outcome depends on factors like how far below equilibrium the price is set, and whether government also addresses the resulting shortage (e.g. through direct provision or rationing)." },
+  ],
+};
+
 async function run() {
   const BASE = path.join(__dirname, "..", "lessons");
   const jobs = [
@@ -773,18 +871,20 @@ async function run() {
     { lesson: "lesson-08", data: LESSON8, splitAnswers: true },
     { lesson: "review-01-ped-tr-pes", data: REVIEW1 },
     { lesson: "review-02-full-recap", data: REVIEW2 },
+    { lesson: "assessment-01-topics-1-2", data: TEST1, splitAnswers: true, filename: "test" },
   ];
   for (const job of jobs) {
+    const baseName = job.filename || "worksheet";
     const doc = buildDoc(job.data, { skipAnswers: !!job.splitAnswers });
     const buf = await Packer.toBuffer(doc);
-    const out = path.join(BASE, job.lesson, "worksheet.docx");
+    const out = path.join(BASE, job.lesson, `${baseName}.docx`);
     fs.writeFileSync(out, buf);
     console.log("wrote", out);
 
     if (job.splitAnswers) {
       const answerDoc = buildAnswerDoc(job.data);
       const answerBuf = await Packer.toBuffer(answerDoc);
-      const answerOut = path.join(BASE, job.lesson, "worksheet-answers.docx");
+      const answerOut = path.join(BASE, job.lesson, `${baseName}-answers.docx`);
       fs.writeFileSync(answerOut, answerBuf);
       console.log("wrote", answerOut);
     }
